@@ -1,0 +1,158 @@
+import { PhoneSpec, BrandInfo } from '../types';
+
+export const BRANDS: BrandInfo[] = [
+  { name: 'Samsung', count: 1, logoText: 'SAMSUNG', slug: 'samsung' },
+  { name: 'Tecno', count: 1, logoText: 'TECNO', slug: 'tecno' },
+];
+
+export const PHONES_DATA: PhoneSpec[] = [
+  {
+    id: 'samsung-galaxy-a54-5g',
+    name: 'Samsung Galaxy A54 5G',
+    brand: 'Samsung',
+    model: 'Galaxy A54 5G (8GB/256GB)',
+    pricePKR: 89999,
+    officialPricePKR: 119999,
+    marketPriceRangePKR: { min: 84999, max: 99999 },
+    variants: [
+      {
+        id: 'a54-8-128',
+        name: '8GB / 128GB',
+        ram: '8 GB (+ 8 GB RAM Plus virtual memory = 16GB)',
+        storage: '128 GB built-in (microSD Card Slot supported up to 1TB via shared SIM slot)',
+        pricePKR: 84999,
+        officialPricePKR: 109999,
+        marketPriceRangePKR: { min: 79999, max: 88999 },
+      },
+      {
+        id: 'a54-8-256',
+        name: '8GB / 256GB',
+        ram: '8 GB (+ 8 GB RAM Plus virtual memory = 16GB)',
+        storage: '256 GB built-in (microSD Card Slot supported up to 1TB via shared SIM slot)',
+        pricePKR: 89999,
+        officialPricePKR: 119999,
+        marketPriceRangePKR: { min: 84999, max: 99999 },
+      },
+    ],
+    ptaTax: {
+      passportTaxPKR: 30980,
+      cnicTaxPKR: 35145,
+      status: 'Official PTA Approved',
+    },
+    releaseDate: 'March 2023',
+    rating: 0.0,
+    reviewCount: 0,
+    image: 'https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-41gvz-500x500.webp',
+    tags: ['trending', 'camera', 'budget', 'flagship'],
+    specs: {
+      display: '6.4" FHD+ Super AMOLED, 120Hz Refresh Rate, 1080 x 2340 pixels, HDR10+, 1000 nits (HBM) Peak Brightness, Corning Gorilla Glass 5',
+      refreshRate: '120Hz Super AMOLED',
+      processor: 'Samsung Exynos 1380 (5nm) Octa-Core (4x2.4 GHz Cortex-A78 & 4x2.0 GHz Cortex-A55) with Mali-G68 MP5 GPU',
+      ram: '8 GB (+ 8 GB RAM Plus virtual memory = 16GB)',
+      storage: '256 GB built-in (microSD Card Slot supported up to 1TB via shared SIM slot)',
+      mainCamera: '50MP Main OIS (f/1.8, All-Pixel Autofocus, VDIS) + 12MP Ultra-Wide (f/2.2, 123° FOV) + 5MP Macro (f/2.4) with LED Flash',
+      selfieCamera: '32MP Ultra-Clear Wide Front Camera (f/2.2, 26mm, 4K@30fps UHD Video Recording)',
+      battery: '5000 mAh Li-Po Long-Lasting 2-Day Battery',
+      charging: '25W Super Fast Charging (50% in 30 mins)',
+      os: 'Android 14 with One UI 6.1 (4 Major OS Upgrades & 5 Years Security Updates)',
+      network: '5G Dual SIM (Nano-SIM, dual stand-by / MicroSD), IP67 Dust & Water Resistance (1m for 30 mins), Stereo Dual Speakers with Dolby Atmos, Optical In-Display Fingerprint',
+    },
+    colors: ['Awesome Violet', 'Awesome White', 'Awesome Graphite', 'Awesome Lime'],
+    colorImages: {
+      'Awesome Violet': 'https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-41gvz-500x500.webp',
+      'Awesome White': 'https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-nwjoh-500x500.webp',
+      'Awesome Graphite': 'https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-sem0b-500x500.webp',
+      'Awesome Lime': 'https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-wmmpy-500x500.webp',
+    },
+    colorHexes: {
+      'Awesome Violet': '#a794db',
+      'Awesome White': '#f1f3f6',
+      'Awesome Graphite': '#2e3239',
+      'Awesome Lime': '#d7e372',
+    },
+    popularInCities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Multan', 'Peshawar'],
+  },
+  {
+    id: 'tecno-spark-40-pro-plus',
+    name: 'Tecno Spark 40 Pro Plus',
+    brand: 'Tecno',
+    model: 'Spark 40 Pro+ (8GB/256GB)',
+    pricePKR: 59999,
+    officialPricePKR: 64999,
+    marketPriceRangePKR: { min: 54999, max: 62999 },
+    variants: [
+      {
+        id: 'spark40pp-8-128',
+        name: '8GB / 128GB',
+        ram: '8 GB (+ 8 GB Extended Virtual RAM = 16GB)',
+        storage: '128 GB UFS 2.2 built-in (microSD Card Slot supported up to 1TB)',
+        pricePKR: 54999,
+        officialPricePKR: 59999,
+        marketPriceRangePKR: { min: 51999, max: 56999 },
+      },
+      {
+        id: 'spark40pp-8-256',
+        name: '8GB / 256GB',
+        ram: '8 GB (+ 8 GB Extended Virtual RAM = 16GB)',
+        storage: '256 GB UFS 2.2 built-in (microSD Card Slot supported up to 1TB)',
+        pricePKR: 59999,
+        officialPricePKR: 64999,
+        marketPriceRangePKR: { min: 54999, max: 62999 },
+      },
+    ],
+    ptaTax: {
+      passportTaxPKR: 16500,
+      cnicTaxPKR: 19900,
+      status: 'Official PTA Approved',
+    },
+    releaseDate: 'January 2025',
+    rating: 0.0,
+    reviewCount: 0,
+    image: 'https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-ahqfm-500x500.webp',
+    tags: ['trending', 'budget', 'camera', 'gaming', 'flagship'],
+    specs: {
+      display: '6.78" 1.5K 3D Curved AMOLED, 144Hz Refresh Rate, 1224 x 2720 pixels, 2160Hz PWM Dimming, 1500 nits Peak Brightness, Corning Gorilla Glass 5',
+      refreshRate: '144Hz 3D Curved AMOLED',
+      processor: 'MediaTek Helio G200 (6nm) Octa-Core (2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55)',
+      ram: '8 GB (+ 8 GB Extended Virtual RAM = 16GB)',
+      storage: '256 GB UFS 2.2 built-in (microSD Card Slot supported up to 1TB)',
+      mainCamera: '50MP Ultra Clear Main Sensor (f/1.6, EIS, PDAF, Super Night 3.0) + 2MP Auxiliary Depth + AI Lens with Quad-LED Flash',
+      selfieCamera: '13MP Ultra-Clear Dual Flash Front Camera with AI Portrait & Eye-Tracking (f/2.2, 1080p@30fps)',
+      battery: '5200 mAh High-Density Long-Life Battery',
+      charging: '45W Super Charge Wired + 30W Magnetic Wireless Charging support',
+      os: 'Android 15 with HiOS 15 (AI Call Noise Cancellation, AI Eraser 2.0, Ask Ella AI Assistant)',
+      network: '4G LTE Dual SIM (Nano-SIM, dual stand-by), IP64 Dust & Water Resistance, 1.5m Drop Resistance, Dual Stereo Speakers with Dolby Atmos & DTS, In-Display Optical Fingerprint',
+    },
+    colors: ['Lake Green', 'Temporal Orbits', 'Radiant Sunset', 'Lunar Frost'],
+    colorImages: {
+      'Lake Green': 'https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-ahqfm-500x500.webp',
+      'Temporal Orbits': 'https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-dbjm9-500x500.webp',
+      'Radiant Sunset': 'https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-oa58m-500x500.webp',
+      'Lunar Frost': 'https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-pb3tm-500x500.webp',
+    },
+    colorHexes: {
+      'Lake Green': '#9fc29f',
+      'Temporal Orbits': '#2e333d',
+      'Radiant Sunset': '#d5c4a1',
+      'Lunar Frost': '#f1efe8',
+    },
+    popularInCities: ['Lahore', 'Karachi', 'Multan', 'Faisalabad', 'Rawalpindi', 'Peshawar'],
+  }
+];
+
+export const QUICK_FILTERS = [
+  { id: 'trending', label: 'Trending', icon: '🔥', description: 'Most searched in Pakistan this week' },
+  { id: 'budget', label: 'Budget Picks', icon: '💰', description: 'Best value phones under PKR 80,000' },
+  { id: 'camera', label: 'Camera Kings', icon: '📸', description: 'Flagship optics & 4K/8K sensors' },
+  { id: 'gaming', label: 'Gaming Phones', icon: '🎮', description: 'High FPS, vapor cooling & 120Hz+' },
+  { id: 'flagship', label: 'Ultra Flagships', icon: '👑', description: 'Top-tier luxury smartphones' },
+] as const;
+
+export const PTA_SLABS = [
+  { range: 'Up to $30 (Under PKR 8,500)', passportTax: 'PKR 180', cnicTax: 'PKR 370' },
+  { range: '$30 to $100 (PKR 8,500 - 28,000)', passportTax: 'PKR 1,800', cnicTax: 'PKR 3,200' },
+  { range: '$100 to $200 (PKR 28,000 - 56,000)', passportTax: 'PKR 8,600', cnicTax: 'PKR 11,500' },
+  { range: '$200 to $350 (PKR 56,000 - 98,000)', passportTax: 'PKR 23,000', cnicTax: 'PKR 28,500' },
+  { range: '$350 to $500 (PKR 98,000 - 140,000)', passportTax: 'PKR 38,000', cnicTax: 'PKR 46,000' },
+  { range: 'Above $500 (Flagships & iPhones)', passportTax: 'PKR 115,000 - 145,000', cnicTax: 'PKR 135,000 - 170,000' },
+];

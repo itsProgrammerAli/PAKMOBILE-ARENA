@@ -1,0 +1,6 @@
+{
+  "name": "PakMobile Arena",
+  "description": "Premium smartphone database, detailed hardware specifications, expert reviews, and live PKR retail pricing for PakMobile Arena.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
