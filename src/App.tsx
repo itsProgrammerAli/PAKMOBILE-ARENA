@@ -31,12 +31,11 @@ export default function App() {
   // Compared phones list (up to 2)
   const [comparedPhones, setComparedPhones] = useState<PhoneSpec[]>([]);
 
-  // Theme State ('light' | 'dark')
+  // Theme State ('light' | 'dark') - default to 'light' mode on initial visit
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('theme');
       if (saved === 'dark' || saved === 'light') return saved;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
     return 'light';
   });

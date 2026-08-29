@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Smartphone, ShieldCheck, Calculator, Scale, Lock, FileText, Mail, Info } from 'lucide-react';
 import { BRANDS } from '../data/phones';
 import { LegalModals, LegalModalType } from './LegalModals';
+import { useExchangeRate } from '../hooks/useExchangeRate';
 
 interface FooterProps {
   onNavigateToPta: () => void;
@@ -15,6 +16,7 @@ export const Footer: React.FC<FooterProps> = ({
   onSelectBrand,
 }) => {
   const [activeLegalModal, setActiveLegalModal] = useState<LegalModalType>(null);
+  const { liveRate } = useExchangeRate();
 
   return (
     <>
@@ -173,7 +175,7 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="pt-6 sm:pt-8 border-t border-gray-200 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-[11px] font-mono tracking-widest text-gray-500 dark:text-zinc-500 uppercase">
             <span>© 2026 PAKMOBILE ARENA DATABASE</span>
             <div className="flex space-x-6 sm:space-x-8 items-center">
-              <span>USD / PKR: 278.40</span>
+              <span>USD / PKR: {liveRate.toFixed(2)}</span>
               <span className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                 <span className="text-emerald-700 dark:text-emerald-400 font-bold">LIVE MARKET SYNC</span>

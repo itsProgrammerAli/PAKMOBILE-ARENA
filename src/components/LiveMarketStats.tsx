@@ -1,7 +1,10 @@
 import React from 'react';
 import { TrendingUp, ShieldCheck, DollarSign, RefreshCw } from 'lucide-react';
+import { useExchangeRate } from '../hooks/useExchangeRate';
 
 export const LiveMarketStats: React.FC = () => {
+  const { liveRate } = useExchangeRate();
+
   return (
     <section id="live-market-stats" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 mb-4 sm:mb-8">
       {/* Responsive Grid: 1 column on mobile (grid-cols-1), 2 on tablets (sm:grid-cols-2), 4 on desktop (lg:grid-cols-4) */}
@@ -14,10 +17,10 @@ export const LiveMarketStats: React.FC = () => {
           </div>
           <div className="min-w-0 flex-1">
             <div className="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Interbank Rate</div>
-            <div className="text-base sm:text-lg font-bold text-gray-900 font-mono tracking-tight">1 USD = ₨ 278.40</div>
+            <div className="text-base sm:text-lg font-bold text-gray-900 font-mono tracking-tight">1 USD = ₨ {liveRate.toFixed(2)}</div>
             <div className="text-xs text-emerald-700 font-semibold flex items-center gap-1 mt-0.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              <span>Stable Market Rate</span>
+              <span>Live Market Rate</span>
             </div>
           </div>
         </div>

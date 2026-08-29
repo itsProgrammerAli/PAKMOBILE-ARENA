@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { PhoneSpec } from '../types';
 import { PHONES_DATA } from '../data/phones';
+import { useExchangeRate } from '../hooks/useExchangeRate';
 
 interface PtaTaxPageProps {
   initialPhone?: PhoneSpec | null;
@@ -32,7 +33,7 @@ export const PtaTaxPage: React.FC<PtaTaxPageProps> = ({
   const [docType, setDocType] = useState<'passport' | 'cnic'>('passport');
   const [searchFilter, setSearchFilter] = useState('');
 
-  const USD_TO_PKR_RATE = 278.40;
+  const { liveRate } = useExchangeRate();
 
   // Official FBR PTA Tax Slabs for 2026 (DIRBS SRO compliance)
   const calculateCustomTax = (usd: number, type: 'passport' | 'cnic') => {
@@ -55,7 +56,7 @@ export const PtaTaxPage: React.FC<PtaTaxPageProps> = ({
   };
 
   const calculatedTax = calculateCustomTax(customPriceUSD, docType);
-  const estimatedDevicePKR = Math.round(customPriceUSD * USD_TO_PKR_RATE);
+  const estimatedDevicePKR = Math.round(customPriceUSD * liveRate);
   const totalLandedCost = estimatedDevicePKR + calculatedTax;
 
   const formatPKR = (val: number) => {
@@ -117,7 +118,7 @@ export const PtaTaxPage: React.FC<PtaTaxPageProps> = ({
           {/* Col 3 (Right): Exchange Rate Badge */}
           <div className="flex items-center justify-center md:justify-end w-full md:w-auto">
             <span className="text-[11px] font-mono font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 sm:py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800/60 shadow-2xs whitespace-nowrap">
-              USD / PKR Exchange: 278.40
+              USD / PKR Exchange: {liveRate.toFixed(2)}
             </span>
           </div>
         </div>

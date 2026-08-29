@@ -54,6 +54,15 @@ export interface PhoneSpec {
 
 export type FilterCategory = 'all' | 'trending' | 'budget' | 'camera' | 'gaming' | 'flagship';
 
+export interface UserReview {
+  id: string;
+  userName: string;
+  city: string;
+  rating: number;
+  date: string;
+  comment: string;
+}
+
 export interface BrandInfo {
   name: string;
   count: number;

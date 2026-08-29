@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PhoneSpec, FilterCategory } from '../types';
 import { PhoneCard } from './PhoneCard';
 import { ArrowUpDown, AlertCircle } from 'lucide-react';
+import { getEffectivePhoneRating } from '../hooks/usePhoneReviewStats';
 
 interface PhoneGridShowcaseProps {
   phones: PhoneSpec[];
@@ -54,7 +55,7 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
   } else if (sortBy === 'price-desc') {
     displayedPhones.sort((a, b) => b.pricePKR - a.pricePKR);
   } else if (sortBy === 'rating') {
-    displayedPhones.sort((a, b) => b.rating - a.rating);
+    displayedPhones.sort((a, b) => getEffectivePhoneRating(b) - getEffectivePhoneRating(a));
   }
 
   return (

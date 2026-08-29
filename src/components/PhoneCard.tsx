@@ -10,6 +10,7 @@ import {
   Star 
 } from 'lucide-react';
 import { PhoneSpec } from '../types';
+import { usePhoneReviewStats } from '../hooks/usePhoneReviewStats';
 
 interface PhoneCardProps {
   phone: PhoneSpec;
@@ -24,6 +25,8 @@ export const PhoneCard: React.FC<PhoneCardProps> = ({
   onToggleCompare,
   isCompared,
 }) => {
+  const { ratingDisplay, totalReviews, hasReviews } = usePhoneReviewStats(phone);
+
   const formatPKR = (val: number) => {
     return '₨ ' + val.toLocaleString('en-PK');
   };
@@ -78,12 +81,12 @@ export const PhoneCard: React.FC<PhoneCardProps> = ({
           {/* Rating and Release */}
           <div className="flex items-center justify-between text-[10px] sm:text-xs text-gray-500 dark:text-zinc-400 mb-1">
             <div className="flex items-center gap-1 font-medium">
-              <Star className={`w-3 h-3 ${phone.rating > 0 ? 'fill-amber-400 text-amber-400' : 'text-gray-300 dark:text-zinc-600'}`} />
-              <span className={phone.rating > 0 ? 'text-amber-500 font-bold' : 'text-gray-600 dark:text-zinc-400'}>
-                {phone.rating.toFixed(1)}
+              <Star className={`w-3 h-3 ${hasReviews ? 'fill-amber-400 text-amber-400' : 'text-gray-300 dark:text-zinc-600'}`} />
+              <span className={hasReviews ? 'text-amber-500 font-bold' : 'text-gray-600 dark:text-zinc-400'}>
+                {ratingDisplay}
               </span>
               <span className="text-gray-400 dark:text-zinc-500 font-normal">
-                ({phone.reviewCount} {phone.reviewCount === 1 ? 'review' : 'reviews'})
+                ({totalReviews} {totalReviews === 1 ? 'review' : 'reviews'})
               </span>
             </div>
             <span className="text-[10px] text-gray-400 dark:text-zinc-500 hidden sm:inline">{phone.releaseDate}</span>

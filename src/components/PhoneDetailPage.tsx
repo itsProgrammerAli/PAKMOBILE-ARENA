@@ -26,18 +26,9 @@ import {
   Sparkles,
   HardDrive
 } from 'lucide-react';
-import { PhoneSpec } from '../types';
+import { PhoneSpec, UserReview } from '../types';
 import { PHONES_DATA } from '../data/phones';
 import { PhoneCard } from './PhoneCard';
-
-interface UserReview {
-  id: string;
-  userName: string;
-  city: string;
-  rating: number;
-  date: string;
-  comment: string;
-}
 
 interface PhoneDetailPageProps {
   phone: PhoneSpec;
@@ -440,6 +431,9 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
     const updated = [newRev, ...userReviews];
     setUserReviews(updated);
     localStorage.setItem(`reviews_${phone.id}`, JSON.stringify(updated));
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('phone-review-updated', { detail: { phoneId: phone.id } }));
+    }
     setReviewName('');
     setReviewCity('');
     setReviewComment('');
@@ -881,7 +875,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Dimensions & Weight</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? '162.3 x 79.0 x 8.6 mm, ~232 grams (Flat titanium frame & Grade 2 Titanium construction)'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? '161.1 x 77.4 x 8.2 mm, ~213 grams (Brushed aluminum metal frame with ergonomic Key Island)'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? '158.2 x 76.7 x 8.2 mm, ~202 grams (Ergonomic glass sandwich with rounded corners)'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? '164.0 x 75.3 x 6.49 mm (Ultra-slim 6.49mm profile), ~160 grams (Featherweight curved grip)'
@@ -891,7 +889,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Build Materials</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? 'Corning Gorilla Armor anti-reflective front glass, Gorilla Glass back, Grade 2 Titanium frame'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? 'Corning Gorilla Glass Victus+ front and back, premium brushed aluminum metal frame'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? 'Corning Gorilla Glass 5 front and back, durable polycarbonate matte-finish frame'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? 'Corning Gorilla Glass 5 3D curved front, Magic Skin vegan leather / matte glass back, aerospace composite frame'
@@ -901,7 +903,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">SIM Slot Configuration</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? 'Dual SIM (Nano-SIM and eSIM, dual stand-by) + multi-eSIM profile support across all Pakistan telcos'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? 'Hybrid Dual SIM (Nano-SIM, dual stand-by) + microSD card slot (expandable up to 1TB)'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? 'Hybrid Dual SIM (Nano-SIM, dual stand-by) + microSD card slot (expandable up to 1TB)'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? 'Dual SIM (Nano-SIM, dual stand-by) + dedicated microSD card slot (expandable up to 1TB)'
@@ -911,7 +917,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Water & Dust Resistance</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? 'IP68 dust/water resistant (up to 1.5m for 30 mins) with S-Pen stylus IP68 rating'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? 'IP67 dust/water resistant (up to 1m for 30 mins) with water-touch rejection'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? 'IP67 dust/water resistant (up to 1m for 30 mins) with water-touch rejection'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? 'IP64 dust and splash water resistance + 1.5m drop resistance certified'
@@ -946,7 +956,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Resolution & Density</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? 'QHD+ (3120 x 1440 pixels, 19.5:9 ratio, ~505 PPI density) Dynamic LTPO AMOLED 2X'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? 'FHD+ (1080 x 2340 pixels, 19.5:9 ratio, ~390 PPI density) with Vision Booster'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? 'FHD+ (1080 x 2340 pixels, 19.5:9 ratio, ~403 PPI density) with Vision Booster'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? '1.5K (1224 x 2720 pixels, ~440 PPI density) 3D Curved AMOLED with 2160Hz PWM high frequency dimming'
@@ -956,7 +970,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Peak Brightness</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? '2600 nits Peak Brightness with Corning Gorilla Armor Anti-Reflective Coating & Vision Booster'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? '1000 nits High Brightness Mode (HBM) with Vision Booster outdoor sunlight visibility'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? '1000 nits High Brightness Mode (HBM) with Vision Booster outdoor visibility'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? 'Peak brightness up to 1500 nits with Wet & Oily Touch 2.0 control'
@@ -966,7 +984,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">HDR Standards</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? 'HDR10+, Vision Booster, 100% DCI-P3 wide color gamut, SGS Eye Care Certified'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? 'HDR10+, SGS Eye Care Certification, 100% DCI-P3 wide color spectrum'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? 'HDR10+, SGS Eye Care Certification, 100% DCI-P3 wide color spectrum'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? 'HDR10, 10-bit Color Depth (1.07 Billion Colors), 100% DCI-P3 wide color gamut'
@@ -1005,7 +1027,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">AI Acceleration</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? 'Galaxy AI Suite (Circle to Search with Google, Live Translate, Note Assist, Generative Photo Edit, Transcript Assist)'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? 'Samsung Exynos AI Engine with Photo Remaster, Object Eraser, AI Auto Framing & Knox Vault AI verification'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? 'Samsung Exynos AI Engine with Photo Remaster, Object Eraser & Auto Framing'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? 'MediaTek APU AI Engine with Ask Ella AI Assistant, AI Eraser 2.0, and AI Call Noise Reduction'
@@ -1032,7 +1058,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Image Stabilization</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? 'Multi-Directional OIS (2x wider OIS optical correction angle) + Super Steady EIS video stabilization'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? 'Hardware OIS (Optical Image Stabilization, 1.5° wider angle) + VDIS (Video Digital Image Stabilization)'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? 'Hardware OIS (Optical Image Stabilization, 1.5° wider angle) + VDIS (Video Digital Image Stabilization)'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? 'EIS (Electronic Image Stabilization) + PDAF Autofocus with Super Night 3.0 algorithms'
@@ -1042,7 +1072,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Video Recording</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? '8K @ 24/30fps, 4K @ 30/60/120fps, 1080p @ 240fps slow-motion, 10-bit HDR10+ recording'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? '4K @ 30fps, 1080p @ 30/60fps with Super HDR Video (12-bit) and gyro-EIS'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? '4K @ 30fps, 1080p @ 30/60fps, 720p @ 480fps super slow-motion'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? '2K @ 30fps, 1080p @ 30/60fps with Dual View video recording mode'
@@ -1052,7 +1086,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Optics Features</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? 'Laser Autofocus, 100x Space Zoom, ProVisual Engine AI, Super Nightography, Expert RAW 24MP'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? 'AI ISP Nightography, 4-in-1 Pixel Binning, Super HDR Video, Object Eraser, Single Take'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? 'Nightography, Auto Framing, Photo Remaster, Object Eraser, Pro Mode, Food Mode, Single Take'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? 'Super Night Mode 3.0, AI Portrait 2.0, HDR, Quad-LED Flash, Document Scanner, Panorama'
@@ -1079,7 +1117,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Front Video Capabilities</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? '4K recording @ 30/60fps with Auto HDR, Dual Pixel PDAF & Dual Video Call integration'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? '4K recording @ 30fps, 1080p @ 30/60fps with Portrait Video Bokeh & Super HDR'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? '4K recording @ 30fps, 1080p @ 30/60fps with Portrait Video Bokeh'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? '1080p recording @ 30fps with Dual Micro-Slit LED Flash assistance'
@@ -1110,7 +1152,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Wireless & Reverse Power</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? '45W Super Fast Charging 2.0 + 15W Fast Wireless Charging 2.0 + 4.5W Wireless PowerShare'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? '25W Super Fast Wired Charging Protocol with USB Power Delivery 3.0 (PD 3.0)'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? '25W Super Fast Wired Charging Protocol with USB Power Delivery 3.0 (PD 3.0)'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? '30W Magnetic Wireless Charging support + Smart Bypass charging for low-temperature gaming'
@@ -1137,7 +1183,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Wi-Fi & Bluetooth</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? 'Wi-Fi 7 (802.11 a/b/g/n/ac/ax/be tri-band), Bluetooth 5.3, NFC, USB Type-C 3.2 Gen 1 (DisplayPort)'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? 'Wi-Fi 6 (802.11 a/b/g/n/ac/ax dual-band), Bluetooth 5.3, NFC, USB Type-C 2.0 (OTG)'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? 'Wi-Fi 6 (802.11 a/b/g/n/ac/ax dual-band), Bluetooth 5.3, NFC, USB Type-C 2.0 (OTG)'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? 'Wi-Fi 802.11 a/b/g/n/ac (dual-band), Bluetooth 5.3, NFC, FM Radio, USB Type-C 2.0 (OTG)'
@@ -1147,7 +1197,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-normal break-words">Special Hardware</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? 'Built-in S-Pen Stylus with Bluetooth LE & 2.8ms Latency, Samsung DeX desktop support, Samsung Knox Vault, UWB'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? 'Stereo Dual Speakers with Dolby Atmos, Samsung Knox Vault Hardware Security, Brushed Metal Frame Key Island'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? 'Stereo Dual Speakers tuned with Dolby Atmos, Samsung Knox Vault Hardware Security, Voice Focus call clarity'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? 'Dynamic Port 2.0 (Dynamic Island notifications), Dual Stereo Speakers with Dolby Atmos & DTS, Infrared Blaster'
@@ -1157,7 +1211,11 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Biometrics & Audio</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
-                    {phone.id === 'samsung-galaxy-a54-5g'
+                    {phone.id === 'samsung-galaxy-s24-ultra'
+                      ? 'Qualcomm 3D Sonic Gen 2 Ultrasonic In-Display Fingerprint Sensor, AI Face Unlock, Stereo Dual Speakers tuned by AKG'
+                      : phone.id === 'samsung-galaxy-a55-5g'
+                      ? 'Optical Under-Display Fingerprint Sensor, AI Face Unlock, Stereo Dual Speakers with Dolby Atmos'
+                      : phone.id === 'samsung-galaxy-a54-5g'
                       ? 'Optical Under-Display Fingerprint Sensor, AI Face Unlock, Stereo Dual Speakers with Dolby Atmos'
                       : phone.id === 'tecno-spark-40-pro-plus'
                       ? 'Under-Display Optical Fingerprint Sensor, AI Face Unlock, Dual Stereo Speakers certified with Hi-Res Audio'

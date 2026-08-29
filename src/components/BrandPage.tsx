@@ -3,6 +3,7 @@ import { PhoneSpec } from '../types';
 import { PHONES_DATA, BRANDS } from '../data/phones';
 import { PhoneCard } from './PhoneCard';
 import { ArrowLeft, ArrowUpDown, Smartphone, ShieldCheck } from 'lucide-react';
+import { getEffectivePhoneRating } from '../hooks/usePhoneReviewStats';
 
 interface BrandPageProps {
   brandName: string;
@@ -35,7 +36,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
   const sortedPhones = [...brandPhones].sort((a, b) => {
     if (sortBy === 'price-asc') return a.pricePKR - b.pricePKR;
     if (sortBy === 'price-desc') return b.pricePKR - a.pricePKR;
-    if (sortBy === 'rating') return b.rating - a.rating;
+    if (sortBy === 'rating') return getEffectivePhoneRating(b) - getEffectivePhoneRating(a);
     return 0; // featured default
   });
 
