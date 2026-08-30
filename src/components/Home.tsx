@@ -31,17 +31,19 @@ export const Home: React.FC<HomeProps> = ({
 }) => {
   return (
     <div className="space-y-4">
-      {/* Seamless Hero Section with Top Search Bar & Categories */}
-      <HeroSection
-        activeFilter={activeFilter}
-        onSelectFilter={(f) => {
-          setActiveFilter(f);
-          setSelectedBrand(null);
-        }}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        onSelectPhone={onSelectPhone}
-      />
+      {/* Seamless Hero Section with Top Search Bar & Categories - ONLY rendered when no brand is selected */}
+      {(!selectedBrand || selectedBrand === 'all') && (
+        <HeroSection
+          activeFilter={activeFilter}
+          onSelectFilter={(f) => {
+            setActiveFilter(f);
+            setSelectedBrand(null);
+          }}
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          onSelectPhone={onSelectPhone}
+        />
+      )}
 
       {/* Main Phone Catalog Showcase */}
       <PhoneGridShowcase

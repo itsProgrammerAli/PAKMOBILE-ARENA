@@ -1,7 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { 
   ArrowLeft, 
-  Share2, 
   Scale, 
   Check, 
   ShieldCheck, 
@@ -24,7 +23,9 @@ import {
   User,
   MapPin,
   Sparkles,
-  HardDrive
+  HardDrive,
+  ChevronRight,
+  Home as HomeIcon
 } from 'lucide-react';
 import { PhoneSpec, UserReview } from '../types';
 import { PHONES_DATA } from '../data/phones';
@@ -33,6 +34,8 @@ import { PhoneCard } from './PhoneCard';
 interface PhoneDetailPageProps {
   phone: PhoneSpec;
   onBack: () => void;
+  onNavigateToHome?: () => void;
+  onSelectBrand?: (brand: string) => void;
   onToggleCompare: (phone: PhoneSpec) => void;
   isCompared: boolean;
   onNavigateToPta: (phone?: PhoneSpec) => void;
@@ -286,14 +289,50 @@ const DeviceVisual: React.FC<{
             </text>
           </g>
         ) : isApple ? (
-          /* Apple iPhone Pro Triangular Island */
+          /* Apple iPhone 15 Pro Max Sculpted Titanium & Triangular Pro Island */
           <g>
-            <rect x="50" y="35" width="70" height="70" rx="18" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
-            <circle cx="70" cy="53" r="14" fill="#18191b" stroke="#94a3b8" strokeWidth="2" />
-            <circle cx="70" cy="87" r="14" fill="#18191b" stroke="#94a3b8" strokeWidth="2" />
-            <circle cx="100" cy="70" r="14" fill="#18191b" stroke="#94a3b8" strokeWidth="2" />
-            <circle cx="100" cy="48" r="6" fill="#fef08a" stroke="#cbd5e1" strokeWidth="1" />
-            <circle cx="100" cy="92" r="5" fill="#0f172a" stroke="#475569" strokeWidth="1" />
+            {/* Matte Glass Pro Camera Bump */}
+            <rect 
+              x="48" 
+              y="32" 
+              width="78" 
+              height="78" 
+              rx="20" 
+              fill="rgba(255,255,255,0.18)" 
+              stroke="rgba(255,255,255,0.35)" 
+              strokeWidth="1.2" 
+            />
+            
+            {/* Top Left Lens (48MP Main OIS) */}
+            <circle cx="68" cy="52" r="15" fill="#111827" stroke="#cbd5e1" strokeWidth="2" />
+            <circle cx="68" cy="52" r="11" fill={`url(#lens-grad-${phone.id})`} />
+            <circle cx="68" cy="52" r="6" fill="#030712" />
+            <circle cx="65" cy="49" r="2.5" fill="#38bdf8" opacity="0.65" />
+
+            {/* Bottom Left Lens (12MP 5x Tetraprism Telephoto) */}
+            <circle cx="68" cy="88" r="15" fill="#111827" stroke="#cbd5e1" strokeWidth="2" />
+            <circle cx="68" cy="88" r="11" fill={`url(#lens-grad-${phone.id})`} />
+            <circle cx="68" cy="88" r="6" fill="#030712" />
+            <circle cx="65" cy="85" r="2.5" fill="#38bdf8" opacity="0.65" />
+
+            {/* Right Middle Lens (12MP Ultra-Wide) */}
+            <circle cx="104" cy="70" r="15" fill="#111827" stroke="#cbd5e1" strokeWidth="2" />
+            <circle cx="104" cy="70" r="11" fill={`url(#lens-grad-${phone.id})`} />
+            <circle cx="104" cy="70" r="6" fill="#030712" />
+            <circle cx="101" cy="67" r="2.5" fill="#38bdf8" opacity="0.65" />
+
+            {/* Adaptive True Tone Flash */}
+            <circle cx="104" cy="46" r="6.5" fill="#fef08a" stroke="#cbd5e1" strokeWidth="1.2" opacity="0.95" />
+            <circle cx="104" cy="46" r="3" fill="#facc15" />
+
+            {/* LiDAR Scanner & Mic */}
+            <circle cx="104" cy="94" r="5" fill="#0f172a" stroke="#475569" strokeWidth="1.2" />
+            <circle cx="86" cy="94" r="2" fill="#020617" />
+
+            {/* Subtle Centered Apple Logo */}
+            <g transform="translate(122, 185) scale(0.65)" opacity="0.4" fill="white">
+              <path d="M15.2 12.9c-.03-2.9 2.37-4.3 2.48-4.37-1.35-1.97-3.45-2.24-4.2-2.27-1.78-.18-3.48 1.05-4.38 1.05-.91 0-2.31-1.02-3.8-0.99-1.95.03-3.76 1.14-4.76 2.88-2.03 3.52-.52 8.74 1.45 11.59.97 1.4 2.12 2.96 3.63 2.9 1.46-.06 2.01-.94 3.78-.94 1.76 0 2.27.94 3.79.91 1.56-.03 2.55-1.41 3.5-2.82 1.11-1.62 1.56-3.19 1.59-3.27-.03-.02-3.05-1.17-3.08-4.67zM12.4 4.5c.8-0.97 1.34-2.32 1.19-3.67-1.15.05-2.55.77-3.37 1.73-.72.83-1.35 2.18-1.18 3.5 1.29.1 2.61-.69 3.36-1.56z" />
+            </g>
           </g>
         ) : (
           /* Generic Flagship Circular / Modern Matrix Island */
@@ -312,6 +351,8 @@ const DeviceVisual: React.FC<{
 export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
   phone,
   onBack,
+  onNavigateToHome,
+  onSelectBrand,
   onToggleCompare,
   isCompared,
   onNavigateToPta,
@@ -319,7 +360,6 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
   onSelectPhone,
 }) => {
   const [selectedColor, setSelectedColor] = useState<string>(phone.colors[0] || 'Default');
-  const [copied, setCopied] = useState(false);
   const [imageError, setImageError] = useState(false);
 
   // User submitted reviews state
@@ -398,14 +438,6 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
 
   const formatPKR = (val: number) => {
     return '₨ ' + val.toLocaleString('en-PK');
-  };
-
-  const handleShare = () => {
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(window.location.href);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
   };
 
   const handleSelectRelated = (targetPhone: PhoneSpec) => {
@@ -513,222 +545,199 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
   };
 
   return (
-    <div id="phone-detail-page" className="min-h-screen bg-gray-50 dark:bg-zinc-950 text-gray-900 dark:text-zinc-100 pb-20 transition-colors duration-200">
+    <div id="phone-detail-page" className="min-h-screen bg-slate-50 dark:bg-zinc-950 text-slate-900 dark:text-zinc-100 pb-20 transition-colors duration-200">
       
-      {/* Top Breadcrumb & Navigation Bar (Static, Non-Sticky) */}
-      <div className="relative w-full bg-white dark:bg-zinc-950 border-b border-gray-200 dark:border-white/10 shadow-2xs">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between gap-3">
-          
-          <div className="flex items-center space-x-3 text-sm text-gray-500 dark:text-zinc-400 min-w-0">
-            <button 
-              id="back-to-home-btn"
-              onClick={onBack}
-              className="w-10 h-10 rounded-xl bg-gray-100 dark:bg-white/5 hover:bg-emerald-50 dark:hover:bg-white/10 hover:text-emerald-700 dark:hover:text-emerald-400 text-gray-700 dark:text-zinc-200 transition-colors border border-gray-200 dark:border-white/10 inline-flex items-center justify-center flex-shrink-0"
-              title="Back"
-              aria-label="Back"
-            >
-              <ArrowLeft className="w-4 h-4" />
-            </button>
-            <div className="hidden sm:flex items-center space-x-2 text-xs font-medium">
-              <span className="text-gray-500 dark:text-zinc-400">{phone.brand}</span>
-              <span className="text-gray-300 dark:text-zinc-700">/</span>
-              <span className="font-bold text-gray-900 dark:text-white truncate max-w-xs">{phone.name}</span>
-            </div>
-          </div>
-
-          <div className="flex gap-3 flex-1 sm:flex-initial sm:w-72">
+      {/* Clean Breadcrumb Navigation Line */}
+      <div className="relative w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-2xs">
+        <div className="max-w-5xl mx-auto px-3 sm:px-4 py-2.5">
+          <nav aria-label="Breadcrumb" className="flex items-center space-x-1.5 text-xs sm:text-sm font-medium text-slate-500 dark:text-zinc-400 min-w-0">
             <button
-              id="detail-compare-toggle-btn"
-              onClick={() => onToggleCompare(phone)}
-              className={`flex-1 h-10 px-3.5 rounded-xl text-xs font-bold inline-flex items-center justify-center gap-2 transition-all shadow-2xs ${
-                isCompared
-                  ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700/60'
-                  : 'bg-white dark:bg-white/5 text-gray-700 dark:text-zinc-300 border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/10 hover:text-emerald-700 dark:hover:text-emerald-400'
-              }`}
+              id="breadcrumb-home"
+              onClick={() => {
+                if (onNavigateToHome) onNavigateToHome();
+                else onBack();
+              }}
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center gap-1.5 shrink-0 cursor-pointer font-medium"
             >
-              {isCompared ? (
-                <>
-                  <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
-                  <span>In Compare</span>
-                </>
-              ) : (
-                <>
-                  <Scale className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
-                  <span>Compare</span>
-                </>
-              )}
+              <HomeIcon className="w-3.5 h-3.5" />
+              <span>Home</span>
             </button>
+
+            <ChevronRight className="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 shrink-0" />
 
             <button
-              id="detail-share-btn"
-              onClick={handleShare}
-              className="flex-1 h-10 px-3.5 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-xs font-bold text-gray-700 dark:text-zinc-300 hover:bg-gray-50 dark:hover:bg-white/10 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors inline-flex items-center justify-center gap-2 shadow-2xs"
+              id="breadcrumb-brand"
+              onClick={() => {
+                if (onSelectBrand) onSelectBrand(phone.brand);
+                else if (onNavigateToHome) onNavigateToHome();
+                else onBack();
+              }}
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors shrink-0 cursor-pointer font-medium"
             >
-              <Share2 className="w-4 h-4 flex-shrink-0" />
-              <span>{copied ? 'Copied!' : 'Share'}</span>
+              {phone.brand}
             </button>
-          </div>
 
+            <ChevronRight className="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 shrink-0" />
+
+            <span className="text-slate-800 dark:text-slate-200 font-semibold truncate max-w-[200px] sm:max-w-xs md:max-w-md">
+              {phone.name}
+            </span>
+          </nav>
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8 space-y-8 sm:space-y-10">
+      {/* Main Flat Layout Container */}
+      <div className="w-full max-w-5xl mx-auto px-3 sm:px-4 py-3 space-y-4 bg-transparent">
         
         {/* ========================================================================= */}
-        {/* SEQUENCE 1: BASIC INFO, INTERACTIVE IMAGE, PRICING, & PTA TAX            */}
+        {/* SEQUENCE 1: VISUALIZER, PRICING, VARIANTS, & PTA CUSTOM DUTIES           */}
         {/* ========================================================================= */}
-        <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm dark:shadow-2xl border border-gray-200 dark:border-white/10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+          
+          {/* Left Column: Visualizer & Colorways (Flat on page background) */}
+          <div className="md:col-span-5 space-y-3">
             
-            {/* Left: Dynamic Color-Variant Main Image & Clean Grid Color Picker */}
-            <div className="lg:col-span-5 flex flex-col items-center justify-center space-y-5">
-              
-              {/* Product Visual Container with Fallback-Proof Vector Renderer */}
-              <div className="relative w-full max-w-sm aspect-square bg-gradient-to-b from-gray-50 to-emerald-50/20 dark:from-white/[0.02] dark:to-emerald-950/20 rounded-3xl p-6 flex items-center justify-center border border-gray-200/80 dark:border-white/10 group overflow-hidden">
-                
-                {/* Visualizer: renders high-res photo if loaded and valid, or ultra-crisp vector illustration in exact titanium finish */}
-                {imageError ? (
-                  <DeviceVisual phone={phone} selectedColor={selectedColor} colorHex={activeColorHex} />
-                ) : (
-                  <div className="relative w-full h-full flex items-center justify-center">
-                    <img 
-                      id="main-product-display-image"
-                      key={`${activeImage}-${selectedColor}`}
-                      src={activeImage} 
-                      alt={`${phone.name} - ${selectedColor}`}
-                      className="max-h-72 w-auto object-contain drop-shadow-md dark:drop-shadow-[0_10px_25px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-all duration-300 animate-in fade-in zoom-in-95"
-                      referrerPolicy="no-referrer"
-                      onError={() => {
-                        setImageError(true);
-                      }}
-                    />
-                  </div>
-                )}
+            {/* Phone Image Showcase (Directly on page background) */}
+            <div className="relative w-full aspect-square bg-white dark:bg-slate-900 rounded-xl p-4 flex items-center justify-center border border-slate-200 dark:border-slate-800 group overflow-hidden shadow-2xs">
+              {imageError ? (
+                <DeviceVisual phone={phone} selectedColor={selectedColor} colorHex={activeColorHex} />
+              ) : (
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <img 
+                    id="main-product-display-image"
+                    key={`${activeImage}-${selectedColor}`}
+                    src={activeImage} 
+                    alt={`${phone.name} - ${selectedColor}`}
+                    className="max-h-64 sm:max-h-72 w-auto object-contain drop-shadow-md dark:drop-shadow-[0_10px_25px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-all duration-300 animate-in fade-in zoom-in-95"
+                    referrerPolicy="no-referrer"
+                    onError={() => {
+                      setImageError(true);
+                    }}
+                  />
+                </div>
+              )}
 
-                {/* Brand Badge */}
-                <span className="absolute top-4 left-4 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider rounded-lg bg-white/95 dark:bg-zinc-900/90 text-gray-800 dark:text-zinc-200 shadow-2xs border border-gray-200 dark:border-white/10">
-                  {phone.brand}
+              {/* Brand Badge */}
+              <span className="absolute top-3 left-3 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-white/95 dark:bg-slate-800 text-slate-800 dark:text-zinc-200 border border-slate-200 dark:border-slate-700 shadow-2xs">
+                {phone.brand}
+              </span>
+
+              {/* PTA Verified Badge */}
+              <span className="absolute top-3 right-3 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60 flex items-center gap-1 shadow-2xs">
+                <ShieldCheck className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
+                <span>PTA Verified</span>
+              </span>
+            </div>
+
+            {/* Official Colorways Selection */}
+            <div className="space-y-2">
+              <div className="flex items-center justify-between text-xs">
+                <span className="font-semibold text-slate-600 dark:text-zinc-400">
+                  Official Colorways ({phone.colors.length}):
                 </span>
-
-                {/* PTA Verified Badge */}
-                <span className="absolute top-4 right-4 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60 flex items-center gap-1">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                  <span>PTA Verified</span>
+                <span className="text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800/50 text-[11px]">
+                  {selectedColor}
                 </span>
               </div>
 
-              {/* Colorways Selector: Strict, Clean Uniform Grid Alignment */}
-              <div className="w-full space-y-2.5">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-gray-500 dark:text-zinc-400 uppercase tracking-wider">
-                    Official Colorways ({phone.colors.length}):
-                  </span>
-                  <span className="text-xs text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-0.5 rounded-md border border-emerald-200 dark:border-emerald-800/50">
-                    {selectedColor}
-                  </span>
-                </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 w-full">
+                {phone.colors.map((colorName) => {
+                  const isSelected = selectedColor === colorName;
+                  const hexCode = phone.colorHexes?.[colorName] || '#475569';
 
-                {/* Strict 2-column on mobile, 3-column on tablet/desktop */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 w-full">
-                  {phone.colors.map((colorName) => {
-                    const isSelected = selectedColor === colorName;
-                    const hexCode = phone.colorHexes?.[colorName] || '#475569';
-
-                    return (
-                      <button
-                        key={colorName}
-                        id={`colorway-btn-${colorName.toLowerCase().replace(/\s+/g, '-')}`}
-                        onClick={() => {
-                          setSelectedColor(colorName);
-                          setImageError(false);
-                        }}
-                        className={`w-full py-2.5 px-3 rounded-xl text-xs font-semibold transition-all flex items-center justify-start gap-2.5 border text-left truncate ${
-                          isSelected
-                            ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-500 text-emerald-900 dark:text-emerald-300 ring-2 ring-emerald-500/30 shadow-2xs font-bold'
-                            : 'bg-white dark:bg-white/5 border-gray-200 dark:border-white/10 text-gray-700 dark:text-zinc-300 hover:border-gray-300 dark:hover:border-white/20 hover:bg-gray-50 dark:hover:bg-white/10'
-                        }`}
-                        title={`Select ${colorName}`}
-                      >
-                        <span 
-                          className={`w-3.5 h-3.5 rounded-full border border-black/20 dark:border-white/30 flex-shrink-0 shadow-2xs transition-transform ${isSelected ? 'scale-110 ring-2 ring-emerald-500/50' : ''}`}
-                          style={{ backgroundColor: hexCode }}
-                        />
-                        <span className="truncate flex-1 font-medium">{colorName}</span>
-                      </button>
-                    );
-                  })}
-                </div>
+                  return (
+                    <button
+                      key={colorName}
+                      id={`colorway-btn-${colorName.toLowerCase().replace(/\s+/g, '-')}`}
+                      onClick={() => {
+                        setSelectedColor(colorName);
+                        setImageError(false);
+                      }}
+                      className={`w-full py-2 px-2.5 rounded-lg text-xs font-semibold transition-all flex items-center justify-start gap-2 border text-left truncate cursor-pointer ${
+                        isSelected
+                          ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-500 text-emerald-900 dark:text-emerald-300 ring-1 ring-emerald-500/40 shadow-2xs font-bold'
+                          : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-zinc-300 hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/60'
+                      }`}
+                      title={`Select ${colorName}`}
+                    >
+                      <span 
+                        className={`w-3.5 h-3.5 rounded-full border border-black/20 dark:border-white/30 flex-shrink-0 shadow-2xs transition-transform ${isSelected ? 'scale-110 ring-2 ring-emerald-500/50' : ''}`}
+                        style={{ backgroundColor: hexCode }}
+                      />
+                      <span className="truncate flex-1 font-medium">{colorName}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
-            {/* Right: Phone Information, Clean Pricing Block, and PTA Tax */}
-            <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
-              
+          </div>
+
+          {/* Right Column: Title, Pricing & PTA Duty Section */}
+          <div className="md:col-span-7 space-y-3">
+            
+            {/* Standalone Price & PTA Duty Card */}
+            <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-4 space-y-4 shadow-2xs">
               <div>
-                <div className="flex flex-wrap items-center gap-2.5 text-xs text-gray-500 dark:text-zinc-400 mb-2">
-                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-bold border border-emerald-200 dark:border-emerald-800/60">
-                    Model: {phone.model}
+                <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-zinc-400 mb-1.5">
+                  <span className="px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-bold border border-emerald-200 dark:border-emerald-800/60 text-[10px]">
+                    {phone.brand} Official
                   </span>
 
-                  {/* Clean Real Ratings Logic */}
-                  <div className="flex items-center gap-1.5 font-bold">
-                    <div className="flex items-center">
-                      <Star className={`w-4 h-4 ${currentRating > 0 ? 'fill-amber-400 text-amber-400' : 'text-gray-300 dark:text-zinc-600'}`} />
-                    </div>
-                    <span className={currentRating > 0 ? 'text-amber-600 dark:text-amber-400' : 'text-gray-700 dark:text-zinc-300'}>
+                  {/* Rating indicator */}
+                  <div className="flex items-center gap-1 font-bold text-[11px]">
+                    <Star className={`w-3.5 h-3.5 ${currentRating > 0 ? 'fill-amber-400 text-amber-400' : 'text-slate-300 dark:text-zinc-600'}`} />
+                    <span className={currentRating > 0 ? 'text-amber-600 dark:text-amber-400' : 'text-slate-700 dark:text-zinc-300'}>
                       {currentRating.toFixed(1)}
                     </span>
-                    <span className="text-gray-400 dark:text-zinc-500 font-normal">
-                      ({totalReviewsCount} {totalReviewsCount === 1 ? 'review' : 'reviews'})
+                    <span className="text-slate-400 dark:text-zinc-500 font-normal">
+                      ({totalReviewsCount})
                     </span>
                   </div>
 
-                  <span className="text-gray-300 dark:text-zinc-700">•</span>
+                  <span>•</span>
                   <span>Released: {phone.releaseDate}</span>
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight font-['Outfit']">
+                <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight font-['Outfit']">
                   {phone.name}
                 </h1>
-                <p className="text-xs sm:text-sm text-gray-500 dark:text-zinc-400 mt-1">
-                  1-Year Official Local Brand Warranty / PTA Approved Market Edition
+                <p className="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">
+                  1-Year Local Brand Warranty / Official PTA Approved
                 </p>
               </div>
 
-              {/* ========================================================================= */}
-              {/* CLEAN PRICING CARD LAYOUT: COMPACT VARIANTS & STRUCTURED METRICS          */}
-              {/* ========================================================================= */}
-              <div className="p-5 sm:p-6 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 shadow-2xs space-y-4">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              {/* Price Display */}
+              <div className="p-3.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                   <div>
-                    <span className="text-xs font-bold text-gray-500 dark:text-zinc-400 uppercase tracking-wider block mb-1">
-                      Estimated Market Price (PKR)
+                    <span className="text-[11px] font-semibold text-slate-500 dark:text-zinc-400 block">
+                      Estimated Market Price (PKR):
                     </span>
-                    <div className="flex items-baseline gap-2.5 flex-wrap">
-                      <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-emerald-700 dark:text-emerald-400 font-mono tracking-tight whitespace-nowrap">
+                    <div className="flex items-baseline gap-2 flex-wrap">
+                      <span className="text-2xl sm:text-3xl font-extrabold text-emerald-700 dark:text-emerald-400 tracking-tight font-['Outfit']">
                         {formatPKR(activePricePKR)}
                       </span>
                       {activeOfficialPricePKR && (
-                        <span className="text-xs sm:text-sm text-gray-400 dark:text-zinc-500 font-mono line-through whitespace-nowrap">
+                        <span className="text-xs text-slate-400 dark:text-zinc-500 line-through">
                           Market Avg: {formatPKR(activeOfficialPricePKR)}
                         </span>
                       )}
                     </div>
                   </div>
-
-                  <span className="self-start sm:self-auto px-3.5 py-1.5 text-xs font-bold rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60 whitespace-nowrap inline-flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span>In Stock Across Pakistan</span>
+                  <span className="text-[11px] font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-100/80 dark:bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-700/60 self-start sm:self-auto inline-flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>In Stock</span>
                   </span>
                 </div>
 
-                {/* Compact PriceOye-Style Variant Selector */}
+                {/* Variant Selector */}
                 {phone.variants && phone.variants.length > 0 && (
-                  <div className="pt-3 border-t border-gray-200/80 dark:border-white/10 flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-semibold text-gray-500 dark:text-zinc-400 mr-1">
+                  <div className="pt-2.5 border-t border-slate-200/80 dark:border-slate-700/80 flex flex-wrap items-center gap-1.5">
+                    <span className="text-xs font-semibold text-slate-500 dark:text-zinc-400 mr-1">
                       Variant:
                     </span>
-                    <div className="flex flex-wrap items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-1.5">
                       {phone.variants.map((variant) => {
                         const isSelected = variant.id === (currentVariant?.id || phone.variants![0].id);
                         return (
@@ -736,10 +745,10 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                             key={variant.id}
                             id={`variant-pill-${variant.id}`}
                             onClick={() => setSelectedVariantId(variant.id)}
-                            className={`text-xs px-3 py-1.5 rounded-lg border font-medium transition-all ${
+                            className={`text-xs px-2.5 py-1 rounded-md border font-medium transition-all cursor-pointer ${
                               isSelected
-                                ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm font-semibold'
-                                : 'bg-white dark:bg-zinc-800 text-gray-700 dark:text-zinc-300 border-gray-200 dark:border-zinc-700 hover:border-emerald-500 dark:hover:border-emerald-500 hover:bg-emerald-50/50 dark:hover:bg-zinc-700/50'
+                                ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs font-semibold'
+                                : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-zinc-300 border-slate-200 dark:border-slate-700 hover:border-emerald-500 hover:bg-emerald-50/40 dark:hover:bg-slate-800'
                             }`}
                             title={`Select ${variant.name} variant`}
                           >
@@ -751,90 +760,90 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                   </div>
                 )}
 
-                {/* Retail Range Row with Horizontal Divider */}
-                <div className="flex items-center justify-between text-xs text-gray-600 dark:text-zinc-300 pt-3 border-t border-gray-200/80 dark:border-white/10">
-                  <span className="flex items-center gap-1.5 font-medium">
-                    <Store className="w-3.5 h-3.5 text-gray-400 dark:text-zinc-500 flex-shrink-0" />
+                {/* Retail Range */}
+                <div className="flex items-center justify-between text-xs text-slate-600 dark:text-zinc-400 pt-2 border-t border-slate-200/80 dark:border-slate-700/80">
+                  <span className="flex items-center gap-1 font-medium">
+                    <Store className="w-3.5 h-3.5 text-slate-400 dark:text-zinc-500 flex-shrink-0" />
                     <span>Retail Market Range:</span>
                   </span>
-                  <span className="font-bold font-mono text-gray-900 dark:text-white whitespace-nowrap">
+                  <span className="font-semibold text-slate-800 dark:text-zinc-200">
                     {formatPKR(activeMarketPriceRange.min)} – {formatPKR(activeMarketPriceRange.max)}
                   </span>
                 </div>
               </div>
 
-              {/* PTA Tax Official Breakout Card */}
-              <div className="p-5 rounded-2xl bg-gradient-to-br from-emerald-50/90 via-teal-50/50 to-gray-50 dark:from-emerald-950/40 dark:via-teal-950/20 dark:to-zinc-900 border border-emerald-200 dark:border-emerald-800/50 shadow-xs space-y-3">
+              {/* Official PTA Passport & CNIC Tax Breakdown */}
+              <div className="p-3.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-3">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <ShieldCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
-                    <span className="text-sm font-bold text-gray-900 dark:text-white">
-                      Official PTA Passport & CNIC Tax Slabs
+                  <div className="flex items-center gap-1.5">
+                    <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
+                    <span className="text-xs font-bold text-slate-900 dark:text-white">
+                      Official PTA Customs Duty Slabs
                     </span>
                   </div>
                   <button 
                     onClick={() => onNavigateToPta(phone)}
-                    className="text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 underline underline-offset-2 flex items-center gap-1 flex-shrink-0"
+                    className="text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 underline underline-offset-2 flex items-center gap-1 flex-shrink-0 cursor-pointer"
                   >
-                    <Calculator className="w-3.5 h-3.5" />
-                    <span>Open Tax Slabs</span>
+                    <Calculator className="w-3 h-3" />
+                    <span>Tax Slabs</span>
                   </button>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                  <div className="p-3 bg-white dark:bg-zinc-900/90 rounded-xl border border-emerald-100 dark:border-white/10 shadow-2xs">
-                    <span className="text-[11px] font-medium text-gray-500 dark:text-zinc-400 block">PTA Passport Tax:</span>
-                    <span className="text-lg font-extrabold font-mono text-emerald-700 dark:text-emerald-400 block mt-0.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <div className="p-2.5 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700/80 shadow-2xs">
+                    <span className="text-[10px] font-medium text-slate-500 dark:text-zinc-400 block">PTA Passport Tax:</span>
+                    <span className="text-base font-extrabold font-mono text-emerald-700 dark:text-emerald-400 block mt-0.5">
                       {formatPKR(phone.ptaTax.passportTaxPKR)}
                     </span>
-                    <span className="text-[10px] text-gray-400 dark:text-zinc-500">Within 60 days of arrival in Pakistan</span>
+                    <span className="text-[9px] text-slate-400 dark:text-zinc-500">Within 60 days of arrival in Pakistan</span>
                   </div>
 
-                  <div className="p-3 bg-white dark:bg-zinc-900/90 rounded-xl border border-emerald-100 dark:border-white/10 shadow-2xs">
-                    <span className="text-[11px] font-medium text-gray-500 dark:text-zinc-400 block">PTA CNIC Tax (ID Card):</span>
-                    <span className="text-lg font-bold font-mono text-gray-900 dark:text-white block mt-0.5">
+                  <div className="p-2.5 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700/80 shadow-2xs">
+                    <span className="text-[10px] font-medium text-slate-500 dark:text-zinc-400 block">PTA CNIC Tax (ID Card):</span>
+                    <span className="text-base font-bold font-mono text-slate-900 dark:text-white block mt-0.5">
                       {formatPKR(phone.ptaTax.cnicTaxPKR)}
                     </span>
-                    <span className="text-[10px] text-gray-400 dark:text-zinc-500">Standard rate for non-travelers</span>
+                    <span className="text-[9px] text-slate-400 dark:text-zinc-500">Standard rate for non-travelers</span>
                   </div>
                 </div>
 
-                <p className="text-[11px] text-gray-500 dark:text-zinc-400 leading-relaxed">
-                  * Note: Official boxed smartphones sold through authorized local distributors include all PTA customs duties & taxes pre-paid in the retail price.
+                <p className="text-[10px] text-slate-500 dark:text-zinc-400 leading-relaxed">
+                  * Boxed smartphones sold through authorized local distributors already include all PTA duties & taxes pre-paid in retail price.
                 </p>
               </div>
 
               {/* Quick Specs Highlight Bar */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
-                <div className="p-2.5 bg-gray-50 dark:bg-white/5 rounded-xl border border-gray-200 dark:border-white/10 flex items-center gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <div className="p-2 bg-slate-50 dark:bg-slate-800/60 rounded-lg border border-slate-200/70 dark:border-slate-700/70 flex items-center gap-2">
                   <Cpu className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
                   <div className="truncate">
-                    <span className="text-[10px] text-gray-400 dark:text-zinc-500 block uppercase">Processor</span>
-                    <span className="text-xs font-bold text-gray-800 dark:text-zinc-200 truncate block">{phone.specs.processor.split('(')[0]}</span>
+                    <span className="text-[9px] text-slate-400 dark:text-zinc-500 block uppercase">Processor</span>
+                    <span className="text-xs font-bold text-slate-800 dark:text-zinc-200 truncate block">{phone.specs.processor.split('(')[0]}</span>
                   </div>
                 </div>
 
-                <div className="p-2.5 bg-gray-50 dark:bg-white/5 rounded-xl border border-gray-200 dark:border-white/10 flex items-center gap-2">
+                <div className="p-2 bg-slate-50 dark:bg-slate-800/60 rounded-lg border border-slate-200/70 dark:border-slate-700/70 flex items-center gap-2">
                   <Camera className="w-4 h-4 text-teal-600 dark:text-teal-400 flex-shrink-0" />
                   <div className="truncate">
-                    <span className="text-[10px] text-gray-400 dark:text-zinc-500 block uppercase">Camera</span>
-                    <span className="text-xs font-bold text-gray-800 dark:text-zinc-200 truncate block">{phone.specs.mainCamera.split('+')[0]}</span>
+                    <span className="text-[9px] text-slate-400 dark:text-zinc-500 block uppercase">Camera</span>
+                    <span className="text-xs font-bold text-slate-800 dark:text-zinc-200 truncate block">{phone.specs.mainCamera.split('+')[0]}</span>
                   </div>
                 </div>
 
-                <div className="p-2.5 bg-gray-50 dark:bg-white/5 rounded-xl border border-gray-200 dark:border-white/10 flex items-center gap-2">
+                <div className="p-2 bg-slate-50 dark:bg-slate-800/60 rounded-lg border border-slate-200/70 dark:border-slate-700/70 flex items-center gap-2">
                   <Battery className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
                   <div className="truncate">
-                    <span className="text-[10px] text-gray-400 dark:text-zinc-500 block uppercase">Battery</span>
-                    <span className="text-xs font-bold text-gray-800 dark:text-zinc-200 truncate block">{phone.specs.battery}</span>
+                    <span className="text-[9px] text-slate-400 dark:text-zinc-500 block uppercase">Battery</span>
+                    <span className="text-xs font-bold text-slate-800 dark:text-zinc-200 truncate block">{phone.specs.battery}</span>
                   </div>
                 </div>
 
-                <div className="p-2.5 bg-gray-50 dark:bg-white/5 rounded-xl border border-gray-200 dark:border-white/10 flex items-center gap-2">
+                <div className="p-2 bg-slate-50 dark:bg-slate-800/60 rounded-lg border border-slate-200/70 dark:border-slate-700/70 flex items-center gap-2">
                   <Zap className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0" />
                   <div className="truncate">
-                    <span className="text-[10px] text-gray-400 dark:text-zinc-500 block uppercase">Display</span>
-                    <span className="text-xs font-bold text-gray-800 dark:text-zinc-200 truncate block">{phone.specs.refreshRate}</span>
+                    <span className="text-[9px] text-slate-400 dark:text-zinc-500 block uppercase">Display</span>
+                    <span className="text-xs font-bold text-slate-800 dark:text-zinc-200 truncate block">{phone.specs.refreshRate}</span>
                   </div>
                 </div>
               </div>
@@ -842,36 +851,37 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
             </div>
 
           </div>
+
         </div>
 
         {/* ========================================================================= */}
-        {/* SEQUENCE 2: FULL TECHNICAL SPECIFICATIONS (STRICT 12-COLUMN HORIZONTAL)   */}
+        {/* SEQUENCE 2: FULL TECHNICAL SPECIFICATIONS (FLAT INDIVIDUAL TABLES)        */}
         {/* ========================================================================= */}
-        <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm dark:shadow-2xl border border-gray-200 dark:border-white/10 space-y-8">
+        <div className="pt-2 space-y-4">
           <div>
             <div className="flex items-center gap-2 mb-1">
               <Layers className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white font-['Outfit'] tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white font-['Outfit'] tracking-tight">
                 Full Technical Specifications
               </h2>
             </div>
-            <p className="text-xs sm:text-sm text-gray-500 dark:text-zinc-400">
+            <p className="text-xs text-slate-500 dark:text-zinc-400">
               Verified hardware and software specifications for the official {phone.name} Pakistani market edition.
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             
             {/* Table 1: Build & Design */}
-            <div className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-2xs">
-              <div className="bg-gray-50 dark:bg-white/5 px-4 sm:px-6 py-3.5 border-b border-gray-200 dark:border-white/10 flex items-center justify-between">
-                <span className="font-bold text-gray-900 dark:text-white text-sm sm:text-base flex items-center gap-2">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-2xs">
+              <div className="bg-slate-50 dark:bg-slate-800/60 px-4 py-2.5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <span className="font-bold text-slate-900 dark:text-white text-sm flex items-center gap-2">
                   <Smartphone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                   <span>Build & Design</span>
                 </span>
-                <span className="text-xs text-gray-500 dark:text-zinc-400 font-medium">Hardware Casing</span>
+                <span className="text-[11px] text-slate-500 dark:text-zinc-400 font-medium">Hardware Casing</span>
               </div>
-              <div className="px-4 sm:px-6 divide-y divide-gray-100 dark:divide-white/5">
+              <div className="px-4 divide-y divide-slate-100 dark:divide-slate-800">
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Dimensions & Weight</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">
@@ -936,15 +946,15 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
             </div>
 
             {/* Table 2: Display & Screen */}
-            <div className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-2xs">
-              <div className="bg-gray-50 dark:bg-white/5 px-4 sm:px-6 py-3.5 border-b border-gray-200 dark:border-white/10 flex items-center justify-between">
-                <span className="font-bold text-gray-900 dark:text-white text-sm sm:text-base flex items-center gap-2">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-2xs">
+              <div className="bg-slate-50 dark:bg-slate-800/60 px-4 py-2.5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <span className="font-bold text-slate-900 dark:text-white text-sm flex items-center gap-2">
                   <Zap className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                   <span>Display & Screen</span>
                 </span>
-                <span className="text-xs text-gray-500 dark:text-zinc-400 font-medium">Panel Technology</span>
+                <span className="text-[11px] text-slate-500 dark:text-zinc-400 font-medium">Panel Technology</span>
               </div>
-              <div className="px-4 sm:px-6 divide-y divide-gray-100 dark:divide-white/5">
+              <div className="px-4 divide-y divide-slate-100 dark:divide-slate-800">
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Display Technology</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">{phone.specs.display}</div>
@@ -999,15 +1009,15 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
             </div>
 
             {/* Table 3: Performance, Chipset & OS */}
-            <div className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-2xs">
-              <div className="bg-gray-50 dark:bg-white/5 px-4 sm:px-6 py-3.5 border-b border-gray-200 dark:border-white/10 flex items-center justify-between">
-                <span className="font-bold text-gray-900 dark:text-white text-sm sm:text-base flex items-center gap-2">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-2xs">
+              <div className="bg-slate-50 dark:bg-slate-800/60 px-4 py-2.5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <span className="font-bold text-slate-900 dark:text-white text-sm flex items-center gap-2">
                   <Cpu className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                   <span>Performance & Chipset</span>
                 </span>
-                <span className="text-xs text-gray-500 dark:text-zinc-400 font-medium">Processing Power</span>
+                <span className="text-[11px] text-slate-500 dark:text-zinc-400 font-medium">Processing Power</span>
               </div>
-              <div className="px-4 sm:px-6 divide-y divide-gray-100 dark:divide-white/5">
+              <div className="px-4 divide-y divide-slate-100 dark:divide-slate-800">
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">System Chipset</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">{phone.specs.processor}</div>
@@ -1042,15 +1052,15 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
             </div>
 
             {/* Table 4: Main Rear Camera System */}
-            <div className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-2xs">
-              <div className="bg-gray-50 dark:bg-white/5 px-4 sm:px-6 py-3.5 border-b border-gray-200 dark:border-white/10 flex items-center justify-between">
-                <span className="font-bold text-gray-900 dark:text-white text-sm sm:text-base flex items-center gap-2">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-2xs">
+              <div className="bg-slate-50 dark:bg-slate-800/60 px-4 py-2.5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <span className="font-bold text-slate-900 dark:text-white text-sm flex items-center gap-2">
                   <Camera className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                   <span>Main Rear Camera System</span>
                 </span>
-                <span className="text-xs text-gray-500 dark:text-zinc-400 font-medium">Optics & Photography</span>
+                <span className="text-[11px] text-slate-500 dark:text-zinc-400 font-medium">Optics & Photography</span>
               </div>
-              <div className="px-4 sm:px-6 divide-y divide-gray-100 dark:divide-white/5">
+              <div className="px-4 divide-y divide-slate-100 dark:divide-slate-800">
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Sensor Configuration</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">{phone.specs.mainCamera}</div>
@@ -1101,15 +1111,15 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
             </div>
 
             {/* Table 5: Front Selfie Camera */}
-            <div className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-2xs">
-              <div className="bg-gray-50 dark:bg-white/5 px-4 sm:px-6 py-3.5 border-b border-gray-200 dark:border-white/10 flex items-center justify-between">
-                <span className="font-bold text-gray-900 dark:text-white text-sm sm:text-base flex items-center gap-2">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-2xs">
+              <div className="bg-slate-50 dark:bg-slate-800/60 px-4 py-2.5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <span className="font-bold text-slate-900 dark:text-white text-sm flex items-center gap-2">
                   <Camera className="w-4 h-4 text-teal-600 dark:text-teal-400" />
                   <span>Front Selfie Camera</span>
                 </span>
-                <span className="text-xs text-gray-500 dark:text-zinc-400 font-medium">Front Sensor</span>
+                <span className="text-[11px] text-slate-500 dark:text-zinc-400 font-medium">Front Sensor</span>
               </div>
-              <div className="px-4 sm:px-6 divide-y divide-gray-100 dark:divide-white/5">
+              <div className="px-4 divide-y divide-slate-100 dark:divide-slate-800">
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Resolution & Sensor</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">{phone.specs.selfieCamera}</div>
@@ -1132,15 +1142,15 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
             </div>
 
             {/* Table 6: Battery & Power Delivery */}
-            <div className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-2xs">
-              <div className="bg-gray-50 dark:bg-white/5 px-4 sm:px-6 py-3.5 border-b border-gray-200 dark:border-white/10 flex items-center justify-between">
-                <span className="font-bold text-gray-900 dark:text-white text-sm sm:text-base flex items-center gap-2">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-2xs">
+              <div className="bg-slate-50 dark:bg-slate-800/60 px-4 py-2.5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <span className="font-bold text-slate-900 dark:text-white text-sm flex items-center gap-2">
                   <Battery className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                   <span>Battery & Power Delivery</span>
                 </span>
-                <span className="text-xs text-gray-500 dark:text-zinc-400 font-medium">Power & Longevity</span>
+                <span className="text-[11px] text-slate-500 dark:text-zinc-400 font-medium">Power & Longevity</span>
               </div>
-              <div className="px-4 sm:px-6 divide-y divide-gray-100 dark:divide-white/5">
+              <div className="px-4 divide-y divide-slate-100 dark:divide-slate-800">
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Battery Capacity</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">{phone.specs.battery}</div>
@@ -1167,15 +1177,15 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
             </div>
 
             {/* Table 7: Connectivity & Extras */}
-            <div className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-2xs">
-              <div className="bg-gray-50 dark:bg-white/5 px-4 sm:px-6 py-3.5 border-b border-gray-200 dark:border-white/10 flex items-center justify-between">
-                <span className="font-bold text-gray-900 dark:text-white text-sm sm:text-base flex items-center gap-2">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-2xs">
+              <div className="bg-slate-50 dark:bg-slate-800/60 px-4 py-2.5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <span className="font-bold text-slate-900 dark:text-white text-sm flex items-center gap-2">
                   <Wifi className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                   <span>Connectivity & Extras</span>
                 </span>
-                <span className="text-xs text-gray-500 dark:text-zinc-400 font-medium">Pakistan Carriers</span>
+                <span className="text-[11px] text-slate-500 dark:text-zinc-400 font-medium">Pakistan Carriers</span>
               </div>
-              <div className="px-4 sm:px-6 divide-y divide-gray-100 dark:divide-white/5">
+              <div className="px-4 divide-y divide-slate-100 dark:divide-slate-800">
                 <div className="flex flex-row items-baseline justify-between py-2.5 border-b border-gray-100 dark:border-white/5 gap-3 hover:bg-gray-50/50 dark:hover:bg-white/5 transition-colors">
                   <div className="w-[36%] shrink-0 text-[11px] font-semibold text-gray-500 dark:text-zinc-400 uppercase tracking-tight leading-snug break-words">Cellular Networks</div>
                   <div className="w-[64%] text-xs sm:text-sm font-semibold text-gray-900 dark:text-zinc-100 leading-snug break-words text-left">{phone.specs.network} (Jazz, Zong, Telenor, Ufone 4G/5G)</div>
@@ -1231,23 +1241,25 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
         {/* ========================================================================= */}
         {/* SEQUENCE 3: PROS & CONS ANALYSIS                                          */}
         {/* ========================================================================= */}
-        <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm dark:shadow-2xl border border-gray-200 dark:border-white/10">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-['Outfit'] mb-6 flex items-center gap-2">
-            <CheckCheck className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
-            <span>Pros & Cons Analysis</span>
-          </h2>
+        <div className="pt-2 space-y-3">
+          <div className="flex items-center gap-2">
+            <CheckCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white font-['Outfit'] tracking-tight">
+              Pros & Cons Analysis
+            </h2>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Pros List */}
-            <div className="p-6 rounded-2xl bg-emerald-50/60 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/50 space-y-4">
-              <div className="flex items-center gap-2 text-emerald-900 dark:text-emerald-300 font-bold text-base">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            <div className="p-4 sm:p-5 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/40 space-y-3">
+              <div className="flex items-center gap-2 text-emerald-900 dark:text-emerald-300 font-bold text-sm">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                 <span>Reasons to Buy (The Good)</span>
               </div>
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 {getPros(phone).map((pro, index) => (
-                  <li key={index} className="flex items-start gap-2.5 text-xs sm:text-sm text-emerald-950 dark:text-emerald-200 font-medium leading-relaxed">
-                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 mt-0.5 flex-shrink-0 font-bold" />
+                  <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-emerald-950 dark:text-emerald-200 font-medium leading-relaxed">
+                    <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 mt-0.5 flex-shrink-0 font-bold" />
                     <span>{pro}</span>
                   </li>
                 ))}
@@ -1255,15 +1267,15 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
             </div>
 
             {/* Cons List */}
-            <div className="p-6 rounded-2xl bg-rose-50/60 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/50 space-y-4">
-              <div className="flex items-center gap-2 text-rose-900 dark:text-rose-300 font-bold text-base">
-                <XCircle className="w-5 h-5 text-rose-600 dark:text-rose-400" />
+            <div className="p-4 sm:p-5 rounded-xl bg-rose-50/70 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800/40 space-y-3">
+              <div className="flex items-center gap-2 text-rose-900 dark:text-rose-300 font-bold text-sm">
+                <XCircle className="w-4 h-4 text-rose-600 dark:text-rose-400" />
                 <span>Points to Consider (The Bad)</span>
               </div>
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 {getCons(phone).map((con, index) => (
-                  <li key={index} className="flex items-start gap-2.5 text-xs sm:text-sm text-rose-950 dark:text-rose-200 font-medium leading-relaxed">
-                    <XCircle className="w-4 h-4 text-rose-500 dark:text-rose-400 mt-0.5 flex-shrink-0" />
+                  <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-rose-950 dark:text-rose-200 font-medium leading-relaxed">
+                    <XCircle className="w-3.5 h-3.5 text-rose-500 dark:text-rose-400 mt-0.5 flex-shrink-0" />
                     <span>{con}</span>
                   </li>
                 ))}
@@ -1275,17 +1287,17 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
         {/* ========================================================================= */}
         {/* SEQUENCE 4: REAL USER RATINGS & COMMUNITY REVIEWS FEEDBACK SECTION        */}
         {/* ========================================================================= */}
-        <div id="user-reviews-section" className="bg-white dark:bg-white/5 dark:backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm dark:shadow-2xl border border-gray-200 dark:border-white/10 space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-100 dark:border-white/10 pb-5">
-            <div className="flex items-center gap-3">
-              <div className="p-3 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 rounded-2xl border border-emerald-100 dark:border-emerald-800/60">
-                <Star className="w-6 h-6 fill-amber-400 text-amber-400" />
+        <div id="user-reviews-section" className="bg-white dark:bg-slate-900 rounded-xl p-4 sm:p-5 shadow-2xs border border-slate-200 dark:border-slate-800 space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-3.5">
+            <div className="flex items-center gap-2.5">
+              <div className="p-2 bg-amber-50 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 rounded-lg border border-amber-200/60 dark:border-amber-800/40">
+                <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-['Outfit']">
+                <h2 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-['Outfit']">
                   Real User Ratings & Community Feedback
                 </h2>
-                <p className="text-xs text-gray-500 dark:text-zinc-400">
+                <p className="text-xs text-slate-500 dark:text-zinc-400">
                   {totalReviewsCount === 0 
                     ? 'No pre-written ratings. Ready for genuine Pakistani buyers to leave authentic feedback.'
                     : `Verified buyer reviews and rating breakdown for ${phone.name}.`}
@@ -1296,17 +1308,17 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
             <button
               id="write-review-toggle-btn"
               onClick={() => setShowReviewForm(!showReviewForm)}
-              className="px-4 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-2 self-start sm:self-auto"
+              className="px-3.5 py-2 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 self-start sm:self-auto"
             >
-              <MessageSquarePlus className="w-4 h-4" />
+              <MessageSquarePlus className="w-3.5 h-3.5" />
               <span>{showReviewForm ? 'Cancel' : 'Write a Review'}</span>
             </button>
           </div>
 
           {reviewSubmitted && (
-            <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-300 dark:border-emerald-700/60 text-emerald-800 dark:text-emerald-200 text-xs font-semibold flex items-center justify-between gap-2 animate-in fade-in shadow-xs">
-              <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
+            <div className="p-3 rounded-lg bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-300 dark:border-emerald-700/60 text-emerald-800 dark:text-emerald-200 text-xs font-semibold flex items-center justify-between gap-2 animate-in fade-in shadow-xs">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
                 <span>Thank you! Your verified review has been published.</span>
               </div>
               <button 
@@ -1321,15 +1333,15 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
 
           {/* Interactive Review Submission Form */}
           {showReviewForm && (
-            <form onSubmit={handleAddReview} className="p-6 rounded-2xl bg-gray-50 dark:bg-white/5 border border-emerald-200 dark:border-emerald-800/50 space-y-4 animate-in fade-in slide-in-from-top-2">
-              <h3 className="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+            <form onSubmit={handleAddReview} className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-emerald-200 dark:border-emerald-800/50 space-y-3 animate-in fade-in slide-in-from-top-2">
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
                 <Sparkles className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                 <span>Submit Your Review for {phone.name}</span>
               </h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs font-bold text-gray-700 dark:text-zinc-300 block mb-1.5">
+                  <label className="text-[11px] font-bold text-slate-700 dark:text-zinc-300 block mb-1">
                     Your Name / Nickname *
                   </label>
                   <div className="relative">
@@ -1339,14 +1351,14 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                       placeholder="e.g. Hamza Tariq"
                       value={reviewName}
                       onChange={(e) => setReviewName(e.target.value)}
-                      className="w-full pl-9 pr-3 py-2.5 rounded-xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-white/10 text-xs font-medium focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
+                      className="w-full pl-8 pr-3 py-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-medium focus:outline-hidden focus:ring-1 focus:ring-emerald-500 text-slate-900 dark:text-white"
                     />
-                    <User className="w-4 h-4 text-gray-400 absolute left-3 top-3" />
+                    <User className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-xs font-bold text-gray-700 dark:text-zinc-300 block mb-1.5">
+                  <label className="text-[11px] font-bold text-slate-700 dark:text-zinc-300 block mb-1">
                     Your City in Pakistan *
                   </label>
                   <div className="relative">
@@ -1355,42 +1367,42 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                       placeholder="e.g. Lahore, Karachi, Islamabad"
                       value={reviewCity}
                       onChange={(e) => setReviewCity(e.target.value)}
-                      className="w-full pl-9 pr-3 py-2.5 rounded-xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-white/10 text-xs font-medium focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
+                      className="w-full pl-8 pr-3 py-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-medium focus:outline-hidden focus:ring-1 focus:ring-emerald-500 text-slate-900 dark:text-white"
                     />
-                    <MapPin className="w-4 h-4 text-gray-400 absolute left-3 top-3" />
+                    <MapPin className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" />
                   </div>
                 </div>
               </div>
 
               <div>
-                <label className="text-xs font-bold text-gray-700 dark:text-zinc-300 block mb-1.5">
+                <label className="text-[11px] font-bold text-slate-700 dark:text-zinc-300 block mb-1">
                   Rating (1 to 5 Stars) *
                 </label>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5">
                   {[1, 2, 3, 4, 5].map((starVal) => (
                     <button
                       type="button"
                       key={starVal}
                       onClick={() => setReviewRating(starVal)}
-                      className="p-1.5 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors"
+                      className="p-1 rounded-md hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors"
                     >
                       <Star 
-                        className={`w-6 h-6 ${
+                        className={`w-5 h-5 ${
                           starVal <= reviewRating 
                             ? 'fill-amber-400 text-amber-400' 
-                            : 'text-gray-300 dark:text-zinc-600'
+                            : 'text-slate-300 dark:text-zinc-600'
                         }`} 
                       />
                     </button>
                   ))}
-                  <span className="text-xs font-bold text-amber-600 dark:text-amber-400 ml-2">
+                  <span className="text-xs font-bold text-amber-600 dark:text-amber-400 ml-1.5">
                     {reviewRating}.0 / 5.0
                   </span>
                 </div>
               </div>
 
               <div>
-                <label className="text-xs font-bold text-gray-700 dark:text-zinc-300 block mb-1.5">
+                <label className="text-[11px] font-bold text-slate-700 dark:text-zinc-300 block mb-1">
                   Your Real-World Review & Experience *
                 </label>
                 <textarea 
@@ -1399,21 +1411,21 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                   placeholder="Share your thoughts on battery life, camera quality, PTA network coverage, thermals, or day-to-day usability..."
                   value={reviewComment}
                   onChange={(e) => setReviewComment(e.target.value)}
-                  className="w-full p-3 rounded-xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-white/10 text-xs font-medium focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
+                  className="w-full p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-medium focus:outline-hidden focus:ring-1 focus:ring-emerald-500 text-slate-900 dark:text-white"
                 />
               </div>
 
-              <div className="flex justify-end gap-2 pt-2">
+              <div className="flex justify-end gap-2 pt-1">
                 <button
                   type="button"
                   onClick={() => setShowReviewForm(false)}
-                  className="px-4 py-2 rounded-xl bg-gray-200 dark:bg-white/10 text-gray-700 dark:text-zinc-300 text-xs font-bold hover:bg-gray-300 transition-colors"
+                  className="px-3.5 py-1.5 rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-zinc-300 text-xs font-bold hover:bg-slate-300 transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold transition-all shadow-xs flex items-center gap-1.5"
+                  className="px-4 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold transition-all shadow-xs flex items-center gap-1.5"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>Publish Review</span>
@@ -1424,50 +1436,50 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
 
           {/* Reviews List or Empty State */}
           {userReviews.length > 0 ? (
-            <div className="space-y-4">
+            <div className="space-y-3">
               {userReviews.map((rev) => (
-                <div key={rev.id} className="p-5 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 space-y-2">
+                <div key={rev.id} className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800 space-y-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 font-bold text-xs flex items-center justify-center">
+                      <div className="w-7 h-7 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 font-bold text-xs flex items-center justify-center">
                         {rev.userName.charAt(0).toUpperCase()}
                       </div>
                       <div>
-                        <span className="text-xs font-bold text-gray-900 dark:text-white block">{rev.userName}</span>
-                        <span className="text-[10px] text-gray-400 dark:text-zinc-500 flex items-center gap-1">
+                        <span className="text-xs font-bold text-slate-900 dark:text-white block">{rev.userName}</span>
+                        <span className="text-[10px] text-slate-400 dark:text-zinc-500 flex items-center gap-1">
                           <MapPin className="w-2.5 h-2.5" />
                           {rev.city} • {rev.date}
                         </span>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-0.5">
                       {[...Array(5)].map((_, i) => (
                         <Star 
                           key={i} 
-                          className={`w-3.5 h-3.5 ${i < rev.rating ? 'fill-amber-400 text-amber-400' : 'text-gray-300 dark:text-zinc-700'}`} 
+                          className={`w-3 h-3 ${i < rev.rating ? 'fill-amber-400 text-amber-400' : 'text-slate-300 dark:text-zinc-700'}`} 
                         />
                       ))}
                     </div>
                   </div>
 
-                  <p className="text-xs text-gray-700 dark:text-zinc-300 leading-relaxed pl-10">
+                  <p className="text-xs text-slate-700 dark:text-zinc-300 leading-relaxed pl-9">
                     "{rev.comment}"
                   </p>
                 </div>
               ))}
             </div>
           ) : (
-            <div className="p-8 rounded-2xl bg-gray-50/70 dark:bg-white/[0.02] border border-dashed border-gray-200 dark:border-white/10 text-center space-y-3">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center">
-                <MessageSquarePlus className="w-6 h-6" />
+            <div className="p-6 rounded-xl bg-slate-50/70 dark:bg-slate-800/20 border border-dashed border-slate-200 dark:border-slate-800 text-center space-y-2">
+              <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center">
+                <MessageSquarePlus className="w-5 h-5" />
               </div>
               <div className="max-w-md mx-auto">
-                <h4 className="text-sm font-bold text-gray-900 dark:text-white">
+                <h4 className="text-xs font-bold text-slate-900 dark:text-white">
                   No user reviews submitted yet
                 </h4>
-                <p className="text-xs text-gray-500 dark:text-zinc-400 mt-1 leading-relaxed">
-                  Be the first Pakistani smartphone owner to rate and review the <span className="font-semibold text-gray-700 dark:text-zinc-300">{phone.name}</span>. Click the button above to publish your feedback.
+                <p className="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5 leading-relaxed">
+                  Be the first Pakistani smartphone owner to rate and review the <span className="font-semibold text-slate-700 dark:text-zinc-300">{phone.name}</span>. Click the button above to publish your feedback.
                 </p>
               </div>
             </div>
@@ -1478,28 +1490,26 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
         {/* SEQUENCE 5: RELATED / SIMILAR SMARTPHONES IN THIS RANGE                   */}
         {/* ========================================================================= */}
         {relatedPhones.length > 0 && (
-          <div id="related-devices-section" className="bg-white dark:bg-white/5 dark:backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm dark:shadow-2xl border border-gray-200 dark:border-white/10 space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-gray-100 dark:border-white/10 pb-5">
-              <div className="flex items-center gap-3">
-                <div className="p-3 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 rounded-2xl border border-emerald-100 dark:border-emerald-800/60">
-                  <Compass className="w-6 h-6" />
-                </div>
+          <div id="related-devices-section" className="pt-2 space-y-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+              <div className="flex items-center gap-2">
+                <Compass className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-['Outfit']">
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white font-['Outfit'] tracking-tight">
                     Similar Devices in this Range
                   </h2>
-                  <p className="text-xs text-gray-500 dark:text-zinc-400">
+                  <p className="text-xs text-slate-500 dark:text-zinc-400">
                     Handpicked smartphones with comparable PKR price points, hardware class, or same brand ecosystem.
                   </p>
                 </div>
               </div>
-              <span className="text-xs font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800/60 self-start sm:self-auto">
+              <span className="text-[11px] font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-1 rounded-lg border border-emerald-200 dark:border-emerald-800/60 self-start sm:self-auto">
                 {relatedPhones.length} Alternative Picks
               </span>
             </div>
 
             {/* Responsive Grid: 1 column on mobile, 2 on tablet, 3 on desktop */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {relatedPhones.map((relPhone) => (
                 <PhoneCard
                   key={relPhone.id}
@@ -1514,9 +1524,9 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
         )}
 
         {/* Bottom CTA / Exploration Bar */}
-        <div className="bg-gradient-to-r from-emerald-800 to-teal-900 dark:from-emerald-950/80 dark:to-teal-950/80 dark:border dark:border-white/10 rounded-3xl p-6 sm:p-8 text-white shadow-lg flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="space-y-1 text-center sm:text-left">
-            <h3 className="text-xl font-bold font-['Outfit']">
+        <div className="bg-gradient-to-r from-emerald-800 to-teal-900 dark:from-emerald-950 dark:to-teal-950 border border-emerald-700/40 rounded-xl p-4 sm:p-5 text-white shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="space-y-0.5 text-center sm:text-left">
+            <h3 className="text-base sm:text-lg font-bold font-['Outfit']">
               Compare with other devices or check PTA tax
             </h3>
             <p className="text-xs text-emerald-100 max-w-xl">
@@ -1524,17 +1534,17 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center gap-2.5 w-full sm:w-auto">
             <button
               onClick={() => onNavigateToPta(phone)}
-              className="w-full sm:w-auto px-5 py-3 rounded-xl bg-white text-emerald-800 text-xs font-extrabold hover:bg-emerald-50 transition-colors shadow-xs flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-4 py-2 rounded-lg bg-white text-emerald-800 text-xs font-bold hover:bg-emerald-50 transition-colors shadow-xs flex items-center justify-center gap-1.5"
             >
               <Calculator className="w-4 h-4 text-emerald-600" />
               <span>PTA Tax Calculator</span>
             </button>
             <button
               onClick={onNavigateToCompare}
-              className="w-full sm:w-auto px-5 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 border border-emerald-500 text-white text-xs font-bold transition-colors shadow-xs flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-4 py-2 rounded-lg bg-emerald-700 hover:bg-emerald-600 border border-emerald-500 text-white text-xs font-bold transition-colors shadow-xs flex items-center justify-center gap-1.5"
             >
               <Scale className="w-4 h-4" />
               <span>Compare Devices</span>

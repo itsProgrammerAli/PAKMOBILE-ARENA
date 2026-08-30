@@ -54,6 +54,47 @@ export default function App() {
     }
   }, [theme]);
 
+  // Browser Native Back/Forward History Listener
+  useEffect(() => {
+    // Initialize root history entry
+    window.history.replaceState({ view: 'home', brand: null }, '');
+
+    const handlePopState = (event: PopStateEvent) => {
+      const state = event.state;
+      if (!state || state.view === 'home') {
+        setCurrentView('home');
+        setSelectedPhone(null);
+        setSelectedBrand(state?.brand || null);
+      } else if (state.view === 'phone-detail' && state.phoneId) {
+        const found = PHONES_DATA.find((p) => p.id === state.phoneId);
+        if (found) {
+          setSelectedPhone(found);
+          setCurrentView('phone-detail');
+        } else {
+          setCurrentView('home');
+          setSelectedPhone(null);
+        }
+      } else if (state.view === 'brand' && state.brand) {
+        setSelectedBrand(state.brand);
+        setCurrentView('brand');
+      } else if (state.view === 'compare') {
+        setCurrentView('compare');
+      } else if (state.view === 'pta-tax') {
+        if (state.phoneId) {
+          const found = PHONES_DATA.find((p) => p.id === state.phoneId);
+          if (found) setPtaTargetPhone(found);
+        }
+        setCurrentView('pta-tax');
+      } else {
+        setCurrentView('home');
+        setSelectedPhone(null);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   const handleToggleTheme = () => {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
@@ -64,13 +105,18 @@ export default function App() {
     setActiveFilter('all');
     setSearchQuery('');
     setLastViewedPhoneId(null);
+    setSelectedPhone(null);
     setCurrentView('home');
+    window.history.pushState({ view: 'home', brand: null }, '');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleBackToHome = () => {
-    const targetView = (previousView === 'brand' && selectedBrand) ? 'brand' : 'home';
-    setCurrentView(targetView);
+    if (window.history.state && window.history.state.view === 'phone-detail') {
+      window.history.back();
+    } else {
+      handleNavigateToHome();
+    }
     if (lastViewedPhoneId) {
       setTimeout(() => {
         const element = document.getElementById(`phone-card-${lastViewedPhoneId}`);
@@ -83,7 +129,10 @@ export default function App() {
 
   const handleSelectBrand = (brand: string) => {
     setSelectedBrand(brand);
-    setCurrentView('brand');
+    setActiveFilter('all');
+    setSearchQuery('');
+    setCurrentView('home');
+    window.history.pushState({ view: 'home', brand }, '');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -92,11 +141,13 @@ export default function App() {
     setLastViewedPhoneId(phone.id);
     setSelectedPhone(phone);
     setCurrentView('phone-detail');
+    window.history.pushState({ view: 'phone-detail', phoneId: phone.id }, '');
     window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
   const handleNavigateToCompare = () => {
     setCurrentView('compare');
+    window.history.pushState({ view: 'compare' }, '');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -107,6 +158,7 @@ export default function App() {
       setPtaTargetPhone(selectedPhone);
     }
     setCurrentView('pta-tax');
+    window.history.pushState({ view: 'pta-tax', phoneId: phone?.id || selectedPhone?.id }, '');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -166,6 +218,8 @@ export default function App() {
           <PhoneDetailPage
             phone={selectedPhone}
             onBack={handleBackToHome}
+            onNavigateToHome={handleNavigateToHome}
+            onSelectBrand={handleSelectBrand}
             onToggleCompare={handleToggleCompare}
             isCompared={comparedPhones.some((p) => p.id === selectedPhone.id)}
             onNavigateToPta={handleNavigateToPta}

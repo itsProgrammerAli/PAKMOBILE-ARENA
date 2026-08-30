@@ -83,13 +83,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className={`text-sm font-semibold transition-all py-1.5 relative cursor-pointer ${
-                activeView === 'home'
+                activeView === 'home' && (!selectedBrand || selectedBrand === 'all')
                   ? 'text-emerald-600 dark:text-emerald-400 font-bold'
                   : 'text-gray-600 dark:text-zinc-300 hover:text-gray-900 dark:hover:text-white'
               }`}
             >
               <span>Home</span>
-              {activeView === 'home' && (
+              {activeView === 'home' && (!selectedBrand || selectedBrand === 'all') && (
                 <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-600 dark:bg-emerald-400 rounded-full" />
               )}
             </button>
@@ -101,16 +101,16 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => setIsBrandsDropdownOpen(!isBrandsDropdownOpen)}
                 onBlur={() => setTimeout(() => setIsBrandsDropdownOpen(false), 200)}
                 className={`flex items-center space-x-1.5 text-sm font-semibold transition-all py-1.5 group cursor-pointer relative ${
-                  activeView === 'brand'
+                  selectedBrand && selectedBrand !== 'all'
                     ? 'text-emerald-600 dark:text-emerald-400 font-bold'
                     : 'text-gray-600 dark:text-zinc-300 hover:text-gray-900 dark:hover:text-white'
                 }`}
               >
-                <span>{activeView === 'brand' && selectedBrand ? selectedBrand : 'Brands'}</span>
+                <span>{selectedBrand && selectedBrand !== 'all' ? selectedBrand : 'Brands'}</span>
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                  isBrandsDropdownOpen ? 'rotate-180 text-emerald-600 dark:text-emerald-400' : activeView === 'brand' ? 'text-emerald-600 dark:text-emerald-400' : 'text-gray-400 dark:text-zinc-500 group-hover:text-gray-600 dark:group-hover:text-zinc-300'
+                  isBrandsDropdownOpen ? 'rotate-180 text-emerald-600 dark:text-emerald-400' : selectedBrand && selectedBrand !== 'all' ? 'text-emerald-600 dark:text-emerald-400' : 'text-gray-400 dark:text-zinc-500 group-hover:text-gray-600 dark:group-hover:text-zinc-300'
                 }`} />
-                {activeView === 'brand' && (
+                {selectedBrand && selectedBrand !== 'all' && (
                   <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-600 dark:bg-emerald-400 rounded-full" />
                 )}
               </button>
@@ -131,7 +131,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                           setIsBrandsDropdownOpen(false);
                         }}
                         className={`flex items-center justify-between px-2.5 py-2 text-xs font-medium rounded-xl transition-colors text-left cursor-pointer ${
-                          selectedBrand?.toLowerCase() === b.name.toLowerCase() && activeView === 'brand'
+                          selectedBrand?.toLowerCase() === b.name.toLowerCase()
                             ? 'bg-emerald-50 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 font-bold'
                             : 'text-gray-700 dark:text-zinc-300 hover:text-emerald-700 dark:hover:text-emerald-400 hover:bg-emerald-50/60 dark:hover:bg-zinc-800/60'
                         }`}
@@ -244,7 +244,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className={`flex items-center gap-2 px-3 py-2 rounded-lg border text-xs font-semibold text-left ${
-                activeView === 'home'
+                activeView === 'home' && (!selectedBrand || selectedBrand === 'all')
                   ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-300 border-emerald-300 dark:border-emerald-700/60'
                   : 'bg-gray-50 dark:bg-zinc-800/60 border-gray-200 dark:border-zinc-700 text-gray-900 dark:text-zinc-100'
               }`}
@@ -312,8 +312,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                     setIsMobileMenuOpen(false);
                   }}
                   className={`px-2 py-1.5 rounded-lg text-center text-xs font-semibold border transition-colors ${
-                    selectedBrand?.toLowerCase() === b.name.toLowerCase() && activeView === 'brand'
-                      ? 'bg-emerald-600 text-white border-emerald-600'
+                    selectedBrand?.toLowerCase() === b.name.toLowerCase()
+                      ? 'bg-emerald-600 text-white border-emerald-600 font-bold'
                       : 'bg-gray-50 dark:bg-zinc-800/60 border-gray-200 dark:border-zinc-700 text-gray-700 dark:text-zinc-300 hover:border-emerald-500'
                   }`}
                 >

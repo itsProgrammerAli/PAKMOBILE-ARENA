@@ -27,10 +27,25 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
 }) => {
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'rating'>('featured');
 
+  // Normalize brand name for robust case-insensitive and alias matching
+  const normalizeBrand = (b: string | null | undefined): string => {
+    if (!b) return '';
+    const lower = b.toLowerCase().trim();
+    if (lower === 'iphone' || lower === 'apple') return 'apple';
+    if (lower === 'galaxy' || lower === 'samsung') return 'samsung';
+    if (lower === 'redmi' || lower === 'mi' || lower === 'xiaomi') return 'xiaomi';
+    return lower;
+  };
+
   // Filter phones by brand and active category
   let displayedPhones = phones.filter((phone) => {
-    if (selectedBrand && phone.brand.toLowerCase() !== selectedBrand.toLowerCase()) {
-      return false;
+    if (selectedBrand) {
+      const normSelected = normalizeBrand(selectedBrand);
+      const normPhoneBrand = normalizeBrand(phone.brand);
+      const isIphoneMatch = normSelected === 'apple' && (phone.name.toLowerCase().includes('iphone') || normPhoneBrand === 'apple');
+      if (normPhoneBrand !== normSelected && !isIphoneMatch) {
+        return false;
+      }
     }
     if (activeFilter === 'all') return true;
     return phone.tags.includes(activeFilter as any);
