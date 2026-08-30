@@ -3,9 +3,11 @@ import { PhoneSpec, BrandInfo } from '../types';
 export const BRANDS: BrandInfo[] = [
   { name: 'Apple', count: 1, logoText: 'APPLE', slug: 'apple' },
   { name: 'Samsung', count: 3, logoText: 'SAMSUNG', slug: 'samsung' },
+  { name: 'Xiaomi', count: 1, logoText: 'XIAOMI', slug: 'xiaomi' },
   { name: 'Tecno', count: 1, logoText: 'TECNO', slug: 'tecno' },
-  { name: 'Infinix', count: 1, logoText: 'INFINIX', slug: 'infinix' },
   { name: 'Vivo', count: 1, logoText: 'VIVO', slug: 'vivo' },
+  { name: 'Infinix', count: 1, logoText: 'INFINIX', slug: 'infinix' },
+  { name: 'Realme', count: 1, logoText: 'REALME', slug: 'realme' },
 ];
 
 export const PHONES_DATA: PhoneSpec[] = [
@@ -86,36 +88,36 @@ export const PHONES_DATA: PhoneSpec[] = [
     name: 'Samsung Galaxy S24 Ultra',
     brand: 'Samsung',
     model: 'Galaxy S24 Ultra (12GB/256GB)',
-    pricePKR: 359999,
-    officialPricePKR: 399999,
-    marketPriceRangePKR: { min: 344999, max: 374999 },
+    pricePKR: 399999,
+    officialPricePKR: 434999,
+    marketPriceRangePKR: { min: 395000, max: 415000 },
     variants: [
       {
         id: 's24u-12-256',
         name: '12GB / 256GB',
         ram: '12 GB LPDDR5X (+ 8 GB RAM Plus virtual memory)',
         storage: '256 GB UFS 4.0 ultra-high-speed storage',
-        pricePKR: 359999,
-        officialPricePKR: 399999,
-        marketPriceRangePKR: { min: 344999, max: 374999 },
+        pricePKR: 399999,
+        officialPricePKR: 434999,
+        marketPriceRangePKR: { min: 395000, max: 415000 },
       },
       {
         id: 's24u-12-512',
         name: '12GB / 512GB',
         ram: '12 GB LPDDR5X (+ 8 GB RAM Plus virtual memory)',
         storage: '512 GB UFS 4.0 ultra-high-speed storage',
-        pricePKR: 394999,
-        officialPricePKR: 434999,
-        marketPriceRangePKR: { min: 379999, max: 414999 },
+        pricePKR: 439999,
+        officialPricePKR: 474999,
+        marketPriceRangePKR: { min: 430000, max: 450000 },
       },
       {
         id: 's24u-12-1tb',
         name: '12GB / 1TB',
         ram: '12 GB LPDDR5X (+ 8 GB RAM Plus virtual memory)',
         storage: '1 TB (1024 GB) UFS 4.0 enterprise-grade storage',
-        pricePKR: 449999,
-        officialPricePKR: 489999,
-        marketPriceRangePKR: { min: 429999, max: 469999 },
+        pricePKR: 489999,
+        officialPricePKR: 529999,
+        marketPriceRangePKR: { min: 475000, max: 505000 },
       },
     ],
     ptaTax: {
@@ -167,7 +169,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     model: 'Galaxy A55 5G (8GB/256GB)',
     pricePKR: 124999,
     officialPricePKR: 139999,
-    marketPriceRangePKR: { min: 118999, max: 131999 },
+    marketPriceRangePKR: { min: 123000, max: 129000 },
     variants: [
       {
         id: 'a55-8-256',
@@ -176,7 +178,7 @@ export const PHONES_DATA: PhoneSpec[] = [
         storage: '256 GB built-in (microSD Card Slot supported up to 1TB via shared SIM slot)',
         pricePKR: 124999,
         officialPricePKR: 139999,
-        marketPriceRangePKR: { min: 118999, max: 131999 },
+        marketPriceRangePKR: { min: 123000, max: 129000 },
       },
     ],
     ptaTax: {
@@ -224,7 +226,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     model: 'Galaxy A54 5G (8GB/256GB)',
     pricePKR: 89999,
     officialPricePKR: 119999,
-    marketPriceRangePKR: { min: 84999, max: 96999 },
+    marketPriceRangePKR: { min: 88000, max: 92000 },
     variants: [
       {
         id: 'a54-8-128',
@@ -233,7 +235,7 @@ export const PHONES_DATA: PhoneSpec[] = [
         storage: '128 GB built-in (microSD Card Slot supported up to 1TB via shared SIM slot)',
         pricePKR: 84999,
         officialPricePKR: 109999,
-        marketPriceRangePKR: { min: 79999, max: 88999 },
+        marketPriceRangePKR: { min: 82000, max: 87000 },
       },
       {
         id: 'a54-8-256',
@@ -242,7 +244,7 @@ export const PHONES_DATA: PhoneSpec[] = [
         storage: '256 GB built-in (microSD Card Slot supported up to 1TB via shared SIM slot)',
         pricePKR: 89999,
         officialPricePKR: 119999,
-        marketPriceRangePKR: { min: 84999, max: 96999 },
+        marketPriceRangePKR: { min: 88000, max: 92000 },
       },
     ],
     ptaTax: {
@@ -347,7 +349,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     model: 'Note 40 Pro (8GB/256GB)',
     pricePKR: 69999,
     officialPricePKR: 74999,
-    marketPriceRangePKR: { min: 65999, max: 72999 },
+    marketPriceRangePKR: { min: 67999, max: 72999 },
     variants: [
       {
         id: 'inf-n40p-8-256',
@@ -356,7 +358,7 @@ export const PHONES_DATA: PhoneSpec[] = [
         storage: '256 GB UFS 2.2 storage',
         pricePKR: 69999,
         officialPricePKR: 74999,
-        marketPriceRangePKR: { min: 65999, max: 72999 },
+        marketPriceRangePKR: { min: 67999, max: 72999 },
       },
     ],
     ptaTax: {
@@ -450,7 +452,127 @@ export const PHONES_DATA: PhoneSpec[] = [
     },
     popularInCities: ['Lahore', 'Karachi', 'Islamabad', 'Multan', 'Faisalabad', 'Sialkot'],
   },
+  {
+    id: 'xiaomi-redmi-note-13-pro',
+    name: 'Xiaomi Redmi Note 13 Pro',
+    brand: 'Xiaomi',
+    model: 'Redmi Note 13 Pro (8GB/256GB)',
+    pricePKR: 64999,
+    officialPricePKR: 74999,
+    marketPriceRangePKR: { min: 62999, max: 67999 },
+    variants: [
+      {
+        id: 'redmi-n13p-8-256',
+        name: '8GB / 256GB',
+        ram: '8 GB (+ 8 GB Extended RAM = 16GB)',
+        storage: '256 GB UFS 2.2 built-in (microSD Card Slot supported)',
+        pricePKR: 64999,
+        officialPricePKR: 74999,
+        marketPriceRangePKR: { min: 62999, max: 67999 },
+      },
+      {
+        id: 'redmi-n13p-12-512',
+        name: '12GB / 512GB',
+        ram: '12 GB (+ 12 GB Extended RAM = 24GB)',
+        storage: '512 GB UFS 2.2 built-in (microSD Card Slot supported)',
+        pricePKR: 79999,
+        officialPricePKR: 89999,
+        marketPriceRangePKR: { min: 77999, max: 82999 },
+      },
+    ],
+    ptaTax: {
+      passportTaxPKR: 18000,
+      cnicTaxPKR: 22000,
+      status: 'Official PTA Approved',
+    },
+    releaseDate: 'January 2024',
+    rating: 0.0,
+    reviewCount: 0,
+    image: 'https://images.priceoye.pk/xiaomi-redmi-note-13-pro-pakistan-priceoye-8zikv-500x500.webp',
+    tags: ['trending', 'budget', 'camera'],
+    specs: {
+      display: '6.67" FHD+ AMOLED, 120Hz Refresh Rate, 1080 x 2400 pixels, 1300 nits Peak Brightness, Corning Gorilla Glass 5',
+      refreshRate: '120Hz AMOLED',
+      processor: 'MediaTek Helio G99 Ultra (6nm) Octa-Core (2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55) with Mali-G57 MC2 GPU',
+      ram: '8 GB / 12 GB LPDDR4X (+ 8 GB Memory Extension)',
+      storage: '256 GB / 512 GB UFS 2.2 built-in (microSD Card Slot supported)',
+      mainCamera: '200MP Main Sensor (f/1.65, 1/1.4", OIS, 4x In-Sensor Lossless Zoom) + 8MP Ultra-Wide (f/2.2, 118° FOV) + 2MP Macro (f/2.4)',
+      selfieCamera: '16MP Front Camera (f/2.4, 1080p@60fps Video with AI Beautify)',
+      battery: '5000 mAh High-Capacity Battery',
+      charging: '67W Turbo Fast Charging (100% in 45 mins)',
+      os: 'Android 13 with MIUI 14 (Upgradable to Xiaomi HyperOS with 3 Major OS Upgrades)',
+      network: '4G LTE Dual SIM, IP54 Splash Resistant, Dual Stereo Speakers with Dolby Atmos, 3.5mm Headphone Jack, In-Screen Fingerprint',
+    },
+    colors: ['Midnight Black', 'Lavender Purple', 'Forest Green'],
+    colorImages: {
+      'Midnight Black': 'https://images.priceoye.pk/xiaomi-redmi-note-13-pro-pakistan-priceoye-8zikv-500x500.webp',
+      'Lavender Purple': 'https://images.priceoye.pk/xiaomi-redmi-note-13-pro-pakistan-priceoye-da8y9-500x500.webp',
+      'Forest Green': 'https://images.priceoye.pk/xiaomi-redmi-note-13-pro-pakistan-priceoye-yunsm-500x500.webp',
+    },
+    colorHexes: {
+      'Midnight Black': '#222328',
+      'Lavender Purple': '#d6c8e3',
+      'Forest Green': '#3a5449',
+    },
+    popularInCities: ['Karachi', 'Lahore', 'Islamabad', 'Rawalpindi', 'Multan', 'Faisalabad'],
+  },
+  {
+    id: 'realme-12-pro-plus-5g',
+    name: 'Realme 12 Pro Plus 5G',
+    brand: 'Realme',
+    model: 'Realme 12 Pro+ 5G (12GB/512GB)',
+    pricePKR: 134999,
+    officialPricePKR: 149999,
+    marketPriceRangePKR: { min: 129999, max: 139999 },
+    variants: [
+      {
+        id: 'realme12pp-12-512',
+        name: '12GB / 512GB',
+        ram: '12 GB (+ 12 GB Dynamic RAM = 24GB)',
+        storage: '512 GB UFS 3.1 high-speed storage',
+        pricePKR: 134999,
+        officialPricePKR: 149999,
+        marketPriceRangePKR: { min: 129999, max: 139999 },
+      },
+    ],
+    ptaTax: {
+      passportTaxPKR: 47000,
+      cnicTaxPKR: 56000,
+      status: 'Official PTA Approved',
+    },
+    releaseDate: 'February 2024',
+    rating: 0.0,
+    reviewCount: 0,
+    image: '/images/realme-12-pro-plus-submarine-blue.png',
+    tags: ['trending', 'camera', 'gaming'],
+    specs: {
+      display: '6.7" FHD+ 3D Curved AMOLED, 120Hz Refresh Rate, 1080 x 2412 pixels, 2160Hz PWM Dimming, 950 nits Peak Brightness',
+      refreshRate: '120Hz Curved AMOLED',
+      processor: 'Qualcomm Snapdragon 7s Gen 2 (4nm) Octa-Core (4x2.40 GHz Cortex-A78 & 4x1.95 GHz Cortex-A55) with Adreno 710 GPU',
+      ram: '12 GB (+ 12 GB Dynamic RAM = 24GB)',
+      storage: '512 GB UFS 3.1 high-speed storage',
+      mainCamera: '64MP Periscope Telephoto (f/2.6, 71mm, 3x Optical / 6x Lossless / 120x SuperZoom, OIS, OmniVision OV64B) + 50MP Sony IMX890 Main (f/1.8, 24mm, OIS) + 8MP Ultra-Wide (f/2.2, 112° FOV)',
+      selfieCamera: '32MP Sony Selfie Camera (f/2.4, 90° FOV, 1080p@30fps)',
+      battery: '5000 mAh Massive Battery with 3D Vapor Chamber Cooling',
+      charging: '67W SUPERVOOC Charge (50% in 19 mins)',
+      os: 'Android 14 with Realme UI 5.0 (2 Major Android Upgrades & 3 Years Security Patches)',
+      network: '5G Dual SIM, Premium Vegan Leather Design with Luxury Watch Dial, IP65 Water & Dust Resistance, Dual Stereo Speakers with Dolby Atmos & Hi-Res Audio, In-Display Fingerprint',
+    },
+    colors: ['Submarine Blue', 'Navigator Beige'],
+    colorImages: {
+      'Submarine Blue': '/images/realme-12-pro-plus-submarine-blue.png',
+      'Navigator Beige': '/images/realme-12-pro-plus-navigator-beige.png',
+    },
+    colorHexes: {
+      'Submarine Blue': '#1f3554',
+      'Navigator Beige': '#e6dec8',
+    },
+    popularInCities: ['Lahore', 'Karachi', 'Islamabad', 'Peshawar', 'Faisalabad', 'Gujranwala'],
+  },
 ];
+
+// Provide both standard exports
+export const phones = PHONES_DATA;
 
 export const QUICK_FILTERS = [
   { id: 'trending', label: 'Trending', icon: '🔥', description: 'Most searched in Pakistan this week' },

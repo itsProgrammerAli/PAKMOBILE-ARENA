@@ -57,6 +57,7 @@ const DeviceVisual: React.FC<{
   const isSamsungUltra = phone.id.includes('s25-ultra') || phone.id.includes('s24-ultra');
   const isTecno = phone.brand.toLowerCase() === 'tecno' || phone.id.includes('tecno') || phone.id.includes('spark');
   const isApple = phone.brand.toLowerCase() === 'apple' || phone.id.includes('iphone');
+  const isRealme = phone.brand.toLowerCase() === 'realme' || phone.id.includes('realme');
 
   // Derive frame & accent colors based on base color hex
   const baseColor = colorHex || '#475569';
@@ -333,6 +334,64 @@ const DeviceVisual: React.FC<{
             <g transform="translate(122, 185) scale(0.65)" opacity="0.4" fill="white">
               <path d="M15.2 12.9c-.03-2.9 2.37-4.3 2.48-4.37-1.35-1.97-3.45-2.24-4.2-2.27-1.78-.18-3.48 1.05-4.38 1.05-.91 0-2.31-1.02-3.8-0.99-1.95.03-3.76 1.14-4.76 2.88-2.03 3.52-.52 8.74 1.45 11.59.97 1.4 2.12 2.96 3.63 2.9 1.46-.06 2.01-.94 3.78-.94 1.76 0 2.27.94 3.79.91 1.56-.03 2.55-1.41 3.5-2.82 1.11-1.62 1.56-3.19 1.59-3.27-.03-.02-3.05-1.17-3.08-4.67zM12.4 4.5c.8-0.97 1.34-2.32 1.19-3.67-1.15.05-2.55.77-3.37 1.73-.72.83-1.35 2.18-1.18 3.5 1.29.1 2.61-.69 3.36-1.56z" />
             </g>
+          </g>
+        ) : isRealme ? (
+          /* Realme 12 Pro Plus 5G Luxury Watch Dial & Golden 3D Seam */
+          <g>
+            {/* Center Golden 3D Zipper Seam running top to bottom */}
+            <line x1="130" y1="18" x2="130" y2="382" stroke="#eab308" strokeWidth="2.5" opacity="0.9" />
+            <line x1="129" y1="18" x2="129" y2="382" stroke="#fef08a" strokeWidth="0.8" opacity="0.95" />
+            <line x1="131" y1="18" x2="131" y2="382" stroke="#ca8a04" strokeWidth="0.8" opacity="0.8" />
+
+            {/* Luxury Watch Golden Fluted Outer Bezel */}
+            <circle cx="130" cy="110" r="54" fill="none" stroke="#eab308" strokeWidth="3.5" opacity="0.95" />
+            <circle cx="130" cy="110" r="51" fill="none" stroke="#fef08a" strokeWidth="1" opacity="0.8" />
+            <circle cx="130" cy="110" r="49" fill="#0f172a" stroke="#ca8a04" strokeWidth="2" />
+            <circle cx="130" cy="110" r="46" fill={`url(#lens-grad-${phone.id})`} />
+
+            {/* Sunburst Dial Texture Ring */}
+            <circle cx="130" cy="110" r="40" fill="none" stroke="rgba(234,179,8,0.25)" strokeWidth="1" strokeDasharray="3 2" />
+
+            {/* Top Main Camera (50MP Sony IMX890 OIS) */}
+            <circle cx="112" cy="92" r="13" fill="#0a0f1d" stroke="#64748b" strokeWidth="1.5" />
+            <circle cx="112" cy="92" r="8.5" fill="#020617" />
+            <circle cx="110" cy="90" r="2.5" fill="#38bdf8" opacity="0.8" />
+
+            {/* Top Right Camera (8MP Ultra-Wide) */}
+            <circle cx="148" cy="92" r="13" fill="#0a0f1d" stroke="#64748b" strokeWidth="1.5" />
+            <circle cx="148" cy="92" r="8.5" fill="#020617" />
+            <circle cx="146" cy="90" r="2.5" fill="#38bdf8" opacity="0.8" />
+
+            {/* Bottom Center 64MP Periscope Rectangular Prism Lens */}
+            <rect x="120" y="118" width="20" height="15" rx="3" fill="#020617" stroke="#64748b" strokeWidth="1.5" />
+            <circle cx="130" cy="125" r="4.5" fill="#0f172a" />
+            <circle cx="128" cy="123" r="1.5" fill="#38bdf8" opacity="0.9" />
+
+            {/* 120X SuperZoom Micro Inscription */}
+            <text
+              x="130"
+              y="108"
+              textAnchor="middle"
+              fill="#fbbf24"
+              fontSize="6"
+              fontWeight="bold"
+              letterSpacing="0.8"
+            >
+              120X
+            </text>
+
+            {/* realme Lower-case Branding on Back */}
+            <text
+              x="75"
+              y="350"
+              textAnchor="middle"
+              fill="rgba(255,255,255,0.7)"
+              fontSize="12"
+              fontWeight="bold"
+              letterSpacing="0.5"
+            >
+              realme
+            </text>
           </g>
         ) : (
           /* Generic Flagship Circular / Modern Matrix Island */
