@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { PhoneSpec } from '../types';
 import { PHONES_DATA, BRANDS } from '../data/phones';
 import { PhoneCard } from './PhoneCard';
@@ -23,22 +23,32 @@ export const BrandPage: React.FC<BrandPageProps> = ({
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'rating'>('featured');
 
   // Filter phones exclusively for this brand
-  const brandPhones = PHONES_DATA.filter(
-    (phone) => phone.brand.toLowerCase() === brandName.toLowerCase()
-  );
+  const brandPhones = useMemo(() => {
+    return PHONES_DATA.filter(
+      (phone) => phone.brand.toLowerCase() === brandName.toLowerCase()
+    );
+  }, [brandName]);
 
   // Match brand metadata
   const brandMeta = BRANDS.find(
     (b) => b.name.toLowerCase() === brandName.toLowerCase()
   );
 
-  // Sort
-  const sortedPhones = [...brandPhones].sort((a, b) => {
-    if (sortBy === 'price-asc') return a.pricePKR - b.pricePKR;
-    if (sortBy === 'price-desc') return b.pricePKR - a.pricePKR;
-    if (sortBy === 'rating') return getEffectivePhoneRating(b) - getEffectivePhoneRating(a);
-    return 0; // featured default
-  });
+  // Strict Immutable Sort
+  const sortedPhones = useMemo(() => {
+    const result = [...brandPhones];
+    switch (sortBy) {
+      case 'price-asc':
+        return result.sort((a, b) => a.pricePKR - b.pricePKR);
+      case 'price-desc':
+        return result.sort((a, b) => b.pricePKR - a.pricePKR);
+      case 'rating':
+        return result.sort((a, b) => getEffectivePhoneRating(b) - getEffectivePhoneRating(a));
+      case 'featured':
+      default:
+        return result;
+    }
+  }, [brandPhones, sortBy]);
 
   return (
     <div id="brand-page" className="min-h-screen bg-gray-50 dark:bg-zinc-950 text-gray-900 dark:text-zinc-100 pb-20 transition-colors duration-200">

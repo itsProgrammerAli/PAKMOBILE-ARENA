@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { PhoneSpec, FilterCategory } from '../types';
 import { PhoneCard } from './PhoneCard';
 import { ArrowUpDown, AlertCircle } from 'lucide-react';
@@ -38,40 +38,53 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
     return lower;
   };
 
-  // 1. Apply category filtering
-  let displayedPhones = filterPhonesByCategory(phones, activeFilter);
+  // 1. Compute filtered list (before sorting)
+  const filteredPhones = useMemo(() => {
+    let result = filterPhonesByCategory(phones, activeFilter);
 
-  // 2. Apply brand filtering if selected
-  if (selectedBrand && selectedBrand !== 'all') {
-    const normSelected = normalizeBrand(selectedBrand);
-    displayedPhones = displayedPhones.filter((phone) => {
-      const normPhoneBrand = normalizeBrand(phone.brand);
-      const isIphoneMatch = normSelected === 'apple' && (phone.name.toLowerCase().includes('iphone') || normPhoneBrand === 'apple');
-      return normPhoneBrand === normSelected || isIphoneMatch;
-    });
-  }
+    // Apply brand filtering if selected
+    if (selectedBrand && selectedBrand !== 'all') {
+      const normSelected = normalizeBrand(selectedBrand);
+      result = result.filter((phone) => {
+        const normPhoneBrand = normalizeBrand(phone.brand);
+        const isIphoneMatch = normSelected === 'apple' && (phone.name.toLowerCase().includes('iphone') || normPhoneBrand === 'apple');
+        return normPhoneBrand === normSelected || isIphoneMatch;
+      });
+    }
 
-  // 3. Filter by search query if any
-  if (searchQuery.trim() !== '') {
-    const q = searchQuery.toLowerCase();
-    displayedPhones = displayedPhones.filter((phone) => {
-      return (
-        phone.name.toLowerCase().includes(q) ||
-        phone.brand.toLowerCase().includes(q) ||
-        phone.specs.processor.toLowerCase().includes(q) ||
-        phone.specs.mainCamera.toLowerCase().includes(q)
-      );
-    });
-  }
+    // Filter by search query if any
+    if (searchQuery.trim() !== '') {
+      const q = searchQuery.toLowerCase();
+      result = result.filter((phone) => {
+        return (
+          phone.name.toLowerCase().includes(q) ||
+          phone.brand.toLowerCase().includes(q) ||
+          phone.specs.processor.toLowerCase().includes(q) ||
+          phone.specs.mainCamera.toLowerCase().includes(q)
+        );
+      });
+    }
 
-  // 4. Sort
-  if (sortBy === 'price-asc') {
-    displayedPhones.sort((a, b) => a.pricePKR - b.pricePKR);
-  } else if (sortBy === 'price-desc') {
-    displayedPhones.sort((a, b) => b.pricePKR - a.pricePKR);
-  } else if (sortBy === 'rating') {
-    displayedPhones.sort((a, b) => getEffectivePhoneRating(b) - getEffectivePhoneRating(a));
-  }
+    return result;
+  }, [phones, activeFilter, selectedBrand, searchQuery]);
+
+  // 2. Strict Immutable Sorting Logic (Always Clone First)
+  const sortedPhones = useMemo(() => {
+    const result = [...filteredPhones]; // Always clone from filtered base
+
+    switch (sortBy) {
+      case 'price-asc':
+        return result.sort((a, b) => a.pricePKR - b.pricePKR);
+      case 'price-desc':
+        return result.sort((a, b) => b.pricePKR - a.pricePKR);
+      case 'rating':
+        return result.sort((a, b) => getEffectivePhoneRating(b) - getEffectivePhoneRating(a));
+      case 'featured':
+      default:
+        // Return original default order (preserve trending / flagship priority)
+        return result;
+    }
+  }, [filteredPhones, sortBy]);
 
   const categoryTitle = getCategoryHeading(activeFilter, selectedBrand);
 
@@ -86,7 +99,7 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
               {categoryTitle}
             </h2>
             <span className="inline-flex items-center gap-1 whitespace-nowrap px-2.5 py-0.5 rounded-full text-[11px] font-bold font-mono bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800/60 flex-shrink-0 shadow-2xs">
-              <span>{displayedPhones.length}</span>
+              <span>{sortedPhones.length}</span>
               <span>models</span>
             </span>
           </div>
@@ -116,20 +129,20 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
             <select
               id="phone-sort-select"
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
+              onChange={(e) => setSortBy(e.target.value as 'featured' | 'price-asc' | 'price-desc' | 'rating')}
               className="bg-transparent border-none text-xs font-bold text-gray-800 dark:text-zinc-200 py-0.5 pr-2 focus:outline-none cursor-pointer"
             >
-              <option value="featured" className="bg-white dark:bg-zinc-900">Featured & Trending</option>
-              <option value="price-asc" className="bg-white dark:bg-zinc-900">Price: Low to High</option>
-              <option value="price-desc" className="bg-white dark:bg-zinc-900">Price: High to Low</option>
-              <option value="rating" className="bg-white dark:bg-zinc-900">Highest Rated</option>
+              <option value="featured" className="bg-white dark:bg-zinc-900 text-gray-900 dark:text-zinc-100">Featured & Trending</option>
+              <option value="price-asc" className="bg-white dark:bg-zinc-900 text-gray-900 dark:text-zinc-100">Price: Low to High</option>
+              <option value="price-desc" className="bg-white dark:bg-zinc-900 text-gray-900 dark:text-zinc-100">Price: High to Low</option>
+              <option value="rating" className="bg-white dark:bg-zinc-900 text-gray-900 dark:text-zinc-100">Highest Rated</option>
             </select>
           </div>
         </div>
       </div>
 
       {/* Responsive Grid of Cards */}
-      {displayedPhones.length === 0 ? (
+      {sortedPhones.length === 0 ? (
         <div className="p-12 text-center rounded-3xl bg-white dark:bg-white/5 dark:backdrop-blur-xl border border-gray-200/80 dark:border-zinc-800 shadow-sm dark:shadow-2xl">
           <AlertCircle className="w-10 h-10 text-gray-400 dark:text-zinc-500 mx-auto mb-3" />
           <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">No Smartphones Found</h3>
@@ -146,7 +159,7 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
         </div>
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {displayedPhones.map((phone) => (
+          {sortedPhones.map((phone) => (
             <PhoneCard
               key={phone.id}
               phone={phone}
