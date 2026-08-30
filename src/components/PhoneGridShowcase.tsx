@@ -3,6 +3,7 @@ import { PhoneSpec, FilterCategory } from '../types';
 import { PhoneCard } from './PhoneCard';
 import { ArrowUpDown, AlertCircle } from 'lucide-react';
 import { getEffectivePhoneRating } from '../hooks/usePhoneReviewStats';
+import { filterPhonesByCategory, getCategoryHeading } from '../utils/filterUtils';
 
 interface PhoneGridShowcaseProps {
   phones: PhoneSpec[];
@@ -37,21 +38,20 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
     return lower;
   };
 
-  // Filter phones by brand and active category
-  let displayedPhones = phones.filter((phone) => {
-    if (selectedBrand) {
-      const normSelected = normalizeBrand(selectedBrand);
+  // 1. Apply category filtering
+  let displayedPhones = filterPhonesByCategory(phones, activeFilter);
+
+  // 2. Apply brand filtering if selected
+  if (selectedBrand && selectedBrand !== 'all') {
+    const normSelected = normalizeBrand(selectedBrand);
+    displayedPhones = displayedPhones.filter((phone) => {
       const normPhoneBrand = normalizeBrand(phone.brand);
       const isIphoneMatch = normSelected === 'apple' && (phone.name.toLowerCase().includes('iphone') || normPhoneBrand === 'apple');
-      if (normPhoneBrand !== normSelected && !isIphoneMatch) {
-        return false;
-      }
-    }
-    if (activeFilter === 'all') return true;
-    return phone.tags.includes(activeFilter as any);
-  });
+      return normPhoneBrand === normSelected || isIphoneMatch;
+    });
+  }
 
-  // Filter by search query if any
+  // 3. Filter by search query if any
   if (searchQuery.trim() !== '') {
     const q = searchQuery.toLowerCase();
     displayedPhones = displayedPhones.filter((phone) => {
@@ -64,7 +64,7 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
     });
   }
 
-  // Sort
+  // 4. Sort
   if (sortBy === 'price-asc') {
     displayedPhones.sort((a, b) => a.pricePKR - b.pricePKR);
   } else if (sortBy === 'price-desc') {
@@ -72,6 +72,8 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
   } else if (sortBy === 'rating') {
     displayedPhones.sort((a, b) => getEffectivePhoneRating(b) - getEffectivePhoneRating(a));
   }
+
+  const categoryTitle = getCategoryHeading(activeFilter, selectedBrand);
 
   return (
     <section id="phones-showcase-section" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-20">
@@ -81,7 +83,7 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start gap-2.5 flex-wrap">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white font-['Outfit'] tracking-tight">
-              {selectedBrand ? `${selectedBrand} Smartphones` : activeFilter === 'all' ? 'Popular Smartphones in Pakistan' : `${activeFilter.charAt(0).toUpperCase() + activeFilter.slice(1)} Smartphones`}
+              {categoryTitle}
             </h2>
             <span className="inline-flex items-center gap-1 whitespace-nowrap px-2.5 py-0.5 rounded-full text-[11px] font-bold font-mono bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800/60 flex-shrink-0 shadow-2xs">
               <span>{displayedPhones.length}</span>

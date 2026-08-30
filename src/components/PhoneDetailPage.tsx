@@ -725,10 +725,6 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                       )}
                     </div>
                   </div>
-                  <span className="text-[11px] font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-100/80 dark:bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-700/60 self-start sm:self-auto inline-flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span>In Stock</span>
-                  </span>
                 </div>
 
                 {/* Variant Selector */}
