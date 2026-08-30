@@ -68,10 +68,22 @@
 
   <!-- Individual Smartphone Specification Pages -->
   <url>
+    <loc>https://pakmobilearena.online/?phone=apple-iphone-17-pro-max</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://pakmobilearena.online/?phone=apple-iphone-15-pro-max</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/?phone=samsung-galaxy-s26-ultra</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pakmobilearena.online/?phone=samsung-galaxy-s24-ultra</loc>
@@ -86,10 +98,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pakmobilearena.online/?phone=samsung-galaxy-a35-5g</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pakmobilearena.online/?phone=samsung-galaxy-a54-5g</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/?phone=tecno-camon-30-pro-5g</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pakmobilearena.online/?phone=tecno-spark-40-pro-plus</loc>
@@ -104,6 +128,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://pakmobilearena.online/?phone=infinix-gt-20-pro-5g</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/?phone=vivo-v40-5g</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://pakmobilearena.online/?phone=vivo-v30-5g</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -111,6 +147,12 @@
   </url>
   <url>
     <loc>https://pakmobilearena.online/?phone=xiaomi-redmi-note-13-pro</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/?phone=xiaomi-redmi-13</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
