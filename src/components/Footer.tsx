@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Smartphone, ShieldCheck, Calculator, Scale, Lock, FileText, Mail, Info } from 'lucide-react';
+import { Smartphone, ShieldCheck, Calculator, Scale, Lock, FileText, Mail, Info, Newspaper } from 'lucide-react';
 import { BRANDS } from '../data/phones';
 import { LegalModals, LegalModalType } from './LegalModals';
 import { useExchangeRate } from '../hooks/useExchangeRate';
@@ -7,12 +7,14 @@ import { useExchangeRate } from '../hooks/useExchangeRate';
 interface FooterProps {
   onNavigateToPta: () => void;
   onNavigateToCompare: () => void;
+  onNavigateToNews?: () => void;
   onSelectBrand?: (brand: string) => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({
   onNavigateToPta,
   onNavigateToCompare,
+  onNavigateToNews,
   onSelectBrand,
 }) => {
   const [activeLegalModal, setActiveLegalModal] = useState<LegalModalType>(null);
@@ -75,6 +77,18 @@ export const Footer: React.FC<FooterProps> = ({
                       <span>Comparison</span>
                     </button>
                   </li>
+                  {onNavigateToNews && (
+                    <li>
+                      <button 
+                        id="footer-market-news-btn"
+                        onClick={onNavigateToNews}
+                        className="text-xs text-gray-600 dark:text-gray-400 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors py-1 flex items-center gap-1.5 cursor-pointer text-left"
+                      >
+                        <Newspaper className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
+                        <span>Market News & Updates</span>
+                      </button>
+                    </li>
+                  )}
                   <li>
                     <a 
                       href="#hero-quick-filters" 

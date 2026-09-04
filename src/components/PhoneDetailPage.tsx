@@ -30,6 +30,7 @@ import {
 import { PhoneSpec, UserReview } from '../types';
 import { PHONES_DATA } from '../data/phones';
 import { PhoneCard } from './PhoneCard';
+import { PhoneReviewSection } from './PhoneReviewSection';
 
 interface PhoneDetailPageProps {
   phone: PhoneSpec;
@@ -1338,6 +1339,14 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
             </div>
           </div>
         </div>
+
+        {/* ========================================================================= */}
+        {/* SEQUENCE 3.5: EDITORIAL EXPERT REVIEW & PAKISTAN MARKET VERDICT           */}
+        {/* ========================================================================= */}
+        <PhoneReviewSection 
+          phone={phone} 
+          onNavigateToCompare={onNavigateToCompare} 
+        />
 
         {/* ========================================================================= */}
         {/* SEQUENCE 4: REAL USER RATINGS & COMMUNITY REVIEWS FEEDBACK SECTION        */}

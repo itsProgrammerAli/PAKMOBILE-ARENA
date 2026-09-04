@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { FilterCategory, PhoneSpec } from './types';
 import { PHONES_DATA } from './data/phones';
 import { Navbar } from './components/Navbar';
@@ -7,13 +8,32 @@ import { BrandPage } from './components/BrandPage';
 import { PhoneDetailPage } from './components/PhoneDetailPage';
 import { ComparePage } from './components/ComparePage';
 import { PtaTaxPage } from './components/PtaTaxPage';
+import News from './pages/News';
+import NewsDetail from './pages/NewsDetail';
 import { Footer } from './components/Footer';
 import { Scale, ArrowRight, X } from 'lucide-react';
 
-export type AppView = 'home' | 'brand' | 'phone-detail' | 'compare' | 'pta-tax';
+export type AppView = 'home' | 'brand' | 'phone-detail' | 'compare' | 'pta-tax' | 'news';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<AppView>('home');
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [currentView, setCurrentView] = useState<AppView>(() => {
+    if (typeof window !== 'undefined') {
+      if (window.location.pathname.startsWith('/news')) {
+        return 'news';
+      }
+      if (window.location.pathname === '/compare') {
+        return 'compare';
+      }
+      if (window.location.pathname === '/pta' || window.location.pathname === '/pta-tax') {
+        return 'pta-tax';
+      }
+    }
+    return 'home';
+  });
+
   const [activeFilter, setActiveFilter] = useState<FilterCategory>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
@@ -54,14 +74,26 @@ export default function App() {
     }
   }, [theme]);
 
-  // Browser Native Back/Forward History Listener
+  // Sync currentView if route changes to non-news
   useEffect(() => {
-    // Initialize root history entry
-    window.history.replaceState({ view: 'home', brand: null }, '');
+    if (location.pathname === '/') {
+      if (currentView === 'news') {
+        setCurrentView('home');
+      }
+    } else if (location.pathname === '/compare') {
+      setCurrentView('compare');
+    } else if (location.pathname === '/pta' || location.pathname === '/pta-tax') {
+      setCurrentView('pta-tax');
+    }
+  }, [location.pathname]);
 
+  // Browser Native Back/Forward History Listener for internal modal/views
+  useEffect(() => {
     const handlePopState = (event: PopStateEvent) => {
       const state = event.state;
-      if (!state || state.view === 'home') {
+      if (window.location.pathname.startsWith('/news')) {
+        setCurrentView('news');
+      } else if (!state || state.view === 'home') {
         setCurrentView('home');
         setSelectedPhone(null);
         setSelectedBrand(state?.brand || null);
@@ -85,9 +117,6 @@ export default function App() {
           if (found) setPtaTargetPhone(found);
         }
         setCurrentView('pta-tax');
-      } else {
-        setCurrentView('home');
-        setSelectedPhone(null);
       }
     };
 
@@ -107,7 +136,7 @@ export default function App() {
     setLastViewedPhoneId(null);
     setSelectedPhone(null);
     setCurrentView('home');
-    window.history.pushState({ view: 'home', brand: null }, '');
+    navigate('/');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -123,7 +152,7 @@ export default function App() {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-      }, 120); // Delay ensures Home DOM is fully mounted
+      }, 120);
     }
   };
 
@@ -132,7 +161,7 @@ export default function App() {
     setActiveFilter('all');
     setSearchQuery('');
     setCurrentView('home');
-    window.history.pushState({ view: 'home', brand }, '');
+    navigate('/');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -141,13 +170,22 @@ export default function App() {
     setLastViewedPhoneId(phone.id);
     setSelectedPhone(phone);
     setCurrentView('phone-detail');
+    if (location.pathname.startsWith('/news')) {
+      navigate('/');
+    }
     window.history.pushState({ view: 'phone-detail', phoneId: phone.id }, '');
     window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
   const handleNavigateToCompare = () => {
     setCurrentView('compare');
-    window.history.pushState({ view: 'compare' }, '');
+    navigate('/compare');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNavigateToNews = () => {
+    setCurrentView('news');
+    navigate('/news');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -158,7 +196,7 @@ export default function App() {
       setPtaTargetPhone(selectedPhone);
     }
     setCurrentView('pta-tax');
-    window.history.pushState({ view: 'pta-tax', phoneId: phone?.id || selectedPhone?.id }, '');
+    navigate('/pta');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -196,6 +234,9 @@ export default function App() {
     setSearchQuery('');
   };
 
+  const isNewsRoute = location.pathname.startsWith('/news');
+  const activeNavView = isNewsRoute ? 'news' : currentView;
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-zinc-950 text-gray-900 dark:text-zinc-100 font-sans flex flex-col selection:bg-emerald-100 selection:text-emerald-900 dark:selection:bg-emerald-900/60 dark:selection:text-emerald-200 transition-colors duration-200">
       
@@ -204,70 +245,100 @@ export default function App() {
         onNavigateToHome={handleNavigateToHome}
         onNavigateToCompare={handleNavigateToCompare}
         onNavigateToPta={() => handleNavigateToPta()}
+        onNavigateToNews={handleNavigateToNews}
         onSelectBrand={handleSelectBrand}
         compareCount={comparedPhones.length}
-        activeView={currentView}
+        activeView={activeNavView}
         selectedBrand={selectedBrand}
         theme={theme}
         onToggleTheme={handleToggleTheme}
       />
 
-      {/* 2. Page Router Body */}
+      {/* 2. Routes & Page Body */}
       <main className="flex-1">
-        {currentView === 'phone-detail' && selectedPhone ? (
-          <PhoneDetailPage
-            phone={selectedPhone}
-            onBack={handleBackToHome}
-            onNavigateToHome={handleNavigateToHome}
-            onSelectBrand={handleSelectBrand}
-            onToggleCompare={handleToggleCompare}
-            isCompared={comparedPhones.some((p) => p.id === selectedPhone.id)}
-            onNavigateToPta={handleNavigateToPta}
-            onNavigateToCompare={handleNavigateToCompare}
-            onSelectPhone={handleSelectPhone}
+        <Routes>
+          <Route 
+            path="/news" 
+            element={
+              <News
+                onNavigateToHome={handleNavigateToHome}
+                onNavigateToPta={() => handleNavigateToPta()}
+                onNavigateToCompare={handleNavigateToCompare}
+              />
+            } 
           />
-        ) : currentView === 'compare' ? (
-          <ComparePage
-            comparedPhones={comparedPhones}
-            onRemovePhone={handleRemoveComparedPhone}
-            onAddPhone={handleAddComparedPhone}
-            onSelectPhone={handleSelectPhone}
-            onNavigateToPta={handleNavigateToPta}
-            onBackToHome={handleNavigateToHome}
+          
+          <Route 
+            path="/news/:slug" 
+            element={
+              <NewsDetail
+                onNavigateToHome={handleNavigateToHome}
+                onNavigateToPta={() => handleNavigateToPta()}
+                onNavigateToCompare={handleNavigateToCompare}
+              />
+            } 
           />
-        ) : currentView === 'pta-tax' ? (
-          <PtaTaxPage
-            initialPhone={ptaTargetPhone}
-            onSelectPhone={handleSelectPhone}
-            onBackToHome={handleNavigateToHome}
+
+          <Route 
+            path="*" 
+            element={
+              currentView === 'phone-detail' && selectedPhone ? (
+                <PhoneDetailPage
+                  phone={selectedPhone}
+                  onBack={handleBackToHome}
+                  onNavigateToHome={handleNavigateToHome}
+                  onSelectBrand={handleSelectBrand}
+                  onToggleCompare={handleToggleCompare}
+                  isCompared={comparedPhones.some((p) => p.id === selectedPhone.id)}
+                  onNavigateToPta={handleNavigateToPta}
+                  onNavigateToCompare={handleNavigateToCompare}
+                  onSelectPhone={handleSelectPhone}
+                />
+              ) : currentView === 'compare' ? (
+                <ComparePage
+                  comparedPhones={comparedPhones}
+                  onRemovePhone={handleRemoveComparedPhone}
+                  onAddPhone={handleAddComparedPhone}
+                  onSelectPhone={handleSelectPhone}
+                  onNavigateToPta={handleNavigateToPta}
+                  onBackToHome={handleNavigateToHome}
+                />
+              ) : currentView === 'pta-tax' ? (
+                <PtaTaxPage
+                  initialPhone={ptaTargetPhone}
+                  onSelectPhone={handleSelectPhone}
+                  onBackToHome={handleNavigateToHome}
+                />
+              ) : currentView === 'brand' && selectedBrand ? (
+                <BrandPage
+                  brandName={selectedBrand}
+                  onBackToHome={handleNavigateToHome}
+                  onSelectPhone={handleSelectPhone}
+                  onToggleCompare={handleToggleCompare}
+                  comparedPhoneIds={comparedPhones.map((p) => p.id)}
+                />
+              ) : (
+                /* HOME VIEW */
+                <Home
+                  activeFilter={activeFilter}
+                  setActiveFilter={setActiveFilter}
+                  searchQuery={searchQuery}
+                  setSearchQuery={setSearchQuery}
+                  selectedBrand={selectedBrand}
+                  setSelectedBrand={setSelectedBrand}
+                  onResetFilters={handleResetFilters}
+                  onSelectPhone={handleSelectPhone}
+                  onToggleCompare={handleToggleCompare}
+                  comparedPhoneIds={comparedPhones.map((p) => p.id)}
+                />
+              )
+            }
           />
-        ) : currentView === 'brand' && selectedBrand ? (
-          <BrandPage
-            brandName={selectedBrand}
-            onBackToHome={handleNavigateToHome}
-            onSelectPhone={handleSelectPhone}
-            onToggleCompare={handleToggleCompare}
-            comparedPhoneIds={comparedPhones.map((p) => p.id)}
-          />
-        ) : (
-          /* HOME VIEW */
-          <Home
-            activeFilter={activeFilter}
-            setActiveFilter={setActiveFilter}
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-            selectedBrand={selectedBrand}
-            setSelectedBrand={setSelectedBrand}
-            onResetFilters={handleResetFilters}
-            onSelectPhone={handleSelectPhone}
-            onToggleCompare={handleToggleCompare}
-            comparedPhoneIds={comparedPhones.map((p) => p.id)}
-          />
-        )}
+        </Routes>
       </main>
 
       {/* Floating Compare Dock on Home/Brand views when devices are selected */}
-      {(currentView === 'home' || currentView === 'brand') && comparedPhones.length > 0 && (
+      {!isNewsRoute && (currentView === 'home' || currentView === 'brand') && comparedPhones.length > 0 && (
         <aside 
           id="floating-compare-bar"
           aria-label="Smartphone Comparison Dock"
@@ -335,6 +406,7 @@ export default function App() {
       <Footer
         onNavigateToPta={() => handleNavigateToPta()}
         onNavigateToCompare={handleNavigateToCompare}
+        onNavigateToNews={handleNavigateToNews}
         onSelectBrand={handleSelectBrand}
       />
 

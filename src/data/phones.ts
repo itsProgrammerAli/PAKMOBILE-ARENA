@@ -92,6 +92,13 @@ export const PHONES_DATA: PhoneSpec[] = [
       'Cosmic Orange': '#d97736',
     },
     popularInCities: ['Karachi', 'Lahore', 'Islamabad', 'Rawalpindi', 'Peshawar', 'Faisalabad', 'Multan', 'Quetta'],
+    review: {
+      verdictScore: 9.4,
+      headline: 'The undisputed mobile video and processing titan, carrying Pakistan\'s highest luxury customs duty bracket.',
+      pakistanMarketContext: 'In Pakistan\'s elite smartphone tier, the iPhone 17 Pro Max commands an unprecedented price exceeding Rs 549,000 for official box-pack Mercantile/Airlink inventory. For overseas travelers and gray market importers, the PTA custom duty alone reaches Rs 142,500 on a valid passport or Rs 174,000 on CNIC via the DIRBS portal. Despite this hefty surcharge, it remains the premier liquid asset on the secondary market in Lahore\'s Hafeez Centre and Karachi\'s Saddar, retaining up to 85% of its dollar value over 12 months.',
+      performanceAndCamera: 'Apple\'s 3nm A19 Pro silicon with integrated vapor chamber cooling fundamentally solves the thermal throttling issues seen in older models during 40°C Pakistani summers. Sustained 120fps gaming in Call of Duty: Warzone and Genshin Impact remains impeccably locked. The triple 48MP Fusion optics—specifically the 5x tetraprism optical zoom and 4K120 Dolby Vision ProRes Log recording—produce unmatched videography dynamic range and authentic skin tones without synthetic over-sharpening.',
+      finalVerdict: 'If budget is no barrier and you demand world-class ProRes videography, seamless iOS 19 Apple Intelligence integration, and the strongest resale liquidity in Pakistan, this is the definitive pinnacle device. For users who strictly require a calling phone and social media browser, the colossal PTA tax makes official mid-range alternatives vastly more cost-effective.',
+    },
   },
   {
     id: 'apple-iphone-15-pro-max',
@@ -1683,6 +1690,13 @@ export const PHONES_DATA: PhoneSpec[] = [
       'Dreamy Purple': '#c2b5e2',
     },
     popularInCities: ['Karachi', 'Lahore', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan', 'Peshawar', 'Gujranwala'],
+    review: {
+      verdictScore: 8.8,
+      headline: 'The slimmest 3D curved 120Hz AMOLED smartphone redefining mid-budget aesthetics in Pakistan under Rs 55,000.',
+      pakistanMarketContext: 'Infinix disrupted the Pakistani market by offering a premium 6.8mm feather-light 3D curved AMOLED display at an aggressive Rs 53,999 on PriceOye and local offline stores (down from its Rs 59,999 launch box price). With full official PTA approval and Carlcare warranty hubs throughout Pakistan (Lahore, Karachi, Rawalpindi, Faisalabad), buyers get rock-solid aftersales support and inexpensive repair costs.',
+      performanceAndCamera: 'The 6nm MediaTek Helio G100 processor with 60-month fluency certification handles daily task execution, social apps, and 45-60fps gameplay in PUBG Mobile with surprisingly low heat dissipation. The 6.78" 120Hz curved AMOLED panel with 1300 nits peak brightness makes outdoor sunlight legibility effortless. While low-light video lacks optical image stabilization (OIS), the 50MP main sensor captures punchy, high-contrast photos with flattering skin tones during daylight.',
+      finalVerdict: 'A premier choice for style-conscious Pakistani university students and young professionals who desire the tactile feel and visual elegance of a Rs 150,000+ flagship for just Rs 53,999. If heavy 90fps competitive esports or 4K OIS video is your primary goal, consider a dedicated gaming phone; otherwise, this is a visual masterpiece for the price.',
+    },
   },
   {
     id: 'infinix-hot-50-pro',
@@ -1809,6 +1823,13 @@ export const PHONES_DATA: PhoneSpec[] = [
       'Arctic Glow': '#edf0f4',
     },
     popularInCities: ['Karachi', 'Lahore', 'Rawalpindi', 'Islamabad', 'Faisalabad', 'Multan', 'Gujranwala', 'Peshawar'],
+    review: {
+      verdictScore: 8.7,
+      headline: 'A 108MP camera powerhouse paired with 120Hz AMOLED and Dolby Atmos stereo under Rs 45,000.',
+      pakistanMarketContext: 'Priced at Rs 43,999 (128GB) and Rs 47,999 (256GB), the Tecno Spark 30 Pro targets the fiercely competitive sub-Rs 50K segment in Pakistan. Distributed with official 13-month PTA warranty through Carlcare services, it is widely stocked across offline retail markets like Hafeez Centre and online retailers like PriceOye, with local street cash discounts routinely settling around Rs 41,500.',
+      performanceAndCamera: 'Featuring the new 6nm MediaTek Helio G100 chipset, day-to-day operations and multitasking with 8GB RAM feel snappy. The standout highlight is the 108MP 1/1.52" primary sensor supporting 3x lossless in-sensor crop, which delivers impressive clarity and natural bokeh rare at this price point. Combined with dual symmetrical stereo speakers tuned by Dolby Atmos, media consumption and gaming audio are top-notch.',
+      finalVerdict: 'The go-to choice for mobile photographers and media binge-watchers who want 108MP high-resolution imaging and vibrant 120Hz AMOLED without crossing Rs 45,000. It punches significantly above its weight against rival Samsung and Vivo budget entries.',
+    },
   },
   {
     id: 'xiaomi-redmi-14c',
@@ -1875,6 +1896,13 @@ export const PHONES_DATA: PhoneSpec[] = [
       'Starry Blue': '#2f4d80',
     },
     popularInCities: ['Karachi', 'Lahore', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan', 'Peshawar', 'Sialkot'],
+    review: {
+      verdictScore: 8.3,
+      headline: 'The budget king of design: A massive 6.88" 120Hz display with premium glass-back aesthetics under Rs 30,000.',
+      pakistanMarketContext: 'Starting at an official price of Rs 28,999 for the 4GB/128GB variant and Rs 32,999 for 6GB/128GB, the Redmi 14C is assembled locally in Pakistan under Xiaomi\'s local manufacturing initiative. Backed by Airlink Communication\'s nationwide warranty and customer care centers, it carries zero import tax overheads and offers maximum spare part affordability.',
+      performanceAndCamera: 'Equipped with the MediaTek Helio G81-Ultra and Xiaomi HyperOS, everyday tasks like WhatsApp, YouTube streaming, and banking apps run smoothly. The spacious 6.88-inch 120Hz panel offers remarkable screen estate for reading and media, though resolution is capped at 720p HD+. The 50MP main camera captures bright, well-saturated daytime portraits with pleasant dynamic range.',
+      finalVerdict: 'An unbeatable entry point for students, delivery riders, and first-time smartphone buyers looking for sleek design, long-lasting 5160mAh battery endurance, and verified PTA safety under Rs 30,000.',
+    },
   },
   {
     id: 'vivo-y28-4g',
@@ -1937,6 +1965,13 @@ export const PHONES_DATA: PhoneSpec[] = [
       'Agate Green': '#1a3b37',
     },
     popularInCities: ['Lahore', 'Karachi', 'Multan', 'Faisalabad', 'Rawalpindi', 'Islamabad', 'Gujranwala', 'Sargodha'],
+    review: {
+      verdictScore: 8.5,
+      headline: 'A battery marathon beast with 6000mAh, 44W FlashCharge, and a stylish Dynamic Light notification ring.',
+      pakistanMarketContext: 'Priced at Rs 46,999 (128GB) and Rs 52,999 (256GB), the Vivo Y28 enjoys exceptional offline shelf presence across mobile markets in Punjab and Sindh. Backed by Vivo Pakistan\'s official 1-year brand warranty and widespread authorized service outlets, the device offers zero PTA duty hurdles and high customer trust among general consumers.',
+      performanceAndCamera: 'The 6000mAh battery is the crown jewel, effortlessly yielding upwards of 10 to 12 hours of screen-on time even on continuous mobile data. Supported by 44W FlashCharge, downtime is minimal. The 90Hz Sunlight display peaks at 1000 nits, which is a lifesaver for outdoor work in bright Pakistani daylight. The 50MP main camera captures vivid, flattering daytime portraits.',
+      finalVerdict: 'The quintessential phone for outdoor professionals, field workers, and battery-anxious users who want 2 days of endurance without worrying about carrying a power bank. If high-tier 60fps competitive gaming is needed, look into Helio G100 or Dimensity models.',
+    },
   },
   {
     id: 'samsung-galaxy-a06',
@@ -2001,6 +2036,13 @@ export const PHONES_DATA: PhoneSpec[] = [
       'Gold': '#e5d19c',
     },
     popularInCities: ['Karachi', 'Lahore', 'Rawalpindi', 'Islamabad', 'Faisalabad', 'Multan', 'Gujranwala', 'Peshawar', 'Quetta'],
+    review: {
+      verdictScore: 8.2,
+      headline: 'The most accessible Samsung branded phone in Pakistan with Knox Vault security and 4 years of software support.',
+      pakistanMarketContext: 'Priced under Rs 28,000 for the base variant, the Galaxy A06 is manufactured locally at Samsung\'s Lucky Motor Corporation assembly facility in Karachi. Because it is locally assembled and officially PTA approved, it carries zero custom duty overheads and offers maximum warranty reliability with Samsung service centers across every major Pakistani city.',
+      performanceAndCamera: 'The MediaTek Helio G85 provides reliable efficiency for One UI 6.1, handling messaging, video playback, and everyday mobile banking with ease. The 50MP main sensor delivers surprisingly sharp daytime photos with Samsung\'s signature saturated color science. Samsung Knox Vault hardware encryption provides financial security for JazzCash, Easypaisa, and banking apps rarely seen at this price tier.',
+      finalVerdict: 'A solid, brand-reliable choice for buyers seeking Samsung\'s dependable software ecosystem, clean One UI, guaranteed Android updates, and Knox security on an entry-level budget. Power users wanting high refresh rates or gaming performance should step up to the Galaxy A15 or A25.',
+    },
   },
 ];
 

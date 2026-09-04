@@ -11,6 +11,14 @@ export interface PhoneVariant {
   };
 }
 
+export interface PhoneReview {
+  verdictScore: number; // e.g. 8.5 / 10
+  headline: string; // Catchy one-line verdict
+  pakistanMarketContext: string; // Pricing & retail availability reality
+  performanceAndCamera: string; // Real-world gaming, thermals, and camera performance
+  finalVerdict: string; // Direct "Who should buy this and who should skip it" advice
+}
+
 export interface PhoneSpec {
   id: string;
   name: string;
@@ -50,6 +58,7 @@ export interface PhoneSpec {
   colorImages?: Record<string, string>;
   colorHexes?: Record<string, string>;
   popularInCities: string[];
+  review?: PhoneReview;
 }
 
 export type FilterCategory = 'all' | 'trending' | 'budget' | 'camera' | 'gaming' | 'flagship';
@@ -68,4 +77,27 @@ export interface BrandInfo {
   count: number;
   logoText: string;
   slug: string;
+}
+
+export type NewsCategory = 'All' | 'PTA & Taxes' | 'Market Trends' | 'Telecom' | 'Hardware & Tech' | 'Consumer Guide' | 'Launches';
+
+export interface NewsArticleSection {
+  heading: string;
+  paragraphs: string[];
+}
+
+export interface NewsArticle {
+  id: string;
+  slug: string;
+  title: string;
+  date: string;
+  isoDate?: string;
+  category: string;
+  readTime: string;
+  imageUrl: string;
+  image?: string; // backwards compatibility
+  summary: string;
+  content: NewsArticleSection[];
+  tags: string[];
+  author?: string;
 }
