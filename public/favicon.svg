@@ -1,14 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
   <defs>
-    <linearGradient id="emeraldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="pakmobile-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#10b981" />
       <stop offset="100%" stop-color="#059669" />
     </linearGradient>
   </defs>
-  <!-- Rounded Emerald Background -->
-  <rect width="64" height="64" rx="16" fill="url(#emeraldGradient)" />
-  <!-- Smartphone Outline -->
-  <rect x="18" y="10" width="28" height="44" rx="6" ry="6" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-  <!-- Smartphone Bottom Bar / Indicator -->
-  <line x1="28" y1="46" x2="36" y2="46" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" />
+  <!-- Rounded Emerald Background Badge matching Navbar -->
+  <rect width="64" height="64" rx="16" fill="url(#pakmobile-emerald)" />
+  <!-- White Smartphone Outline (Lucide Smartphone Vector) -->
+  <rect x="21" y="15" width="22" height="34" rx="4" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <!-- Smartphone Bottom Indicator Dot -->
+  <circle cx="32" cy="42.5" r="1.6" fill="#ffffff" />
 </svg>
+

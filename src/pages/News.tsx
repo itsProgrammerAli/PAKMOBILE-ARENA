@@ -173,7 +173,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({
                     src={article.imageUrl || article.image || FALLBACK_IMAGE}
                     alt={article.title}
                     onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = FALLBACK_IMAGE;
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80";
                     }}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"

@@ -2,6 +2,191 @@ import { NewsArticle } from '../types';
 
 export const NEWS_DATA: NewsArticle[] = [
   {
+    id: 'pta-expands-commercial-5g-pakistan-2026',
+    slug: 'pta-expands-commercial-5g-pakistan-2026',
+    title: 'PTA Expands Commercial 5G Coverage to 22 Cities: Device Compatibility & Speed Reality',
+    date: 'September 5, 2026',
+    isoDate: '2026-09-05',
+    category: 'Telecom & 5G',
+    readTime: '4 min read',
+    imageUrl: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80',
+    summary: 'Pakistan Telecommunication Authority reports 449 active 5G tower sites across 22 cities as over 3.8 million 5G-ready smartphones are logged on national networks.',
+    author: 'PakMobile Arena Telecom Bureau',
+    tags: ['5G Pakistan', 'PTA', 'Jazz 5G', 'Zong 5G', 'Telecom'],
+    content: [
+      {
+        heading: 'The State of Non-Standalone 5G Across Major Cities',
+        paragraphs: [
+          'Following the historic spectrum allocation that raised over $500 million, the Pakistan Telecommunication Authority (PTA) has confirmed that commercial 5G connectivity is now operational across 22 cities nationwide, including Islamabad, Lahore, Karachi, and Peshawar. Over 449 cellular base stations are currently broadcasting 5G signals, representing the most aggressive telecommunication rollout since the introduction of 4G a decade ago.',
+          'However, regulatory officials and telecom engineers emphasize that current deployment operates on a Non-Standalone (NSA) framework utilizing existing 4G core infrastructure. While early adopters in urban centers report latency drops and peak download speeds exceeding 450 Mbps, true gigabit standalone throughput will roll out as dedicated tower hardware is commissioned over the next two quarters. Dense commercial sectors such as Karachi\'s I.I. Chundrigar Road, Lahore\'s Gulberg and DHA, and Islamabad\'s Blue Area are demonstrating the highest network reliability.'
+        ]
+      },
+      {
+        heading: 'Carrier Readiness & Spectrum Allocation Realities',
+        paragraphs: [
+          'The deployment has been spearheaded by Pakistan\'s leading mobile network operators, with Jazz and Zong activating dense sub-6 GHz spectrum clusters in high-traffic corridors, while Telenor and Ufone focus on primary urban hubs. Early field benchmark tests conducted across commercial districts show sustained upload speeds averaging 65 Mbps and ping rates dropping to 14ms on local servers, significantly improving competitive mobile gaming and cloud productivity.',
+          'Network engineers note that carrier aggregation between mid-band 3.5 GHz spectrum and legacy 1800 MHz frequencies provides the sweet spot between building penetration and raw transmission speeds. Telecom operators have also initiated zero-rated 5G trials for university campuses and medical tech incubators across Punjab and Sindh to encourage industrial use cases.'
+        ]
+      },
+      {
+        heading: 'Consumer Impact: Should You Buy a 5G Phone in Pakistan Today?',
+        paragraphs: [
+          'With more than 3.8 million 5G-compatible devices officially registered in the DIRBS database, local manufacturing plants for brands like Samsung, Xiaomi, and Tecno have pivoted heavily towards budget 5G silicon. For Pakistani buyers spending upwards of Rs 50,000, purchasing a 5G-enabled device now offers genuine future-proofing rather than just marketing hype.',
+          'Consumers holding older 4G-only flagships need not panic, as 4G LTE-A networks continue to carry the bulk of daily digital traffic with ample bandwidth. However, for users who rely on heavy file uploads, video conferencing, or hotspot tethering in urban centers, the leap to a modern 5G modem provides noticeable daily responsiveness and lower packet loss.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'fbr-sro-1064-smartphone-custom-valuation-2026',
+    slug: 'fbr-sro-1064-smartphone-custom-valuation-2026',
+    title: 'FBR Implements Revised SRO 1064 Valuation Rulings for Flagship Smartphone Imports',
+    date: 'September 4, 2026',
+    isoDate: '2026-09-04',
+    category: 'PTA & Taxes',
+    readTime: '5 min read',
+    imageUrl: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80',
+    summary: 'Federal Board of Revenue updates customs assessment tiers and regulatory duty bands for flagship imports, impacting iPhone 17 and Galaxy S26 pricing.',
+    author: 'PakMobile Arena Regulatory Bureau',
+    tags: ['PTA Tax', 'FBR Rulings', 'DIRBS', 'iPhone Tax', 'Galaxy S26'],
+    content: [
+      {
+        heading: 'Understanding the New Fixed Duty Slabs',
+        paragraphs: [
+          'The Federal Board of Revenue (FBR) in conjunction with customs authorities has finalized the updated valuation rulings under SRO 1064(I)/2026, establishing standardized C&F bands for smartphones crossing the US$ 500 threshold. Under this revised tax schedule, regulatory duty remains fixed at Rs 17,600, while sales tax stands at 25% of the assessed customs value.',
+          'The revision aims to curb arbitrary customs assessments at major airports and inland container depots, establishing uniform registration levies across CNIC and passport routes under the DIRBS system. By issuing predetermined valuation benchmarks for devices like the upcoming Apple iPhone 17 family and Samsung Galaxy S26 series, customs assessment officers are now bound to standardized assessment schedules, minimizing human discretion at import clearing desks.'
+        ]
+      },
+      {
+        heading: 'DIRBS Alignment Across CNIC and Passport Registrations',
+        paragraphs: [
+          'Under SRO 1064, the procedure for passenger baggage clearance at international arrival terminals has been directly synchronized with the National Database and Registration Authority (NADRA) biometric database. Individual travelers registering handsets on a valid Pakistani passport enjoy calibrated slabs intended to ease personal duty burdens, whereas repeated registrations under the same CNIC within a 12-month calendar cycle automatically trigger commercial withholding brackets.',
+          'This computerized coordination ensures that frequent fliers and overseas Pakistanis visiting during the holiday season can clear their daily-driver handsets through the PTA DIRBS portal within 60 days without encountering arbitrary tax surcharges or unexpected service blocks.'
+        ]
+      },
+      {
+        heading: 'Market Fallout: Grey Market Margins Compress',
+        paragraphs: [
+          'Retail hubs across Karachi\'s Saddar, Lahore\'s Hafeez Centre, and Rawalpindi\'s Singapore Plaza report that the narrowing gap between official warranty distributor pricing and non-PTA grey market stock is shifting buyers back toward official channel handsets. Flagship buyers are increasingly factoring full PTA compliance into upfront purchase budgets.',
+          'Historically, speculative traders in electronics plazas maintained substantial markups on non-PTA handsets paired with temporary SIM bypass software. With strict DIRBS hardware-level blocking and stabilized official import duties, buyers are concluding that paying for factory-approved, warranty-backed PTA devices provides superior long-term resale security and hassle-free carrier support.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'pakistan-local-mobile-manufacturing-milestone-2026',
+    slug: 'pakistan-local-mobile-manufacturing-milestone-2026',
+    title: 'Local Mobile Assembly Crosses 160 Million Handsets: Sub-Rs 40,000 Segment Reinvigorated',
+    date: 'September 3, 2026',
+    isoDate: '2026-09-03',
+    category: 'Market Trends',
+    readTime: '4 min read',
+    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+    summary: 'Pakistan\'s domestic manufacturing facilities achieve record production volumes, shielding budget consumers from steep foreign exchange fluctuations.',
+    author: 'Tariq Mehmood, Senior Industrial Analyst',
+    tags: ['Made in Pakistan', 'Mobile Manufacturing', 'Budget Phones', 'Economy'],
+    content: [
+      {
+        heading: 'Domestic Assembly Meets 90% of Local Demand',
+        paragraphs: [
+          'Official production figures released by engineering development authorities reveal that Pakistani mobile assembly plants have collectively assembled over 161 million devices to date. Over 30 certified assembly plants now manufacture entry-level and mid-range devices domestically for brands including Infinix, Tecno, Xiaomi, Vivo, and Samsung.',
+          'This domestic capacity has acted as a critical buffer for consumers in the Rs 25,000 to Rs 45,000 price range, largely shielding budget buyers from the 4.2% rupee depreciation observed earlier this fiscal year. Indigenous assembly lines across industrial estates in Karachi, Lahore, Faisalabad, and Rawalpindi operate round-the-clock shifts, fulfilling over 90% of the country\'s total mobile phone consumption.'
+        ]
+      },
+      {
+        heading: 'Employment Generation and Supply Chain Expansion',
+        paragraphs: [
+          'Beyond raw handset numbers, the domestic assembly ecosystem now directly employs more than 50,000 skilled technicians, packaging specialists, and quality control engineers. Domestic auxiliary industries have emerged to supply retail packaging materials, protective screen guards, and USB charging cables conforming to international electrical standards.',
+          'Engineering schools in Punjab and Sindh have introduced specialized diploma courses in consumer micro-electronics assembly, ensuring a steady influx of trained professionals capable of operating high-precision robotic placement systems and multi-stage acoustic testing chambers.'
+        ]
+      },
+      {
+        heading: 'Component Localization Remains the Next Frontier',
+        paragraphs: [
+          'While semi-knocked-down (SKD) and completely-knocked-down (CKD) assembly lines are mature, local industry leaders are actively lobbying for duty concessions on surface-mount technology (SMT) equipment to initiate localized circuit board printing and packaging.',
+          'Industrialists project that once SMT operations achieve critical scale across major manufacturing hubs, domestic value addition will increase from the current 18% to over 40%. This technological progression will lay the bedrock for Pakistan to evolve from an import-substitution market into an active exporter of certified budget smartphones to regional Central Asian and African destinations.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'september-2026-upcoming-smartphones-pakistan',
+    slug: 'september-2026-upcoming-smartphones-pakistan',
+    title: 'September 2026 Launch Radar: Samsung Galaxy S26 FE, Infinix Hot 70 Pro & Vivo V80 Lite',
+    date: 'September 2, 2026',
+    isoDate: '2026-09-02',
+    category: 'New Launches',
+    readTime: '4 min read',
+    imageUrl: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=1200&q=80',
+    summary: 'A rundown of the most anticipated mid-range and premium smartphones scheduled to debut in Pakistani retail stores this September.',
+    author: 'PakMobile Arena Hardware Desk',
+    tags: ['Upcoming Mobiles', 'Galaxy S26 FE', 'Infinix Hot 70', 'New Launches'],
+    content: [
+      {
+        heading: 'Mid-Range Contenders Set to Heat Up Competition',
+        paragraphs: [
+          'September is primed to be an eventful month for Pakistani smartphone enthusiasts as multiple tier-one manufacturers prepare local retail launches. Heading the pack is Samsung\'s anticipated Galaxy S26 FE, positioned to bridge the gap between upper-mid-tier pricing and flagship performance with an IP68-rated water-resistant chassis and four generations of Android OS upgrades.',
+          'Simultaneously, Infinix is scheduled to expand its Hot series portfolio with the Hot 70 Pro 5G+, targeting gamers seeking high-refresh displays and 65W charging under Rs 70,000. Vivo is also gearing up to introduce the V80 Lite 5G featuring large battery silicon, an ultra-slim aesthetic, and updated portrait sensors tailored for social content creators.'
+        ]
+      },
+      {
+        heading: 'Hardware Innovations Reaching Mainstream Price Tiers',
+        paragraphs: [
+          'The upcoming September launches highlight how rapidly flagship-grade features are cascading into affordable pricing segments. Both the Infinix Hot 70 Pro and Vivo V80 Lite are confirmed to feature curved 1.5K 120Hz AMOLED panels with peak outdoor brightness ratings crossing 1800 nits, ensuring exceptional daylight legibility during harsh Pakistani summers.',
+          'Under the hood, new 4nm and 6nm chipsets offer thermal efficiency improvements of over 25%, drastically reducing overheating during prolonged mobile gaming sessions. Furthermore, dual stereo speakers with Dolby Atmos tuning and fast in-display fingerprint biometric sensors are now standard inclusions rather than luxury upgrades.'
+        ]
+      },
+      {
+        heading: 'What This Means for Current Phone Buyers',
+        paragraphs: [
+          'Consumers eyeing devices in the Rs 50,000 to Rs 90,000 bracket should monitor distributor launch dates closely, as the arrival of fresh stock typically triggers competitive promotional pricing and bundle offers on outgoing models.',
+          'Retailers in Hall Road and Saddar are already clearing inventory of previous-generation models with markdowns of Rs 5,000 to Rs 12,000. Savvy buyers are advised to weigh whether the incremental camera and battery upgrades of the September arrivals outweigh the steep discounts currently available on proven 2025-2026 bestsellers.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'online-vs-offline-phone-buying-pakistan-trends',
+    slug: 'online-vs-offline-phone-buying-pakistan-trends',
+    title: 'E-Commerce vs Offline Markets: Retailers Adjust Margins as Price Transparency Increases',
+    date: 'September 1, 2026',
+    isoDate: '2026-09-01',
+    category: 'Consumer Guide',
+    readTime: '3 min read',
+    imageUrl: 'https://images.unsplash.com/photo-1556742049-0a67e5572293?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1556742049-0a67e5572293?auto=format&fit=crop&w=1200&q=80',
+    summary: 'How transparent online price tracking is empowering Pakistani shoppers to negotiate better deals at physical retail outlets.',
+    author: 'Usman Ghani, Consumer Tech Reporter',
+    tags: ['Smart Buying', 'Price Comparison', 'DIRBS Verification', 'Retail Tips'],
+    content: [
+      {
+        heading: 'The Shift Towards Informed Negotiation',
+        paragraphs: [
+          'A noticeable behavioral shift has gripped smartphone shoppers in major retail corridors like Karachi\'s Star City Mall and Lahore\'s Hall Road. Rather than accepting retail sticker prices, consumers are routinely referencing real-time aggregator listings on platforms like PakMobile Arena and verified e-commerce sites to secure discounts.',
+          'In response, brick-and-mortar retailers are emphasizing instant in-store SIM activation, zero-wait official warranty cards, and complimentary screen protectors to maintain an edge over digital storefronts. Showroom managers report that over 75% of walk-in customers pull out their phones to show exact live competitor market prices before opening negotiations.'
+        ]
+      },
+      {
+        heading: 'Why Offline Retailing Retains Deep Cultural Trust',
+        paragraphs: [
+          'Despite the rapid expansion of digital banking and Cash on Delivery (COD) logistics, Pakistani consumer psychology continues to place immense value on physical tactile verification. The ability to inspect device packaging, unbox the handset in the merchant\'s presence, and test the camera before money changes hands eliminates the fear of shipping damage or counterfeit deliveries.',
+          'Moreover, experienced retail merchants often provide immediate data transfer assistance from old phones to new devices and assist non-technical buyers with Google account setup and banking app authentication, a personal touchpoint that purely automated online platforms cannot replicate.'
+        ]
+      },
+      {
+        heading: 'Essential Inspection Checkpoints for In-Store Purchases',
+        paragraphs: [
+          'Shoppers are strongly advised to verify the device IMEI via the official PTA 8484 SMS shortcode before handing over cash, check distributor security seals on the box, and ensure a computerized sales tax invoice is provided for valid warranty claims.',
+          'Always insist on checking both SIM 1 and SIM 2 slots on dual-SIM devices using the `*#06#` dialer code against the barcode sticker affixed to the outer retail box. Confirming that the device status shows "Compliant" on the DIRBS verification portal guarantees zero interruption in cellular services and safeguards your investment.'
+        ]
+      }
+    ]
+  },
+  {
     id: 'fbr-pta-custom-valuation-rates-2026',
     slug: 'fbr-pta-custom-valuation-rates-2026',
     title: 'FBR & PTA Re-evaluate Custom Valuation Rates for Smartphone Imports',
@@ -9,8 +194,8 @@ export const NEWS_DATA: NewsArticle[] = [
     isoDate: '2026-08-24',
     category: 'PTA & Taxes',
     readTime: '5 min read',
-    imageUrl: 'https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?auto=format&fit=crop&w=1200&q=80',
-    image: 'https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1200&q=80',
     summary: 'The Federal Board of Revenue and PTA have initiated a joint nationwide revision of customs valuation rulings to restructure DIRBS tax slabs for commercial and individual smartphone imports.',
     author: 'PakMobile Arena Regulatory Bureau',
     tags: ['PTA Tax', 'FBR Valuation', 'DIRBS Registration', 'Customs Duty', 'Hafeez Centre', 'Mobile Tariffs'],
@@ -95,8 +280,8 @@ export const NEWS_DATA: NewsArticle[] = [
     isoDate: '2026-07-10',
     category: 'Telecom',
     readTime: '4 min read',
-    imageUrl: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80',
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
     summary: 'The Pakistan Telecommunication Authority and leading mobile network operators have formalized the spectrum auction timetable, paving the way for commercial 5G high-speed connectivity.',
     author: 'Engr. Bilal Farooq, Telecom Infrastructure Specialist',
     tags: ['5G Spectrum', 'Jazz', 'Zong 4G', 'Ufone', 'PTA Auction', 'Fiber Optics'],
@@ -138,8 +323,8 @@ export const NEWS_DATA: NewsArticle[] = [
     isoDate: '2026-06-18',
     category: 'Hardware & Tech',
     readTime: '4 min read',
-    imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80',
-    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
     summary: 'MediaTek’s power-efficient 6nm Helio G100 and entry-level Dimensity silicon have captured dominant market share in Pakistan’s high-volume mid-tier smartphone segment.',
     author: 'PakMobile Arena Hardware Benchmarking Lab',
     tags: ['MediaTek', 'Helio G100', 'Dimensity', 'Gaming Performance', 'Thermal Management', 'Benchmark'],
@@ -181,8 +366,8 @@ export const NEWS_DATA: NewsArticle[] = [
     isoDate: '2026-05-30',
     category: 'Consumer Guide',
     readTime: '5 min read',
-    imageUrl: 'https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=1200&q=80',
-    image: 'https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80',
     summary: 'An exhaustive buyer’s guide contrasting online marketplaces like PriceOye and Daraz with iconic brick-and-mortar hubs including Hafeez Centre and Saddar Karachi.',
     author: 'Hassan Raza, Retail Consumer Advocate',
     tags: ['PriceOye', 'Daraz', 'Hafeez Centre', 'Saddar Karachi', 'Shopping Guide', 'Warranty Check'],

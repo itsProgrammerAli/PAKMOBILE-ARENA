@@ -300,4 +300,36 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Latest Editorial & Market Analysis (September 2026) -->
+  <url>
+    <loc>https://pakmobilearena.online/news/pta-expands-commercial-5g-pakistan-2026</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/news/fbr-sro-1064-smartphone-custom-valuation-2026</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/news/pakistan-local-mobile-manufacturing-milestone-2026</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/news/september-2026-upcoming-smartphones-pakistan</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/news/online-vs-offline-phone-buying-pakistan-trends</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

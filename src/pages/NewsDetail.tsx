@@ -210,7 +210,10 @@ export const NewsDetail: React.FC<NewsDetailProps> = ({
           <img
             src={primaryImage}
             alt={article.title}
-            onError={() => setImageError(true)}
+            onError={(e) => {
+              setImageError(true);
+              e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80";
+            }}
             className="w-full h-full object-cover object-center"
             referrerPolicy="no-referrer"
             loading="eager"
@@ -368,6 +371,9 @@ export const NewsDetail: React.FC<NewsDetailProps> = ({
                       <img
                         src={rel.imageUrl || rel.image || FALLBACK_IMAGE}
                         alt={rel.title}
+                        onError={(e) => {
+                          e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80";
+                        }}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         referrerPolicy="no-referrer"
                         loading="lazy"
