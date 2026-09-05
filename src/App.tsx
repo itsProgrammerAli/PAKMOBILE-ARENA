@@ -54,8 +54,12 @@ export default function App() {
   // Theme State ('light' | 'dark') - default to 'light' mode on initial visit
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('theme');
-      if (saved === 'dark' || saved === 'light') return saved;
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark' || saved === 'light') return saved;
+      } catch {
+        // Fallback if localStorage is inaccessible
+      }
     }
     return 'light';
   });
@@ -174,7 +178,7 @@ export default function App() {
       navigate('/');
     }
     window.history.pushState({ view: 'phone-detail', phoneId: phone.id }, '');
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   };
 
   const handleNavigateToCompare = () => {

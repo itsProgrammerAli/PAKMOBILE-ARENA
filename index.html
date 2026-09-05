@@ -1,14 +1,36 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QMZM46PYFP"></script>
+    <!-- Cross-Origin Script Error Protection & Safe Analytics Loading -->
     <script>
+      // Suppress untracked cross-origin script errors from external assets or sandboxes
+      window.addEventListener('error', function(event) {
+        if (event && (event.message === 'Script error.' || !event.filename)) {
+          if (event.preventDefault) event.preventDefault();
+          return true;
+        }
+      });
+
+      // Initialize dataLayer safely
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-QMZM46PYFP');
+      // Only load Google Tag Manager when running on the production domain to prevent iframe sandbox script errors
+      try {
+        if (typeof window !== 'undefined' && window.location.hostname === 'pakmobilearena.online') {
+          var gtmScript = document.createElement('script');
+          gtmScript.async = true;
+          gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-QMZM46PYFP';
+          gtmScript.onerror = function() {
+            // Gracefully ignore blocked analytics
+          };
+          document.head.appendChild(gtmScript);
+          gtag('js', new Date());
+          gtag('config', 'G-QMZM46PYFP');
+        }
+      } catch (err) {
+        // Suppress any environment restriction errors
+      }
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

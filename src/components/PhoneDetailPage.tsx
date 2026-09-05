@@ -424,13 +424,16 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
 
   // User submitted reviews state
   const [userReviews, setUserReviews] = useState<UserReview[]>(() => {
-    const saved = localStorage.getItem(`reviews_${phone.id}`);
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch {
-        return [];
+    try {
+      if (typeof window !== 'undefined') {
+        const saved = localStorage.getItem(`reviews_${phone.id}`);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed)) return parsed;
+        }
       }
+    } catch {
+      // Storage access might be restricted in sandbox
     }
     return [];
   });
@@ -456,14 +459,21 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
     } else {
       setSelectedVariantId('');
     }
-    const saved = localStorage.getItem(`reviews_${phone.id}`);
-    if (saved) {
-      try {
-        setUserReviews(JSON.parse(saved));
-      } catch {
-        setUserReviews([]);
+    try {
+      if (typeof window !== 'undefined') {
+        const saved = localStorage.getItem(`reviews_${phone.id}`);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed)) {
+            setUserReviews(parsed);
+          } else {
+            setUserReviews([]);
+          }
+        } else {
+          setUserReviews([]);
+        }
       }
-    } else {
+    } catch {
       setUserReviews([]);
     }
     setShowReviewForm(false);
@@ -522,7 +532,13 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
 
     const updated = [newRev, ...userReviews];
     setUserReviews(updated);
-    localStorage.setItem(`reviews_${phone.id}`, JSON.stringify(updated));
+    try {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem(`reviews_${phone.id}`, JSON.stringify(updated));
+      }
+    } catch {
+      // Storage restricted or quota exceeded
+    }
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new CustomEvent('phone-review-updated', { detail: { phoneId: phone.id } }));
     }
