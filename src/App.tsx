@@ -3,7 +3,7 @@ import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { FilterCategory, PhoneSpec } from './types';
 import { PHONES_DATA } from './data/phones';
 import { Navbar } from './components/Navbar';
-import { Home } from './components/Home';
+import { Home } from './pages/Home';
 import { BrandPage } from './components/BrandPage';
 import { PhoneDetailPage } from './components/PhoneDetailPage';
 import { ComparePage } from './components/ComparePage';
@@ -383,6 +383,9 @@ export default function App() {
                   alt={phone.name}
                   className="w-6 h-6 sm:w-7 sm:h-7 object-contain"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80";
+                  }}
                 />
                 <button
                   onClick={() => handleRemoveComparedPhone(phone.id)}

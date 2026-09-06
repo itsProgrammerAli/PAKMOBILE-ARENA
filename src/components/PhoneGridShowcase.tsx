@@ -103,8 +103,8 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
               <span>models</span>
             </span>
           </div>
-          <p className="text-xs sm:text-sm text-gray-500 dark:text-zinc-400 mt-1.5 max-w-lg leading-relaxed">
-            Prices verified with official distributors & authorized retail outlets across Pakistan.
+          <p className="text-sm md:text-base text-slate-500 dark:text-slate-400 mt-1.5 max-w-lg leading-relaxed">
+            All Smartphones in Pakistan. <span className="font-semibold text-emerald-600 dark:text-emerald-400">{phones.length} models</span>
           </p>
         </div>
 

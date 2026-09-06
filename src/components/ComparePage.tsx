@@ -232,6 +232,9 @@ export const ComparePage: React.FC<ComparePageProps> = ({
                             alt={phone.name}
                             className="w-10 h-10 object-contain bg-gray-50 dark:bg-white/5 p-1 rounded-lg border border-gray-200 dark:border-white/10 group-hover:scale-105 transition-transform"
                             referrerPolicy="no-referrer"
+                            onError={(e) => {
+                              e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80";
+                            }}
                           />
                           <div className="min-w-0">
                             <div className="text-xs sm:text-sm font-bold text-gray-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 truncate">
@@ -300,6 +303,9 @@ export const ComparePage: React.FC<ComparePageProps> = ({
                       alt={phone1.name} 
                       className="max-h-16 sm:max-h-24 w-auto object-contain drop-shadow-xs group-hover:scale-105 transition-transform"
                       referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80";
+                      }}
                     />
                   </div>
 
@@ -359,6 +365,9 @@ export const ComparePage: React.FC<ComparePageProps> = ({
                       alt={phone2.name} 
                       className="max-h-16 sm:max-h-24 w-auto object-contain drop-shadow-xs group-hover:scale-105 transition-transform"
                       referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80";
+                      }}
                     />
                   </div>
 
@@ -462,6 +471,9 @@ export const ComparePage: React.FC<ComparePageProps> = ({
                                   alt={p.name}
                                   className="w-7 h-7 object-contain bg-gray-50 dark:bg-white/5 p-0.5 rounded-lg border border-gray-200 dark:border-white/10"
                                   referrerPolicy="no-referrer"
+                                  onError={(e) => {
+                                    e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80";
+                                  }}
                                 />
                                 <div className="min-w-0">
                                   <div className="text-[11px] sm:text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 truncate">

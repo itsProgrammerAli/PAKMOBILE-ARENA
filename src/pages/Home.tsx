@@ -1,10 +1,10 @@
 import React from 'react';
-import { HeroSection } from './HeroSection';
-import { PhoneGridShowcase } from './PhoneGridShowcase';
+import { HeroSection } from '../components/HeroSection';
+import { PhoneGridShowcase } from '../components/PhoneGridShowcase';
 import { FilterCategory, PhoneSpec } from '../types';
 import { phones } from '../data/phones';
 
-interface HomeProps {
+export interface HomeProps {
   activeFilter: FilterCategory;
   setActiveFilter: (filter: FilterCategory) => void;
   searchQuery: string;
@@ -45,6 +45,13 @@ export const Home: React.FC<HomeProps> = ({
         />
       )}
 
+      {/* Dynamic Subtitle Banner & Counter */}
+      <div className="sr-only">
+        <p className="text-sm md:text-base text-slate-500 dark:text-slate-400">
+          All Smartphones in Pakistan. <span className="font-semibold text-emerald-600 dark:text-emerald-400">{phones.length} models</span>
+        </p>
+      </div>
+
       {/* Main Phone Catalog Showcase */}
       <PhoneGridShowcase
         phones={phones}
@@ -59,3 +66,5 @@ export const Home: React.FC<HomeProps> = ({
     </div>
   );
 };
+
+export default Home;

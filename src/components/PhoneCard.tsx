@@ -64,6 +64,9 @@ export const PhoneCard: React.FC<PhoneCardProps> = ({
           className="h-24 sm:h-36 max-w-[85%] object-contain mx-auto drop-shadow-sm dark:drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)] group-hover/img:scale-105 transition-transform duration-300"
           referrerPolicy="no-referrer"
           loading="lazy"
+          onError={(e) => {
+            e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80";
+          }}
         />
 
         {/* Quick View Hover Overlay (Desktop) */}
@@ -138,7 +141,11 @@ export const PhoneCard: React.FC<PhoneCardProps> = ({
 
             {/* Passport Tax Note */}
             <div className="text-[9px] sm:text-[10px] text-gray-500 dark:text-zinc-400 mt-0.5 truncate">
-              Tax: <span className="font-mono font-semibold text-gray-700 dark:text-zinc-300">{formatPKR(phone.ptaTax.passportTaxPKR)}</span>
+              {phone.ptaTax.passportTaxPKR === 0 ? (
+                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">PTA Tax: Included (Official Assembly)</span>
+              ) : (
+                <>Tax: <span className="font-mono font-semibold text-gray-700 dark:text-zinc-300">{formatPKR(phone.ptaTax.passportTaxPKR)}</span></>
+              )}
             </div>
           </div>
 

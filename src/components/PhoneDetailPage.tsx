@@ -686,8 +686,8 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                     alt={`${phone.name} - ${selectedColor}`}
                     className="max-h-64 sm:max-h-72 w-auto object-contain drop-shadow-md dark:drop-shadow-[0_10px_25px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-all duration-300 animate-in fade-in zoom-in-95"
                     referrerPolicy="no-referrer"
-                    onError={() => {
-                      setImageError(true);
+                    onError={(e) => {
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80";
                     }}
                   />
                 </div>
@@ -866,7 +866,7 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                   <div className="p-2.5 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700/80 shadow-2xs">
                     <span className="text-[10px] font-medium text-slate-500 dark:text-zinc-400 block">PTA Passport Tax:</span>
                     <span className="text-base font-extrabold font-mono text-emerald-700 dark:text-emerald-400 block mt-0.5">
-                      {formatPKR(phone.ptaTax.passportTaxPKR)}
+                      {phone.ptaTax.passportTaxPKR === 0 ? 'Included (Official Assembly)' : formatPKR(phone.ptaTax.passportTaxPKR)}
                     </span>
                     <span className="text-[9px] text-slate-400 dark:text-zinc-500">Within 60 days of arrival in Pakistan</span>
                   </div>
@@ -874,7 +874,7 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                   <div className="p-2.5 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700/80 shadow-2xs">
                     <span className="text-[10px] font-medium text-slate-500 dark:text-zinc-400 block">PTA CNIC Tax (ID Card):</span>
                     <span className="text-base font-bold font-mono text-slate-900 dark:text-white block mt-0.5">
-                      {formatPKR(phone.ptaTax.cnicTaxPKR)}
+                      {phone.ptaTax.cnicTaxPKR === 0 ? 'Included (Official Assembly)' : formatPKR(phone.ptaTax.cnicTaxPKR)}
                     </span>
                     <span className="text-[9px] text-slate-400 dark:text-zinc-500">Standard rate for non-travelers</span>
                   </div>

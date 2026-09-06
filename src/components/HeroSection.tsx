@@ -144,6 +144,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         alt={phone.name} 
                         className="w-9 h-9 object-contain rounded-lg bg-gray-50 dark:bg-zinc-800 p-1 border border-gray-100 dark:border-zinc-700 flex-shrink-0"
                         referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80";
+                        }}
                       />
                       <div>
                         <div className="text-xs font-bold text-gray-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
@@ -286,6 +289,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         alt={phone.name} 
                         className="w-10 h-10 object-contain rounded-xl bg-gray-50 dark:bg-zinc-800 p-1 border border-gray-100 dark:border-zinc-700 flex-shrink-0"
                         referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80";
+                        }}
                       />
                       <div>
                         <div className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">

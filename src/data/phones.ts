@@ -1,13 +1,17 @@
 import { PhoneSpec, BrandInfo } from '../types';
 
 export const BRANDS: BrandInfo[] = [
-  { name: 'Apple', count: 2, logoText: 'APPLE', slug: 'apple' },
-  { name: 'Samsung', count: 8, logoText: 'SAMSUNG', slug: 'samsung' },
-  { name: 'Xiaomi', count: 5, logoText: 'XIAOMI', slug: 'xiaomi' },
-  { name: 'Tecno', count: 5, logoText: 'TECNO', slug: 'tecno' },
-  { name: 'Vivo', count: 4, logoText: 'VIVO', slug: 'vivo' },
-  { name: 'Infinix', count: 6, logoText: 'INFINIX', slug: 'infinix' },
+  { name: 'Apple', count: 3, logoText: 'APPLE', slug: 'apple' },
+  { name: 'Samsung', count: 9, logoText: 'SAMSUNG', slug: 'samsung' },
+  { name: 'Xiaomi', count: 6, logoText: 'XIAOMI', slug: 'xiaomi' },
+  { name: 'Tecno', count: 7, logoText: 'TECNO', slug: 'tecno' },
+  { name: 'Vivo', count: 5, logoText: 'VIVO', slug: 'vivo' },
+  { name: 'Infinix', count: 7, logoText: 'INFINIX', slug: 'infinix' },
   { name: 'Realme', count: 2, logoText: 'REALME', slug: 'realme' },
+  { name: 'Google', count: 1, logoText: 'GOOGLE', slug: 'google' },
+  { name: 'OnePlus', count: 1, logoText: 'ONEPLUS', slug: 'oneplus' },
+  { name: 'Motorola', count: 1, logoText: 'MOTOROLA', slug: 'motorola' },
+  { name: 'Honor', count: 1, logoText: 'HONOR', slug: 'honor' },
 ];
 
 export const PHONES_DATA: PhoneSpec[] = [
@@ -105,9 +109,9 @@ export const PHONES_DATA: PhoneSpec[] = [
     name: 'Apple iPhone 15 Pro Max',
     brand: 'Apple',
     model: 'iPhone 15 Pro Max (256GB)',
-    pricePKR: 479999,
-    officialPricePKR: 524999,
-    marketPriceRangePKR: { min: 470000, max: 490000 },
+    pricePKR: 455000,
+    officialPricePKR: 479999,
+    marketPriceRangePKR: { min: 445000, max: 465000 },
     variants: [
       {
         id: 'iphone15pm-256',
@@ -135,7 +139,7 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 137500,
+      passportTaxPKR: 139000,
       cnicTaxPKR: 168000,
       status: 'Official PTA Approved',
     },
@@ -254,7 +258,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     model: 'Galaxy S24 Ultra (12GB/256GB)',
     pricePKR: 399999,
     officialPricePKR: 434999,
-    marketPriceRangePKR: { min: 395000, max: 415000 },
+    marketPriceRangePKR: { min: 390000, max: 410000 },
     variants: [
       {
         id: 's24u-12-256',
@@ -332,8 +336,8 @@ export const PHONES_DATA: PhoneSpec[] = [
     brand: 'Samsung',
     model: 'Galaxy A55 5G (8GB/256GB)',
     pricePKR: 124999,
-    officialPricePKR: 139999,
-    marketPriceRangePKR: { min: 123000, max: 129000 },
+    officialPricePKR: 130999,
+    marketPriceRangePKR: { min: 122000, max: 127000 },
     variants: [
       {
         id: 'a55-8-256',
@@ -346,8 +350,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 45500,
-      cnicTaxPKR: 54000,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'March 2024',
@@ -388,9 +392,9 @@ export const PHONES_DATA: PhoneSpec[] = [
     name: 'Samsung Galaxy A35 5G',
     brand: 'Samsung',
     model: 'Galaxy A35 5G (8GB/256GB)',
-    pricePKR: 104999,
-    officialPricePKR: 114999,
-    marketPriceRangePKR: { min: 102000, max: 108000 },
+    pricePKR: 99999,
+    officialPricePKR: 104999,
+    marketPriceRangePKR: { min: 97000, max: 102000 },
     variants: [
       {
         id: 'a35-8-256',
@@ -403,8 +407,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 41500,
-      cnicTaxPKR: 49000,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'March 2024',
@@ -625,7 +629,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     model: 'Note 40 Pro (8GB/256GB)',
     pricePKR: 69999,
     officialPricePKR: 74999,
-    marketPriceRangePKR: { min: 67999, max: 72999 },
+    marketPriceRangePKR: { min: 68000, max: 71500 },
     variants: [
       {
         id: 'inf-n40p-8-256',
@@ -638,8 +642,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 19500,
-      cnicTaxPKR: 23500,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'April 2024',
@@ -680,9 +684,9 @@ export const PHONES_DATA: PhoneSpec[] = [
     name: 'Infinix GT 20 Pro 5G',
     brand: 'Infinix',
     model: 'GT 20 Pro 5G (12GB/256GB)',
-    pricePKR: 94999,
-    officialPricePKR: 99999,
-    marketPriceRangePKR: { min: 92000, max: 97999 },
+    pricePKR: 78999,
+    officialPricePKR: 84999,
+    marketPriceRangePKR: { min: 77000, max: 81000 },
     variants: [
       {
         id: 'gt20pro-12-256',
@@ -695,8 +699,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 37500,
-      cnicTaxPKR: 44500,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'May 2024',
@@ -788,9 +792,9 @@ export const PHONES_DATA: PhoneSpec[] = [
     name: 'Vivo V30 5G',
     brand: 'Vivo',
     model: 'V30 5G (12GB/256GB)',
-    pricePKR: 110500,
-    officialPricePKR: 129999,
-    marketPriceRangePKR: { min: 108000, max: 115000 },
+    pricePKR: 129999,
+    officialPricePKR: 139999,
+    marketPriceRangePKR: { min: 126000, max: 132000 },
     variants: [
       {
         id: 'vivo-v30-12-256',
@@ -803,8 +807,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 47000,
-      cnicTaxPKR: 56000,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'March 2024',
@@ -842,8 +846,8 @@ export const PHONES_DATA: PhoneSpec[] = [
     brand: 'Xiaomi',
     model: 'Redmi Note 13 Pro (8GB/256GB)',
     pricePKR: 64999,
-    officialPricePKR: 74999,
-    marketPriceRangePKR: { min: 62999, max: 67999 },
+    officialPricePKR: 69999,
+    marketPriceRangePKR: { min: 63000, max: 66500 },
     variants: [
       {
         id: 'redmi-n13p-8-256',
@@ -865,8 +869,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 18000,
-      cnicTaxPKR: 22000,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'January 2024',
@@ -907,7 +911,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     model: 'Redmi 13 (8GB/128GB, 8GB/256GB)',
     pricePKR: 39999,
     officialPricePKR: 42999,
-    marketPriceRangePKR: { min: 38000, max: 41000 },
+    marketPriceRangePKR: { min: 38500, max: 41000 },
     variants: [
       {
         id: 'redmi-13-8-128',
@@ -929,8 +933,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 12500,
-      cnicTaxPKR: 16000,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'June 2024',
@@ -971,9 +975,9 @@ export const PHONES_DATA: PhoneSpec[] = [
     name: 'Realme 12 Pro Plus 5G',
     brand: 'Realme',
     model: 'Realme 12 Pro+ 5G (12GB/512GB)',
-    pricePKR: 134999,
+    pricePKR: 139999,
     officialPricePKR: 149999,
-    marketPriceRangePKR: { min: 129999, max: 139999 },
+    marketPriceRangePKR: { min: 135000, max: 142000 },
     variants: [
       {
         id: 'realme12pp-12-512',
@@ -986,8 +990,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 47000,
-      cnicTaxPKR: 56000,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'February 2024',
@@ -1151,7 +1155,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     brand: 'Tecno',
     model: 'Spark 20 Pro+ (256GB)',
     pricePKR: 52999,
-    officialPricePKR: 55999,
+    officialPricePKR: 56999,
     marketPriceRangePKR: { min: 51000, max: 54000 },
     variants: [
       {
@@ -1165,8 +1169,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 20000,
-      cnicTaxPKR: 25500,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'February 2024',
@@ -1469,9 +1473,9 @@ export const PHONES_DATA: PhoneSpec[] = [
     name: 'Realme C67',
     brand: 'Realme',
     model: 'C67 (128GB)',
-    pricePKR: 44999,
-    officialPricePKR: 52999,
-    marketPriceRangePKR: { min: 42000, max: 46000 },
+    pricePKR: 38999,
+    officialPricePKR: 42999,
+    marketPriceRangePKR: { min: 37500, max: 40000 },
     variants: [
       {
         id: 'c67-8-128',
@@ -1484,8 +1488,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 16500,
-      cnicTaxPKR: 21000,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'January 2024',
@@ -1641,9 +1645,9 @@ export const PHONES_DATA: PhoneSpec[] = [
     name: 'Infinix Hot 50 Pro+',
     brand: 'Infinix',
     model: 'Hot 50 Pro+ (256GB)',
-    pricePKR: 53999,
+    pricePKR: 58999,
     officialPricePKR: 59999,
-    marketPriceRangePKR: { min: 51000, max: 55000 },
+    marketPriceRangePKR: { min: 57500, max: 59000 },
     variants: [
       {
         id: 'h50pp-8-256',
@@ -1656,8 +1660,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 19500,
-      cnicTaxPKR: 25000,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'October 2024',
@@ -1704,8 +1708,8 @@ export const PHONES_DATA: PhoneSpec[] = [
     brand: 'Infinix',
     model: 'Hot 50 Pro (128GB / 256GB)',
     pricePKR: 46999,
-    officialPricePKR: 52999,
-    marketPriceRangePKR: { min: 44000, max: 48000 },
+    officialPricePKR: 48999,
+    marketPriceRangePKR: { min: 45500, max: 47500 },
     variants: [
       {
         id: 'h50p-8-128',
@@ -1727,8 +1731,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 17500,
-      cnicTaxPKR: 22000,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'October 2024',
@@ -1767,9 +1771,9 @@ export const PHONES_DATA: PhoneSpec[] = [
     name: 'Tecno Spark 30 Pro',
     brand: 'Tecno',
     model: 'Spark 30 Pro (128GB / 256GB)',
-    pricePKR: 43999,
-    officialPricePKR: 49999,
-    marketPriceRangePKR: { min: 41000, max: 45000 },
+    pricePKR: 45999,
+    officialPricePKR: 47999,
+    marketPriceRangePKR: { min: 44500, max: 46500 },
     variants: [
       {
         id: 's30p-8-128',
@@ -1791,8 +1795,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 16000,
-      cnicTaxPKR: 20500,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'September 2024',
@@ -1836,9 +1840,9 @@ export const PHONES_DATA: PhoneSpec[] = [
     name: 'Xiaomi Redmi 14C',
     brand: 'Xiaomi',
     model: 'Redmi 14C (128GB)',
-    pricePKR: 28999,
-    officialPricePKR: 33999,
-    marketPriceRangePKR: { min: 27000, max: 30000 },
+    pricePKR: 34999,
+    officialPricePKR: 36999,
+    marketPriceRangePKR: { min: 33500, max: 35500 },
     variants: [
       {
         id: 'r14c-4-128',
@@ -1860,8 +1864,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 10500,
-      cnicTaxPKR: 14000,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'August 2024',
@@ -1909,9 +1913,9 @@ export const PHONES_DATA: PhoneSpec[] = [
     name: 'Vivo Y28',
     brand: 'Vivo',
     model: 'Y28 (128GB / 256GB)',
-    pricePKR: 46999,
-    officialPricePKR: 53999,
-    marketPriceRangePKR: { min: 45000, max: 48000 },
+    pricePKR: 49999,
+    officialPricePKR: 52999,
+    marketPriceRangePKR: { min: 48500, max: 50500 },
     variants: [
       {
         id: 'y28-8-128',
@@ -1933,8 +1937,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 17500,
-      cnicTaxPKR: 22000,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'July 2024',
@@ -1978,9 +1982,9 @@ export const PHONES_DATA: PhoneSpec[] = [
     name: 'Samsung Galaxy A06',
     brand: 'Samsung',
     model: 'Galaxy A06 (64GB / 128GB)',
-    pricePKR: 27999,
-    officialPricePKR: 32999,
-    marketPriceRangePKR: { min: 26000, max: 29000 },
+    pricePKR: 28999,
+    officialPricePKR: 30999,
+    marketPriceRangePKR: { min: 27500, max: 29500 },
     variants: [
       {
         id: 'a06-4-64',
@@ -2002,8 +2006,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       },
     ],
     ptaTax: {
-      passportTaxPKR: 9800,
-      cnicTaxPKR: 13500,
+      passportTaxPKR: 0,
+      cnicTaxPKR: 0,
       status: 'Official PTA Approved',
     },
     releaseDate: 'August 2024',
@@ -2044,6 +2048,7 @@ export const PHONES_DATA: PhoneSpec[] = [
       finalVerdict: 'A solid, brand-reliable choice for buyers seeking Samsung\'s dependable software ecosystem, clean One UI, guaranteed Android updates, and Knox security on an entry-level budget. Power users wanting high refresh rates or gaming performance should step up to the Galaxy A15 or A25.',
     },
   },
+
 ];
 
 // Provide both standard exports

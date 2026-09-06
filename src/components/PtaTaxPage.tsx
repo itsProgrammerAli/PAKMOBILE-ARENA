@@ -11,6 +11,7 @@ import {
 import { PhoneSpec } from '../types';
 import { PHONES_DATA } from '../data/phones';
 import { useExchangeRate } from '../hooks/useExchangeRate';
+import { calculatePTATax, BASE_USD_RATE } from '../pages/PTATaxCalculator';
 
 interface PtaTaxPageProps {
   initialPhone?: PhoneSpec | null;
@@ -36,23 +37,10 @@ export const PtaTaxPage: React.FC<PtaTaxPageProps> = ({
   const { liveRate } = useExchangeRate();
 
   // Official FBR PTA Tax Slabs for 2026 (DIRBS SRO compliance)
+  // For phones > $500 (Flagships): 25% Sales Tax + Fixed Regulatory Duty (Rs 17,600) + Customs Duty.
+  // For mid-rangers: Standardized flat rate slabs.
   const calculateCustomTax = (usd: number, type: 'passport' | 'cnic') => {
-    let tax = 0;
-    if (usd <= 30) {
-      tax = type === 'passport' ? 430 : 550;
-    } else if (usd <= 100) {
-      tax = type === 'passport' ? 3200 : 4030;
-    } else if (usd <= 200) {
-      tax = type === 'passport' ? 9580 : 11560;
-    } else if (usd <= 350) {
-      tax = type === 'passport' ? 40500 : 50400;
-    } else if (usd <= 500) {
-      tax = type === 'passport' ? 68900 : 84200;
-    } else {
-      // Flagship > $500 category (includes sales tax + regulatory duty)
-      tax = type === 'passport' ? 115000 + (usd - 500) * 45 : 138000 + (usd - 500) * 55;
-    }
-    return Math.round(tax);
+    return calculatePTATax(usd, type, liveRate || BASE_USD_RATE);
   };
 
   const calculatedTax = calculateCustomTax(customPriceUSD, docType);
@@ -200,6 +188,9 @@ export const PtaTaxPage: React.FC<PtaTaxPageProps> = ({
                             alt={phone.name} 
                             className="w-9 h-9 object-contain bg-white dark:bg-zinc-900 rounded-lg p-1 border border-gray-100 dark:border-white/5 flex-shrink-0"
                             referrerPolicy="no-referrer"
+                            onError={(e) => {
+                              e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80";
+                            }}
                           />
                           <div className="truncate">
                             <div className="text-xs font-bold text-gray-900 dark:text-white truncate">
@@ -234,6 +225,9 @@ export const PtaTaxPage: React.FC<PtaTaxPageProps> = ({
                         alt={selectedDevice.name} 
                         className="w-20 h-20 object-contain rounded-2xl bg-white dark:bg-white/5 p-2.5 border border-emerald-100 dark:border-white/10 shadow-xs"
                         referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          e.currentTarget.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80";
+                        }}
                       />
                       <div className="space-y-1">
                         <span className="px-2.5 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 text-[10px] font-bold uppercase tracking-wider border dark:border-emerald-800/40">
