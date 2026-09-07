@@ -2,6 +2,363 @@ import { NewsArticle } from '../types';
 
 export const NEWS_DATA: NewsArticle[] = [
   {
+    "id": "apple-fall-2026-event-2nm-a20-pro-foldable-ultra",
+    "slug": "apple-fall-2026-event-2nm-a20-pro-foldable-ultra",
+    "title": "Apple Gears Up for Fall 2026 Launch: 2nm A20 Pro Silicon and Foldable Ultra Leaks",
+    "date": "September 7, 2026",
+    "isoDate": "2026-09-07",
+    "category": "Global Tech",
+    "readTime": "5 min read",
+    "imageUrl": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Anticipation peaks ahead of Apple's annual hardware reveal, with reports pointing to 2nm fabrication nodes and early previews of book-style foldable prototypes.",
+    "author": "PakMobile Arena Global Tech Desk",
+    "tags": [
+      "Apple",
+      "A20 Pro",
+      "iPhone Ultra",
+      "2nm Silicon",
+      "Flagship Tech"
+    ],
+    "content": [
+      {
+        "heading": "The Transition to 2nm Semiconductor Fabrication",
+        "paragraphs": [
+          "The global technology industry is closely monitoring Cupertino as supply-chain tracking indicates the official debut of next-generation 2-nanometer architecture in flagship mobile computing. The anticipated A20 Pro chipset represents a substantial leap in thermal efficiency, delivering up to 30% lower power draw during intensive neural tasks compared to previous-generation silicon.",
+          "Industry analysts report that Apple has secured primary commercial allocation for advanced wafer runs, pairing this silicon milestone with custom in-house modem designs intended to streamline power dissipation across international 5G frequency bands. The refined gate-all-around (GAA) nanosheet transistors allow higher density without thermal throttling, a critical benchmark for sustaining peak graphics rendering and on-device generative intelligence."
+        ]
+      },
+      {
+        "heading": "Pakistani Import Forecast and Valuation Expectations",
+        "paragraphs": [
+          "For consumers in Pakistan, the arrival of next-tier flagships will trigger the standard top-tier FBR customs duty schedule. Under prevailing SRO valuation guidelines, devices commanding retail prices in excess of ,000 face standard 25% sales tax and fixed customs tariffs upon passenger entry or commercial consignment.",
+          "Local authorized distributor networks are preparing pre-order allocations, with retail trade analysts projecting that initial demand will center heavily on corporate upgrade plans and premium retail hubs in Islamabad, Lahore, and Karachi. Prospective buyers should anticipate landed prices reflecting both interbank dollar parity and the mandated DIRBS registration levies, reinforcing the critical need to purchase only official boxed stock with valid local warranty verification."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "samsung-galaxy-a07s-official-launch-budget-specs",
+    "slug": "samsung-galaxy-a07s-official-launch-budget-specs",
+    "title": "Samsung Galaxy A07s Launches Globally: Upgraded 6.7-Inch Panel and 5000mAh Battery",
+    "date": "September 7, 2026",
+    "isoDate": "2026-09-07",
+    "category": "New Launches",
+    "readTime": "4 min read",
+    "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Samsung introduces its latest entry-level contender, featuring refined software support timelines and enhanced durability for value-driven smartphone markets.",
+    "author": "PakMobile Arena Hardware Desk",
+    "tags": [
+      "Samsung",
+      "Galaxy A07s",
+      "Budget Smartphones",
+      "Made in Pakistan"
+    ],
+    "content": [
+      {
+        "heading": "Optimized Hardware for Daily Workloads",
+        "paragraphs": [
+          "Samsung has officially expanded its entry-tier portfolio with the announcement of the Galaxy A07s. Tailored for budget-conscious buyers requiring dependable battery endurance and clear day-to-day usability, the handset sports a generous 6.7-inch HD+ display with a 90Hz adaptive refresh rate and a durable polycarbonate unibody finish.",
+          "Under the hood, an energy-efficient octa-core SoC works in tandem with a 5,000 mAh battery cell supported by 15W wired fast charging. The inclusion of One UI Core built on the latest Android base brings Samsung Knox Vault security mechanisms into an accessible entry-level price bracket, safeguarding biometric tokens and personal transaction data against hardware tampering."
+        ]
+      },
+      {
+        "heading": "Local Manufacturing Outlook in Pakistan",
+        "paragraphs": [
+          "Given that earlier models in the Galaxy A0-series ranked among the highest-volume locally assembled devices in Pakistan, industry observers anticipate that commercial SKD lines will commence domestic production within the next quarter. Domestic assembly will ensure competitive pricing under Rs 32,000, insulating budget buyers from currency fluctuations and import freight overheads.",
+          "With complete local DIRBS compliance out-of-the-box and full nationwide support via Samsung's authorized service centers across Karachi, Lahore, Rawalpindi, and Peshawar, the Galaxy A07s is poised to become a staple offering for gig workers, students, and first-time smartphone adopters seeking recognized brand reliability."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-18-fold-flagship-launch-specs-pricing",
+    "slug": "xiaomi-18-fold-flagship-launch-specs-pricing",
+    "title": "Xiaomi Unveils Xiaomi 18 Fold: In-House Xring O3 Silicon Meets LPDDR6 Memory",
+    "date": "September 7, 2026",
+    "isoDate": "2026-09-07",
+    "category": "Hardware & Tech",
+    "readTime": "5 min read",
+    "imageUrl": "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Xiaomi pushes the envelope of foldable engineering with zero-gap carbon hinges, proprietary co-processors, and ultra-high-speed memory buses.",
+    "author": "PakMobile Arena Engineering Review",
+    "tags": [
+      "Xiaomi 18 Fold",
+      "Foldable Tech",
+      "LPDDR6",
+      "Flagship Mobile"
+    ],
+    "content": [
+      {
+        "heading": "Engineering the Zero-Crease Foldable Platform",
+        "paragraphs": [
+          "Xiaomi has expanded its ultra-premium mobile lineup with the commercial launch of the Xiaomi 18 Fold. The device incorporates a proprietary dual-pivot carbon fiber hinge rated for more than 500,000 continuous fold cycles, nearly eliminating the visible center crease that historically challenged flexible OLED displays.",
+          "Crucially, the device is powered by the company's dedicated Xring O3 companion processor, engineered specifically to manage multi-window display scaling and thermals across both internal 8.03-inch and external 6.56-inch LTPO panels. It is paired with rapid LPDDR6 system memory, allowing desktop-class multitasking without thermal throttling during multi-app spreadsheet manipulation or split-screen video rendering."
+        ]
+      },
+      {
+        "heading": "Positioning in South Asian Luxury Markets",
+        "paragraphs": [
+          "While foldable handsets occupy a niche tier in Pakistan due to foreign exchange and luxury duties, high-end power users and corporate executives continue to show rising appetite for book-style productivity devices. Importers predict that parallel gray channels and official international warranty units will command premium interest across tech enclaves in major metropolitan cities.",
+          "Prospective owners must keep in mind the substantial PTA DIRBS tax liability exceeding Rs 140,000 for foreign-sourced units over 00 C&F valuation, leading savvy consumers to demand official distributor warranty representations that bundle pre-paid tax verification and screen-protection riders."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tecno-spark-50-pro-pakistan-launch-date-price",
+    "slug": "tecno-spark-50-pro-pakistan-launch-date-price",
+    "title": "Tecno Spark 50 Pro Slated for Pakistan Launch on September 10: 108MP Camera Under Rs 60K",
+    "date": "September 7, 2026",
+    "isoDate": "2026-09-07",
+    "category": "Local Market",
+    "readTime": "4 min read",
+    "imageUrl": "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Transsion Holdings brand Tecno prepares to challenge the mid-range retail sector with high-resolution photography and 120Hz curved AMOLED displays.",
+    "author": "PakMobile Arena Consumer Market Desk",
+    "tags": [
+      "Tecno",
+      "Spark 50 Pro",
+      "Mid Range",
+      "Pakistan Launch",
+      "Camera Phones"
+    ],
+    "content": [
+      {
+        "heading": "Aggressive Mid-Range Hardware Specifications",
+        "paragraphs": [
+          "Tecno Mobile Pakistan has confirmed that the Spark 50 Pro will officially land on local retail shelves on September 10. The device aims squarely at the competitive Rs 50,000 to Rs 60,000 price bracket, introducing a 108-megapixel primary image sensor equipped with in-sensor lossless crop zoom and electronic image stabilization.",
+          "A 120Hz curved AMOLED display with 1,200 nits peak brightness and dual stereo speakers tuned for gaming round out an aggressive hardware sheet aimed directly at young mobile gamers and university students across Pakistan. With rapid 45W charging powering a 5,000mAh battery, the device offers substantial turnaround times between intensive gaming sessions."
+        ]
+      },
+      {
+        "heading": "Retail Availability and Distributor Channels",
+        "paragraphs": [
+          "Retail dealers across Saddar, Karachi, and Hafeez Centre, Lahore, report that pre-booking allocations include bundle gifts such as true-wireless earbuds and extended display replacement vouchers. The device will be fully assembled in domestic facilities, guaranteeing immediate official PTA DIRBS approval and 12-month Carlcare warranty coverage upon unboxing.",
+          "By maintaining domestic assembly plants in Karachi, Tecno bypasses heavy finished-goods import tariffs, enabling pricing that directly undercuts imported alternatives while maintaining ready spare part availability for screens and charging modules."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vivo-x500-pro-max-zeiss-periscope-camera-leak",
+    "slug": "vivo-x500-pro-max-zeiss-periscope-camera-leak",
+    "title": "Vivo X500 Pro Max Teased with 200MP Zeiss Periscope Sensor and 4x Lossless Optical Zoom",
+    "date": "September 7, 2026",
+    "isoDate": "2026-09-07",
+    "category": "Hardware & Tech",
+    "readTime": "4 min read",
+    "imageUrl": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Vivo deepens its collaboration with Zeiss, developing high-magnification computational optics to challenge traditional standalone mirrorless glass.",
+    "author": "PakMobile Arena Optics Desk",
+    "tags": [
+      "Vivo",
+      "X500 Pro Max",
+      "Zeiss Camera",
+      "Periscope Zoom",
+      "Mobile Photography"
+    ],
+    "content": [
+      {
+        "heading": "Next-Generation Optical Hardware Architecture",
+        "paragraphs": [
+          "Mobile photography benchmarks are set to undergo another major revision as initial technical previews of the Vivo X500 Pro Max emerge. The centerpiece of the device is a newly customized 200-megapixel periscope telephoto assembly developed in partnership with optics specialist Zeiss, supporting 4x native optical magnification and computational portrait enhancement up to 20x zoom.",
+          "The sensor features advanced floating lens elements that adjust dynamically for extreme macro portraiture, reducing chromatic aberration while retaining lifelike color fidelity in difficult stage and night concert lighting conditions. Vivo's custom V4 imaging ISP provides multi-exposure bracket combining in under 80 milliseconds."
+        ]
+      },
+      {
+        "heading": "Pakistani Creator Ecosystem Relevance",
+        "paragraphs": [
+          "As digital content creation and video monetization expand among local Pakistani youth, the demand for smartphones offering studio-grade optics has reached new highs. Flagship photography devices have become viable production tools for local vloggers and fashion videographers, driving consistent interest despite premium import duties.",
+          "Local photography collectives in Islamabad and Lahore cite the Zeiss T* anti-reflective coating and natural skin-tone rendition as decisive advantages when capturing wedding celebrations and outdoor cultural festivities under challenging sun glare."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oppo-iqoo-8000mah-silicon-carbon-battery-testing",
+    "slug": "oppo-iqoo-8000mah-silicon-carbon-battery-testing",
+    "title": "Silicon-Carbon Revolution: Oppo and iQOO Test 8000mAh Battery Architectures for 2027",
+    "date": "September 7, 2026",
+    "isoDate": "2026-09-07",
+    "category": "Hardware & Tech",
+    "readTime": "4 min read",
+    "imageUrl": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Breakthroughs in negative electrode chemistry allow smartphone engineers to test multi-day battery capacities without increasing phone thickness.",
+    "author": "PakMobile Arena Battery & Power Lab",
+    "tags": [
+      "Battery Tech",
+      "8000mAh",
+      "Silicon Carbon",
+      "Oppo",
+      "iQOO"
+    ],
+    "content": [
+      {
+        "heading": "Breaking the 5,000mAh Capacity Barrier",
+        "paragraphs": [
+          "Laboratory testing across major Chinese smartphone manufacturing clusters reveals that upcoming flagship generations from brands like Oppo and iQOO are validating battery capacities approaching 8,000 mAh. This technological milestone is made possible through high-proportion silicon-carbon anodes, which store significantly more lithium ions per unit volume than traditional synthetic graphite.",
+          "Despite holding nearly 60% more energy than standard batteries from two years ago, test engineering samples maintain an overall chassis thickness below 8.4mm, pairing high volumetric efficiency with 100W flash charging protocols that replenish empty cells to 80% capacity in under 38 minutes."
+        ]
+      },
+      {
+        "heading": "Significance for Load-Shedding and Regional Power Climates",
+        "paragraphs": [
+          "In regions experiencing periodic municipal power outages or long inter-city travel journeys, multi-day battery endurance provides tangible utility. Extended cycle life ratings—up to 1,600 charging iterations before dropping below 80% health—ensure that consumers will not need premature battery replacements during typical three-year ownership cycles.",
+          "Furthermore, the higher chemical stability of silicon-carbon matrices delivers superior resilience in severe summer ambient heat, making these power cells well-suited to the extreme 45°C summer conditions frequently recorded in central and southern Pakistan."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pta-dirbs-server-cluster-upgrade-fast-registration",
+    "slug": "pta-dirbs-server-cluster-upgrade-fast-registration",
+    "title": "PTA DIRBS Upgrades Server Cluster to Reduce IMEI Verification Response Times",
+    "date": "September 7, 2026",
+    "isoDate": "2026-09-07",
+    "category": "PTA & Taxes",
+    "readTime": "4 min read",
+    "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Pakistan Telecommunication Authority modernizes database infrastructure, expediting automated tax status queries and merchant batch clearances.",
+    "author": "PakMobile Arena Regulatory Bureau",
+    "tags": [
+      "PTA",
+      "DIRBS",
+      "IMEI Check",
+      "Customs Verification",
+      "Telecom Pakistan"
+    ],
+    "content": [
+      {
+        "heading": "Optimizing 8484 Shortcode and API Performance",
+        "paragraphs": [
+          "The Pakistan Telecommunication Authority (PTA) has deployed upgraded database cluster nodes across its national DIRBS facilities. The hardware overhaul aims to eliminate response bottlenecks experienced by consumers verifying IMEI status through the 8484 SMS shortcode and online verification portals during peak shopping hours.",
+          "Average query processing times have been reduced from over four minutes during high-traffic intervals to under 12 seconds, allowing shoppers to verify device legitimacy in real time at retail counters before completing transactions. The new clusters feature redundant fiber backbones and distributed load balancers spread across data centers in Islamabad and Karachi."
+        ]
+      },
+      {
+        "heading": "Direct Integration with Commercial Banking Portals",
+        "paragraphs": [
+          "The infrastructure update also strengthens backend connections with commercial banking APIs and FBR customs records, allowing automated cross-referencing of paid customs duty challans. Handsets registered via mobile banking apps now receive network whitelist activation across all four cellular operators within 30 minutes of tax clearance.",
+          "This instant synchronization eradicates fraudulent second-hand scams where non-compliant or temporarily patched devices are sold to unsuspecting buyers, providing peace of mind for both shoppers and retail merchants in key tech markets."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lpddr6-ram-standard-finalized-mobile-performance",
+    "slug": "lpddr6-ram-standard-finalized-mobile-performance",
+    "title": "LPDDR6 Memory Standard Finalized: What Next-Gen RAM Means for Future Mid-Rangers",
+    "date": "September 7, 2026",
+    "isoDate": "2026-09-07",
+    "category": "Hardware & Tech",
+    "readTime": "4 min read",
+    "imageUrl": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=1200&q=80",
+    "summary": "JEDEC formalizes the LPDDR6 specification, unlocking higher memory bandwidths to handle on-device AI models and complex real-time rendering.",
+    "author": "PakMobile Arena Semiconductor Desk",
+    "tags": [
+      "LPDDR6",
+      "Mobile RAM",
+      "Hardware Engineering",
+      "JEDEC",
+      "Performance"
+    ],
+    "content": [
+      {
+        "heading": "Doubling Memory Bandwidth for Mobile AI",
+        "paragraphs": [
+          "The JEDEC Solid State Technology Association has officially ratified the final operational parameters for Low Power Double Data Rate 6 (LPDDR6) memory. Designed to support escalating computational demands from edge artificial intelligence and high-framerate mobile gaming, the standard provides channel speeds reaching up to 14.4 Gbps per pin.",
+          "This represents a massive bandwidth expansion over current LPDDR5X chips, allowing mobile processors to load large language model weights and execute camera image signal processing pipelines without creating system memory bottlenecks. Enhanced sub-channel architecture also cuts active power consumption by approximately 20% compared to previous architectures."
+        ]
+      },
+      {
+        "heading": "Long-Term Impact on Budget Handset Longevity",
+        "paragraphs": [
+          "As high-speed memory architectures scale into mass production, semiconductor analysts anticipate that memory controllers supporting LPDDR6 will trickle down into upper mid-range chipsets by late 2027. This transition will prevent interface lag and prolong smooth operational lifespans for consumer handsets across the Rs 70,000 to Rs 100,000 price tier.",
+          "For Pakistani buyers who typically hold their mobile devices for three to four years, increased memory bandwidth ensures future operating system updates and evolving social apps will not cause the gradual performance degradation seen on older memory standards."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "refurbished-smartphone-resale-value-index-pakistan-2026",
+    "slug": "refurbished-smartphone-resale-value-index-pakistan-2026",
+    "title": "Refurbished Market Index: iPhone 14 and Galaxy S23 Maintain Highest Resale Value in Pakistan",
+    "date": "September 7, 2026",
+    "isoDate": "2026-09-07",
+    "category": "Consumer Guide",
+    "readTime": "5 min read",
+    "imageUrl": "https://images.unsplash.com/photo-1591337676887-a217a6970a8a?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1591337676887-a217a6970a8a?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Market tracking across second-hand electronic plazas reveals which previous-generation flagships retain the strongest trade-in value.",
+    "author": "PakMobile Arena Consumer Analytics",
+    "tags": [
+      "Used Phones",
+      "Resale Value",
+      "iPhone 14",
+      "Galaxy S23",
+      "Consumer Guide"
+    ],
+    "content": [
+      {
+        "heading": "Analyzing Depreciation Curves in Secondary Tech Hubs",
+        "paragraphs": [
+          "Data collected from major secondary electronics retail centers including Hall Road in Lahore, Singapore Plaza in Rawalpindi, and Amma Tower in Karachi highlights a clear valuation trend: older premium flagships with official PTA approval retain substantially higher residual value compared to depreciated mid-tier alternatives.",
+          "Specifically, the Apple iPhone 14 Pro series and Samsung Galaxy S23 Ultra have maintained upwards of 68% of their inflation-adjusted value, driven primarily by strong spare parts availability, durable display glass, and continuous multi-year operating system update commitments. In contrast, unbranded or gray-market models suffer severe depreciation upon secondary resale."
+        ]
+      },
+      {
+        "heading": "Key Inspection Points for Pre-Owned Shoppers",
+        "paragraphs": [
+          "Consumers navigating the pre-owned market are strongly advised to inspect device hardware systematically: verifying true battery health cycles through diagnostic software, confirming factory display seal water-resistance, and performing real-time IMEI status checks on the PTA DIRBS portal to guard against cloned device patches.",
+          "Purchasing from established brick-and-mortar retailers offering written 7-day checking warranties and computerized payment receipts remains the most reliable strategy to prevent inadvertent purchase of blacklisted or stolen mobile stock."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "under-display-camera-transparent-oled-breakthrough",
+    "slug": "under-display-camera-transparent-oled-breakthrough",
+    "title": "Under-Display Selfie Cameras Near Mainstream Parity: Transparent OLED Breakthroughs",
+    "date": "September 7, 2026",
+    "isoDate": "2026-09-07",
+    "category": "Hardware & Tech",
+    "readTime": "4 min read",
+    "imageUrl": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Advanced sub-pixel arrangements and AI demosaicing algorithms eliminate the hazy diffraction artifacts that previously hindered full-screen displays.",
+    "author": "PakMobile Arena Display Tech Lab",
+    "tags": [
+      "Under-Display Camera",
+      "OLED Tech",
+      "Future Smartphones",
+      "Display Innovation"
+    ],
+    "content": [
+      {
+        "heading": "Overcoming the Physical Barrier of Screen Diffraction",
+        "paragraphs": [
+          "Display panel manufacturers have achieved a major milestone in under-display camera (UDC) technology through redesigned serpentine cathode matrices. By routing micro-wiring around individual sub-pixels, ambient light transmittance across the camera coverage zone has increased to 92%, substantially reducing the flare and hazy haze that plagued earlier under-screen cameras.",
+          "In parallel, neural image signal processors execute real-time anti-diffraction filtering on every captured frame, delivering video call clarity and portrait sharpness virtually indistinguishable from traditional hole-punch camera modules. Sub-pixel density across the sensor cutout now matches the surrounding panel at 400+ PPI, rendering the camera lens invisible to the naked eye."
+        ]
+      },
+      {
+        "heading": "Anticipated Rollout Across Mainstream Handsets",
+        "paragraphs": [
+          "While initial deployment remains concentrated in gaming flagships and concept models, supply-chain roadmaps indicate that mid-tier premium devices will begin adopting these uninterrupted edge-to-edge displays throughout 2027, paving the way for the gradual retirement of the punch-hole camera era.",
+          "Pakistani entertainment enthusiasts who consume extensive high-definition streaming and gaming content will particularly benefit from complete screen immersion without visual cutouts interrupting widescreen playback."
+        ]
+      }
+    ]
+  },
+  {
     id: 'global-3nm-silicon-shortage-smartphones-2026',
     slug: 'global-3nm-silicon-shortage-smartphones-2026',
     title: 'Global 3nm Chip Shortage Influences Late 2026 Smartphone Launch Calendars',
