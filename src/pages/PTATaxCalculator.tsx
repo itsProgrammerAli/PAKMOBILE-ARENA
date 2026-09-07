@@ -103,12 +103,26 @@ interface PTATaxCalculatorProps {
 }
 
 export const PTATaxCalculator: React.FC<PTATaxCalculatorProps> = ({ onBack, onSelectPhone }) => {
+  const [selectedPhoneId, setSelectedPhoneId] = useState<string>('');
+  const [selectedPhone, setSelectedPhone] = useState<PhoneSpec | null>(null);
   const [customPriceUSD, setCustomPriceUSD] = useState<number>(899);
   const [docType, setDocType] = useState<'passport' | 'cnic'>('passport');
   const { liveRate } = useExchangeRate();
 
   const currentRate = liveRate || BASE_USD_RATE;
-  const breakdown = getPTATaxBreakdown(customPriceUSD, docType, currentRate);
+  
+  // If a phone is chosen from catalog, use its official audited integer tax
+  const phoneOfficialTax = selectedPhone 
+    ? (docType === 'passport' 
+        ? (selectedPhone.ptaPassportTax ?? selectedPhone.ptaTax.passportTaxPKR) 
+        : (selectedPhone.ptaCnicTax ?? selectedPhone.ptaTax.cnicTaxPKR))
+    : null;
+
+  const standardBreakdown = getPTATaxBreakdown(customPriceUSD, docType, currentRate);
+  
+  const displayTax = phoneOfficialTax !== null ? phoneOfficialTax : standardBreakdown.totalTax;
+  const baseDevicePKR = selectedPhone ? selectedPhone.pricePKR : standardBreakdown.basePKR;
+  const landedCost = baseDevicePKR + displayTax;
 
   const formatPKR = (val: number) => '₨ ' + val.toLocaleString('en-PK');
 
@@ -131,7 +145,7 @@ export const PTATaxCalculator: React.FC<PTATaxCalculatorProps> = ({ onBack, onSe
               <span>PTA DIRBS Tax Calculator</span>
             </h1>
             <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-              FBR customs duty and tax engine for smartphones imported into Pakistan.
+              Official FBR customs duty and tax engine for smartphones in Pakistan.
             </p>
           </div>
         </div>
@@ -148,6 +162,38 @@ export const PTATaxCalculator: React.FC<PTATaxCalculatorProps> = ({ onBack, onSe
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Controls */}
           <div className="space-y-6">
+            {/* Dynamic Phone Model Selection Dropdown */}
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-zinc-300 mb-2">
+                Select Smartphone Model (Live Catalog)
+              </label>
+              <select
+                id="pta-model-dropdown"
+                value={selectedPhoneId}
+                onChange={(e) => {
+                  const id = e.target.value;
+                  setSelectedPhoneId(id);
+                  const found = phones.find(p => p.id === id);
+                  if (found) {
+                    setSelectedPhone(found);
+                    const estUsd = Math.round(found.pricePKR / currentRate);
+                    setCustomPriceUSD(estUsd);
+                    if (onSelectPhone) onSelectPhone(found);
+                  } else {
+                    setSelectedPhone(null);
+                  }
+                }}
+                className="w-full px-4 py-3 bg-gray-50 dark:bg-zinc-800/80 border border-gray-200 dark:border-zinc-700 rounded-2xl text-xs sm:text-sm font-semibold text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer shadow-2xs"
+              >
+                <option value="">-- Choose from Catalog or Enter Custom USD --</option>
+                {phones.map((p) => (
+                  <option key={p.id} value={p.id}>
+                    {p.name} — PKR {p.pricePKR.toLocaleString()} (Passport: PKR {(p.ptaPassportTax ?? p.ptaTax.passportTaxPKR).toLocaleString()})
+                  </option>
+                ))}
+              </select>
+            </div>
+
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-zinc-300 mb-2">
                 Handset Valuation (USD $)
@@ -159,7 +205,11 @@ export const PTATaxCalculator: React.FC<PTATaxCalculatorProps> = ({ onBack, onSe
                   min="10"
                   max="3000"
                   value={customPriceUSD}
-                  onChange={(e) => setCustomPriceUSD(Math.max(0, parseInt(e.target.value) || 0))}
+                  onChange={(e) => {
+                    setSelectedPhoneId('');
+                    setSelectedPhone(null);
+                    setCustomPriceUSD(Math.max(0, parseInt(e.target.value) || 0));
+                  }}
                   className="w-full pl-9 pr-4 py-3 bg-gray-50 dark:bg-zinc-800/80 border border-gray-200 dark:border-zinc-700 rounded-2xl text-base font-bold text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 />
               </div>
@@ -183,7 +233,7 @@ export const PTATaxCalculator: React.FC<PTATaxCalculatorProps> = ({ onBack, onSe
                   }`}
                 >
                   <div className="font-bold">Passport Registration</div>
-                  <div className="text-[10px] text-gray-500 dark:text-zinc-400 mt-0.5">International Passengers</div>
+                  <div className="text-[10px] text-gray-500 dark:text-zinc-400 mt-0.5">Within 60 days of arrival</div>
                 </button>
                 <button
                   type="button"
@@ -195,7 +245,7 @@ export const PTATaxCalculator: React.FC<PTATaxCalculatorProps> = ({ onBack, onSe
                   }`}
                 >
                   <div className="font-bold">CNIC Registration</div>
-                  <div className="text-[10px] text-gray-500 dark:text-zinc-400 mt-0.5">Commercial & Domestic</div>
+                  <div className="text-[10px] text-gray-500 dark:text-zinc-400 mt-0.5">Standard rate (Non-travelers)</div>
                 </button>
               </div>
             </div>
@@ -214,7 +264,11 @@ export const PTATaxCalculator: React.FC<PTATaxCalculatorProps> = ({ onBack, onSe
                   <button
                     key={item.val}
                     type="button"
-                    onClick={() => setCustomPriceUSD(item.val)}
+                    onClick={() => {
+                      setSelectedPhoneId('');
+                      setSelectedPhone(null);
+                      setCustomPriceUSD(item.val);
+                    }}
                     className="px-2.5 py-2 text-[11px] font-bold rounded-xl border border-gray-200 dark:border-zinc-800 hover:border-emerald-500 text-gray-700 dark:text-zinc-300 transition-colors"
                   >
                     {item.label}
@@ -228,30 +282,42 @@ export const PTATaxCalculator: React.FC<PTATaxCalculatorProps> = ({ onBack, onSe
           <div className="bg-slate-50 dark:bg-zinc-800/50 rounded-2xl p-6 border border-gray-200/60 dark:border-zinc-800 flex flex-col justify-between">
             <div className="space-y-4">
               <div className="pb-4 border-b border-gray-200 dark:border-zinc-700">
-                <div className="text-xs font-bold uppercase text-gray-500 dark:text-zinc-400 tracking-wider">
-                  Estimated PTA DIRBS Tax
+                <div className="flex items-center justify-between">
+                  <div className="text-xs font-bold uppercase text-gray-500 dark:text-zinc-400 tracking-wider">
+                    Official PTA Customs Duty
+                  </div>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">
+                    {docType === 'passport' ? 'Passport SRO' : 'CNIC SRO'}
+                  </span>
                 </div>
-                <div className="text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 mt-1 font-mono">
-                  {formatPKR(breakdown.totalTax)}
+                <div className="text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 mt-1 font-sans tracking-tight">
+                  {formatPKR(displayTax)}
                 </div>
                 <div className="text-xs text-gray-500 dark:text-zinc-400 mt-1">
-                  Payable via 1Link, ATM, or Online Banking PSID
+                  Payable via 1Link, ATM, JazzCash, Easypaisa, or Online Banking PSID
                 </div>
               </div>
 
-              {breakdown.isFlagship ? (
+              {selectedPhone && (selectedPhone.isLocallyAssembled || selectedPhone.ptaTax.isLocallyAssembled) && (
+                <div className="flex items-center gap-1.5 text-[11px] font-medium text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 p-2.5 rounded-xl border border-emerald-200/80 dark:border-emerald-800/40">
+                  <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0 text-emerald-600 dark:text-emerald-400" />
+                  <span>(Pre-paid on official boxed retail warranty)</span>
+                </div>
+              )}
+
+              {standardBreakdown.isFlagship ? (
                 <div className="space-y-2 text-xs">
                   <div className="flex justify-between text-gray-600 dark:text-zinc-300">
                     <span>25% Sales Tax (on base valuation):</span>
-                    <span className="font-mono font-semibold">{formatPKR(breakdown.salesTax)}</span>
+                    <span className="font-mono font-semibold">{formatPKR(standardBreakdown.salesTax)}</span>
                   </div>
                   <div className="flex justify-between text-gray-600 dark:text-zinc-300">
                     <span>Fixed Regulatory Duty:</span>
-                    <span className="font-mono font-semibold">{formatPKR(breakdown.regulatoryDuty)}</span>
+                    <span className="font-mono font-semibold">{formatPKR(standardBreakdown.regulatoryDuty)}</span>
                   </div>
                   <div className="flex justify-between text-gray-600 dark:text-zinc-300">
                     <span>Customs Duty ({docType.toUpperCase()}):</span>
-                    <span className="font-mono font-semibold">{formatPKR(breakdown.customsDuty)}</span>
+                    <span className="font-mono font-semibold">{formatPKR(standardBreakdown.customsDuty)}</span>
                   </div>
                 </div>
               ) : (
@@ -262,12 +328,14 @@ export const PTATaxCalculator: React.FC<PTATaxCalculatorProps> = ({ onBack, onSe
 
               <div className="pt-4 border-t border-gray-200 dark:border-zinc-700 space-y-2">
                 <div className="flex justify-between text-xs text-gray-600 dark:text-zinc-300">
-                  <span>Approx. Handset Base Value:</span>
-                  <span className="font-mono">{formatPKR(breakdown.basePKR)}</span>
+                  <span>Approx. Handset Retail Value:</span>
+                  <span className="font-mono font-bold">{formatPKR(baseDevicePKR)}</span>
                 </div>
                 <div className="flex justify-between text-sm font-bold text-gray-900 dark:text-white">
                   <span>Total Landed Cost in Pakistan:</span>
-                  <span className="font-mono text-emerald-600 dark:text-emerald-400">{formatPKR(breakdown.totalLandedCost)}</span>
+                  <span className="font-mono text-emerald-600 dark:text-emerald-400 text-base font-extrabold">
+                    {formatPKR(landedCost)}
+                  </span>
                 </div>
               </div>
             </div>

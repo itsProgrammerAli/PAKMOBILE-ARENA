@@ -253,11 +253,11 @@ export const PtaTaxPage: React.FC<PtaTaxPageProps> = ({
                             International
                           </span>
                         </div>
-                        <div className="text-2xl font-extrabold text-emerald-700 dark:text-emerald-400 font-mono">
-                          {formatPKR(selectedDevice.ptaTax.passportTaxPKR)}
+                        <div className="text-2xl font-bold font-sans tracking-tight text-emerald-600 dark:text-emerald-400">
+                          {"Rs " + ((selectedDevice.ptaPassportTax ?? selectedDevice.ptaTax.passportTaxPKR) || 0).toLocaleString('en-PK')}
                         </div>
                         <p className="text-[11px] text-gray-500 dark:text-zinc-400 leading-normal">
-                          Requires entry stamp on passport within 60 days of arrival in Pakistan.
+                          Within 60 days of arrival in Pakistan.
                         </p>
                       </div>
 
@@ -269,15 +269,22 @@ export const PtaTaxPage: React.FC<PtaTaxPageProps> = ({
                             Local Resident
                           </span>
                         </div>
-                        <div className="text-2xl font-extrabold text-gray-900 dark:text-white font-mono">
-                          {formatPKR(selectedDevice.ptaTax.cnicTaxPKR)}
+                        <div className="text-2xl font-bold font-sans tracking-tight text-slate-900 dark:text-white">
+                          {"Rs " + ((selectedDevice.ptaCnicTax ?? selectedDevice.ptaTax.cnicTaxPKR) || 0).toLocaleString('en-PK')}
                         </div>
                         <p className="text-[11px] text-gray-500 dark:text-zinc-400 leading-normal">
-                          Applicable for any Pakistani citizen with a valid Nadra CNIC number.
+                          Standard rate for non-travelers (Nadra CNIC).
                         </p>
                       </div>
 
                     </div>
+
+                    {(selectedDevice.isLocallyAssembled || selectedDevice.ptaTax.isLocallyAssembled) && (
+                      <div className="flex items-center gap-1.5 text-[11px] font-medium text-emerald-700 dark:text-emerald-400 bg-emerald-50/80 dark:bg-emerald-950/40 p-2.5 rounded-xl border border-emerald-200/80 dark:border-emerald-800/40">
+                        <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0 text-emerald-600 dark:text-emerald-400" />
+                        <span>(Pre-paid on official boxed retail warranty)</span>
+                      </div>
+                    )}
 
                     {/* Landed Summary Calculation */}
                     <div className="p-4 rounded-2xl bg-white/90 dark:bg-zinc-900/90 border border-emerald-200 dark:border-emerald-800/40 text-xs text-gray-700 dark:text-zinc-300 space-y-2">

@@ -863,25 +863,40 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  <div className="p-2.5 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700/80 shadow-2xs">
-                    <span className="text-[10px] font-medium text-slate-500 dark:text-zinc-400 block">PTA Passport Tax:</span>
-                    <span className="text-base font-extrabold font-mono text-emerald-700 dark:text-emerald-400 block mt-0.5">
-                      {phone.ptaTax.passportTaxPKR === 0 ? 'Included (Official Assembly)' : formatPKR(phone.ptaTax.passportTaxPKR)}
+                  <div className="p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700/80 shadow-2xs flex flex-col justify-between">
+                    <div>
+                      <span className="text-[11px] font-semibold text-slate-500 dark:text-zinc-400 block">PTA Passport Tax:</span>
+                      <span className="text-2xl font-bold font-sans tracking-tight text-emerald-600 dark:text-emerald-400 block mt-1">
+                        {"Rs " + ((phone.ptaPassportTax ?? phone.ptaTax.passportTaxPKR) || 0).toLocaleString('en-PK')}
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-slate-400 dark:text-zinc-500 mt-2 block">
+                      Within 60 days of arrival in Pakistan
                     </span>
-                    <span className="text-[9px] text-slate-400 dark:text-zinc-500">Within 60 days of arrival in Pakistan</span>
                   </div>
 
-                  <div className="p-2.5 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700/80 shadow-2xs">
-                    <span className="text-[10px] font-medium text-slate-500 dark:text-zinc-400 block">PTA CNIC Tax (ID Card):</span>
-                    <span className="text-base font-bold font-mono text-slate-900 dark:text-white block mt-0.5">
-                      {phone.ptaTax.cnicTaxPKR === 0 ? 'Included (Official Assembly)' : formatPKR(phone.ptaTax.cnicTaxPKR)}
+                  <div className="p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700/80 shadow-2xs flex flex-col justify-between">
+                    <div>
+                      <span className="text-[11px] font-semibold text-slate-500 dark:text-zinc-400 block">PTA CNIC Tax (ID Card):</span>
+                      <span className="text-2xl font-bold font-sans tracking-tight text-slate-900 dark:text-white block mt-1">
+                        {"Rs " + ((phone.ptaCnicTax ?? phone.ptaTax.cnicTaxPKR) || 0).toLocaleString('en-PK')}
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-slate-400 dark:text-zinc-500 mt-2 block">
+                      Standard rate for non-travelers
                     </span>
-                    <span className="text-[9px] text-slate-400 dark:text-zinc-500">Standard rate for non-travelers</span>
                   </div>
                 </div>
 
+                {(phone.isLocallyAssembled || phone.ptaTax.isLocallyAssembled) && (
+                  <div className="flex items-center gap-1.5 text-[11px] font-medium text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 p-2 rounded-lg border border-emerald-200 dark:border-emerald-800/40">
+                    <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0 text-emerald-600 dark:text-emerald-400" />
+                    <span>(Pre-paid on official boxed retail warranty)</span>
+                  </div>
+                )}
+
                 <p className="text-[10px] text-slate-500 dark:text-zinc-400 leading-relaxed">
-                  * Boxed smartphones sold through authorized local distributors already include all PTA duties & taxes pre-paid in retail price.
+                  * Official FBR DIRBS customs tax slabs. Boxed smartphones sold through authorized local distributors already include all PTA duties & taxes pre-paid in retail price.
                 </p>
               </div>
 

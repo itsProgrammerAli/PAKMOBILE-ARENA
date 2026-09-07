@@ -78,7 +78,7 @@ export default function App() {
     }
   }, [theme]);
 
-  // Sync currentView if route changes to non-news
+  // Sync currentView if route changes to non-news & keep canonical in sync
   useEffect(() => {
     if (location.pathname === '/') {
       if (currentView === 'news') {
@@ -88,6 +88,20 @@ export default function App() {
       setCurrentView('compare');
     } else if (location.pathname === '/pta' || location.pathname === '/pta-tax') {
       setCurrentView('pta-tax');
+    }
+
+    // Dynamic canonical synchronization for client-side navigation & SEO
+    try {
+      let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+      if (!canonicalLink) {
+        canonicalLink = document.createElement('link');
+        canonicalLink.rel = 'canonical';
+        document.head.appendChild(canonicalLink);
+      }
+      const cleanPath = location.pathname === '/' ? '/' : location.pathname;
+      canonicalLink.href = `https://pakmobilearena.online${cleanPath}`;
+    } catch {
+      // Safe fallback
     }
   }, [location.pathname]);
 

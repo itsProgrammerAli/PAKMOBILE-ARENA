@@ -35,7 +35,11 @@ export interface PhoneSpec {
     passportTaxPKR: number;
     cnicTaxPKR: number;
     status: 'Official PTA Approved' | 'Non-PTA' | 'Factory Unlocked';
+    isLocallyAssembled?: boolean;
   };
+  ptaPassportTax?: number;
+  ptaCnicTax?: number;
+  isLocallyAssembled?: boolean;
   releaseDate: string;
   rating: number;
   reviewCount: number;
