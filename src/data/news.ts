@@ -24,7 +24,7 @@ export const NEWS_DATA: NewsArticle[] = [
       {
         heading: 'Pakistani Pricing, Booking Windows and DIRBS Projections',
         paragraphs: [
-          'Global pre-orders commence on September 12, with retail availability set for September 18 at base prices of $1,199 (Pro) and $1,299 (Pro Max). In Pakistan, where commercial bank dollar parity sits near Rs 277.30, imported units will incur the highest FBR luxury customs tier.',
+          'Global pre-orders commence on September 12, with retail availability set for September 18 at base prices of $1,199 (Pro) and $1,299 (Pro Max). In Pakistan, where commercial bank dollar parity sits near Rs 278.30, imported units will incur the highest FBR luxury customs tier.',
           'With standard 25% sales tax, Rs 17,600 regulatory duty, and advance levies under DIRBS, consumers can expect total PTA taxes to land between Rs 155,000 and Rs 185,000 depending on storage configurations. Major distributors are finalizing corporate pre-booking tranches for arrival late this month.'
         ]
       }

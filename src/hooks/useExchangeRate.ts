@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const FALLBACK_PKR_RATE = 277.30;
+const FALLBACK_PKR_RATE = 278.30;
 const CACHE_KEY = 'pakmobile_usd_pkr_rate';
 const CACHE_TIME_KEY = 'pakmobile_usd_pkr_timestamp';
 const CACHE_DURATION_MS = 60 * 60 * 1000; // 1 hour session cache

@@ -14,7 +14,7 @@ import { useExchangeRate } from '../hooks/useExchangeRate';
 import { phones } from '../data/phones';
 import { PhoneSpec } from '../types';
 
-export const BASE_USD_RATE = 277.30;
+export const BASE_USD_RATE = 278.30;
 export const FIXED_REGULATORY_DUTY = 17600;
 
 export interface PTATaxBreakdown {
@@ -32,7 +32,7 @@ export interface PTATaxBreakdown {
  * Official FBR PTA Tax Calculation Engine (September 2026 SRO compliant)
  * - Phones <= $500: Standard flat rate slabs.
  * - Phones > $500 (Flagships): 25% Sales Tax + Fixed Regulatory Duty (Rs 17,600) + Customs Duty.
- * - Reference standard base USD rate: Rs 277.30.
+ * - Reference standard base USD rate: Rs 278.30.
  */
 export function calculatePTATax(
   usd: number, 
