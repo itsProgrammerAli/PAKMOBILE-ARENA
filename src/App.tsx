@@ -30,6 +30,9 @@ export default function App() {
       if (window.location.pathname === '/pta' || window.location.pathname === '/pta-tax') {
         return 'pta-tax';
       }
+      if (window.location.pathname.startsWith('/phone/')) {
+        return 'phone-detail';
+      }
     }
     return 'home';
   });
@@ -43,7 +46,13 @@ export default function App() {
   const [previousView, setPreviousView] = useState<AppView>('home');
 
   // Selected phone for detail view
-  const [selectedPhone, setSelectedPhone] = useState<PhoneSpec | null>(null);
+  const [selectedPhone, setSelectedPhone] = useState<PhoneSpec | null>(() => {
+    if (typeof window !== 'undefined' && window.location.pathname.startsWith('/phone/')) {
+      const phoneId = window.location.pathname.replace('/phone/', '').replace(/\/$/, '');
+      return PHONES_DATA.find((p) => p.id === phoneId) || null;
+    }
+    return null;
+  });
   
   // Selected phone pre-fill for PTA page
   const [ptaTargetPhone, setPtaTargetPhone] = useState<PhoneSpec | null>(null);
@@ -88,6 +97,13 @@ export default function App() {
       setCurrentView('compare');
     } else if (location.pathname === '/pta' || location.pathname === '/pta-tax') {
       setCurrentView('pta-tax');
+    } else if (location.pathname.startsWith('/phone/')) {
+      const phoneId = location.pathname.replace('/phone/', '').replace(/\/$/, '');
+      const found = PHONES_DATA.find((p) => p.id === phoneId);
+      if (found) {
+        setSelectedPhone(found);
+        setCurrentView('phone-detail');
+      }
     }
 
     // Dynamic canonical synchronization for client-side navigation & SEO

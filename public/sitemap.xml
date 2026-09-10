@@ -300,6 +300,24 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://pakmobilearena.online/phone/tecno-spark-50-pro</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/phone/vivo-v80-lite-5g</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/phone/samsung-galaxy-z-fold-6</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
 
   <!-- Latest Editorial & Market Analysis (September 2026) -->
   <url>
@@ -449,6 +467,31 @@
   </url>
   <url>
     <loc>https://pakmobilearena.online/news/under-display-camera-transparent-oled-breakthrough</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/news/apple-official-launch-iphone-18-pro-max-2nm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/news/jazz-veon-1000-live-5g-sites-pakistan-2026</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/news/it-ministry-revised-telecom-bill-pakistan-2026</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/news/tecno-spark-50-pro-pakistan-retail-availability</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pakmobilearena.online/news/oppo-find-x10-series-triple-200mp-camera-leak</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

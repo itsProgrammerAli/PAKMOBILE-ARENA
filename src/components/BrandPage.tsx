@@ -39,14 +39,17 @@ export const BrandPage: React.FC<BrandPageProps> = ({
     const result = [...brandPhones];
     switch (sortBy) {
       case 'price-asc':
-        return result.sort((a, b) => a.pricePKR - b.pricePKR);
+        return result.sort((a, b) => (a.pricePKR ?? a.price ?? 0) - (b.pricePKR ?? b.price ?? 0));
       case 'price-desc':
-        return result.sort((a, b) => b.pricePKR - a.pricePKR);
+        return result.sort((a, b) => (b.pricePKR ?? b.price ?? 0) - (a.pricePKR ?? a.price ?? 0));
       case 'rating':
         return result.sort((a, b) => getEffectivePhoneRating(b) - getEffectivePhoneRating(a));
       case 'featured':
-      default:
-        return result;
+      default: {
+        const flagships = result.filter((phone) => (phone.pricePKR ?? phone.price ?? 0) >= 300000);
+        const standardPhones = result.filter((phone) => (phone.pricePKR ?? phone.price ?? 0) < 300000);
+        return [...flagships, ...[...standardPhones].reverse()];
+      }
     }
   }, [brandPhones, sortBy]);
 

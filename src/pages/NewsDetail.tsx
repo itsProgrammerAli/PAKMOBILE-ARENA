@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { 
   Calendar, 
-  Clock, 
   ArrowLeft, 
   Share2, 
   Check, 
@@ -10,12 +9,12 @@ import {
   ChevronRight, 
   ShieldCheck, 
   Flame, 
-  ExternalLink,
-  BookOpen,
-  ArrowRight,
-  TrendingUp,
-  Calculator,
-  Scale
+  ExternalLink, 
+  BookOpen, 
+  ArrowRight, 
+  TrendingUp, 
+  Calculator, 
+  Scale 
 } from 'lucide-react';
 import { NewsArticle } from '../types';
 import { getNewsArticleBySlug, getRelatedNews, NEWS_DATA } from '../data/news';
@@ -67,7 +66,14 @@ export const NewsDetail: React.FC<NewsDetailProps> = ({
       case 'Market Trends':
         return 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/60';
       case 'Telecom':
+      case 'Telecom & 5G':
         return 'bg-blue-100 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300 border-blue-200 dark:border-blue-800/60';
+      case 'Policy & Telecom':
+        return 'bg-sky-100 dark:bg-sky-950/60 text-sky-800 dark:text-sky-300 border-sky-200 dark:border-sky-800/60';
+      case 'Local Market':
+        return 'bg-orange-100 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300 border-orange-200 dark:border-orange-800/60';
+      case 'Global Tech':
+        return 'bg-indigo-100 dark:bg-indigo-950/60 text-indigo-800 dark:text-indigo-300 border-indigo-200 dark:border-indigo-800/60';
       case 'Hardware & Tech':
         return 'bg-purple-100 dark:bg-purple-950/60 text-purple-800 dark:text-purple-300 border-purple-200 dark:border-purple-800/60';
       case 'Consumer Guide':
@@ -155,21 +161,17 @@ export const NewsDetail: React.FC<NewsDetailProps> = ({
         {/* ARTICLE HERO HEADER                                                      */}
         {/* ========================================================================= */}
         <header className="space-y-4 mt-3 mb-2 md:my-0">
-          <div className="flex flex-wrap items-center gap-2.5 text-xs text-slate-500 dark:text-slate-400 mt-2 mb-4 md:mt-0 md:mb-0">
-            <span className={`px-3 py-1 rounded-lg text-xs font-bold border shadow-2xs ${getCategoryBadgeClass(article.category)}`}>
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <span className="px-3 py-1 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400 text-xs font-semibold rounded-full border border-emerald-200/80 dark:border-emerald-800/40 shadow-2xs">
               {article.category}
             </span>
-            <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
-              <Clock className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>{article.readTime}</span>
-            </div>
-            <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
+            <div className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 dark:text-slate-400">
               <Calendar className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>Published {article.date}</span>
+              <span>{article.date}</span>
             </div>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-black text-gray-900 dark:text-white font-['Outfit'] tracking-tight leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-black text-gray-900 dark:text-white font-['Outfit'] tracking-tight leading-tight mt-3 mb-2">
             {article.title}
           </h1>
 
@@ -384,10 +386,9 @@ export const NewsDetail: React.FC<NewsDetailProps> = ({
                     </div>
 
                     <div className="p-4 space-y-2">
-                      <div className="flex items-center gap-3 text-[11px] text-gray-500 dark:text-zinc-400">
+                      <div className="inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-500 dark:text-zinc-400">
+                        <Calendar className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                         <span>{rel.date}</span>
-                        <span>•</span>
-                        <span>{rel.readTime}</span>
                       </div>
                       <h4 className="text-sm font-bold text-gray-900 dark:text-white font-['Outfit'] line-clamp-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                         {rel.title}

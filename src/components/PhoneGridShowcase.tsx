@@ -68,21 +68,30 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
     return result;
   }, [phones, activeFilter, selectedBrand, searchQuery]);
 
-  // 2. Strict Immutable Sorting Logic (Always Clone First)
-  const sortedPhones = useMemo(() => {
-    const result = [...filteredPhones]; // Always clone from filtered base
-
+  // 2. Strict Immutable Dynamic Sorting Logic
+  // Group 1 (Flagships): Filter devices with a price >= 300,000 (e.g., iPhone 17 Pro Max, S24 Ultra, Z Fold 6)
+  // Group 2 (Standard & New Additions): Filter the remaining devices (price < 300,000)
+  // Reverse Group 2 so that the most recently appended devices in 'phones.ts' move to the very top of the standard section
+  const displayPhones = useMemo(() => {
     switch (sortBy) {
-      case 'price-asc':
-        return result.sort((a, b) => a.pricePKR - b.pricePKR);
-      case 'price-desc':
-        return result.sort((a, b) => b.pricePKR - a.pricePKR);
-      case 'rating':
+      case 'price-asc': {
+        const result = [...filteredPhones];
+        return result.sort((a, b) => (a.pricePKR ?? a.price ?? 0) - (b.pricePKR ?? b.price ?? 0));
+      }
+      case 'price-desc': {
+        const result = [...filteredPhones];
+        return result.sort((a, b) => (b.pricePKR ?? b.price ?? 0) - (a.pricePKR ?? a.price ?? 0));
+      }
+      case 'rating': {
+        const result = [...filteredPhones];
         return result.sort((a, b) => getEffectivePhoneRating(b) - getEffectivePhoneRating(a));
+      }
       case 'featured':
-      default:
-        // Return original default order (preserve trending / flagship priority)
-        return result;
+      default: {
+        const flagships = filteredPhones.filter((phone) => (phone.pricePKR ?? phone.price ?? 0) >= 300000);
+        const standardPhones = filteredPhones.filter((phone) => (phone.pricePKR ?? phone.price ?? 0) < 300000);
+        return [...flagships, ...[...standardPhones].reverse()];
+      }
     }
   }, [filteredPhones, sortBy]);
 
@@ -99,7 +108,7 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
               {categoryTitle}
             </h2>
             <span className="inline-flex items-center gap-1 whitespace-nowrap px-2.5 py-0.5 rounded-full text-[11px] font-bold font-mono bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800/60 flex-shrink-0 shadow-2xs">
-              <span>{sortedPhones.length}</span>
+              <span>{displayPhones.length}</span>
               <span>models</span>
             </span>
           </div>
@@ -142,7 +151,7 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
       </div>
 
       {/* Responsive Grid of Cards */}
-      {sortedPhones.length === 0 ? (
+      {displayPhones.length === 0 ? (
         <div className="p-12 text-center rounded-3xl bg-white dark:bg-white/5 dark:backdrop-blur-xl border border-gray-200/80 dark:border-zinc-800 shadow-sm dark:shadow-2xl">
           <AlertCircle className="w-10 h-10 text-gray-400 dark:text-zinc-500 mx-auto mb-3" />
           <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">No Smartphones Found</h3>
@@ -159,7 +168,7 @@ export const PhoneGridShowcase: React.FC<PhoneGridShowcaseProps> = ({
         </div>
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {sortedPhones.map((phone) => (
+          {displayPhones.map((phone) => (
             <PhoneCard
               key={phone.id}
               phone={phone}

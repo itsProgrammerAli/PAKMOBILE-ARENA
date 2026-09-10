@@ -2,6 +2,147 @@ import { NewsArticle } from '../types';
 
 export const NEWS_DATA: NewsArticle[] = [
   {
+    id: 'apple-official-launch-iphone-18-pro-max-2nm',
+    slug: 'apple-official-launch-iphone-18-pro-max-2nm',
+    title: 'Apple Officially Unveils iPhone 18 Pro & Pro Max with 2nm A20 Pro Silicon and In-House C2 Modem',
+    date: 'September 10, 2026',
+    isoDate: '2026-09-10',
+    category: 'Global Tech',
+    imageUrl: 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=1200&q=80',
+    summary: "Apple's major September keynote confirms the transition to TSMC's 2nm fabrication node, desktop-class super cores, and an enhanced Apple Intelligence suite.",
+    author: 'PakMobile Arena Global Tech Desk',
+    tags: ['Apple Keynote', 'iPhone 18 Pro', 'A20 Pro', '2nm Silicon', 'Flagship'],
+    content: [
+      {
+        heading: 'A20 Pro Chipset Sets New Mobile Computing Benchmarks',
+        paragraphs: [
+          "Apple has officially concluded its flagship hardware keynote, pulling back the curtain on the iPhone 18 Pro and iPhone 18 Pro Max. Under the hood is Apple's groundbreaking A20 Pro silicon, manufactured on TSMC's bleeding-edge 2-nanometer process. Featuring a redesigned 6-core CPU architecture with two specialized 'desktop-class' super cores, Apple claims a 20% uplift in single-thread speed alongside a 40% more efficient graphics pipeline.",
+          "The devices also introduce Apple's custom-engineered C2 cellular modem, replacing third-party basebands to achieve tighter power integration. Display outdoor brightness peaks at an unprecedented 3,000 nits on the Super Retina XDR panels, paired with refined Camera Control sensors and variable aperture lenses."
+        ]
+      },
+      {
+        heading: 'Pakistani Pricing, Booking Windows and DIRBS Projections',
+        paragraphs: [
+          'Global pre-orders commence on September 12, with retail availability set for September 18 at base prices of $1,199 (Pro) and $1,299 (Pro Max). In Pakistan, where commercial bank dollar parity sits near Rs 277.30, imported units will incur the highest FBR luxury customs tier.',
+          'With standard 25% sales tax, Rs 17,600 regulatory duty, and advance levies under DIRBS, consumers can expect total PTA taxes to land between Rs 155,000 and Rs 185,000 depending on storage configurations. Major distributors are finalizing corporate pre-booking tranches for arrival late this month.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'jazz-veon-1000-live-5g-sites-pakistan-2026',
+    slug: 'jazz-veon-1000-live-5g-sites-pakistan-2026',
+    title: 'Jazz & VEON Cross 1,000 Live 5G Sites in Pakistan: Target 2,500 Towers by Year-End',
+    date: 'September 10, 2026',
+    isoDate: '2026-09-10',
+    category: 'Telecom & 5G',
+    imageUrl: 'https://images.unsplash.com/photo-1516245834210-c4c142787335?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1516245834210-c4c142787335?auto=format&fit=crop&w=1200&q=80',
+    summary: 'Following top-level regulatory meetings with PTA leadership, Jazz accelerates commercial 5G coverage across federal and provincial economic corridors.',
+    author: 'PakMobile Arena Telecom Desk',
+    tags: ['Jazz 5G', 'VEON', 'PTA', '5G Pakistan', 'Telecom Expansion'],
+    content: [
+      {
+        heading: 'Rapid Infrastructure Scaling Across Urban Centers',
+        paragraphs: [
+          'In a joint briefing following executive discussions with Pakistan Telecommunication Authority (PTA) Chairman Maj Gen (R) Hafeez Ur Rehman, leadership from VEON Group and Jazz confirmed that their commercial 5G network footprint has officially crossed 1,000 live cell sites nationwide. The operator is aggressively targeting more than 2,500 activated base stations prior to the close of 2026.',
+          'The accelerated expansion leverages newly awarded mid-band and C-band spectrum allocations, delivering low-latency broadband across primary business districts in Karachi, Lahore, Islamabad, and Faisalabad. Network engineers report average real-world downlink speeds exceeding 420 Mbps during high-concurrency peak hours.'
+        ]
+      },
+      {
+        heading: 'Driving 5G Device Adoption Among Pakistani Consumers',
+        paragraphs: [
+          'Telecom executives reiterated that sustaining digital transformation requires addressing hardware affordability barriers. In collaboration with local assembly partners, Jazz is working toward subsidized device financing structures to ensure consumers purchasing sub-Rs 45,000 handsets can transition seamlessly onto commercial 5G carriers.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'it-ministry-revised-telecom-bill-pakistan-2026',
+    slug: 'it-ministry-revised-telecom-bill-pakistan-2026',
+    title: 'IT Ministry Prepares Revised Telecom Bill to Protect Private Property and Ease Right-of-Way',
+    date: 'September 10, 2026',
+    isoDate: '2026-09-10',
+    category: 'Policy & Telecom',
+    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    summary: 'Following parliamentary scrutiny and digital privacy debates, the federal cabinet finalizes a balanced legislative draft for fiber-to-the-tower installation.',
+    author: 'PakMobile Arena Policy Analyst',
+    tags: ['Telecom Bill', 'MoITT', 'Fiberization', 'Broadband Pakistan', 'Digital Policy'],
+    content: [
+      {
+        heading: 'Addressing Constitutional and Right-of-Way Anxieties',
+        paragraphs: [
+          'The Ministry of Information Technology and Telecommunication (MoITT) has finalized a comprehensive revision of the Pakistan Telecommunication (Re-organisation) Amendment Bill following recommendations from a prime-ministerial consultative committee. The previous draft had sparked heated debates in the Senate over clauses regarding access to private property and automated implied consent for infrastructure placement.',
+          'The revised legislative framework strengthens private landowner protections under constitutional provisions while establishing transparent, standardized Right-of-Way (RoW) dispute mechanisms for municipal and provincial authorities.'
+        ]
+      },
+      {
+        heading: 'Why Fiberization Is Vital for Everyday Mobile Data Speeds',
+        paragraphs: [
+          "Currently, only 15% to 20% of Pakistan's 58,000+ mobile cell towers are connected directly via fiber-optic backhauls, creating significant capacity chokepoints during peak cellular usage. The streamlined RoW procedures aim to accelerate fiber rollout, ensuring local 4G and 5G base stations achieve consistent high-speed throughput without dropping packet connections."
+        ]
+      }
+    ]
+  },
+  {
+    id: 'tecno-spark-50-pro-pakistan-retail-availability',
+    slug: 'tecno-spark-50-pro-pakistan-retail-availability',
+    title: 'Tecno Spark 50 Pro Lands on Pakistani Shelves: 108MP Studio Sensor Starts at Rs 56,999',
+    date: 'September 10, 2026',
+    isoDate: '2026-09-10',
+    category: 'Local Market',
+    imageUrl: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=1200&q=80',
+    summary: 'Tecno begins retail shipments of its anticipated mid-ranger, offering 120Hz curved AMOLED visuals and factory-approved DIRBS registration.',
+    author: 'PakMobile Arena Retail Reporter',
+    tags: ['Tecno Pakistan', 'Spark 50 Pro', 'Camera Phone', 'Hafeez Centre', 'Price Update'],
+    content: [
+      {
+        heading: 'Aggressive Pricing Targets Mid-Tier Competition',
+        paragraphs: [
+          'Retail outlets across Hall Road, Hafeez Centre, and Singapore Plaza have officially received the first retail shipments of the Tecno Spark 50 Pro today. Priced at an aggressive Rs 56,999 for the 8GB/256GB model, the smartphone aims directly at young content creators seeking premium aesthetics on a disciplined budget.',
+          'The handset is centered around a 108MP primary camera sensor supporting 3x lossless in-sensor crop and dedicated night portrait algorithms. Backing the optics is a 6.78-inch curved AMOLED display with a responsive 120Hz refresh rate and dual stereo speakers engineered with DTS audio tuning.'
+        ]
+      },
+      {
+        heading: 'Assembled Locally with Boxed Warranty Recourse',
+        paragraphs: [
+          'Manufactured in domestic assembly lines in Karachi, boxed retail units feature pre-paid PTA taxes and immediate DIRBS registration upon activation. Buyers also receive standard 12-month Carlcare warranty backing and 100-day broken screen replacement coverage.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'oppo-find-x10-series-triple-200mp-camera-leak',
+    slug: 'oppo-find-x10-series-triple-200mp-camera-leak',
+    title: 'Oppo Find X10 Series Confirmed with Triple 200MP Cameras and Massive 8500mAh Batteries',
+    date: 'September 10, 2026',
+    isoDate: '2026-09-10',
+    category: 'Hardware & Tech',
+    imageUrl: 'https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=1200&q=80',
+    summary: 'Oppo confirms its upcoming flagship series will feature unprecedented multi-sensor 200MP arrays and silicon-carbon marathon batteries.',
+    author: 'PakMobile Arena Hardware Desk',
+    tags: ['Oppo', 'Find X10 Pro Max', '200MP Camera', 'Hasselblad', 'Silicon Carbon'],
+    content: [
+      {
+        heading: 'Pushing Mobile Imaging to the Extreme',
+        paragraphs: [
+          'Oppo has officially previewed the technical blueprints of its impending Find X10 lineup, slated for broad commercial distribution later this month. Headlining the specifications sheet for the top-tier Find X10 Pro Max is a world-first triple 200MP camera matrix—spanning primary wide, ultra-wide, and periscope optical zoom modules developed in close partnership with Hasselblad.',
+          'By deploying identical ultra-high-resolution sensors across all focal lengths, the device eliminates image quality degradation and color temperature shifts when switching between portrait zoom and sweeping landscape perspectives.'
+        ]
+      },
+      {
+        heading: 'Unprecedented Battery Capacity in a Slim Profile',
+        paragraphs: [
+          'Equally noteworthy is the incorporation of second-generation silicon-carbon battery cells, achieving an enormous 8,500 mAh total capacity while preserving an ergonomic chassis thickness under 8.6mm. Paired with 100W SuperVOOC wired and 50W wireless flash charging, the device sets a new standard for extended battery performance.'
+        ]
+      }
+    ]
+  },
+  {
     "id": "apple-fall-2026-event-2nm-a20-pro-foldable-ultra",
     "slug": "apple-fall-2026-event-2nm-a20-pro-foldable-ultra",
     "title": "Apple Gears Up for Fall 2026 Launch: 2nm A20 Pro Silicon and Foldable Ultra Leaks",

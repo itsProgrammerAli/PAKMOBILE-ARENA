@@ -25,6 +25,7 @@ export interface PhoneSpec {
   brand: string;
   model: string;
   pricePKR: number;
+  price?: number;
   officialPricePKR?: number;
   marketPriceRangePKR: {
     min: number;
@@ -97,7 +98,7 @@ export interface NewsArticle {
   date: string;
   isoDate?: string;
   category: string;
-  readTime: string;
+  readTime?: string;
   imageUrl: string;
   image?: string; // backwards compatibility
   summary: string;
