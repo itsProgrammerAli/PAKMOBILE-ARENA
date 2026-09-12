@@ -66,6 +66,12 @@ export const BRANDS: BrandInfo[] = [
     "count": 1,
     "logoText": "HONOR",
     "slug": "honor"
+  },
+  {
+    "name": "Oppo",
+    "count": 1,
+    "logoText": "OPPO",
+    "slug": "oppo"
   }
 ];
 
@@ -3783,6 +3789,306 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Faisalabad",
       "Quetta"
     ]
+  },
+  {
+    "id": "infinix-zero-40-5g",
+    "name": "Infinix Zero 40 5G",
+    "brand": "Infinix",
+    "model": "Zero 40 5G",
+    "pricePKR": 99999,
+    "officialPricePKR": 99999,
+    "marketPriceRangePKR": {
+      "min": 95000,
+      "max": 99999
+    },
+    "ptaTax": {
+      "passportTaxPKR": 15000,
+      "cnicTaxPKR": 18000,
+      "status": "Official PTA Approved"
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "reviews": 0,
+    "variants": [
+      {
+        "id": "infinix-zero-40-5g-v1",
+        "name": "12GB / 256GB",
+        "ram": "12GB RAM",
+        "storage": "256GB Storage",
+        "pricePKR": 99999,
+        "officialPricePKR": 99999,
+        "marketPriceRangePKR": {
+          "min": 95000,
+          "max": 99999
+        }
+      }
+    ],
+    "colors": [
+      "Moving Titanium",
+      "Rock Black",
+      "Violet Garden"
+    ],
+    "specs": {
+      "display": "6.78\" AMOLED 144Hz",
+      "refreshRate": "144Hz",
+      "processor": "MediaTek Dimensity 8200 Ultimate",
+      "ram": "12GB",
+      "storage": "256GB",
+      "mainCamera": "108MP OIS + 50MP Ultrawide",
+      "selfieCamera": "50MP",
+      "battery": "5000 mAh",
+      "charging": "45W Fast Charging",
+      "os": "XOS 14 based on Android 14",
+      "network": "5G"
+    },
+    "image": "/images/phones/infinix-zero-40-5g-pakistan-priceoye-942sd-500x500.webp",
+    "images": [
+      "/images/phones/infinix-zero-40-5g-pakistan-priceoye-942sd-500x500.webp",
+      "/images/phones/infinix-zero-40-5g-pakistan-priceoye-kovvu-500x500.webp",
+      "/images/phones/infinix-zero-40-5g-pakistan-priceoye-t3zks-500x500.webp"
+    ],
+    "releaseDate": "2024-08-30",
+    "tags": [
+      "5g"
+    ],
+    "colorHexes": {
+      "Moving Titanium": "#E3E4E5",
+      "Rock Black": "#1A1A1A",
+      "Violet Garden": "#D8BFD8"
+    },
+    "colorImages": {
+      "Moving Titanium": "/images/phones/infinix-zero-40-5g-pakistan-priceoye-942sd-500x500.webp",
+      "Rock Black": "/images/phones/infinix-zero-40-5g-pakistan-priceoye-kovvu-500x500.webp",
+      "Violet Garden": "/images/phones/infinix-zero-40-5g-pakistan-priceoye-t3zks-500x500.webp"
+    }
+  },
+  {
+    "id": "redmi-note-14-pro-plus-5g",
+    "name": "Redmi Note 14 Pro+ 5G",
+    "brand": "Xiaomi",
+    "model": "Note 14 Pro+ 5G",
+    "pricePKR": 135000,
+    "officialPricePKR": 135000,
+    "marketPriceRangePKR": {
+      "min": 130000,
+      "max": 135000
+    },
+    "ptaTax": {
+      "passportTaxPKR": 15000,
+      "cnicTaxPKR": 18000,
+      "status": "Official PTA Approved"
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "reviews": 0,
+    "variants": [
+      {
+        "id": "redmi-note-14-pro-plus-5g-v1",
+        "name": "12GB / 256GB",
+        "ram": "12GB RAM",
+        "storage": "256GB Storage",
+        "pricePKR": 135000,
+        "officialPricePKR": 135000,
+        "marketPriceRangePKR": {
+          "min": 130000,
+          "max": 135000
+        }
+      }
+    ],
+    "colors": [
+      "Midnight Black",
+      "Mirror Porcelain White",
+      "Sand Star Green",
+      "Phantom Purple"
+    ],
+    "specs": {
+      "display": "6.67\" AMOLED 120Hz",
+      "refreshRate": "120Hz",
+      "processor": "Snapdragon 7s Gen 3",
+      "ram": "12GB",
+      "storage": "256GB",
+      "mainCamera": "50MP OIS + 8MP + 50MP Telephoto",
+      "selfieCamera": "20MP",
+      "battery": "6200 mAh",
+      "charging": "90W Fast Charging",
+      "os": "HyperOS based on Android 14",
+      "network": "5G"
+    },
+    "image": "/images/phones/xiaomi-redmi-note-14-pro-plus-pakistan-priceoye-dcuyr-500x500.webp",
+    "images": [
+      "/images/phones/xiaomi-redmi-note-14-pro-plus-pakistan-priceoye-dcuyr-500x500.webp",
+      "/images/phones/xiaomi-redmi-note-14-pro-plus-pakistan-priceoye-dh643-500x500.webp",
+      "/images/phones/xiaomi-redmi-note-14-pro-plus-pakistan-priceoye-futbw-500x500.webp",
+      "/images/phones/xiaomi-redmi-note-14-pro-plus-pakistan-priceoye-pqiez-500x500.webp"
+    ],
+    "releaseDate": "2024-09-26",
+    "tags": [
+      "5g"
+    ],
+    "colorHexes": {
+      "Midnight Black": "#000000",
+      "Mirror Porcelain White": "#FFFFFF",
+      "Sand Star Green": "#C4D8D1",
+      "Phantom Purple": "#8A2BE2"
+    },
+    "colorImages": {
+      "Midnight Black": "/images/phones/xiaomi-redmi-note-14-pro-plus-pakistan-priceoye-dcuyr-500x500.webp",
+      "Mirror Porcelain White": "/images/phones/xiaomi-redmi-note-14-pro-plus-pakistan-priceoye-dh643-500x500.webp",
+      "Sand Star Green": "/images/phones/xiaomi-redmi-note-14-pro-plus-pakistan-priceoye-futbw-500x500.webp",
+      "Phantom Purple": "/images/phones/xiaomi-redmi-note-14-pro-plus-pakistan-priceoye-pqiez-500x500.webp"
+    }
+  },
+  {
+    "id": "realme-13-pro-plus-5g",
+    "name": "Realme 13 Pro+ 5G",
+    "brand": "Realme",
+    "model": "13 Pro+ 5G",
+    "pricePKR": 121000,
+    "officialPricePKR": 121000,
+    "marketPriceRangePKR": {
+      "min": 115000,
+      "max": 121000
+    },
+    "ptaTax": {
+      "passportTaxPKR": 15000,
+      "cnicTaxPKR": 18000,
+      "status": "Official PTA Approved"
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "reviews": 0,
+    "variants": [
+      {
+        "id": "realme-13-pro-plus-5g-v1",
+        "name": "8GB / 256GB",
+        "ram": "8GB RAM",
+        "storage": "256GB Storage",
+        "pricePKR": 121000,
+        "officialPricePKR": 121000,
+        "marketPriceRangePKR": {
+          "min": 115000,
+          "max": 121000
+        }
+      },
+      {
+        "id": "realme-13-pro-plus-5g-v2",
+        "name": "12GB / 512GB",
+        "ram": "12GB RAM",
+        "storage": "512GB Storage",
+        "pricePKR": 145000,
+        "officialPricePKR": 145000,
+        "marketPriceRangePKR": {
+          "min": 140000,
+          "max": 145000
+        }
+      }
+    ],
+    "colors": [
+      "Monet Gold",
+      "Emerald Green"
+    ],
+    "specs": {
+      "display": "6.7\" AMOLED 120Hz",
+      "refreshRate": "120Hz",
+      "processor": "Snapdragon 7s Gen 2",
+      "ram": "8GB/12GB",
+      "storage": "256GB/512GB",
+      "mainCamera": "50MP OIS + 50MP Periscope + 8MP",
+      "selfieCamera": "32MP",
+      "battery": "5200 mAh",
+      "charging": "80W Fast Charging",
+      "os": "Realme UI 5.0 based on Android 14",
+      "network": "5G"
+    },
+    "image": "/images/phones/realme-13-plus-5g-pakistan-priceoye-269o1-500x500.webp",
+    "images": [
+      "/images/phones/realme-13-plus-5g-pakistan-priceoye-269o1-500x500.webp",
+      "/images/phones/realme-13-plus-5g-pakistan-priceoye-eba8g-500x500.webp"
+    ],
+    "releaseDate": "2024-07-30",
+    "tags": [
+      "5g"
+    ],
+    "colorHexes": {
+      "Monet Gold": "#D4AF37",
+      "Emerald Green": "#50C878"
+    },
+    "colorImages": {
+      "Monet Gold": "/images/phones/realme-13-plus-5g-pakistan-priceoye-eba8g-500x500.webp",
+      "Emerald Green": "/images/phones/realme-13-plus-5g-pakistan-priceoye-269o1-500x500.webp"
+    }
+  },
+  {
+    "id": "oppo-reno-12f-5g",
+    "name": "Oppo Reno 12F 5G",
+    "brand": "Oppo",
+    "model": "Reno 12F 5G",
+    "pricePKR": 79999,
+    "officialPricePKR": 79999,
+    "marketPriceRangePKR": {
+      "min": 75000,
+      "max": 79999
+    },
+    "ptaTax": {
+      "passportTaxPKR": 15000,
+      "cnicTaxPKR": 18000,
+      "status": "Official PTA Approved"
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "reviews": 0,
+    "variants": [
+      {
+        "id": "oppo-reno-12f-5g-v1",
+        "name": "8GB / 256GB",
+        "ram": "8GB RAM",
+        "storage": "256GB Storage",
+        "pricePKR": 79999,
+        "officialPricePKR": 79999,
+        "marketPriceRangePKR": {
+          "min": 75000,
+          "max": 79999
+        }
+      }
+    ],
+    "colors": [
+      "Amber Orange",
+      "Olive Green"
+    ],
+    "specs": {
+      "display": "6.67\" OLED 120Hz",
+      "refreshRate": "120Hz",
+      "processor": "MediaTek Dimensity 6300",
+      "ram": "8GB",
+      "storage": "256GB",
+      "mainCamera": "50MP Main + 8MP Ultrawide + 2MP Macro",
+      "selfieCamera": "32MP",
+      "battery": "5000 mAh",
+      "charging": "45W SUPERVOOC",
+      "os": "ColorOS 14 based on Android 14",
+      "network": "5G"
+    },
+    "image": "/images/phones/oppo-reno-12f-5g-sa-pakistan-priceoye-dsxnc-500x500.webp",
+    "images": [
+      "/images/phones/oppo-reno-12f-5g-sa-pakistan-priceoye-dsxnc-500x500.webp",
+      "/images/phones/oppo-reno-12f-5g-sa-pakistan-priceoye-eogj1-500x500.webp"
+    ],
+    "releaseDate": "2024-06-28",
+    "tags": [
+      "5g"
+    ],
+    "colorHexes": {
+      "Amber Orange": "#FF7E00",
+      "Olive Green": "#556B2F"
+    },
+    "colorImages": {
+      "Amber Orange": "/images/phones/oppo-reno-12f-5g-sa-pakistan-priceoye-dsxnc-500x500.webp",
+      "Olive Green": "/images/phones/oppo-reno-12f-5g-sa-pakistan-priceoye-eogj1-500x500.webp"
+    }
   }
 ];
 
