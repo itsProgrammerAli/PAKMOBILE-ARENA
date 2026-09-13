@@ -141,8 +141,13 @@ export const PhoneCard: React.FC<PhoneCardProps> = ({
 
             {/* Passport Tax Note */}
             <div className="text-[9px] sm:text-[10px] text-gray-500 dark:text-zinc-400 mt-0.5 truncate">
-              <>PTA Tax: <span className="font-mono font-semibold text-gray-700 dark:text-zinc-300">{formatPKR(phone.ptaPassportTax ?? phone.ptaTax.passportTaxPKR)}</span></>
-              {(phone.isLocallyAssembled || phone.ptaTax.isLocallyAssembled) && (
+              {(() => {
+                const taxVal = phone.ptaPassportTax ?? phone.ptaTax?.passportTaxPKR;
+                return (
+                  <>PTA Tax: <span className="font-mono font-semibold text-gray-700 dark:text-zinc-300">{taxVal !== undefined && taxVal !== null && taxVal > 0 ? formatPKR(taxVal) : 'Retail Approved'}</span></>
+                );
+              })()}
+              {(phone.isLocallyAssembled || phone.ptaTax?.isLocallyAssembled) && (
                 <span className="ml-1 text-[9px] text-emerald-600 dark:text-emerald-400 font-semibold">(Pre-paid)</span>
               )}
             </div>

@@ -1835,6 +1835,121 @@ export const NEWS_DATA: NewsArticle[] = [
         ]
       }
     ]
+  },
+  {
+    id: "iphone-17-pta-tax-slabs-sept-2026",
+    slug: "iphone-17-pta-tax-slabs-sept-2026",
+    title: "iPhone 17 Series PTA Tax Slabs Officially Confirmed in Pakistan",
+    summary: "With the global rollout of the iPhone 17 series, the FBR has updated the customs valuation, bringing the PTA tax for the Pro Max variant to an all-time high.",
+    category: "PTA Tax",
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    readTime: "3 min read",
+    imageUrl: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
+    content: [
+      {
+        heading: "Updated Customs Valuation for iPhone 17 Series",
+        paragraphs: [
+          "The Federal Board of Revenue (FBR) alongside the Pakistan Telecommunication Authority (PTA) has issued updated regulatory customs duties and mobile tax slabs for the upcoming Apple iPhone 17 family.",
+          "Consumers intending to register their international units on passport or CNIC must account for these officially confirmed tariffs."
+        ]
+      }
+    ]
+  },
+  {
+    id: "infinix-zero-40-local-assembly",
+    slug: "infinix-zero-40-local-assembly",
+    title: "Infinix Zero 40 5G Begins Local Assembly in Pakistan, Price Drop Expected",
+    summary: "In a massive win for local consumers, Infinix has started locally assembling its premium Zero 40 5G model, which could result in a significant price reduction soon.",
+    category: "Market Trends",
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    readTime: "3 min read",
+    imageUrl: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80",
+    content: [
+      {
+        heading: "Local Assembly Milestone in Karachi Facility",
+        paragraphs: [
+          "Transsion Holdings has initiated commercial manufacturing lines for the flagship-tier Infinix Zero 40 5G locally. This move allows avoidance of commercial CBU import duties, offering substantial savings to Pakistani buyers."
+        ]
+      }
+    ]
+  },
+  {
+    id: "samsung-fold-6-price-slash",
+    slug: "samsung-fold-6-price-slash",
+    title: "Samsung Galaxy Z Fold 6 Sees Massive Discount in Local Retail Markets",
+    summary: "Retailers across major cities are offering huge promotional discounts on the Galaxy Z Fold 6 to boost premium segment sales ahead of the winter season.",
+    category: "Offers & Discounts",
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    readTime: "2 min read",
+    imageUrl: "https://images.unsplash.com/photo-1605236453806-6ff36851218e?auto=format&fit=crop&w=800&q=80",
+    content: [
+      {
+        heading: "Retail Price Reductions Across Lahore and Karachi",
+        paragraphs: [
+          "Authorized Samsung distributors have lowered street prices on select 512GB variants of the Galaxy Z Fold 6 with zero-markup installment options from partner banks."
+        ]
+      }
+    ]
+  },
+  {
+    id: "xiaomi-hyperos-2-pakistan-rollout",
+    slug: "xiaomi-hyperos-2-pakistan-rollout",
+    title: "Xiaomi HyperOS 2.0: Rollout Schedule for Pakistani Users Revealed",
+    summary: "Xiaomi has officially shared the timeline for the HyperOS 2.0 update. The Redmi Note 14 Pro+ 5G will be among the first devices to receive the AI-packed update this month.",
+    category: "Software Updates",
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    readTime: "4 min read",
+    imageUrl: "https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?auto=format&fit=crop&w=800&q=80",
+    content: [
+      {
+        heading: "HyperOS 2.0 Regional Feature Parity",
+        paragraphs: [
+          "Pakistani variants of recent Xiaomi and Redmi smartphones will receive the new Android 15-based HyperOS 2.0 update featuring enhanced battery optimizations and localized network band management."
+        ]
+      }
+    ]
+  },
+  {
+    id: "pta-crackdown-illegal-patches",
+    slug: "pta-crackdown-illegal-patches",
+    title: "PTA Intensifies Crackdown on Illegally Patched Non-PTA Smartphones",
+    summary: "The telecom authority has launched a new automated system to immediately block high-end smartphones running on software-patched IMEIs.",
+    category: "Tech News",
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    readTime: "3 min read",
+    imageUrl: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+    content: [
+      {
+        heading: "DIRBS Automated Flagging Engine",
+        paragraphs: [
+          "The PTA's Device Identification Registration and Blocking System (DIRBS) has been upgraded with automated algorithmic checks to detect and permanently blacklist duplicate or duplicated CPID and patched IMEI entries."
+        ]
+      }
+    ]
+  },
+  {
+    id: "oppo-reno-12f-sales-record",
+    slug: "oppo-reno-12f-sales-record",
+    title: "Oppo Reno 12F 5G Breaks Mid-Range Sales Records in its First Week",
+    summary: "Oppo's aggressive pricing and marketing strategy for the Reno 12F 5G has paid off, making it the most demanded camera phone under Rs 80,000 this week.",
+    category: "Market Trends",
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    readTime: "2 min read",
+    imageUrl: "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?auto=format&fit=crop&w=800&q=80",
+    content: [
+      {
+        heading: "Strong Demand in Offline Retail",
+        paragraphs: [
+          "The Oppo Reno 12F 5G has achieved strong initial sales momentum across Hafeez Centre Lahore and Saddar Karachi markets, propelled by its AI portrait features and appealing design."
+        ]
+      }
+    ]
   }
 ];
 

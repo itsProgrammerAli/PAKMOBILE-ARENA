@@ -33,8 +33,8 @@ export interface PhoneSpec {
   };
   variants?: PhoneVariant[];
   ptaTax: {
-    passportTaxPKR: number;
-    cnicTaxPKR: number;
+    passportTaxPKR?: number;
+    cnicTaxPKR?: number;
     status: 'Official PTA Approved' | 'Non-PTA' | 'Factory Unlocked';
     isLocallyAssembled?: boolean;
   };
@@ -44,8 +44,10 @@ export interface PhoneSpec {
   releaseDate: string;
   rating: number;
   reviewCount: number;
+  reviewsCount?: number;
   image: string;
-  tags: Array<'trending' | 'budget' | 'camera' | 'gaming' | 'flagship' | 'battery'>;
+  images?: string[];
+  tags: Array<'trending' | 'budget' | 'camera' | 'gaming' | 'flagship' | 'battery' | '5g' | string>;
   specs: {
     display: string;
     refreshRate: string;
@@ -77,8 +79,9 @@ export interface PhoneSpec {
   colors: string[];
   colorImages?: Record<string, string>;
   colorHexes?: Record<string, string>;
-  popularInCities: string[];
+  popularInCities?: string[];
   review?: PhoneReview;
+  reviews?: number | UserReview[];
 }
 
 export type FilterCategory = 'all' | 'trending' | 'budget' | 'camera' | 'gaming' | 'flagship';
@@ -118,6 +121,6 @@ export interface NewsArticle {
   image?: string; // backwards compatibility
   summary: string;
   content: NewsArticleSection[];
-  tags: string[];
+  tags?: string[];
   author?: string;
 }

@@ -1,145 +1,100 @@
 const fs = require('fs');
 const content = fs.readFileSync('src/data/news.ts', 'utf8');
 
-const newArticles = [
+const userObjects = [
   {
-    id: "pta-tax-revision-rumors-sept-2026",
-    slug: "pta-tax-revision-rumors-sept-2026",
-    title: "FBR Considering Revisions in PTA Tax for High-End Flagships in Late 2026",
-    summary: "Sources suggest that the FBR might introduce a new tax slab for smartphones priced above Rs 300,000 to regulate the import of premium devices.",
+    id: "iphone-17-pta-tax-slabs-sept-2026",
+    slug: "iphone-17-pta-tax-slabs-sept-2026",
+    title: "iPhone 17 Series PTA Tax Slabs Officially Confirmed in Pakistan",
+    summary: "With the global rollout of the iPhone 17 series, the FBR has updated the customs valuation, bringing the PTA tax for the Pro Max variant to an all-time high.",
+    excerpt: "With the global rollout of the iPhone 17 series, the FBR has updated the customs valuation, bringing the PTA tax for the Pro Max variant to an all-time high.",
     category: "PTA Tax",
-    date: "September 12, 2026",
-    isoDate: "2026-09-12",
-    imageUrl: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=80",
-    image: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=80",
-    author: "PakMobile Arena Editorial Team",
-    tags: ["PTA Tax", "FBR", "Flagship"],
-    content: [
-      {
-        heading: "Potential PTA Tax Revisions",
-        paragraphs: [
-          "Sources suggest that the FBR might introduce a new tax slab for smartphones priced above Rs 300,000 to regulate the import of premium devices."
-        ]
-      }
-    ]
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    imageUrl: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
+    content: [],
+    tags: []
   },
   {
-    id: "samsung-s27-ultra-leaks-pakistan",
-    slug: "samsung-s27-ultra-leaks-pakistan",
-    title: "Samsung Galaxy S27 Ultra Early Leaks: What It Means for Pakistani Consumers",
-    summary: "With the S27 series rumors heating up, Samsung is reportedly focusing on a refined titanium chassis and a new 200MP sensor. Expected launch early next year.",
-    category: "Rumors & Leaks",
-    date: "September 12, 2026",
-    isoDate: "2026-09-12",
-    imageUrl: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=800&q=80",
-    image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=800&q=80",
-    author: "PakMobile Arena Hardware Desk",
-    tags: ["Samsung", "Galaxy S27 Ultra", "Rumors"],
-    content: [
-      {
-        heading: "Early Galaxy S27 Ultra Leaks",
-        paragraphs: [
-          "With the S27 series rumors heating up, Samsung is reportedly focusing on a refined titanium chassis and a new 200MP sensor. Expected launch early next year."
-        ]
-      }
-    ]
-  },
-  {
-    id: "tecno-spark-50-pro-market-dominance",
-    slug: "tecno-spark-50-pro-market-dominance",
-    title: "How Tecno Spark 50 Pro is Disrupting the Sub-Rs 80,000 Market in Pakistan",
-    summary: "Priced aggressively at Rs 74,999, the Spark 50 Pro is seeing massive sales volumes across local markets, beating its competitors in the budget-premium segment.",
+    id: "infinix-zero-40-local-assembly",
+    slug: "infinix-zero-40-local-assembly",
+    title: "Infinix Zero 40 5G Begins Local Assembly in Pakistan, Price Drop Expected",
+    summary: "In a massive win for local consumers, Infinix has started locally assembling its premium Zero 40 5G model, which could result in a significant price reduction soon.",
+    excerpt: "In a massive win for local consumers, Infinix has started locally assembling its premium Zero 40 5G model, which could result in a significant price reduction soon.",
     category: "Market Trends",
-    date: "September 12, 2026",
-    isoDate: "2026-09-12",
-    imageUrl: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80",
-    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80",
-    author: "PakMobile Arena Market Analysis",
-    tags: ["Tecno", "Spark 50 Pro", "Market Trends"],
-    content: [
-      {
-        heading: "Spark 50 Pro Disrupts the Market",
-        paragraphs: [
-          "Priced aggressively at Rs 74,999, the Spark 50 Pro is seeing massive sales volumes across local markets, beating its competitors in the budget-premium segment."
-        ]
-      }
-    ]
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    imageUrl: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80",
+    content: [],
+    tags: []
   },
   {
-    id: "vivo-v80-lite-5g-camera-review",
-    slug: "vivo-v80-lite-5g-camera-review",
-    title: "Vivo V80 Lite 5G Camera Test: Is It the Best Portrait Phone Under 1.5 Lakh?",
-    summary: "Our early impressions of the Vivo V80 Lite 5G highlight its impressive 50MP Sony OIS sensor and advanced portrait algorithms.",
-    category: "Reviews",
-    date: "September 12, 2026",
-    isoDate: "2026-09-12",
-    imageUrl: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80",
-    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80",
-    author: "PakMobile Arena Reviews Team",
-    tags: ["Vivo", "V80 Lite", "Camera Test"],
-    content: [
-      {
-        heading: "Testing the Vivo V80 Lite 5G Camera",
-        paragraphs: [
-          "Our early impressions of the Vivo V80 Lite 5G highlight its impressive 50MP Sony OIS sensor and advanced portrait algorithms."
-        ]
-      }
-    ]
+    id: "samsung-fold-6-price-slash",
+    slug: "samsung-fold-6-price-slash",
+    title: "Samsung Galaxy Z Fold 6 Sees Massive Discount in Local Retail Markets",
+    summary: "Retailers across major cities are offering huge promotional discounts on the Galaxy Z Fold 6 to boost premium segment sales ahead of the winter season.",
+    excerpt: "Retailers across major cities are offering huge promotional discounts on the Galaxy Z Fold 6 to boost premium segment sales ahead of the winter season.",
+    category: "Offers & Discounts",
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    imageUrl: "https://images.unsplash.com/photo-1605236453806-6ff36851218e?auto=format&fit=crop&w=800&q=80",
+    content: [],
+    tags: []
   },
   {
-    id: "5g-network-rollout-pakistan-update",
-    slug: "5g-network-rollout-pakistan-update",
-    title: "5G Rollout in Pakistan: PTA Finalizes Spectrum Auction Details for November",
-    summary: "The long-awaited 5G spectrum auction is finally taking shape, with major telecom operators preparing their infrastructure for commercial launch.",
-    category: "Telecom News",
-    date: "September 12, 2026",
-    isoDate: "2026-09-12",
-    imageUrl: "https://images.unsplash.com/photo-1544427920-c49ccfbc38f0?auto=format&fit=crop&w=800&q=80",
-    image: "https://images.unsplash.com/photo-1544427920-c49ccfbc38f0?auto=format&fit=crop&w=800&q=80",
-    author: "PakMobile Arena Telecom Desk",
-    tags: ["5G", "Pakistan", "PTA", "Spectrum Auction"],
-    content: [
-      {
-        heading: "5G Spectrum Auction Details Finalized",
-        paragraphs: [
-          "The long-awaited 5G spectrum auction is finally taking shape, with major telecom operators preparing their infrastructure for commercial launch."
-        ]
-      }
-    ]
-  },
-  {
-    id: "iphone-18-rumors-apple-intelligence",
-    slug: "iphone-18-rumors-apple-intelligence",
-    title: "Apple Intelligence Expansion: What to Expect from Next Year's iOS Updates",
-    summary: "While the iPhone 17 series dominates the market, Apple is already working on deeper AI integrations for the upcoming iOS ecosystem.",
+    id: "xiaomi-hyperos-2-pakistan-rollout",
+    slug: "xiaomi-hyperos-2-pakistan-rollout",
+    title: "Xiaomi HyperOS 2.0: Rollout Schedule for Pakistani Users Revealed",
+    summary: "Xiaomi has officially shared the timeline for the HyperOS 2.0 update. The Redmi Note 14 Pro+ 5G will be among the first devices to receive the AI-packed update this month.",
+    excerpt: "Xiaomi has officially shared the timeline for the HyperOS 2.0 update. The Redmi Note 14 Pro+ 5G will be among the first devices to receive the AI-packed update this month.",
     category: "Software Updates",
-    date: "September 12, 2026",
-    isoDate: "2026-09-12",
-    imageUrl: "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=800&q=80",
-    image: "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=800&q=80",
-    author: "PakMobile Arena Software Desk",
-    tags: ["Apple", "iOS", "Apple Intelligence"],
-    content: [
-      {
-        heading: "Future of Apple Intelligence in iOS",
-        paragraphs: [
-          "While the iPhone 17 series dominates the market, Apple is already working on deeper AI integrations for the upcoming iOS ecosystem."
-        ]
-      }
-    ]
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    imageUrl: "https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?auto=format&fit=crop&w=800&q=80",
+    content: [],
+    tags: []
+  },
+  {
+    id: "pta-crackdown-illegal-patches",
+    slug: "pta-crackdown-illegal-patches",
+    title: "PTA Intensifies Crackdown on Illegally Patched Non-PTA Smartphones",
+    summary: "The telecom authority has launched a new automated system to immediately block high-end smartphones running on software-patched IMEIs.",
+    excerpt: "The telecom authority has launched a new automated system to immediately block high-end smartphones running on software-patched IMEIs.",
+    category: "Tech News",
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    imageUrl: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+    content: [],
+    tags: []
+  },
+  {
+    id: "oppo-reno-12f-sales-record",
+    slug: "oppo-reno-12f-sales-record",
+    title: "Oppo Reno 12F 5G Breaks Mid-Range Sales Records in its First Week",
+    summary: "Oppo's aggressive pricing and marketing strategy for the Reno 12F 5G has paid off, making it the most demanded camera phone under Rs 80,000 this week.",
+    excerpt: "Oppo's aggressive pricing and marketing strategy for the Reno 12F 5G has paid off, making it the most demanded camera phone under Rs 80,000 this week.",
+    category: "Market Trends",
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    imageUrl: "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?auto=format&fit=crop&w=800&q=80",
+    content: [],
+    tags: []
   }
 ];
 
-const match = content.match(/export const NEWS_DATA: NewsArticle\[\] = \[/);
-if (match) {
-  const insertIndex = match.index + match[0].length;
-  let newArticlesStr = JSON.stringify(newArticles, null, 2);
-  // Remove the opening '[' and closing ']' to insert properly
-  newArticlesStr = newArticlesStr.substring(1, newArticlesStr.length - 1) + ',';
-  
-  const newContent = content.substring(0, insertIndex) + '\n  ' + newArticlesStr + content.substring(insertIndex);
-  fs.writeFileSync('src/data/news.ts', newContent, 'utf8');
-  console.log('Successfully appended 6 provided news articles.');
+const endBracketIndex = content.lastIndexOf('];');
+
+if (endBracketIndex !== -1) {
+    const stringifiedObjects = JSON.stringify(userObjects, null, 2);
+    // Remove the opening [ and closing ] from the stringified objects so we can insert them
+    const innerObjects = stringifiedObjects.substring(1, stringifiedObjects.length - 1);
+    
+    const newContent = content.substring(0, endBracketIndex) + 
+                       ',\n  ' + innerObjects.trim() + '\n' +
+                       content.substring(endBracketIndex);
+                       
+    fs.writeFileSync('src/data/news.ts', newContent, 'utf8');
+    console.log("Successfully appended the 6 news articles.");
 } else {
-  console.log('Could not find NEWS_DATA array.');
+    console.log("Could not find the end of the array.");
 }

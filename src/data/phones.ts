@@ -1,77 +1,70 @@
 import { PhoneSpec, BrandInfo } from '../types';
 
-export const BRANDS: BrandInfo[] = [
+const BRAND_DEFINITIONS: Array<Omit<BrandInfo, 'count'>> = [
   {
     "name": "Apple",
-    "count": 3,
     "logoText": "APPLE",
     "slug": "apple"
   },
   {
     "name": "Samsung",
-    "count": 10,
     "logoText": "SAMSUNG",
     "slug": "samsung"
   },
   {
     "name": "Xiaomi",
-    "count": 6,
     "logoText": "XIAOMI",
     "slug": "xiaomi"
   },
   {
     "name": "Tecno",
-    "count": 8,
     "logoText": "TECNO",
     "slug": "tecno"
   },
   {
     "name": "Vivo",
-    "count": 6,
     "logoText": "VIVO",
     "slug": "vivo"
   },
   {
     "name": "Infinix",
-    "count": 7,
     "logoText": "INFINIX",
     "slug": "infinix"
   },
   {
     "name": "Realme",
-    "count": 2,
     "logoText": "REALME",
     "slug": "realme"
   },
   {
     "name": "Google",
-    "count": 1,
     "logoText": "GOOGLE",
     "slug": "google"
   },
   {
     "name": "OnePlus",
-    "count": 1,
     "logoText": "ONEPLUS",
     "slug": "oneplus"
   },
   {
     "name": "Motorola",
-    "count": 1,
     "logoText": "MOTOROLA",
     "slug": "motorola"
   },
   {
     "name": "Honor",
-    "count": 1,
     "logoText": "HONOR",
     "slug": "honor"
   },
   {
     "name": "Oppo",
-    "count": 1,
     "logoText": "OPPO",
     "slug": "oppo"
+  },
+  {
+    "name": "Nothing",
+    "logoText": "NOTHING",
+    "slug": "nothing"
   }
 ];
 
@@ -4089,8 +4082,789 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Amber Orange": "/images/phones/oppo-reno-12f-5g-sa-pakistan-priceoye-dsxnc-500x500.webp",
       "Olive Green": "/images/phones/oppo-reno-12f-5g-sa-pakistan-priceoye-eogj1-500x500.webp"
     }
+  },
+  {
+    "id": "infinix-smart-20",
+    "name": "Infinix Smart 20",
+    "brand": "Infinix",
+    "model": "Smart 20 (4GB/64GB, 4GB/128GB)",
+    "pricePKR": 38499,
+    "marketPriceRangePKR": {
+      "min": 38499,
+      "max": 45999
+    },
+    "variants": [
+      {
+        "id": "infinix-smart-20-4-64",
+        "name": "4GB RAM / 64GB Storage",
+        "ram": "4GB",
+        "storage": "64GB",
+        "pricePKR": 38499,
+        "marketPriceRangePKR": {
+          "min": 38499,
+          "max": 38499
+        }
+      },
+      {
+        "id": "infinix-smart-20-4-128",
+        "name": "4GB RAM / 128GB Storage",
+        "ram": "4GB",
+        "storage": "128GB",
+        "pricePKR": 45999,
+        "marketPriceRangePKR": {
+          "min": 45999,
+          "max": 45999
+        }
+      }
+    ],
+    "ptaTax": {
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "isLocallyAssembled": true,
+    "releaseDate": "2026-05-15",
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "popularInCities": [],
+    "image": "/images/phones/infinix-smart-20/infinix-smart-20-pakistan-priceoye-dwseo-500x500.webp",
+    "tags": [
+      "budget",
+      "battery"
+    ],
+    "specs": {
+      "display": "6.78-inch IPS LCD, 120Hz Refresh Rate",
+      "refreshRate": "120Hz",
+      "processor": "MediaTek Helio G81 Ultimate",
+      "ram": "4GB LPDDR4X (Up to 8GB with Virtual RAM)",
+      "storage": "64GB / 128GB, microSD expandable",
+      "mainCamera": "8 MP Dual Rear Camera with Dual LED Flash",
+      "selfieCamera": "8 MP Front Camera",
+      "battery": "5200 mAh",
+      "charging": "15W Type-C Fast Charging",
+      "os": "XOS 16 based on Android 16",
+      "network": "4G LTE / 3G / 2G",
+      "resolution": "720 x 1576 pixels (HD+)",
+      "dimensions": "167.7 x 78.8 x 7.7 mm",
+      "simSlot": "Dual SIM (Nano-SIM, dual stand-by) + Dedicated microSD slot"
+    },
+    "colors": [
+      "Shadow Black",
+      "Cloudline Blue",
+      "Polaris Titanium",
+      "Sunlike Orange"
+    ],
+    "colorHexes": {
+      "Shadow Black": "#1f2022",
+      "Cloudline Blue": "#6b9ec7",
+      "Polaris Titanium": "#8f9298",
+      "Sunlike Orange": "#e67e22"
+    },
+    "colorImages": {
+      "Shadow Black": "/images/phones/infinix-smart-20/infinix-smart-20-pakistan-priceoye-4eb98-500x500.webp",
+      "Cloudline Blue": "/images/phones/infinix-smart-20/infinix-smart-20-pakistan-priceoye-kvanw-500x500.webp",
+      "Polaris Titanium": "/images/phones/infinix-smart-20/infinix-smart-20-pakistan-priceoye-dwseo-500x500.webp",
+      "Sunlike Orange": "/images/phones/infinix-smart-20/infinix-smart-20-pakistan-priceoye-ap7mn-500x500.webp"
+    }
+  },
+  {
+    "id": "motorola-edge-70-fusion",
+    "name": "Motorola Edge 70 Fusion",
+    "brand": "Motorola",
+    "model": "Edge 70 Fusion (12GB/256GB)",
+    "pricePKR": 134999,
+    "marketPriceRangePKR": {
+      "min": 134999,
+      "max": 134999
+    },
+    "variants": [
+      {
+        "id": "moto-edge-70-fusion-12-256",
+        "name": "12GB RAM / 256GB Storage",
+        "ram": "12GB",
+        "storage": "256GB",
+        "pricePKR": 134999,
+        "marketPriceRangePKR": {
+          "min": 134999,
+          "max": 134999
+        }
+      }
+    ],
+    "ptaTax": {
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": false
+    },
+    "isLocallyAssembled": false,
+    "releaseDate": "2026-09-08",
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "popularInCities": [],
+    "image": "/images/phones/motorola-edge-70-fusion/motorola-edge-70-fusion-pakistan-priceoye-249wv-500x500.webp",
+    "tags": [
+      "trending",
+      "camera",
+      "5g"
+    ],
+    "specs": {
+      "display": "6.78-inch Endless Edge AMOLED, 144Hz",
+      "refreshRate": "144Hz",
+      "processor": "Qualcomm Snapdragon 7s Gen 3",
+      "ram": "12GB LPDDR5X",
+      "storage": "256GB UFS 2.2",
+      "mainCamera": "50 MP OIS (Sony LYT-700C) + 13 MP Ultra-wide / Macro",
+      "selfieCamera": "32 MP Front Camera, 4K Video",
+      "battery": "7000 mAh (Pakistani market verified)",
+      "charging": "68W TurboPower Fast Charging",
+      "os": "Android 16",
+      "network": "5G / 4G LTE / 3G / 2G",
+      "resolution": "2772 x 1272 pixels (1.5K)",
+      "dimensions": "162.76 x 75.60 x 7.99 mm",
+      "simSlot": "Dual SIM (Nano-SIM, dual stand-by)"
+    },
+    "colors": [
+      "Pantone Silhouette",
+      "Pantone Sporting Green"
+    ],
+    "colorHexes": {
+      "Pantone Silhouette": "#232528",
+      "Pantone Sporting Green": "#3b6e57"
+    },
+    "colorImages": {
+      "Pantone Silhouette": "/images/phones/motorola-edge-70-fusion/motorola-edge-70-fusion-pakistan-priceoye-249wv-500x500.webp",
+      "Pantone Sporting Green": "/images/phones/motorola-edge-70-fusion/motorola-edge-70-fusion-pakistan-priceoye-024tr-500x500.webp"
+    }
+  },
+  {
+    "id": "infinix-note-60-edge-5g",
+    "name": "Infinix Note 60 Edge 5G",
+    "brand": "Infinix",
+    "model": "Note 60 Edge 5G (8GB/256GB)",
+    "pricePKR": 92499,
+    "marketPriceRangePKR": {
+      "min": 92499,
+      "max": 92499
+    },
+    "variants": [
+      {
+        "id": "infinix-note-60-edge-8-256",
+        "name": "8GB RAM / 256GB Storage",
+        "ram": "8GB",
+        "storage": "256GB",
+        "pricePKR": 92499,
+        "marketPriceRangePKR": {
+          "min": 92499,
+          "max": 92499
+        }
+      }
+    ],
+    "ptaTax": {
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "isLocallyAssembled": true,
+    "releaseDate": "2026-04-20",
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "popularInCities": [],
+    "image": "/images/phones/infinix-note-60-edge-5g/infinix-note-edge-pakistan-priceoye-4p1qe-500x500.webp",
+    "tags": [
+      "trending",
+      "battery",
+      "5g"
+    ],
+    "specs": {
+      "display": "6.78-inch 3D Curved AMOLED, 120Hz, Gorilla Glass 7i",
+      "refreshRate": "120Hz",
+      "processor": "MediaTek Dimensity 7100 (6nm)",
+      "ram": "8GB LPDDR4X",
+      "storage": "256GB UFS 2.2",
+      "mainCamera": "50 MP OIS Main Camera with Quad LED Flash",
+      "selfieCamera": "13 MP Front Camera",
+      "battery": "6500 mAh",
+      "charging": "45W All-Round FastCharge 2.0",
+      "os": "XOS 16 based on Android 16",
+      "network": "5G / 4G LTE / 3G / 2G",
+      "resolution": "1208 x 2644 pixels (1.5K)",
+      "simSlot": "Dual SIM (Nano-SIM, dual stand-by)"
+    },
+    "colors": [
+      "Lunar Titanium",
+      "Silk Green",
+      "Stellar Blue",
+      "Shadow Black",
+      "Solar Orange"
+    ],
+    "colorHexes": {
+      "Lunar Titanium": "#a4a7aa",
+      "Silk Green": "#698976",
+      "Stellar Blue": "#345579",
+      "Shadow Black": "#18191a",
+      "Solar Orange": "#e06d2d"
+    },
+    "colorImages": {
+      "Lunar Titanium": "/images/phones/infinix-note-60-edge-5g/infinix-note-edge-pakistan-priceoye-4p1qe-500x500.webp",
+      "Silk Green": "/images/phones/infinix-note-60-edge-5g/infinix-note-edge-pakistan-priceoye-8e8rr-500x500.webp",
+      "Stellar Blue": "/images/phones/infinix-note-60-edge-5g/infinix-note-edge-pakistan-priceoye-ld2uv-500x500.webp",
+      "Shadow Black": "/images/phones/infinix-note-60-edge-5g/infinix-note-edge-pakistan-priceoye-zhzsx-500x500.webp",
+      "Solar Orange": "/images/phones/infinix-note-60-edge-5g/infinix-note-edge-pakistan-priceoye-h2uaq-500x500.webp"
+    }
+  },
+  {
+    "id": "honor-x8d",
+    "name": "Honor X8d",
+    "brand": "Honor",
+    "model": "X8d (8GB/256GB)",
+    "pricePKR": 74499,
+    "marketPriceRangePKR": {
+      "min": 74499,
+      "max": 74499
+    },
+    "variants": [
+      {
+        "id": "honor-x8d-8-256",
+        "name": "8GB RAM / 256GB Storage",
+        "ram": "8GB",
+        "storage": "256GB",
+        "pricePKR": 74499,
+        "marketPriceRangePKR": {
+          "min": 74499,
+          "max": 74499
+        }
+      }
+    ],
+    "ptaTax": {
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": false
+    },
+    "isLocallyAssembled": false,
+    "releaseDate": "2026-06-15",
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "popularInCities": [],
+    "image": "/images/phones/honor-x8d/honor-x8d-pakistan-priceoye-1ou8e-500x500.webp",
+    "tags": [
+      "trending",
+      "camera"
+    ],
+    "specs": {
+      "display": "6.7-inch AMOLED, 90Hz, 3000 nits peak brightness",
+      "refreshRate": "90Hz",
+      "processor": "Qualcomm Snapdragon 680 (6nm)",
+      "ram": "8GB RAM",
+      "storage": "256GB",
+      "mainCamera": "108 MP (f/1.75) + 5 MP (f/2.2 Wide Angle)",
+      "selfieCamera": "50 MP Front Camera with Selfie Light",
+      "battery": "4500 mAh",
+      "charging": "45W HONOR SuperCharge",
+      "os": "MagicOS 9.0 (Based on Android 15)",
+      "network": "4G LTE / 3G / 2G",
+      "resolution": "1080 x 2412 pixels (FHD+)",
+      "dimensions": "161.05 x 74.55 x 6.78 mm, 166g",
+      "simSlot": "Dual SIM (Nano-SIM, dual stand-by)"
+    },
+    "colors": [
+      "Velvet Black",
+      "Velvet Grey",
+      "Light Blue"
+    ],
+    "colorHexes": {
+      "Velvet Black": "#1c1d1f",
+      "Velvet Grey": "#6d7075",
+      "Light Blue": "#85b1d9"
+    },
+    "colorImages": {
+      "Velvet Black": "/images/phones/honor-x8d/honor-x8d-pakistan-priceoye-1ou8e-500x500.webp",
+      "Velvet Grey": "/images/phones/honor-x8d/honor-x8d-pakistan-priceoye-s3tv9-500x500.webp",
+      "Light Blue": "/images/phones/honor-x8d/honor-x8d-pakistan-priceoye-amkr5-500x500.webp"
+    }
+  },
+  {
+    "id": "nothing-cmf-phone-1-5g",
+    "name": "Nothing CMF Phone 1 5G",
+    "brand": "Nothing",
+    "model": "CMF Phone 1 (8GB/128GB)",
+    "pricePKR": 76599,
+    "marketPriceRangePKR": {
+      "min": 76599,
+      "max": 76599
+    },
+    "variants": [
+      {
+        "id": "nothing-cmf-phone-1-8-128",
+        "name": "8GB RAM / 128GB Storage",
+        "ram": "8GB",
+        "storage": "128GB",
+        "pricePKR": 76599,
+        "marketPriceRangePKR": {
+          "min": 76599,
+          "max": 76599
+        }
+      }
+    ],
+    "ptaTax": {
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": false
+    },
+    "isLocallyAssembled": false,
+    "releaseDate": "2025-05-07",
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "popularInCities": [],
+    "image": "/images/phones/nothing-cmf-phone-1-5g/nothing-cmf-phone-1-pakistan-priceoye-67qs8-500x500.webp",
+    "tags": [
+      "trending",
+      "5g"
+    ],
+    "specs": {
+      "display": "6.67-inch Super AMOLED, 120Hz, 2000 nits peak",
+      "refreshRate": "120Hz",
+      "processor": "MediaTek Dimensity 7300 5G (4nm)",
+      "ram": "8GB LPDDR4X",
+      "storage": "128GB, expandable up to 2TB",
+      "mainCamera": "50 MP Sony Sensor + Portrait Sensor",
+      "selfieCamera": "16 MP Front Camera",
+      "battery": "5000 mAh",
+      "charging": "33W Fast Charging",
+      "os": "Nothing OS 2.6 (Powered by Android 14)",
+      "network": "5G / 4G LTE / 3G / 2G",
+      "resolution": "1080 x 2400 pixels (395 ppi)",
+      "dimensions": "164 x 77 x 8 mm, 197g",
+      "simSlot": "Dual SIM (Nano-SIM, dual stand-by)"
+    },
+    "colors": [
+      "Black",
+      "Light Green"
+    ],
+    "colorHexes": {
+      "Black": "#222325",
+      "Light Green": "#8fa878"
+    },
+    "colorImages": {
+      "Black": "/images/phones/nothing-cmf-phone-1-5g/nothing-cmf-phone-1-pakistan-priceoye-67qs8-500x500.webp",
+      "Light Green": "/images/phones/nothing-cmf-phone-1-5g/nothing-cmf-phone-1-pakistan-priceoye-cztvl-500x500.webp"
+    }
+  },
+  {
+    "id": "xiaomi-redmi-15c",
+    "name": "Xiaomi Redmi 15C",
+    "brand": "Xiaomi",
+    "model": "Redmi 15C (4GB/128GB, 6GB/128GB)",
+    "pricePKR": 42999,
+    "marketPriceRangePKR": {
+      "min": 42999,
+      "max": 46999
+    },
+    "variants": [
+      {
+        "id": "xiaomi-redmi-15c-4-128",
+        "name": "4GB RAM / 128GB Storage",
+        "ram": "4GB",
+        "storage": "128GB",
+        "pricePKR": 42999,
+        "marketPriceRangePKR": {
+          "min": 42999,
+          "max": 42999
+        }
+      },
+      {
+        "id": "xiaomi-redmi-15c-6-128",
+        "name": "6GB RAM / 128GB Storage",
+        "ram": "6GB",
+        "storage": "128GB",
+        "pricePKR": 46999,
+        "marketPriceRangePKR": {
+          "min": 46999,
+          "max": 46999
+        }
+      }
+    ],
+    "ptaTax": {
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "isLocallyAssembled": true,
+    "releaseDate": "2025-09-21",
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "popularInCities": [],
+    "image": "/images/phones/xiaomi-redmi-15c/xiaomi-redmi-15c-pakistan-priceoye-92xh3-500x500.webp",
+    "tags": [
+      "budget",
+      "battery"
+    ],
+    "specs": {
+      "display": "6.9-inch Dot Drop Display, IPS LCD, 120Hz, Gorilla Glass 3",
+      "refreshRate": "120Hz",
+      "processor": "MediaTek Helio G81-Ultra",
+      "ram": "4GB / 6GB LPDDR4X",
+      "storage": "128GB eMMC 5.1, dedicated microSD slot",
+      "mainCamera": "50 MP Main Camera (f/1.8) + Auxiliary Lens",
+      "selfieCamera": "8 MP Front Camera (f/2.0)",
+      "battery": "6000 mAh",
+      "charging": "33W Fast Charging",
+      "os": "Xiaomi HyperOS 2 (Android 15)",
+      "network": "4G LTE / 3G / 2G",
+      "resolution": "720 x 1600 pixels (HD+)",
+      "dimensions": "171.56 x 79.47 x 7.99 mm, 205g",
+      "simSlot": "Dual SIM (Nano-SIM) + dedicated microSD"
+    },
+    "colors": [
+      "Moonlight Blue",
+      "Midnight Black",
+      "Mint Green",
+      "Twilight Orange"
+    ],
+    "colorHexes": {
+      "Moonlight Blue": "#547392",
+      "Midnight Black": "#191a1c",
+      "Mint Green": "#8ec5a5",
+      "Twilight Orange": "#dc7949"
+    },
+    "colorImages": {
+      "Moonlight Blue": "/images/phones/xiaomi-redmi-15c/xiaomi-redmi-15c-pakistan-priceoye-92xh3-500x500.webp",
+      "Midnight Black": "/images/phones/xiaomi-redmi-15c/xiaomi-redmi-15c-pakistan-priceoye-rygof-500x500.webp",
+      "Mint Green": "/images/phones/xiaomi-redmi-15c/xiaomi-redmi-15c-pakistan-priceoye-n44ud-500x500.webp",
+      "Twilight Orange": "/images/phones/xiaomi-redmi-15c/xiaomi-redmi-15c-pakistan-priceoye-xlsa4-500x500.webp"
+    }
+  },
+  {
+    "id": "vivo-y05",
+    "name": "Vivo Y05",
+    "brand": "Vivo",
+    "model": "Y05 (4GB/64GB, 4GB/128GB)",
+    "pricePKR": 39999,
+    "officialPricePKR": 44999,
+    "marketPriceRangePKR": {
+      "min": 39999,
+      "max": 45499
+    },
+    "variants": [
+      {
+        "id": "vivo-y05-4-64",
+        "name": "4GB RAM / 64GB Storage",
+        "ram": "4GB",
+        "storage": "64GB",
+        "pricePKR": 39999,
+        "officialPricePKR": 44999,
+        "marketPriceRangePKR": {
+          "min": 39999,
+          "max": 39999
+        }
+      },
+      {
+        "id": "vivo-y05-4-128",
+        "name": "4GB RAM / 128GB Storage",
+        "ram": "4GB",
+        "storage": "128GB",
+        "pricePKR": 45499,
+        "officialPricePKR": 50999,
+        "marketPriceRangePKR": {
+          "min": 45499,
+          "max": 45499
+        }
+      }
+    ],
+    "ptaTax": {
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "isLocallyAssembled": true,
+    "releaseDate": "2026-02-11",
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "popularInCities": [],
+    "image": "/images/phones/vivo-y05/vivo-y05-pakistan-priceoye-dfry8-500x500.webp",
+    "tags": [
+      "budget",
+      "battery"
+    ],
+    "specs": {
+      "display": "6.74-inch LCD, 120Hz, 1200 nits high brightness, IP65",
+      "refreshRate": "120Hz",
+      "processor": "Unisoc T7225 Octa-Core",
+      "ram": "4GB (+4GB Extended RAM)",
+      "storage": "64GB / 128GB, microSD expandable",
+      "mainCamera": "8 MP Rear Camera",
+      "selfieCamera": "5 MP Front Camera",
+      "battery": "6500 mAh BlueVolt Battery",
+      "charging": "15W Fast Charging",
+      "os": "OriginOS 6 (Android 16)",
+      "network": "4G LTE / 3G / 2G",
+      "resolution": "1600 x 720 pixels (HD+)",
+      "dimensions": "167.40 x 77.10 x 8.39 mm, 209g",
+      "simSlot": "2 Nano SIMs + microSD"
+    },
+    "colors": [
+      "Voyage Black",
+      "Haze Blue",
+      "Summit Platinum"
+    ],
+    "colorHexes": {
+      "Voyage Black": "#1d1e20",
+      "Haze Blue": "#4f759c",
+      "Summit Platinum": "#c3c7cb"
+    },
+    "colorImages": {
+      "Voyage Black": "/images/phones/vivo-y05/vivo-y05-pakistan-priceoye-dfry8-500x500.webp",
+      "Haze Blue": "/images/phones/vivo-y05/vivo-y05-pakistan-priceoye-flwrn-500x500.webp",
+      "Summit Platinum": "/images/phones/vivo-y05/vivo-y05-pakistan-priceoye-7oglo-500x500.webp"
+    }
+  },
+  {
+    "id": "realme-c100i",
+    "name": "Realme C100i",
+    "brand": "Realme",
+    "model": "C100i (4GB/64GB, 4GB/128GB, 6GB/128GB)",
+    "pricePKR": 35999,
+    "marketPriceRangePKR": {
+      "min": 35999,
+      "max": 52999
+    },
+    "variants": [
+      {
+        "id": "realme-c100i-4-64",
+        "name": "4GB RAM / 64GB Storage",
+        "ram": "4GB",
+        "storage": "64GB",
+        "pricePKR": 35999,
+        "marketPriceRangePKR": {
+          "min": 35999,
+          "max": 35999
+        }
+      },
+      {
+        "id": "realme-c100i-4-128",
+        "name": "4GB RAM / 128GB Storage",
+        "ram": "4GB",
+        "storage": "128GB",
+        "pricePKR": 44999,
+        "marketPriceRangePKR": {
+          "min": 44999,
+          "max": 44999
+        }
+      },
+      {
+        "id": "realme-c100i-6-128",
+        "name": "6GB RAM / 128GB Storage",
+        "ram": "6GB",
+        "storage": "128GB",
+        "pricePKR": 52999,
+        "marketPriceRangePKR": {
+          "min": 52999,
+          "max": 52999
+        }
+      }
+    ],
+    "ptaTax": {
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "isLocallyAssembled": true,
+    "releaseDate": "2026-06-08",
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "popularInCities": [],
+    "image": "/images/phones/realme-c100i/realme-c100i-pakistan-priceoye-2reil-500x500.webp",
+    "tags": [
+      "budget",
+      "battery"
+    ],
+    "specs": {
+      "display": "6.8-inch LCD Display, 120Hz, Corning Gorilla Glass",
+      "refreshRate": "120Hz",
+      "processor": "UNISOC T7250 Octa-Core (Arm Mali-G57@850MHz)",
+      "ram": "4GB / 6GB LPDDR4X",
+      "storage": "64GB / 128GB",
+      "mainCamera": "8 MP AI Primary Camera",
+      "selfieCamera": "5 MP Front Camera",
+      "battery": "7000 mAh Massive Battery",
+      "charging": "15W Quick Charge",
+      "os": "realme UI on Android 16",
+      "network": "4G LTE / 3G / 2G",
+      "resolution": "720 x 1570 pixels (HD+)",
+      "dimensions": "Weight: 208g",
+      "simSlot": "Dual Nano-SIM"
+    },
+    "colors": [
+      "Dawn Purple",
+      "Dusk Gray"
+    ],
+    "colorHexes": {
+      "Dawn Purple": "#735b80",
+      "Dusk Gray": "#4c4f54"
+    },
+    "colorImages": {
+      "Dawn Purple": "/images/phones/realme-c100i/realme-c100i-pakistan-priceoye-2reil-500x500.webp",
+      "Dusk Gray": "/images/phones/realme-c100i/realme-c100i-pakistan-priceoye-x6hd0-500x500.webp"
+    }
+  },
+  {
+    "id": "oppo-a6",
+    "name": "Oppo A6",
+    "brand": "Oppo",
+    "model": "A6 (CPH2817) (8GB/128GB, 8GB/256GB)",
+    "pricePKR": 67999,
+    "marketPriceRangePKR": {
+      "min": 67999,
+      "max": 77999
+    },
+    "variants": [
+      {
+        "id": "oppo-a6-8-128",
+        "name": "8GB RAM / 128GB Storage",
+        "ram": "8GB",
+        "storage": "128GB",
+        "pricePKR": 67999,
+        "marketPriceRangePKR": {
+          "min": 67999,
+          "max": 67999
+        }
+      },
+      {
+        "id": "oppo-a6-8-256",
+        "name": "8GB RAM / 256GB Storage",
+        "ram": "8GB",
+        "storage": "256GB",
+        "pricePKR": 77999,
+        "marketPriceRangePKR": {
+          "min": 77999,
+          "max": 77999
+        }
+      }
+    ],
+    "ptaTax": {
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "isLocallyAssembled": true,
+    "releaseDate": "2025-11-25",
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "popularInCities": [],
+    "image": "/images/phones/oppo-a6/oppo-a6-pakistan-priceoye-elznh-500x500.webp",
+    "tags": [
+      "trending",
+      "battery"
+    ],
+    "specs": {
+      "display": "6.75-inch LCD, 120Hz Ultra Smooth Display",
+      "refreshRate": "120Hz",
+      "processor": "Qualcomm Snapdragon 685 (6nm)",
+      "ram": "8GB LPDDR4X",
+      "storage": "128GB / 256GB",
+      "mainCamera": "50 MP Main Camera + 2 MP Portrait Camera",
+      "selfieCamera": "8 MP Front Camera",
+      "battery": "7000 mAh High-Capacity Battery",
+      "charging": "45W SUPERVOOC Flash Charge",
+      "os": "ColorOS 15 (Android 15)",
+      "network": "4G LTE / 3G / 2G",
+      "resolution": "1570 x 720 pixels (HD+)",
+      "dimensions": "Thickness 8.66mm, Weight 215g",
+      "simSlot": "Dual SIM (Nano-SIM, dual stand-by)"
+    },
+    "colors": [
+      "Sapphire Blue",
+      "Aurora Gold"
+    ],
+    "colorHexes": {
+      "Sapphire Blue": "#25508a",
+      "Aurora Gold": "#caa86b"
+    },
+    "colorImages": {
+      "Sapphire Blue": "/images/phones/oppo-a6/oppo-a6-pakistan-priceoye-elznh-500x500.webp",
+      "Aurora Gold": "/images/phones/oppo-a6/oppo-a6-pakistan-priceoye-spdvo-500x500.webp"
+    }
+  },
+  {
+    "id": "tecno-spark-50",
+    "name": "Tecno Spark 50",
+    "brand": "Tecno",
+    "model": "Spark 50 (6GB/128GB)",
+    "pricePKR": 54499,
+    "marketPriceRangePKR": {
+      "min": 54499,
+      "max": 54499
+    },
+    "variants": [
+      {
+        "id": "tecno-spark-50-6-128",
+        "name": "6GB RAM / 128GB Storage",
+        "ram": "6GB",
+        "storage": "128GB",
+        "pricePKR": 54499,
+        "marketPriceRangePKR": {
+          "min": 54499,
+          "max": 54499
+        }
+      }
+    ],
+    "ptaTax": {
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "isLocallyAssembled": true,
+    "releaseDate": "2026-04-27",
+    "rating": 0,
+    "reviewCount": 0,
+    "reviewsCount": 0,
+    "popularInCities": [],
+    "image": "/images/phones/tecno-spark-50/tecno-spark-50-pakistan-priceoye-t2xtg-500x500.webp",
+    "tags": [
+      "budget",
+      "battery"
+    ],
+    "specs": {
+      "display": "6.78-inch IPS LCD, 120Hz Hole Screen",
+      "refreshRate": "120Hz",
+      "processor": "MediaTek Helio G81",
+      "ram": "6GB (+12GB Extendable up to 18GB)",
+      "storage": "128GB",
+      "mainCamera": "50 MP Main Camera + AI Lens with LED Flash",
+      "selfieCamera": "8 MP Front Camera with Soft Light Ring",
+      "battery": "7000 mAh Long-Life Battery",
+      "charging": "18W Fast Charging",
+      "os": "Android 16",
+      "network": "4G LTE / 3G / 2G",
+      "resolution": "720 x 1600 pixels (HD+)",
+      "dimensions": "167.8 x 79.22 x 8.27 mm, 210g",
+      "simSlot": "Dual SIM (Nano-SIM, dual stand-by)"
+    },
+    "colors": [
+      "Ink Black",
+      "Neo Titanium",
+      "Aurora Purple",
+      "Halo Blue",
+      "Dynamic Orange"
+    ],
+    "colorHexes": {
+      "Ink Black": "#1c1c1e",
+      "Neo Titanium": "#84878a",
+      "Aurora Purple": "#63487a",
+      "Halo Blue": "#4b779a",
+      "Dynamic Orange": "#e26a2c"
+    },
+    "colorImages": {
+      "Ink Black": "/images/phones/tecno-spark-50/tecno-spark-50-pakistan-priceoye-t2xtg-500x500.webp",
+      "Neo Titanium": "/images/phones/tecno-spark-50/tecno-spark-50-pakistan-priceoye-z71n1-500x500.webp",
+      "Aurora Purple": "/images/phones/tecno-spark-50/tecno-spark-50-pakistan-priceoye-n66m6-500x500.webp",
+      "Halo Blue": "/images/phones/tecno-spark-50/tecno-spark-50-pakistan-priceoye-xa4ho-500x500.webp",
+      "Dynamic Orange": "/images/phones/tecno-spark-50/tecno-spark-50-pakistan-priceoye-jnwdo-500x500.webp"
+    }
   }
 ];
+
+export const BRANDS: BrandInfo[] = BRAND_DEFINITIONS.map((b) => ({
+  ...b,
+  count: PHONES_DATA.filter((p) => p.brand.toLowerCase() === b.name.toLowerCase()).length,
+}));
 
 export const phones = PHONES_DATA;
 export const allPhones = PHONES_DATA;

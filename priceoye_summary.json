@@ -1,0 +1,257 @@
+{
+  "infinix/infinix-smart-20": {
+    "title": "",
+    "ogImage": "https://images.priceoye.pk/infinix-smart-20-pakistan-priceoye-0s4x3.jpg",
+    "images": [
+      "https://images.priceoye.pk/infinix-smart-20-pakistan-priceoye-4eb98-500x500.webp",
+      "https://images.priceoye.pk/infinix-smart-20-pakistan-priceoye-0s4x3.jpg",
+      "https://images.priceoye.pk/infinix-smart-20-pakistan-priceoye-qcmdh-500x500.webp",
+      "https://images.priceoye.pk/infinix-smart-20-pakistan-priceoye-05klv-500x500.webp",
+      "https://images.priceoye.pk/infinix-smart-20-pakistan-priceoye-4eb98-100x100.webp",
+      "https://images.priceoye.pk/infinix-smart-20-pakistan-priceoye-qcmdh-100x100.webp",
+      "https://images.priceoye.pk/infinix-smart-20-pakistan-priceoye-05klv-100x100.webp",
+      "https://images.priceoye.pk/badges/priceoye-sale-20260908-lp0gh.png"
+    ],
+    "ldJsonsCount": 3,
+    "sampleLd": {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Priceoye",
+      "url": "https://priceoye.pk/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://priceoye.pk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "motorola/motorola-edge-70-fusion": {
+    "title": "",
+    "ogImage": "https://images.priceoye.pk/motorola-edge-70-fusion-pakistan-priceoye-eq8o1.jpg",
+    "images": [
+      "https://images.priceoye.pk/motorola-edge-70-fusion-pakistan-priceoye-024tr-500x500.webp",
+      "https://images.priceoye.pk/motorola-edge-70-fusion-pakistan-priceoye-eq8o1.jpg",
+      "https://images.priceoye.pk/motorola-edge-70-fusion-pakistan-priceoye-024tr-100x100.webp",
+      "https://images.priceoye.pk/motorola-edge-70-fusion-pakistan-priceoye-249wv-100x100.webp"
+    ],
+    "ldJsonsCount": 3,
+    "sampleLd": {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Priceoye",
+      "url": "https://priceoye.pk/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://priceoye.pk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "infinix/infinix-note-60-edge-5g": {
+    "title": "",
+    "ogImage": "https://images.priceoye.pk/infinix-note-edge-pakistan-priceoye-x4pn1.jpg",
+    "images": [
+      "https://images.priceoye.pk/infinix-note-edge-pakistan-priceoye-4p1qe-500x500.webp",
+      "https://images.priceoye.pk/infinix-note-edge-pakistan-priceoye-x4pn1.jpg",
+      "https://images.priceoye.pk/infinix-note-edge-pakistan-priceoye-5uoq4-500x500.webp",
+      "https://images.priceoye.pk/infinix-note-edge-pakistan-priceoye-lbjqg-500x500.webp",
+      "https://images.priceoye.pk/infinix-note-edge-pakistan-priceoye-4p1qe-100x100.webp",
+      "https://images.priceoye.pk/infinix-note-edge-pakistan-priceoye-5uoq4-100x100.webp",
+      "https://images.priceoye.pk/infinix-note-edge-pakistan-priceoye-lbjqg-100x100.webp",
+      "https://images.priceoye.pk/badges/priceoye-sale-20260908-lp0gh.png"
+    ],
+    "ldJsonsCount": 3,
+    "sampleLd": {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Priceoye",
+      "url": "https://priceoye.pk/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://priceoye.pk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "honor/honor-x8d": {
+    "title": "",
+    "ogImage": "https://images.priceoye.pk/honor-x8d-pakistan-priceoye-fhwli.jpg",
+    "images": [
+      "https://images.priceoye.pk/honor-x8d-pakistan-priceoye-1ou8e-500x500.webp",
+      "https://images.priceoye.pk/honor-x8d-pakistan-priceoye-fhwli.jpg",
+      "https://images.priceoye.pk/honor-x8d-pakistan-priceoye-gk6no-500x500.webp",
+      "https://images.priceoye.pk/honor-x8d-pakistan-priceoye-6iqvc-500x500.webp",
+      "https://images.priceoye.pk/honor-x8d-pakistan-priceoye-1ou8e-100x100.webp",
+      "https://images.priceoye.pk/honor-x8d-pakistan-priceoye-gk6no-100x100.webp",
+      "https://images.priceoye.pk/honor-x8d-pakistan-priceoye-6iqvc-100x100.webp",
+      "https://images.priceoye.pk/badges/priceoye-sale-20260908-lp0gh.png"
+    ],
+    "ldJsonsCount": 3,
+    "sampleLd": {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Priceoye",
+      "url": "https://priceoye.pk/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://priceoye.pk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "nothing/nothing-cmf-phone-1-5g": {
+    "title": "",
+    "ogImage": "https://images.priceoye.pk/nothing-cmf-phone-1-pakistan-priceoye-6mo6r.jpg",
+    "images": [
+      "https://images.priceoye.pk/nothing-cmf-phone-1-pakistan-priceoye-67qs8-500x500.webp",
+      "https://images.priceoye.pk/nothing-cmf-phone-1-pakistan-priceoye-6mo6r.jpg",
+      "https://images.priceoye.pk/nothing-cmf-phone-1-pakistan-priceoye-rqxku-500x500.webp",
+      "https://images.priceoye.pk/nothing-cmf-phone-1-pakistan-priceoye-t15rj-500x500.webp",
+      "https://images.priceoye.pk/nothing-cmf-phone-1-pakistan-priceoye-67qs8-100x100.webp",
+      "https://images.priceoye.pk/nothing-cmf-phone-1-pakistan-priceoye-rqxku-100x100.webp",
+      "https://images.priceoye.pk/nothing-cmf-phone-1-pakistan-priceoye-t15rj-100x100.webp",
+      "https://images.priceoye.pk/nothing-cmf-phone-1-pakistan-priceoye-cztvl-100x100.webp"
+    ],
+    "ldJsonsCount": 3,
+    "sampleLd": {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Priceoye",
+      "url": "https://priceoye.pk/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://priceoye.pk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "xiaomi/xiaomi-redmi-15c": {
+    "title": "",
+    "ogImage": "https://images.priceoye.pk/xiaomi-redmi-15c-pakistan-priceoye-c4z95.jpg",
+    "images": [
+      "https://images.priceoye.pk/xiaomi-redmi-15c-pakistan-priceoye-rygof-500x500.webp",
+      "https://images.priceoye.pk/xiaomi-redmi-15c-pakistan-priceoye-c4z95.jpg",
+      "https://images.priceoye.pk/xiaomi-redmi-15c-pakistan-priceoye-rygof-100x100.webp",
+      "https://images.priceoye.pk/badges/priceoye-sale-20260908-lp0gh.png",
+      "https://images.priceoye.pk/xiaomi-redmi-15c-pakistan-priceoye-92xh3-100x100.webp",
+      "https://images.priceoye.pk/xiaomi-redmi-15c-pakistan-priceoye-n44ud-100x100.webp",
+      "https://images.priceoye.pk/xiaomi-redmi-15c-pakistan-priceoye-xlsa4-100x100.webp"
+    ],
+    "ldJsonsCount": 3,
+    "sampleLd": {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Priceoye",
+      "url": "https://priceoye.pk/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://priceoye.pk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "vivo/vivo-y05": {
+    "title": "",
+    "ogImage": "https://images.priceoye.pk/vivo-y05-pakistan-priceoye-035r8.jpg",
+    "images": [
+      "https://images.priceoye.pk/vivo-y05-pakistan-priceoye-dfry8-500x500.webp",
+      "https://images.priceoye.pk/vivo-y05-pakistan-priceoye-035r8.jpg",
+      "https://images.priceoye.pk/vivo-y05-pakistan-priceoye-8e3ka-500x500.webp",
+      "https://images.priceoye.pk/vivo-y05-pakistan-priceoye-nb98f-500x500.webp",
+      "https://images.priceoye.pk/vivo-y05-pakistan-priceoye-dfry8-100x100.webp",
+      "https://images.priceoye.pk/vivo-y05-pakistan-priceoye-8e3ka-100x100.webp",
+      "https://images.priceoye.pk/vivo-y05-pakistan-priceoye-nb98f-100x100.webp",
+      "https://images.priceoye.pk/badges/priceoye-sale-20260908-lp0gh.png"
+    ],
+    "ldJsonsCount": 3,
+    "sampleLd": {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Priceoye",
+      "url": "https://priceoye.pk/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://priceoye.pk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "realme/realme-c100i": {
+    "title": "",
+    "ogImage": "https://images.priceoye.pk/realme-c100i-pakistan-priceoye-m0x3n.jpg",
+    "images": [
+      "https://images.priceoye.pk/realme-c100i-pakistan-priceoye-x6hd0-500x500.webp",
+      "https://images.priceoye.pk/realme-c100i-pakistan-priceoye-m0x3n.jpg",
+      "https://images.priceoye.pk/realme-c100i-pakistan-priceoye-e6ouf-500x500.webp",
+      "https://images.priceoye.pk/realme-c100i-pakistan-priceoye-j1i1c-500x500.webp",
+      "https://images.priceoye.pk/realme-c100i-pakistan-priceoye-x6hd0-100x100.webp",
+      "https://images.priceoye.pk/realme-c100i-pakistan-priceoye-e6ouf-100x100.webp",
+      "https://images.priceoye.pk/realme-c100i-pakistan-priceoye-j1i1c-100x100.webp",
+      "https://images.priceoye.pk/badges/priceoye-sale-20260908-lp0gh.png"
+    ],
+    "ldJsonsCount": 3,
+    "sampleLd": {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Priceoye",
+      "url": "https://priceoye.pk/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://priceoye.pk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "oppo/oppo-a6": {
+    "title": "",
+    "ogImage": "https://images.priceoye.pk/oppo-a6-pakistan-priceoye-2b09q.jpg",
+    "images": [
+      "https://images.priceoye.pk/oppo-a6-pakistan-priceoye-elznh-500x500.webp",
+      "https://images.priceoye.pk/oppo-a6-pakistan-priceoye-2b09q.jpg",
+      "https://images.priceoye.pk/oppo-a6-pakistan-priceoye-jwn9c-500x500.webp",
+      "https://images.priceoye.pk/oppo-a6-pakistan-priceoye-9mqir-500x500.webp",
+      "https://images.priceoye.pk/oppo-a6-pakistan-priceoye-elznh-100x100.webp",
+      "https://images.priceoye.pk/oppo-a6-pakistan-priceoye-jwn9c-100x100.webp",
+      "https://images.priceoye.pk/oppo-a6-pakistan-priceoye-9mqir-100x100.webp",
+      "https://images.priceoye.pk/badges/priceoye-sale-20260908-lp0gh.png"
+    ],
+    "ldJsonsCount": 3,
+    "sampleLd": {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Priceoye",
+      "url": "https://priceoye.pk/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://priceoye.pk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "tecno/tecno-spark-50": {
+    "title": "",
+    "ogImage": "https://images.priceoye.pk/tecno-spark-50-pakistan-priceoye-lykqb.jpg",
+    "images": [
+      "https://images.priceoye.pk/tecno-spark-50-pakistan-priceoye-t2xtg-500x500.webp",
+      "https://images.priceoye.pk/tecno-spark-50-pakistan-priceoye-lykqb.jpg",
+      "https://images.priceoye.pk/tecno-spark-50-pakistan-priceoye-zt4qh-500x500.webp",
+      "https://images.priceoye.pk/tecno-spark-50-pakistan-priceoye-xszj2-500x500.webp",
+      "https://images.priceoye.pk/tecno-spark-50-pakistan-priceoye-t2xtg-100x100.webp",
+      "https://images.priceoye.pk/tecno-spark-50-pakistan-priceoye-zt4qh-100x100.webp",
+      "https://images.priceoye.pk/tecno-spark-50-pakistan-priceoye-xszj2-100x100.webp",
+      "https://images.priceoye.pk/badges/priceoye-sale-20260908-lp0gh.png"
+    ],
+    "ldJsonsCount": 3,
+    "sampleLd": {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Priceoye",
+      "url": "https://priceoye.pk/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://priceoye.pk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  }
+}

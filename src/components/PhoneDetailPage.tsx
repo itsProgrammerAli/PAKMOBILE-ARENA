@@ -867,7 +867,12 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                     <div>
                       <span className="text-[11px] font-semibold text-slate-500 dark:text-zinc-400 block">PTA Passport Tax:</span>
                       <span className="text-2xl font-bold font-sans tracking-tight text-emerald-600 dark:text-emerald-400 block mt-1">
-                        {"Rs " + ((phone.ptaPassportTax ?? phone.ptaTax.passportTaxPKR) || 0).toLocaleString('en-PK')}
+                        {(() => {
+                          const pTax = phone.ptaPassportTax ?? phone.ptaTax?.passportTaxPKR;
+                          return pTax !== undefined && pTax !== null && pTax > 0
+                            ? "Rs " + pTax.toLocaleString('en-PK')
+                            : "Included in Retail";
+                        })()}
                       </span>
                     </div>
                     <span className="text-[10px] text-slate-400 dark:text-zinc-500 mt-2 block">
@@ -879,7 +884,12 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                     <div>
                       <span className="text-[11px] font-semibold text-slate-500 dark:text-zinc-400 block">PTA CNIC Tax (ID Card):</span>
                       <span className="text-2xl font-bold font-sans tracking-tight text-slate-900 dark:text-white block mt-1">
-                        {"Rs " + ((phone.ptaCnicTax ?? phone.ptaTax.cnicTaxPKR) || 0).toLocaleString('en-PK')}
+                        {(() => {
+                          const cTax = phone.ptaCnicTax ?? phone.ptaTax?.cnicTaxPKR;
+                          return cTax !== undefined && cTax !== null && cTax > 0
+                            ? "Rs " + cTax.toLocaleString('en-PK')
+                            : "Included in Retail";
+                        })()}
                       </span>
                     </div>
                     <span className="text-[10px] text-slate-400 dark:text-zinc-500 mt-2 block">
