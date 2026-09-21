@@ -478,7 +478,41 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
     }
     setShowReviewForm(false);
     setReviewSubmitted(false);
-  }, [phone.id, phone.colors, phone.variants]);
+
+    // Dynamic Pakistani SEO Title & Meta Description update
+    if (typeof document !== 'undefined') {
+      const pageTitle = phone.metaTitle || `${phone.name} Price in Pakistan & Specs | Mobile Price PK`;
+      document.title = pageTitle;
+
+      let metaDesc = document.querySelector('meta[name="description"]');
+      if (!metaDesc) {
+        metaDesc = document.createElement('meta');
+        metaDesc.setAttribute('name', 'description');
+        document.head.appendChild(metaDesc);
+      }
+      if (phone.metaDescription) {
+        metaDesc.setAttribute('content', phone.metaDescription);
+      }
+
+      let ogTitle = document.querySelector('meta[property="og:title"]');
+      if (!ogTitle) {
+        ogTitle = document.createElement('meta');
+        ogTitle.setAttribute('property', 'og:title');
+        document.head.appendChild(ogTitle);
+      }
+      ogTitle.setAttribute('content', pageTitle);
+
+      let ogDesc = document.querySelector('meta[property="og:description"]');
+      if (!ogDesc) {
+        ogDesc = document.createElement('meta');
+        ogDesc.setAttribute('property', 'og:description');
+        document.head.appendChild(ogDesc);
+      }
+      if (phone.metaDescription) {
+        ogDesc.setAttribute('content', phone.metaDescription);
+      }
+    }
+  }, [phone.id, phone.colors, phone.variants, phone.metaTitle, phone.metaDescription, phone.name]);
 
   // Derived current variant and dynamic active pricing/specs
   const currentVariant = useMemo(() => {
@@ -505,6 +539,128 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
     const userSum = userReviews.reduce((acc, r) => acc + r.rating, 0);
     return Number(((initialSum + userSum) / totalReviewsCount).toFixed(1));
   }, [phone.rating, phone.reviewCount, userReviews, totalReviewsCount]);
+
+  // Schema.org Product Structured Data (JSON-LD) for Search Engine Rich Snippets
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+
+    const imagesList = Array.isArray(phone.images) && phone.images.length > 0 
+      ? phone.images 
+      : [phone.image];
+    const absoluteImages = imagesList.map((img) =>
+      img.startsWith('http') ? img : `https://pakmobilearena.online${img}`
+    );
+
+    const productSchema: Record<string, any> = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: phone.name,
+      image: absoluteImages,
+      description:
+        phone.metaDescription ||
+        `Official ${phone.name} price in Pakistan starts at Rs. ${phone.pricePKR?.toLocaleString('en-PK')}. View full specs, camera details, battery life, and PTA tax values.`,
+      brand: {
+        '@type': 'Brand',
+        name: phone.brand,
+      },
+      category: 'Mobile Phones',
+      model: phone.model,
+      sku: currentVariant?.id || phone.id,
+      mpn: phone.id,
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'PKR',
+        lowPrice: phone.marketPriceRangePKR?.min || phone.pricePKR,
+        highPrice: phone.marketPriceRangePKR?.max || phone.officialPricePKR || phone.pricePKR,
+        offerCount: phone.variants?.length || 1,
+        price: activePricePKR,
+        availability: 'https://schema.org/InStock',
+        itemCondition: 'https://schema.org/NewCondition',
+        url: `https://pakmobilearena.online/phone/${phone.id}`,
+        seller: {
+          '@type': 'Organization',
+          name: 'PakMobile Arena',
+          url: 'https://pakmobilearena.online',
+        },
+      },
+      additionalProperty: [
+        {
+          '@type': 'PropertyValue',
+          name: 'PTA Status',
+          value: phone.ptaTax?.status || 'PTA Approved',
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'RAM',
+          value: activeRamSpec,
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'Storage',
+          value: activeStorageSpec,
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'Processor',
+          value: phone.specs.processor,
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'Main Camera',
+          value: phone.specs.mainCamera,
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'Battery',
+          value: phone.specs.battery,
+        },
+      ],
+    };
+
+    if (totalReviewsCount > 0) {
+      productSchema.aggregateRating = {
+        '@type': 'AggregateRating',
+        ratingValue: currentRating > 0 ? currentRating.toString() : '4.5',
+        reviewCount: totalReviewsCount.toString(),
+        bestRating: '5',
+        worstRating: '1',
+      };
+    }
+
+    let script = document.getElementById('schema-product-jsonld') as HTMLScriptElement | null;
+    if (!script) {
+      script = document.createElement('script');
+      script.id = 'schema-product-jsonld';
+      script.type = 'application/ld+json';
+      document.head.appendChild(script);
+    }
+    script.text = JSON.stringify(productSchema, null, 2);
+
+    return () => {
+      const el = document.getElementById('schema-product-jsonld');
+      if (el) el.remove();
+    };
+  }, [
+    phone.id,
+    phone.name,
+    phone.brand,
+    phone.model,
+    phone.image,
+    phone.images,
+    phone.pricePKR,
+    phone.officialPricePKR,
+    phone.marketPriceRangePKR,
+    phone.metaDescription,
+    phone.variants,
+    phone.ptaTax,
+    phone.specs,
+    currentVariant,
+    activePricePKR,
+    activeRamSpec,
+    activeStorageSpec,
+    currentRating,
+    totalReviewsCount,
+  ]);
 
   const formatPKR = (val: number) => {
     return '₨ ' + val.toLocaleString('en-PK');

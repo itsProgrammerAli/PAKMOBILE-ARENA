@@ -243,22 +243,32 @@ export const NewsDetail: React.FC<NewsDetailProps> = ({
         {/* LONG-FORM BODY CONTENT (Structured Headings & Paragraphs)               */}
         {/* ========================================================================= */}
         <div className="space-y-8 text-gray-800 dark:text-zinc-200">
-          {article.content.map((section, idx) => (
-            <section key={idx} className="space-y-4">
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white font-['Outfit'] tracking-tight flex items-center gap-2.5">
-                <span className="w-1.5 h-5 bg-emerald-600 dark:bg-emerald-500 rounded-full inline-block" />
-                <span>{section.heading}</span>
-              </h2>
+          {Array.isArray(article.content) ? (
+            article.content.map((section, idx) => (
+              <section key={idx} className="space-y-4">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white font-['Outfit'] tracking-tight flex items-center gap-2.5">
+                  <span className="w-1.5 h-5 bg-emerald-600 dark:bg-emerald-500 rounded-full inline-block" />
+                  <span>{section.heading}</span>
+                </h2>
 
-              <div className="space-y-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-zinc-300">
-                {section.paragraphs.map((p, pIdx) => (
-                  <p key={pIdx} className="leading-relaxed">
-                    {p}
-                  </p>
-                ))}
-              </div>
-            </section>
-          ))}
+                <div className="space-y-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-zinc-300">
+                  {section.paragraphs.map((p, pIdx) => (
+                    <p key={pIdx} className="leading-relaxed">
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              </section>
+            ))
+          ) : typeof article.content === 'string' ? (
+            <div className="space-y-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-zinc-300">
+              {(article.content as string).split('\n\n').map((p, pIdx) => (
+                <p key={pIdx} className="leading-relaxed">
+                  {p}
+                </p>
+              ))}
+            </div>
+          ) : null}
         </div>
 
         {/* ========================================================================= */}

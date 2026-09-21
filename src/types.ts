@@ -80,6 +80,8 @@ export interface PhoneSpec {
   colorImages?: Record<string, string>;
   colorHexes?: Record<string, string>;
   popularInCities?: string[];
+  metaTitle?: string;
+  metaDescription?: string;
   review?: PhoneReview;
   reviews?: number | UserReview[];
 }
@@ -120,7 +122,9 @@ export interface NewsArticle {
   imageUrl: string;
   image?: string; // backwards compatibility
   summary: string;
-  content: NewsArticleSection[];
+  content: NewsArticleSection[] | string;
   tags?: string[];
   author?: string;
+  metaTitle?: string;
+  metaDescription?: string;
 }
