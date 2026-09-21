@@ -112,12 +112,11 @@ export const PTATaxCalculator: React.FC<PTATaxCalculatorProps> = ({ onBack, onSe
   const currentRate = liveRate || BASE_USD_RATE;
   
   // If a phone is chosen from catalog, use its official audited integer tax
-  const taxCandidate = selectedPhone 
+  const phoneOfficialTax = selectedPhone 
     ? (docType === 'passport' 
-        ? (selectedPhone.ptaPassportTax ?? selectedPhone.ptaTax?.passportTaxPKR) 
-        : (selectedPhone.ptaCnicTax ?? selectedPhone.ptaTax?.cnicTaxPKR))
-    : undefined;
-  const phoneOfficialTax = (taxCandidate !== undefined && taxCandidate !== null) ? taxCandidate : null;
+        ? (selectedPhone.ptaPassportTax ?? selectedPhone.ptaTax.passportTaxPKR) 
+        : (selectedPhone.ptaCnicTax ?? selectedPhone.ptaTax.cnicTaxPKR))
+    : null;
 
   const standardBreakdown = getPTATaxBreakdown(customPriceUSD, docType, currentRate);
   
@@ -187,15 +186,11 @@ export const PTATaxCalculator: React.FC<PTATaxCalculatorProps> = ({ onBack, onSe
                 className="w-full px-4 py-3 bg-gray-50 dark:bg-zinc-800/80 border border-gray-200 dark:border-zinc-700 rounded-2xl text-xs sm:text-sm font-semibold text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer shadow-2xs"
               >
                 <option value="">-- Choose from Catalog or Enter Custom USD --</option>
-                {phones.map((p) => {
-                  const pTax = p.ptaPassportTax ?? p.ptaTax?.passportTaxPKR;
-                  const taxLabel = (pTax !== undefined && pTax !== null && pTax > 0) ? `Passport: PKR ${pTax.toLocaleString()}` : 'Retail Approved';
-                  return (
-                    <option key={p.id} value={p.id}>
-                      {p.name} — PKR {p.pricePKR.toLocaleString()} ({taxLabel})
-                    </option>
-                  );
-                })}
+                {phones.map((p) => (
+                  <option key={p.id} value={p.id}>
+                    {p.name} — PKR {p.pricePKR.toLocaleString()} (Passport: PKR {(p.ptaPassportTax ?? p.ptaTax.passportTaxPKR).toLocaleString()})
+                  </option>
+                ))}
               </select>
             </div>
 

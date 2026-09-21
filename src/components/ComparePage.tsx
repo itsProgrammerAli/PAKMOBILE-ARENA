@@ -597,10 +597,10 @@ export const ComparePage: React.FC<ComparePageProps> = ({
                     </div>
                     <div className="grid grid-cols-2 divide-x divide-gray-200 dark:divide-white/10 text-center items-center mt-0.5">
                       <div className="text-xs md:text-sm font-bold text-slate-900 dark:text-slate-100 text-center leading-snug px-1.5">
-                        {phone1 ? (phone1.ptaTax?.passportTaxPKR && phone1.ptaTax.passportTaxPKR > 0 ? formatPKR(phone1.ptaTax.passportTaxPKR) : 'Retail Approved') : '-'}
+                        {phone1 ? formatPKR(phone1.ptaTax.passportTaxPKR) : '-'}
                       </div>
                       <div className="text-xs md:text-sm font-bold text-slate-900 dark:text-slate-100 text-center leading-snug px-1.5">
-                        {phone2 ? (phone2.ptaTax?.passportTaxPKR && phone2.ptaTax.passportTaxPKR > 0 ? formatPKR(phone2.ptaTax.passportTaxPKR) : 'Retail Approved') : <span className="text-xs text-slate-400 dark:text-slate-500 font-normal italic">-</span>}
+                        {phone2 ? formatPKR(phone2.ptaTax.passportTaxPKR) : <span className="text-xs text-slate-400 dark:text-slate-500 font-normal italic">-</span>}
                       </div>
                     </div>
                   </div>
@@ -612,10 +612,10 @@ export const ComparePage: React.FC<ComparePageProps> = ({
                     </div>
                     <div className="grid grid-cols-2 divide-x divide-gray-200 dark:divide-white/10 text-center items-center mt-0.5">
                       <div className="text-xs md:text-sm font-bold text-slate-900 dark:text-slate-100 text-center leading-snug px-1.5">
-                        {phone1 ? (phone1.ptaTax?.cnicTaxPKR && phone1.ptaTax.cnicTaxPKR > 0 ? formatPKR(phone1.ptaTax.cnicTaxPKR) : 'Retail Approved') : '-'}
+                        {phone1 ? formatPKR(phone1.ptaTax.cnicTaxPKR) : '-'}
                       </div>
                       <div className="text-xs md:text-sm font-bold text-slate-900 dark:text-slate-100 text-center leading-snug px-1.5">
-                        {phone2 ? (phone2.ptaTax?.cnicTaxPKR && phone2.ptaTax.cnicTaxPKR > 0 ? formatPKR(phone2.ptaTax.cnicTaxPKR) : 'Retail Approved') : <span className="text-xs text-slate-400 dark:text-slate-500 font-normal italic">-</span>}
+                        {phone2 ? formatPKR(phone2.ptaTax.cnicTaxPKR) : <span className="text-xs text-slate-400 dark:text-slate-500 font-normal italic">-</span>}
                       </div>
                     </div>
                   </div>

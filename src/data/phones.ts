@@ -60,14 +60,10 @@ const BRAND_DEFINITIONS: Array<Omit<BrandInfo, 'count'>> = [
     "name": "Oppo",
     "logoText": "OPPO",
     "slug": "oppo"
-  },
-  {
-    "name": "Nothing",
-    "logoText": "NOTHING",
-    "slug": "nothing"
   }
 ];
 
+// Manufacturer corrections checked 2026-09-15: https://support.apple.com/en-my/125091 and https://www.samsung.com/pk/smartphones/galaxy-s26-ultra/
 export const PHONES_DATA: PhoneSpec[] = [
   {
     "id": "apple-iphone-17-pro-max",
@@ -149,30 +145,30 @@ export const PHONES_DATA: PhoneSpec[] = [
       "camera"
     ],
     "specs": {
-      "display": "6.9\" Super Retina XDR OLED, 120Hz ProMotion Adaptive Refresh Rate, 2868 x 1320 pixels at 460 ppi, Dynamic Island, Always-On Display, Ceramic Shield 2 front and back glass, 3000 nits Peak Outdoor Brightness, Anti-reflective coating",
+      "display": "6.9\" Super Retina XDR OLED, 120Hz ProMotion Adaptive Refresh Rate, 2868 x 1320 pixels at 460 ppi, Dynamic Island, Always-On Display, Ceramic Shield 2 front, 3000 nits Peak Outdoor Brightness, Anti-reflective coating",
       "refreshRate": "120Hz ProMotion Super Retina XDR",
       "processor": "Apple A19 Pro (3nm TSMC N3P) Hexa-Core (2 Performance Cores + 4 Efficiency Cores) with 6-Core Next-Gen Ray Tracing GPU, Vapor Chamber Liquid Thermal Cooling & 16-Core Neural Engine",
       "ram": "12 GB Unified High-Bandwidth Memory (Apple Intelligence GenAI optimized)",
       "storage": "256 GB / 512 GB / 1 TB / 2 TB Ultra NVMe Flash Storage",
-      "mainCamera": "Pro Fusion 48MP Triple System: 48MP Fusion Main (f/1.78, 2nd-gen Sensor-Shift OIS, 100% Focus Pixels) + 48MP Fusion Ultra-Wide (f/2.2, 120° FOV, Macro Photography) + 48MP Fusion Telephoto (f/2.8, Tetraprism 5x Optical Zoom, 3D Sensor-Shift OIS, 40x Digital Zoom, LiDAR Scanner) with 4K Dolby Vision 120fps & Spatial Video Recording",
-      "selfieCamera": "24MP TrueDepth Front Camera (f/1.9, Autofocus with Focus Pixels, 4K60 Dolby Vision HDR, Cinematic Mode)",
-      "battery": "4850 mAh Li-Ion High-Capacity All-Day Battery (Up to 39 hours video playback)",
-      "charging": "40W Wired Fast Charging (50% in 20 mins) + 25W MagSafe Wireless Charging + 15W Qi2 Wireless + Reverse Wired Charging via USB-C",
-      "os": "iOS 19 (Full Apple Intelligence Generative Suite, Siri Pro, Visual Intelligence)",
-      "network": "5G Dual SIM (Nano-SIM + eSIM / Dual eSIM), Aerospace Grade Titanium Frame with Ceramic Shield Back, Action Button + Dedicated Camera Control Button, USB-C 3.2 Gen 2 (up to 20Gbps transfer speed with 4K DisplayPort output), IP68 Dust/Water Resistant (6m for 30 mins), Stereo Dual Speakers with Spatial Audio",
+      "mainCamera": "48MP Fusion main (24mm, f/1.78, second-generation sensor-shift OIS) + 48MP ultrawide (13mm, f/2.2, 120-degree view, Hybrid Focus Pixels) + 48MP telephoto (100mm, 4x, f/2.8, tetraprism, 3D sensor-shift OIS/AF); 12MP optical-quality 8x crop; up to 40x digital zoom",
+      "selfieCamera": "18MP Center Stage front camera, f/1.9, autofocus with Focus Pixels; 4K Dolby Vision up to 60fps",
+      "battery": "Rechargeable lithium-ion; up to 37 hours video playback (physical-SIM regional model)",
+      "charging": "Up to 50% in 20 minutes with a 40W-or-higher USB-C adapter; adapter sold separately",
+      "os": "iOS 26 at launch; update availability varies",
+      "network": "5G Dual SIM (Nano-SIM + eSIM / Dual eSIM), Aluminium unibody with Ceramic Shield back, Action Button + Dedicated Camera Control Button, USB-C (USB 3; up to 10Gb/s; DisplayPort), IP68 Dust/Water Resistant (6m for 30 mins), Stereo Dual Speakers with Spatial Audio",
       "resolution": "Super Retina XDR (2868 x 1320 pixels), 19.5:9 ratio (~460 ppi)",
       "peakBrightness": "3000 nits peak outdoor brightness, 1000 nits typical",
       "hdrSupport": "Dolby Vision, HDR10, HLG, Always-On ProMotion 1-120Hz",
-      "dimensions": "163.4 x 78.0 x 8.25 mm, 227g",
-      "buildMaterials": "Grade 5 Titanium frame with Ceramic Shield front & textured matte glass back",
+      "dimensions": "163.4 x 78.0 x 8.75 mm; 231 g (physical-SIM regional model)",
+      "buildMaterials": "Aluminium unibody; Ceramic Shield 2 front; Ceramic Shield back",
       "simSlot": "Dual SIM (Nano-SIM and eSIM, or Dual eSIM)",
       "waterResistance": "IP68 water & dust resistance (up to 6m for 30 mins)",
       "stabilization": "Second-generation sensor-shift optical image stabilization (OIS)",
       "videoRecording": "4K @ 24/25/30/60/120fps Dolby Vision HDR, 4K ProRes Log, Spatial Video recording",
       "opticsFeatures": "Photonic Engine, Deep Fusion, Smart HDR 5, LiDAR Scanner, Action Mode",
       "frontVideoRecording": "4K @ 24/25/30/60fps Dolby Vision HDR with Cinematic mode",
-      "wirelessCharging": "25W MagSafe wireless charging, 15W Qi2 wireless, reverse wired charging",
-      "wifiBluetooth": "Wi-Fi 7 (802.11be) with 2x2 MIMO, Bluetooth 5.4, Thread networking",
+      "wirelessCharging": "MagSafe and Qi2 wireless charging up to 25W",
+      "wifiBluetooth": "Wi-Fi 7 (2x2 MIMO), Bluetooth 6, Thread; Apple N1 wireless chip",
       "specialHardware": "Dynamic Island, Customizable Action Button, Camera Control capacitive sensor",
       "biometricsAudio": "Face ID TrueDepth facial recognition, Spatial Audio with Dolby Atmos stereo speakers"
     },
@@ -395,20 +391,20 @@ export const PHONES_DATA: PhoneSpec[] = [
     "specs": {
       "display": "6.9\" QHD+ Dynamic LTPO AMOLED 2X, 1-120Hz Adaptive Refresh Rate, 3120 x 1440 pixels (505 ppi), 3000 nits Peak Brightness, Corning Gorilla Glass Armor 2 with Anti-Reflective Coating & Hardware-Level Privacy Display Angle Protection",
       "refreshRate": "120Hz Dynamic LTPO AMOLED 2X",
-      "processor": "Qualcomm Snapdragon 8 Gen 4 / 8 Elite for Galaxy (3nm TSMC) Octa-Core (2x4.32 GHz Oryon V2 Phoenix L & 6x3.53 GHz Oryon V2 Phoenix M) with Adreno 830 GPU & Next-Gen Neural NPU",
+      "processor": "Qualcomm Snapdragon 8 Elite Gen 5 for Galaxy",
       "ram": "12 GB / 16 GB LPDDR5X (+ RAM Plus virtual memory support)",
       "storage": "256 GB / 512 GB / 1 TB UFS 4.0 Ultra-High-Speed Storage",
-      "mainCamera": "200MP ISOCELL HP2+ Ultra Main OIS (f/1.7, Multi-directional PDAF, Laser AF) + 50MP Periscope Telephoto (5x Optical / 10x Optical Quality / 100x Space Zoom, OIS, f/3.4) + 50MP Ultra-Wide (120˚ FOV, Super Steady, Dual Pixel PDAF, Macro) + 10MP Telephoto (3x Optical, OIS) with 8K@30fps UHD HDR Video",
+      "mainCamera": "200MP ISOCELL HP2+ Ultra Main OIS (f/1.4, Multi-directional PDAF, Laser AF) + 50MP Periscope Telephoto (5x Optical / 10x Optical Quality / 100x Space Zoom, OIS, f/2.9) + 50MP Ultra-Wide (120˚ FOV, Super Steady, Dual Pixel PDAF, Macro) + 10MP Telephoto (3x Optical, OIS) with 8K@30fps UHD HDR Video",
       "selfieCamera": "12MP Dual Pixel Front Camera (f/2.2, 26mm, Dual Pixel PDAF, 4K@60fps UHD with Auto HDR)",
       "battery": "5000 mAh Li-Ion Intelligent All-Day Battery with 2.2x larger vapor chamber liquid cooling",
       "charging": "60W Super Fast Charging 2.0 (75% in 30 mins) + 25W Fast Wireless 2.0 + 4.5W Wireless PowerShare",
       "os": "Android 16 with One UI 8.5 (Guaranteed 7 Major Android OS Upgrades & 7 Years Security Updates, Full Galaxy AI Suite 2.0)",
-      "network": "5G Dual SIM (Nano-SIM + eSIM / Dual eSIM), Built-in Bluetooth S-Pen Stylus with Air Actions, IP68 Dust/Water Resistant (1.5m for 30 mins), Grade 5 Titanium Frame, Stereo Dual Speakers tuned by AKG with Dolby Atmos, Ultrasonic In-Display Fingerprint 3D Sonic Gen 2",
+      "network": "5G Dual SIM (Nano-SIM + eSIM / Dual eSIM), Built-in S Pen stylus without Bluetooth or remote Air Actions, IP68 Dust/Water Resistant (1.5m for 30 mins), Armor Aluminum frame, Stereo Dual Speakers tuned by AKG with Dolby Atmos, Ultrasonic In-Display Fingerprint 3D Sonic Gen 2",
       "resolution": "Dynamic LTPO AMOLED 2X QHD+ (3120 x 1440 pixels), 19.5:9 ratio (~500 ppi)",
       "peakBrightness": "3000 nits peak brightness, Vision Booster 2.0",
       "hdrSupport": "HDR10+, 1-120Hz dynamic LTPO adaptive refresh rate",
-      "dimensions": "162.3 x 79.0 x 8.4 mm, 230g",
-      "buildMaterials": "Titanium frame with anti-reflective Corning Gorilla Armor glass (front & back)",
+      "dimensions": "163.6 x 78.1 x 7.9 mm; 214 g",
+      "buildMaterials": "Armor Aluminum frame with Corning Gorilla Glass protection",
       "simSlot": "Dual SIM (2 Nano-SIMs + eSIM, dual stand-by)",
       "waterResistance": "IP68 water & dust resistance (up to 1.5m for 30 mins)",
       "stabilization": "Enhanced OIS with wider correction angle + Super Steady video gyro-EIS",
@@ -417,7 +413,7 @@ export const PHONES_DATA: PhoneSpec[] = [
       "frontVideoRecording": "4K @ 30/60fps, 1080p @ 30fps with Dual Pixel PDAF",
       "wirelessCharging": "15W Fast Wireless Charging 2.0 + 4.5W Wireless PowerShare reverse charging",
       "wifiBluetooth": "Wi-Fi 7 (802.11be tri-band), Bluetooth 5.4, Ultra Wideband (UWB)",
-      "specialHardware": "Integrated S-Pen stylus (2.8ms latency, Bluetooth LE), Samsung DeX desktop mode",
+      "specialHardware": "Integrated S Pen (no Bluetooth pairing or remote Air Actions); Samsung DeX",
       "biometricsAudio": "Qualcomm 3D Sonic Gen 2 ultrasonic in-display fingerprint, stereo speakers by AKG Dolby Atmos"
     },
     "colors": [
@@ -533,7 +529,7 @@ export const PHONES_DATA: PhoneSpec[] = [
       "peakBrightness": "2600 nits peak brightness, Vision Booster",
       "hdrSupport": "HDR10+, 1-120Hz LTPO adaptive refresh rate",
       "dimensions": "162.3 x 79.0 x 8.6 mm, 232g",
-      "buildMaterials": "Titanium frame with anti-reflective Corning Gorilla Armor glass front and back",
+      "buildMaterials": "Titanium frame; Corning Gorilla Armor front; Gorilla Glass Victus 2 back",
       "simSlot": "Dual SIM (2 Nano-SIMs and eSIM, dual stand-by)",
       "waterResistance": "IP68 water & dust resistant (up to 1.5m for 30 mins)",
       "stabilization": "OIS (Optical Image Stabilization) on main and both telephoto lenses + Super Steady gyro-EIS",
@@ -843,7 +839,7 @@ export const PHONES_DATA: PhoneSpec[] = [
       "selfieCamera": "32MP Ultra-Clear Wide Front Camera (f/2.2, 26mm, 4K@30fps UHD Video Recording)",
       "battery": "5000 mAh Li-Po Long-Lasting 2-Day Battery",
       "charging": "25W Super Fast Charging (50% in 30 mins)",
-      "os": "Android 14 with One UI 6.1 (4 Major OS Upgrades & 5 Years Security Updates)",
+      "os": "Android 13 with One UI 5.1 at launch; up to four Android generation upgrades and five years of security updates",
       "network": "5G Dual SIM (Nano-SIM, dual stand-by / MicroSD), IP67 Dust & Water Resistance (1m for 30 mins), Stereo Dual Speakers with Dolby Atmos, Optical In-Display Fingerprint",
       "resolution": "FHD+ Super AMOLED (2340 x 1080 pixels), 19.5:9 ratio (~403 ppi)",
       "peakBrightness": "1000 nits HBM, Vision Booster",
@@ -1034,27 +1030,27 @@ export const PHONES_DATA: PhoneSpec[] = [
       "processor": "MediaTek Helio G200 (6nm) Octa-Core (2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55)",
       "ram": "8 GB (+ 8 GB Extended Virtual RAM = 16GB)",
       "storage": "256 GB UFS 2.2 built-in (microSD Card Slot supported up to 1TB)",
-      "mainCamera": "50MP Ultra Clear Main Sensor (f/1.6, EIS, PDAF, Super Night 3.0) + 2MP Auxiliary Depth + AI Lens with Quad-LED Flash",
+      "mainCamera": "50MP main with EIS and rear dual flash",
       "selfieCamera": "13MP Ultra-Clear Dual Flash Front Camera with AI Portrait & Eye-Tracking (f/2.2, 1080p@30fps)",
       "battery": "5200 mAh High-Density Long-Life Battery",
       "charging": "45W Super Charge Wired + 30W Magnetic Wireless Charging support",
       "os": "Android 15 with HiOS 15 (AI Call Noise Cancellation, AI Eraser 2.0, Ask Ella AI Assistant)",
       "network": "4G LTE Dual SIM (Nano-SIM, dual stand-by), IP64 Dust & Water Resistance, 1.5m Drop Resistance, Dual Stereo Speakers with Dolby Atmos & DTS, In-Display Optical Fingerprint",
-      "resolution": "FHD+ 3D Curved AMOLED (2436 x 1080 pixels), 20:9 ratio (~393 ppi)",
+      "resolution": "2720 x 1224 pixels (1.5K)",
       "peakBrightness": "1000 nits peak brightness",
-      "hdrSupport": "120Hz refresh rate, DCI-P3 wide color gamut",
-      "dimensions": "164.6 x 75.0 x 7.55 mm, 179g",
-      "buildMaterials": "Corning Gorilla Glass 5 front, lightweight composite slim body",
+      "hdrSupport": "144Hz refresh rate",
+      "dimensions": "163.9 x 75.8 x 6.49 mm; 160 g",
+      "buildMaterials": "Slim 6.49mm body with metal camera-module decoration",
       "simSlot": "Dual SIM (Nano-SIM, dual stand-by)",
-      "waterResistance": "IP53 dust and splash protection",
+      "waterResistance": "IP64 dust and water resistance",
       "stabilization": "Electronic Image Stabilization (EIS) with PDAF",
       "videoRecording": "2K (1440p) @ 30fps, 1080p @ 30/60fps with EIS",
-      "opticsFeatures": "108MP main sensor (1/1.67\"), 3x in-sensor lossless zoom, Quad-LED flash",
+      "opticsFeatures": "50MP imaging with electronic stabilization",
       "frontVideoRecording": "1080p @ 30fps with Dual micro-slit LED flash",
-      "wirelessCharging": "Not supported (33W wired fast charging)",
+      "wirelessCharging": "30W wireless charging; 5W reverse wireless charging",
       "wifiBluetooth": "Wi-Fi 5 (802.11ac dual-band), Bluetooth 5.2, NFC",
-      "specialHardware": "Dynamic Port notch notification pill, ultra-slim 7.55mm curved ergonomic profile",
-      "biometricsAudio": "In-display optical fingerprint scanner, dual stereo speakers with DTS audio"
+      "specialHardware": "6.49mm body; infrared remote control; FreeLink",
+      "biometricsAudio": "In-display fingerprint sensor; dual speakers with Dolby Atmos"
     },
     "colors": [
       "Nebula Black",
@@ -1943,18 +1939,18 @@ export const PHONES_DATA: PhoneSpec[] = [
       "ram": "8 GB LPDDR4X (+ 8 GB Extended RAM 3.0 = 16GB total)",
       "storage": "128 GB / 256 GB UFS 2.2 high-speed storage (microSD expandable up to 1TB)",
       "mainCamera": "50MP Ultra-Sensing Main Camera (f/1.8, PDAF) + 2MP Bokeh Sensor (f/2.4) with Flicker Sensor & Smart Aura Light Portrait",
-      "selfieCamera": "8MP Front HD Camera (f/2.0, Portrait mode, 1080p@30fps)",
+      "selfieCamera": "32MP front portrait camera",
       "battery": "5000 mAh High-Density Large Battery with 4-Year Battery Health durability",
       "charging": "80W FlashCharge (0 to 80% in ~30 minutes)",
       "os": "Funtouch OS 14 based on Android 14",
-      "network": "4G Dual SIM (Nano-SIM, dual stand-by), Dual Stereo Speakers with 300% Audio Booster, In-Display Optical Fingerprint, IP54 Water & Dust Resistance, 7.79mm Ultra-Slim 3D Flat Frame Design",
+      "network": "4G Dual SIM (Nano-SIM, dual stand-by), Dual Stereo Speakers with 300% Audio Booster, In-Display Optical Fingerprint, IP64 Water & Dust Resistance, 7.79mm Ultra-Slim 3D Flat Frame Design",
       "resolution": "FHD+ Ultra Vision AMOLED (2400 x 1080 pixels), 20:9 ratio (~394 ppi)",
       "peakBrightness": "1800 nits peak brightness, 1200 nits HBM",
       "hdrSupport": "120Hz refresh rate, SGS Eye Care certified",
-      "dimensions": "163.2 x 75.8 x 7.79 mm, 186g",
+      "dimensions": "Emerald Green: 7.79mm, 188g; Titanium Silver: 7.95mm, 190g",
       "buildMaterials": "Metallic high-gloss composite frame with Fluorite AG glass effect back",
       "simSlot": "Dual SIM (Nano-SIM, dual stand-by, microSD slot up to 1TB)",
-      "waterResistance": "IP54 dust and splash resistance",
+      "waterResistance": "IP64 dust and water resistance",
       "stabilization": "Electronic Image Stabilization (EIS) with PDAF",
       "videoRecording": "1080p @ 30fps (Snapdragon 685 ISP limits to 1080p30)",
       "opticsFeatures": "50MP Main (f/1.8, PDAF), 2MP Bokeh, Flicker sensor, Smart Aura Light ring with color temp control",
@@ -3477,7 +3473,7 @@ export const PHONES_DATA: PhoneSpec[] = [
       {
         "id": "tecno-spark-50-pro-128gb",
         "name": "8GB / 128GB",
-        "ram": "8 GB LPDDR4X (+8GB Extended RAM)",
+        "ram": "8GB physical RAM; up to 16GB extended memory",
         "storage": "128 GB UFS Internal Storage (microSD expandable up to 1TB)",
         "pricePKR": 74999,
         "officialPricePKR": 74999,
@@ -3507,21 +3503,21 @@ export const PHONES_DATA: PhoneSpec[] = [
       "battery"
     ],
     "specs": {
-      "display": "6.78\" IPS LCD, HD+ (1600 x 720 pixels), 120Hz Smooth Refresh Rate, Dynamic Port notification bar, SGS Five-Star Drop Resistance",
+      "display": "6.78-inch HD+ display; 120Hz; 1576 x 720 pixels",
       "refreshRate": "120Hz Smooth Refresh Display",
-      "processor": "MediaTek Helio G100 (6nm) Octa-Core (2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55) with Mali-G57 MC2 GPU",
-      "ram": "8 GB LPDDR4X RAM (Expandable up to 24GB via Memory Fusion 4.0)",
-      "storage": "128 GB / 256 GB UFS High-Speed Storage (Dedicated microSD slot up to 1TB)",
+      "processor": "MediaTek Helio G100 Ultimate (6nm)",
+      "ram": "8GB physical RAM; up to 16GB extended memory",
+      "storage": "128GB; Pakistan specification",
       "mainCamera": "50MP Sony LYTIA 600 Main Sensor (f/1.8, 1/1.95\", PDAF) + AI auxiliary lens, Single LED Flash, AI Eraser 2.0, Live Photo, Universal Tone",
       "selfieCamera": "8MP Front Camera with Front LED Flash & AI Portrait mode",
       "battery": "6000 mAh Mega Battery (retains >80% capacity after 1900 cycles) with Bypass Charging",
       "charging": "60W Super Charge wired (approx. 63% in 30 mins, full charge in ~55 mins) via USB Type-C",
       "os": "HiOS 16 based on Android 16 (FreeLink 2.0 signal enhancement, Ask Ella AI assistant)",
       "network": "4G LTE Dual Nano-SIM, Dual Stereo Speakers with DTS Sound, NFC, Infrared Port, IP68 & IP69 Dust/Water Resistance",
-      "resolution": "HD+ (1600 x 720 pixels), 20:9 aspect ratio (~260 ppi)",
+      "resolution": "1576 x 720 pixels (HD+)",
       "peakBrightness": "600 nits typical brightness, outdoor sunlight readability mode",
       "hdrSupport": "120Hz high refresh rate, TÜV Rheinland Low Blue Light certified",
-      "dimensions": "168.6 x 76.5 x 7.8 mm, 198g",
+      "dimensions": "167.8 x 79.2 x 7.8 mm",
       "buildMaterials": "SGS Five-Star Premium Drop Resistance certified body (survives drops up to 1.8m), ultra-slim 7.8mm profile, IP68/IP69 rating",
       "simSlot": "Dedicated Triple Slot (2 Nano-SIMs + 1 microSD card up to 1TB)",
       "waterResistance": "IP68 & IP69 dust and water resistance (high-pressure water jet & immersion resistant)",
@@ -3530,7 +3526,7 @@ export const PHONES_DATA: PhoneSpec[] = [
       "opticsFeatures": "50MP Sony LYTIA 600 sensor, AI Eraser 2.0, Universal Tone, Live Photo, Super Night Mode",
       "frontVideoRecording": "1080p @ 30fps with Front Flash",
       "wirelessCharging": "Not supported (60W wired Super Charge with Bypass Charging)",
-      "wifiBluetooth": "Wi-Fi 5 (802.11 a/b/g/n/ac dual-band), Bluetooth 5.3, NFC, Infrared Blaster",
+      "wifiBluetooth": "Dual-band Wi-Fi (2.4/5GHz), Bluetooth 5.4, NFC, FM, infrared remote",
       "specialHardware": "FreeLink 2.0 signal enhancement, Ask Ella AI assistant, 1.8m drop resistance, Infrared remote control",
       "biometricsAudio": "Side-mounted capacitive fingerprint sensor, dual stereo speakers with DTS Sound & volume booster, 3.5mm headphone jack"
     },
@@ -3579,7 +3575,7 @@ export const PHONES_DATA: PhoneSpec[] = [
         "id": "vivo-v80-lite-5g-256gb",
         "name": "8GB/256GB",
         "ram": "8 GB LPDDR4X (+8GB Extended RAM)",
-        "storage": "256 GB UFS 2.2 Storage",
+        "storage": "256GB UFS 3.1",
         "pricePKR": 111999,
         "officialPricePKR": 124999,
         "marketPriceRangePKR": {
@@ -3600,7 +3596,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     "releaseDate": "September 2026",
     "rating": 0,
     "reviewCount": 0,
-    "image": "/images/vivo-v80-lite-5g-pakistan-priceoye-cof0i-500x500.webp",
+    "image": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1787042134153/eed22030f61b93ffe7e1f409c814e0e5.png",
     "tags": [
       "trending",
       "camera",
@@ -3608,44 +3604,44 @@ export const PHONES_DATA: PhoneSpec[] = [
       "battery"
     ],
     "specs": {
-      "display": "6.67\" Ultra Vision AMOLED Display, FHD+ (2400 x 1080 pixels), 120Hz Refresh Rate, 1800 nits Peak Outdoor Brightness, HDR10+, SGS Low Blue Light Eye Care Certified",
-      "refreshRate": "120Hz Ultra Vision AMOLED",
-      "processor": "Qualcomm Snapdragon 4 Gen 2 (4nm) 5G Octa-Core (2x2.2 GHz Cortex-A78 & 6x1.95 GHz Cortex-A55) with Adreno 613 GPU",
-      "ram": "8 GB LPDDR4X (+8 GB Vivo Extended RAM 3.0)",
-      "storage": "256 GB UFS 2.2 internal high-speed flash storage (MicroSD expandable up to 1TB)",
-      "mainCamera": "Aura Light Portrait 50MP Dual System: 50MP Ultra-Sensing Main (f/1.79, OIS Optical Image Stabilization, PDAF) + 2MP Bokeh Depth Sensor + Smart Aura Light Ring Flash with Color Temperature Tuning",
-      "selfieCamera": "32MP HD Portrait Selfie Camera (f/2.45, AI Face Beauty, Night Portrait, 1080p 30fps)",
-      "battery": "5000 mAh Li-Ion Long-Life Battery (Health Engine with 4-year durability guarantee)",
-      "charging": "80W FlashCharge (0 to 80% in approximately 30 mins) via USB Type-C",
-      "os": "Funtouch OS 14 based on Android 14 (Guaranteed 2 Android OS upgrades & 3 years security patches)",
-      "network": "5G Dual SIM (Nano-SIM, dual stand-by, 5G SA/NSA), In-Display Fingerprint Scanner, Dual Stereo Speakers (300% Audio Booster), IP54 Water & Dust Resistance",
-      "resolution": "FHD+ Ultra Vision AMOLED (2400 x 1080 pixels), 20:9 ratio (~394 ppi)",
-      "peakBrightness": "1800 nits peak outdoor brightness, 1200 nits HBM",
-      "hdrSupport": "120Hz refresh rate, SGS Low Blue Light Eye Care Certified, HDR10+",
-      "dimensions": "163.2 x 75.8 x 7.79 mm, 188g",
-      "buildMaterials": "Glass front, 3D Fluorite AG matte back with metallic flat frame",
-      "simSlot": "Dual SIM (Nano-SIM, dual stand-by, 5G SA/NSA, microSD up to 1TB)",
-      "waterResistance": "IP54 dust and splash resistance",
-      "stabilization": "OIS (Optical Image Stabilization) on 50MP main sensor + EIS gyro stabilization",
-      "videoRecording": "1080p @ 30/60fps with OIS and EIS (Snapdragon 4 Gen 2 ISP limits to 1080p60)",
-      "opticsFeatures": "50MP Ultra-Sensing Main (f/1.79, OIS, PDAF) + 2MP Bokeh Depth + Smart Aura Light ring flash with color temp tuning",
-      "frontVideoRecording": "1080p @ 30fps with AI Face Beauty",
-      "wirelessCharging": "Not supported (80W FlashCharge wired)",
-      "wifiBluetooth": "Wi-Fi 5 (802.11ac dual-band), Bluetooth 5.1, NFC",
-      "specialHardware": "Studio-Grade Aura Light ring flash, BlueVolt battery health engine (4-year warranty)",
-      "biometricsAudio": "In-display optical fingerprint scanner, dual stereo speakers with 300% Audio Booster"
+      "display": "6.83-inch AMOLED; 2800 x 1260; up to 120Hz",
+      "refreshRate": "120Hz AMOLED",
+      "processor": "MediaTek Dimensity 7360-Turbo (4nm); 4 x 2.5GHz + 4 x 2.0GHz",
+      "ram": "8GB LPDDR4X; 8GB software extended RAM",
+      "storage": "128GB / 256GB UFS 3.1; no memory-card expansion",
+      "mainCamera": "50MP f/1.8 main + 2MP f/2.4 secondary; rear flash",
+      "selfieCamera": "32MP front, f/2.0",
+      "battery": "7050mAh typical; 6850mAh rated",
+      "charging": "44W FlashCharge",
+      "os": "Android 16 with OriginOS 6 at launch",
+      "network": "5G; dual nano-SIM standby; USB-C 2.0",
+      "resolution": "2800 x 1260; 449ppi",
+      "peakBrightness": "3000 nits local peak; 2000 nits HBM",
+      "hdrSupport": "P3 wide color gamut; up to 120Hz",
+      "dimensions": "164.42 x 75.25mm; Sapphire Blue: 7.99mm, 197g; Silk White: 8.10mm, 199g",
+      "buildMaterials": "Plastic composite back",
+      "simSlot": "Two nano-SIMs",
+      "waterResistance": "IP68/IP69 laboratory-rated protection",
+      "stabilization": "Stabilization mode not specified in manufacturer technical table",
+      "videoRecording": "MP4 recording; resolution/frame-rate requires confirmation",
+      "opticsFeatures": "Night, Portrait, Pro and Dual View modes",
+      "frontVideoRecording": "Video and Dual View supported",
+      "wirelessCharging": "Manufacturer lists 44W wired FlashCharge",
+      "wifiBluetooth": "Dual-band Wi-Fi; Bluetooth 5.4; no NFC or FM",
+      "specialHardware": "Gyroscope; USB OTG",
+      "biometricsAudio": "In-display optical fingerprint"
     },
     "colors": [
-      "Titanium Blue",
-      "Diamond White"
+      "Silk White",
+      "Sapphire Blue"
     ],
     "colorImages": {
-      "Titanium Blue": "/images/vivo-v80-lite-5g-pakistan-priceoye-cof0i-500x500.webp",
-      "Diamond White": "/images/vivo-v80-lite-5g-pakistan-priceoye-sqp7c-500x500.webp"
+      "Silk White": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1787042134153/eed22030f61b93ffe7e1f409c814e0e5.png",
+      "Sapphire Blue": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1787042138017/771811ffa01f500e4b628ac717a724cb.png"
     },
     "colorHexes": {
-      "Titanium Blue": "#1f384c",
-      "Diamond White": "#f0f3f6"
+      "Silk White": "#eeece7",
+      "Sapphire Blue": "#384e80"
     },
     "popularInCities": [
       "Karachi",
@@ -3750,7 +3746,7 @@ export const PHONES_DATA: PhoneSpec[] = [
       "opticsFeatures": "50MP Dual Pixel AF (f/1.8, OIS), 10MP Telephoto (3x optical, 30x Space Zoom, OIS), 12MP Ultra-wide (123° FOV), ProVisual Engine",
       "frontVideoRecording": "Cover: 4K @ 30/60fps. Under-Display: 1080p @ 30/60fps",
       "wirelessCharging": "15W Fast Wireless Charging 2.0 + 4.5W Wireless PowerShare reverse charging",
-      "wifiBluetooth": "Wi-Fi 7 (802.11be tri-band), Bluetooth 5.3, Ultra Wideband (UWB)",
+      "wifiBluetooth": "Wi-Fi 6E (802.11ax; 2.4/5/6 GHz), Bluetooth 5.3, Ultra Wideband (UWB)",
       "specialHardware": "S-Pen Fold Edition support, Samsung DeX desktop computing mode, 1.6x larger vapor chamber cooling",
       "biometricsAudio": "Side-mounted capacitive fingerprint scanner, stereo speakers tuned by AKG with Dolby Atmos"
     },
@@ -3897,17 +3893,27 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Phantom Purple"
     ],
     "specs": {
-      "display": "6.67\" AMOLED 120Hz",
+      "display": "6.67-inch CrystalRes AMOLED; 2712 x 1220; 120Hz; Gorilla Glass Victus 2",
       "refreshRate": "120Hz",
       "processor": "Snapdragon 7s Gen 3",
       "ram": "12GB",
       "storage": "256GB",
-      "mainCamera": "50MP OIS + 8MP + 50MP Telephoto",
-      "selfieCamera": "20MP",
-      "battery": "6200 mAh",
-      "charging": "90W Fast Charging",
+      "mainCamera": "200MP main (f/1.65, 1/1.4-inch, OIS) + 8MP ultrawide (f/2.2) + 2MP macro (f/2.4); Pakistan/global version",
+      "selfieCamera": "20MP front, f/2.2",
+      "battery": "5110mAh typical (Pakistan/global version)",
+      "charging": "120W HyperCharge",
       "os": "HyperOS based on Android 14",
-      "network": "5G"
+      "network": "5G",
+      "resolution": "2712 x 1220 (1.5K)",
+      "peakBrightness": "3000 nits peak",
+      "hdrSupport": "Dolby Vision, HDR10+, 12-bit color",
+      "stabilization": "Optical stabilization on main camera",
+      "videoRecording": "4K at 24/30fps; 1080p at 30/60fps",
+      "frontVideoRecording": "1080p at 30/60fps",
+      "wifiBluetooth": "Wi-Fi 6/6E subject to region; Bluetooth 5.4; NFC",
+      "waterResistance": "IP68; laboratory immersion up to 1.5m for 30 minutes",
+      "biometricsAudio": "In-screen fingerprint; dual speakers, Dolby Atmos",
+      "dimensions": "162.53 x 74.67mm; thickness 8.75–8.85mm and weight 205.13–210.14g by finish"
     },
     "image": "/images/phones/xiaomi-redmi-note-14-pro-plus-pakistan-priceoye-dcuyr-500x500.webp",
     "images": [
@@ -3984,17 +3990,26 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Emerald Green"
     ],
     "specs": {
-      "display": "6.7\" AMOLED 120Hz",
+      "display": "6.7-inch OLED; 2412 x 1080; up to 120Hz; 10-bit color",
       "refreshRate": "120Hz",
       "processor": "Snapdragon 7s Gen 2",
       "ram": "8GB/12GB",
       "storage": "256GB/512GB",
-      "mainCamera": "50MP OIS + 50MP Periscope + 8MP",
-      "selfieCamera": "32MP",
+      "mainCamera": "50MP Sony LYT-701 main (1/1.56-inch, f/1.88, OIS) + 50MP Sony LYT-600 periscope (1/1.95-inch, 73mm, f/2.65, OIS) + 8MP ultrawide (f/2.2, 112-degree view)",
+      "selfieCamera": "32MP Sony front camera, f/2.45, 90-degree view",
       "battery": "5200 mAh",
       "charging": "80W Fast Charging",
       "os": "Realme UI 5.0 based on Android 14",
-      "network": "5G"
+      "network": "5G",
+      "resolution": "2412 x 1080 (FHD+)",
+      "peakBrightness": "600 nits typical; 1200 global maximum; 2000 local peak",
+      "stabilization": "OIS on main and periscope cameras; EIS supported in specified video modes",
+      "videoRecording": "4K at 30fps; 1080p at 30/60fps",
+      "frontVideoRecording": "Up to 4K at 30fps",
+      "wifiBluetooth": "Wi-Fi 6 dual-band; Bluetooth 5.2; regional NFC availability varies",
+      "dimensions": "161.34 x 73.91mm; glass: 8.23mm, 190g; leather: 8.41mm, 185.5g",
+      "biometricsAudio": "In-display optical fingerprint; dual speakers with OReality Audio",
+      "simSlot": "Two nano-SIM slots"
     },
     "image": "/images/phones/realme-13-plus-5g-pakistan-priceoye-269o1-500x500.webp",
     "images": [
@@ -4053,17 +4068,25 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Olive Green"
     ],
     "specs": {
-      "display": "6.67\" OLED 120Hz",
+      "display": "6.67-inch flat OLED; 2400 x 1080; up to 120Hz; AGC DT-Star2 cover glass",
       "refreshRate": "120Hz",
       "processor": "MediaTek Dimensity 6300",
-      "ram": "8GB",
-      "storage": "256GB",
-      "mainCamera": "50MP Main + 8MP Ultrawide + 2MP Macro",
-      "selfieCamera": "32MP",
+      "ram": "12GB LPDDR4X (Pakistan version)",
+      "storage": "256GB UFS 2.2; memory card supported",
+      "mainCamera": "50MP main (f/1.8, autofocus) + 8MP ultrawide (f/2.2, 112-degree view) + 2MP macro (f/2.4)",
+      "selfieCamera": "32MP front (f/2.4, 90-degree view)",
       "battery": "5000 mAh",
       "charging": "45W SUPERVOOC",
       "os": "ColorOS 14 based on Android 14",
-      "network": "5G"
+      "network": "5G",
+      "resolution": "2400 x 1080 pixels; 394ppi",
+      "peakBrightness": "600 nits typical; 1200 sunlight; 2100 local peak",
+      "dimensions": "163.1 x 75.8 x 7.76 mm; about 187g",
+      "videoRecording": "1080p at 30/60fps; 720p slow motion at 120fps",
+      "frontVideoRecording": "1080p at 30fps",
+      "wifiBluetooth": "Wi-Fi 5 dual-band; Bluetooth 5.3; NFC not supported on Pakistan version",
+      "simSlot": "Dual nano-SIM",
+      "biometricsAudio": "In-display optical fingerprint; face unlock; USB-C audio"
     },
     "image": "/images/phones/oppo-reno-12f-5g-sa-pakistan-priceoye-dsxnc-500x500.webp",
     "images": [
@@ -4081,782 +4104,6 @@ export const PHONES_DATA: PhoneSpec[] = [
     "colorImages": {
       "Amber Orange": "/images/phones/oppo-reno-12f-5g-sa-pakistan-priceoye-dsxnc-500x500.webp",
       "Olive Green": "/images/phones/oppo-reno-12f-5g-sa-pakistan-priceoye-eogj1-500x500.webp"
-    }
-  },
-  {
-    "id": "infinix-smart-20",
-    "name": "Infinix Smart 20",
-    "brand": "Infinix",
-    "model": "Smart 20 (4GB/64GB, 4GB/128GB)",
-    "pricePKR": 38499,
-    "marketPriceRangePKR": {
-      "min": 38499,
-      "max": 45999
-    },
-    "variants": [
-      {
-        "id": "infinix-smart-20-4-64",
-        "name": "4GB RAM / 64GB Storage",
-        "ram": "4GB",
-        "storage": "64GB",
-        "pricePKR": 38499,
-        "marketPriceRangePKR": {
-          "min": 38499,
-          "max": 38499
-        }
-      },
-      {
-        "id": "infinix-smart-20-4-128",
-        "name": "4GB RAM / 128GB Storage",
-        "ram": "4GB",
-        "storage": "128GB",
-        "pricePKR": 45999,
-        "marketPriceRangePKR": {
-          "min": 45999,
-          "max": 45999
-        }
-      }
-    ],
-    "ptaTax": {
-      "status": "Official PTA Approved",
-      "isLocallyAssembled": true
-    },
-    "isLocallyAssembled": true,
-    "releaseDate": "2026-05-15",
-    "rating": 0,
-    "reviewCount": 0,
-    "reviewsCount": 0,
-    "popularInCities": [],
-    "image": "/images/phones/infinix-smart-20/infinix-smart-20-pakistan-priceoye-dwseo-500x500.webp",
-    "tags": [
-      "budget",
-      "battery"
-    ],
-    "specs": {
-      "display": "6.78-inch IPS LCD, 120Hz Refresh Rate",
-      "refreshRate": "120Hz",
-      "processor": "MediaTek Helio G81 Ultimate",
-      "ram": "4GB LPDDR4X (Up to 8GB with Virtual RAM)",
-      "storage": "64GB / 128GB, microSD expandable",
-      "mainCamera": "8 MP Dual Rear Camera with Dual LED Flash",
-      "selfieCamera": "8 MP Front Camera",
-      "battery": "5200 mAh",
-      "charging": "15W Type-C Fast Charging",
-      "os": "XOS 16 based on Android 16",
-      "network": "4G LTE / 3G / 2G",
-      "resolution": "720 x 1576 pixels (HD+)",
-      "dimensions": "167.7 x 78.8 x 7.7 mm",
-      "simSlot": "Dual SIM (Nano-SIM, dual stand-by) + Dedicated microSD slot"
-    },
-    "colors": [
-      "Shadow Black",
-      "Cloudline Blue",
-      "Polaris Titanium",
-      "Sunlike Orange"
-    ],
-    "colorHexes": {
-      "Shadow Black": "#1f2022",
-      "Cloudline Blue": "#6b9ec7",
-      "Polaris Titanium": "#8f9298",
-      "Sunlike Orange": "#e67e22"
-    },
-    "colorImages": {
-      "Shadow Black": "/images/phones/infinix-smart-20/infinix-smart-20-pakistan-priceoye-4eb98-500x500.webp",
-      "Cloudline Blue": "/images/phones/infinix-smart-20/infinix-smart-20-pakistan-priceoye-kvanw-500x500.webp",
-      "Polaris Titanium": "/images/phones/infinix-smart-20/infinix-smart-20-pakistan-priceoye-dwseo-500x500.webp",
-      "Sunlike Orange": "/images/phones/infinix-smart-20/infinix-smart-20-pakistan-priceoye-ap7mn-500x500.webp"
-    }
-  },
-  {
-    "id": "motorola-edge-70-fusion",
-    "name": "Motorola Edge 70 Fusion",
-    "brand": "Motorola",
-    "model": "Edge 70 Fusion (12GB/256GB)",
-    "pricePKR": 134999,
-    "marketPriceRangePKR": {
-      "min": 134999,
-      "max": 134999
-    },
-    "variants": [
-      {
-        "id": "moto-edge-70-fusion-12-256",
-        "name": "12GB RAM / 256GB Storage",
-        "ram": "12GB",
-        "storage": "256GB",
-        "pricePKR": 134999,
-        "marketPriceRangePKR": {
-          "min": 134999,
-          "max": 134999
-        }
-      }
-    ],
-    "ptaTax": {
-      "status": "Official PTA Approved",
-      "isLocallyAssembled": false
-    },
-    "isLocallyAssembled": false,
-    "releaseDate": "2026-09-08",
-    "rating": 0,
-    "reviewCount": 0,
-    "reviewsCount": 0,
-    "popularInCities": [],
-    "image": "/images/phones/motorola-edge-70-fusion/motorola-edge-70-fusion-pakistan-priceoye-249wv-500x500.webp",
-    "tags": [
-      "trending",
-      "camera",
-      "5g"
-    ],
-    "specs": {
-      "display": "6.78-inch Endless Edge AMOLED, 144Hz",
-      "refreshRate": "144Hz",
-      "processor": "Qualcomm Snapdragon 7s Gen 3",
-      "ram": "12GB LPDDR5X",
-      "storage": "256GB UFS 2.2",
-      "mainCamera": "50 MP OIS (Sony LYT-700C) + 13 MP Ultra-wide / Macro",
-      "selfieCamera": "32 MP Front Camera, 4K Video",
-      "battery": "7000 mAh (Pakistani market verified)",
-      "charging": "68W TurboPower Fast Charging",
-      "os": "Android 16",
-      "network": "5G / 4G LTE / 3G / 2G",
-      "resolution": "2772 x 1272 pixels (1.5K)",
-      "dimensions": "162.76 x 75.60 x 7.99 mm",
-      "simSlot": "Dual SIM (Nano-SIM, dual stand-by)"
-    },
-    "colors": [
-      "Pantone Silhouette",
-      "Pantone Sporting Green"
-    ],
-    "colorHexes": {
-      "Pantone Silhouette": "#232528",
-      "Pantone Sporting Green": "#3b6e57"
-    },
-    "colorImages": {
-      "Pantone Silhouette": "/images/phones/motorola-edge-70-fusion/motorola-edge-70-fusion-pakistan-priceoye-249wv-500x500.webp",
-      "Pantone Sporting Green": "/images/phones/motorola-edge-70-fusion/motorola-edge-70-fusion-pakistan-priceoye-024tr-500x500.webp"
-    }
-  },
-  {
-    "id": "infinix-note-60-edge-5g",
-    "name": "Infinix Note 60 Edge 5G",
-    "brand": "Infinix",
-    "model": "Note 60 Edge 5G (8GB/256GB)",
-    "pricePKR": 92499,
-    "marketPriceRangePKR": {
-      "min": 92499,
-      "max": 92499
-    },
-    "variants": [
-      {
-        "id": "infinix-note-60-edge-8-256",
-        "name": "8GB RAM / 256GB Storage",
-        "ram": "8GB",
-        "storage": "256GB",
-        "pricePKR": 92499,
-        "marketPriceRangePKR": {
-          "min": 92499,
-          "max": 92499
-        }
-      }
-    ],
-    "ptaTax": {
-      "status": "Official PTA Approved",
-      "isLocallyAssembled": true
-    },
-    "isLocallyAssembled": true,
-    "releaseDate": "2026-04-20",
-    "rating": 0,
-    "reviewCount": 0,
-    "reviewsCount": 0,
-    "popularInCities": [],
-    "image": "/images/phones/infinix-note-60-edge-5g/infinix-note-edge-pakistan-priceoye-4p1qe-500x500.webp",
-    "tags": [
-      "trending",
-      "battery",
-      "5g"
-    ],
-    "specs": {
-      "display": "6.78-inch 3D Curved AMOLED, 120Hz, Gorilla Glass 7i",
-      "refreshRate": "120Hz",
-      "processor": "MediaTek Dimensity 7100 (6nm)",
-      "ram": "8GB LPDDR4X",
-      "storage": "256GB UFS 2.2",
-      "mainCamera": "50 MP OIS Main Camera with Quad LED Flash",
-      "selfieCamera": "13 MP Front Camera",
-      "battery": "6500 mAh",
-      "charging": "45W All-Round FastCharge 2.0",
-      "os": "XOS 16 based on Android 16",
-      "network": "5G / 4G LTE / 3G / 2G",
-      "resolution": "1208 x 2644 pixels (1.5K)",
-      "simSlot": "Dual SIM (Nano-SIM, dual stand-by)"
-    },
-    "colors": [
-      "Lunar Titanium",
-      "Silk Green",
-      "Stellar Blue",
-      "Shadow Black",
-      "Solar Orange"
-    ],
-    "colorHexes": {
-      "Lunar Titanium": "#a4a7aa",
-      "Silk Green": "#698976",
-      "Stellar Blue": "#345579",
-      "Shadow Black": "#18191a",
-      "Solar Orange": "#e06d2d"
-    },
-    "colorImages": {
-      "Lunar Titanium": "/images/phones/infinix-note-60-edge-5g/infinix-note-edge-pakistan-priceoye-4p1qe-500x500.webp",
-      "Silk Green": "/images/phones/infinix-note-60-edge-5g/infinix-note-edge-pakistan-priceoye-8e8rr-500x500.webp",
-      "Stellar Blue": "/images/phones/infinix-note-60-edge-5g/infinix-note-edge-pakistan-priceoye-ld2uv-500x500.webp",
-      "Shadow Black": "/images/phones/infinix-note-60-edge-5g/infinix-note-edge-pakistan-priceoye-zhzsx-500x500.webp",
-      "Solar Orange": "/images/phones/infinix-note-60-edge-5g/infinix-note-edge-pakistan-priceoye-h2uaq-500x500.webp"
-    }
-  },
-  {
-    "id": "honor-x8d",
-    "name": "Honor X8d",
-    "brand": "Honor",
-    "model": "X8d (8GB/256GB)",
-    "pricePKR": 74499,
-    "marketPriceRangePKR": {
-      "min": 74499,
-      "max": 74499
-    },
-    "variants": [
-      {
-        "id": "honor-x8d-8-256",
-        "name": "8GB RAM / 256GB Storage",
-        "ram": "8GB",
-        "storage": "256GB",
-        "pricePKR": 74499,
-        "marketPriceRangePKR": {
-          "min": 74499,
-          "max": 74499
-        }
-      }
-    ],
-    "ptaTax": {
-      "status": "Official PTA Approved",
-      "isLocallyAssembled": false
-    },
-    "isLocallyAssembled": false,
-    "releaseDate": "2026-06-15",
-    "rating": 0,
-    "reviewCount": 0,
-    "reviewsCount": 0,
-    "popularInCities": [],
-    "image": "/images/phones/honor-x8d/honor-x8d-pakistan-priceoye-1ou8e-500x500.webp",
-    "tags": [
-      "trending",
-      "camera"
-    ],
-    "specs": {
-      "display": "6.7-inch AMOLED, 90Hz, 3000 nits peak brightness",
-      "refreshRate": "90Hz",
-      "processor": "Qualcomm Snapdragon 680 (6nm)",
-      "ram": "8GB RAM",
-      "storage": "256GB",
-      "mainCamera": "108 MP (f/1.75) + 5 MP (f/2.2 Wide Angle)",
-      "selfieCamera": "50 MP Front Camera with Selfie Light",
-      "battery": "4500 mAh",
-      "charging": "45W HONOR SuperCharge",
-      "os": "MagicOS 9.0 (Based on Android 15)",
-      "network": "4G LTE / 3G / 2G",
-      "resolution": "1080 x 2412 pixels (FHD+)",
-      "dimensions": "161.05 x 74.55 x 6.78 mm, 166g",
-      "simSlot": "Dual SIM (Nano-SIM, dual stand-by)"
-    },
-    "colors": [
-      "Velvet Black",
-      "Velvet Grey",
-      "Light Blue"
-    ],
-    "colorHexes": {
-      "Velvet Black": "#1c1d1f",
-      "Velvet Grey": "#6d7075",
-      "Light Blue": "#85b1d9"
-    },
-    "colorImages": {
-      "Velvet Black": "/images/phones/honor-x8d/honor-x8d-pakistan-priceoye-1ou8e-500x500.webp",
-      "Velvet Grey": "/images/phones/honor-x8d/honor-x8d-pakistan-priceoye-s3tv9-500x500.webp",
-      "Light Blue": "/images/phones/honor-x8d/honor-x8d-pakistan-priceoye-amkr5-500x500.webp"
-    }
-  },
-  {
-    "id": "nothing-cmf-phone-1-5g",
-    "name": "Nothing CMF Phone 1 5G",
-    "brand": "Nothing",
-    "model": "CMF Phone 1 (8GB/128GB)",
-    "pricePKR": 76599,
-    "marketPriceRangePKR": {
-      "min": 76599,
-      "max": 76599
-    },
-    "variants": [
-      {
-        "id": "nothing-cmf-phone-1-8-128",
-        "name": "8GB RAM / 128GB Storage",
-        "ram": "8GB",
-        "storage": "128GB",
-        "pricePKR": 76599,
-        "marketPriceRangePKR": {
-          "min": 76599,
-          "max": 76599
-        }
-      }
-    ],
-    "ptaTax": {
-      "status": "Official PTA Approved",
-      "isLocallyAssembled": false
-    },
-    "isLocallyAssembled": false,
-    "releaseDate": "2025-05-07",
-    "rating": 0,
-    "reviewCount": 0,
-    "reviewsCount": 0,
-    "popularInCities": [],
-    "image": "/images/phones/nothing-cmf-phone-1-5g/nothing-cmf-phone-1-pakistan-priceoye-67qs8-500x500.webp",
-    "tags": [
-      "trending",
-      "5g"
-    ],
-    "specs": {
-      "display": "6.67-inch Super AMOLED, 120Hz, 2000 nits peak",
-      "refreshRate": "120Hz",
-      "processor": "MediaTek Dimensity 7300 5G (4nm)",
-      "ram": "8GB LPDDR4X",
-      "storage": "128GB, expandable up to 2TB",
-      "mainCamera": "50 MP Sony Sensor + Portrait Sensor",
-      "selfieCamera": "16 MP Front Camera",
-      "battery": "5000 mAh",
-      "charging": "33W Fast Charging",
-      "os": "Nothing OS 2.6 (Powered by Android 14)",
-      "network": "5G / 4G LTE / 3G / 2G",
-      "resolution": "1080 x 2400 pixels (395 ppi)",
-      "dimensions": "164 x 77 x 8 mm, 197g",
-      "simSlot": "Dual SIM (Nano-SIM, dual stand-by)"
-    },
-    "colors": [
-      "Black",
-      "Light Green"
-    ],
-    "colorHexes": {
-      "Black": "#222325",
-      "Light Green": "#8fa878"
-    },
-    "colorImages": {
-      "Black": "/images/phones/nothing-cmf-phone-1-5g/nothing-cmf-phone-1-pakistan-priceoye-67qs8-500x500.webp",
-      "Light Green": "/images/phones/nothing-cmf-phone-1-5g/nothing-cmf-phone-1-pakistan-priceoye-cztvl-500x500.webp"
-    }
-  },
-  {
-    "id": "xiaomi-redmi-15c",
-    "name": "Xiaomi Redmi 15C",
-    "brand": "Xiaomi",
-    "model": "Redmi 15C (4GB/128GB, 6GB/128GB)",
-    "pricePKR": 42999,
-    "marketPriceRangePKR": {
-      "min": 42999,
-      "max": 46999
-    },
-    "variants": [
-      {
-        "id": "xiaomi-redmi-15c-4-128",
-        "name": "4GB RAM / 128GB Storage",
-        "ram": "4GB",
-        "storage": "128GB",
-        "pricePKR": 42999,
-        "marketPriceRangePKR": {
-          "min": 42999,
-          "max": 42999
-        }
-      },
-      {
-        "id": "xiaomi-redmi-15c-6-128",
-        "name": "6GB RAM / 128GB Storage",
-        "ram": "6GB",
-        "storage": "128GB",
-        "pricePKR": 46999,
-        "marketPriceRangePKR": {
-          "min": 46999,
-          "max": 46999
-        }
-      }
-    ],
-    "ptaTax": {
-      "status": "Official PTA Approved",
-      "isLocallyAssembled": true
-    },
-    "isLocallyAssembled": true,
-    "releaseDate": "2025-09-21",
-    "rating": 0,
-    "reviewCount": 0,
-    "reviewsCount": 0,
-    "popularInCities": [],
-    "image": "/images/phones/xiaomi-redmi-15c/xiaomi-redmi-15c-pakistan-priceoye-92xh3-500x500.webp",
-    "tags": [
-      "budget",
-      "battery"
-    ],
-    "specs": {
-      "display": "6.9-inch Dot Drop Display, IPS LCD, 120Hz, Gorilla Glass 3",
-      "refreshRate": "120Hz",
-      "processor": "MediaTek Helio G81-Ultra",
-      "ram": "4GB / 6GB LPDDR4X",
-      "storage": "128GB eMMC 5.1, dedicated microSD slot",
-      "mainCamera": "50 MP Main Camera (f/1.8) + Auxiliary Lens",
-      "selfieCamera": "8 MP Front Camera (f/2.0)",
-      "battery": "6000 mAh",
-      "charging": "33W Fast Charging",
-      "os": "Xiaomi HyperOS 2 (Android 15)",
-      "network": "4G LTE / 3G / 2G",
-      "resolution": "720 x 1600 pixels (HD+)",
-      "dimensions": "171.56 x 79.47 x 7.99 mm, 205g",
-      "simSlot": "Dual SIM (Nano-SIM) + dedicated microSD"
-    },
-    "colors": [
-      "Moonlight Blue",
-      "Midnight Black",
-      "Mint Green",
-      "Twilight Orange"
-    ],
-    "colorHexes": {
-      "Moonlight Blue": "#547392",
-      "Midnight Black": "#191a1c",
-      "Mint Green": "#8ec5a5",
-      "Twilight Orange": "#dc7949"
-    },
-    "colorImages": {
-      "Moonlight Blue": "/images/phones/xiaomi-redmi-15c/xiaomi-redmi-15c-pakistan-priceoye-92xh3-500x500.webp",
-      "Midnight Black": "/images/phones/xiaomi-redmi-15c/xiaomi-redmi-15c-pakistan-priceoye-rygof-500x500.webp",
-      "Mint Green": "/images/phones/xiaomi-redmi-15c/xiaomi-redmi-15c-pakistan-priceoye-n44ud-500x500.webp",
-      "Twilight Orange": "/images/phones/xiaomi-redmi-15c/xiaomi-redmi-15c-pakistan-priceoye-xlsa4-500x500.webp"
-    }
-  },
-  {
-    "id": "vivo-y05",
-    "name": "Vivo Y05",
-    "brand": "Vivo",
-    "model": "Y05 (4GB/64GB, 4GB/128GB)",
-    "pricePKR": 39999,
-    "officialPricePKR": 44999,
-    "marketPriceRangePKR": {
-      "min": 39999,
-      "max": 45499
-    },
-    "variants": [
-      {
-        "id": "vivo-y05-4-64",
-        "name": "4GB RAM / 64GB Storage",
-        "ram": "4GB",
-        "storage": "64GB",
-        "pricePKR": 39999,
-        "officialPricePKR": 44999,
-        "marketPriceRangePKR": {
-          "min": 39999,
-          "max": 39999
-        }
-      },
-      {
-        "id": "vivo-y05-4-128",
-        "name": "4GB RAM / 128GB Storage",
-        "ram": "4GB",
-        "storage": "128GB",
-        "pricePKR": 45499,
-        "officialPricePKR": 50999,
-        "marketPriceRangePKR": {
-          "min": 45499,
-          "max": 45499
-        }
-      }
-    ],
-    "ptaTax": {
-      "status": "Official PTA Approved",
-      "isLocallyAssembled": true
-    },
-    "isLocallyAssembled": true,
-    "releaseDate": "2026-02-11",
-    "rating": 0,
-    "reviewCount": 0,
-    "reviewsCount": 0,
-    "popularInCities": [],
-    "image": "/images/phones/vivo-y05/vivo-y05-pakistan-priceoye-dfry8-500x500.webp",
-    "tags": [
-      "budget",
-      "battery"
-    ],
-    "specs": {
-      "display": "6.74-inch LCD, 120Hz, 1200 nits high brightness, IP65",
-      "refreshRate": "120Hz",
-      "processor": "Unisoc T7225 Octa-Core",
-      "ram": "4GB (+4GB Extended RAM)",
-      "storage": "64GB / 128GB, microSD expandable",
-      "mainCamera": "8 MP Rear Camera",
-      "selfieCamera": "5 MP Front Camera",
-      "battery": "6500 mAh BlueVolt Battery",
-      "charging": "15W Fast Charging",
-      "os": "OriginOS 6 (Android 16)",
-      "network": "4G LTE / 3G / 2G",
-      "resolution": "1600 x 720 pixels (HD+)",
-      "dimensions": "167.40 x 77.10 x 8.39 mm, 209g",
-      "simSlot": "2 Nano SIMs + microSD"
-    },
-    "colors": [
-      "Voyage Black",
-      "Haze Blue",
-      "Summit Platinum"
-    ],
-    "colorHexes": {
-      "Voyage Black": "#1d1e20",
-      "Haze Blue": "#4f759c",
-      "Summit Platinum": "#c3c7cb"
-    },
-    "colorImages": {
-      "Voyage Black": "/images/phones/vivo-y05/vivo-y05-pakistan-priceoye-dfry8-500x500.webp",
-      "Haze Blue": "/images/phones/vivo-y05/vivo-y05-pakistan-priceoye-flwrn-500x500.webp",
-      "Summit Platinum": "/images/phones/vivo-y05/vivo-y05-pakistan-priceoye-7oglo-500x500.webp"
-    }
-  },
-  {
-    "id": "realme-c100i",
-    "name": "Realme C100i",
-    "brand": "Realme",
-    "model": "C100i (4GB/64GB, 4GB/128GB, 6GB/128GB)",
-    "pricePKR": 35999,
-    "marketPriceRangePKR": {
-      "min": 35999,
-      "max": 52999
-    },
-    "variants": [
-      {
-        "id": "realme-c100i-4-64",
-        "name": "4GB RAM / 64GB Storage",
-        "ram": "4GB",
-        "storage": "64GB",
-        "pricePKR": 35999,
-        "marketPriceRangePKR": {
-          "min": 35999,
-          "max": 35999
-        }
-      },
-      {
-        "id": "realme-c100i-4-128",
-        "name": "4GB RAM / 128GB Storage",
-        "ram": "4GB",
-        "storage": "128GB",
-        "pricePKR": 44999,
-        "marketPriceRangePKR": {
-          "min": 44999,
-          "max": 44999
-        }
-      },
-      {
-        "id": "realme-c100i-6-128",
-        "name": "6GB RAM / 128GB Storage",
-        "ram": "6GB",
-        "storage": "128GB",
-        "pricePKR": 52999,
-        "marketPriceRangePKR": {
-          "min": 52999,
-          "max": 52999
-        }
-      }
-    ],
-    "ptaTax": {
-      "status": "Official PTA Approved",
-      "isLocallyAssembled": true
-    },
-    "isLocallyAssembled": true,
-    "releaseDate": "2026-06-08",
-    "rating": 0,
-    "reviewCount": 0,
-    "reviewsCount": 0,
-    "popularInCities": [],
-    "image": "/images/phones/realme-c100i/realme-c100i-pakistan-priceoye-2reil-500x500.webp",
-    "tags": [
-      "budget",
-      "battery"
-    ],
-    "specs": {
-      "display": "6.8-inch LCD Display, 120Hz, Corning Gorilla Glass",
-      "refreshRate": "120Hz",
-      "processor": "UNISOC T7250 Octa-Core (Arm Mali-G57@850MHz)",
-      "ram": "4GB / 6GB LPDDR4X",
-      "storage": "64GB / 128GB",
-      "mainCamera": "8 MP AI Primary Camera",
-      "selfieCamera": "5 MP Front Camera",
-      "battery": "7000 mAh Massive Battery",
-      "charging": "15W Quick Charge",
-      "os": "realme UI on Android 16",
-      "network": "4G LTE / 3G / 2G",
-      "resolution": "720 x 1570 pixels (HD+)",
-      "dimensions": "Weight: 208g",
-      "simSlot": "Dual Nano-SIM"
-    },
-    "colors": [
-      "Dawn Purple",
-      "Dusk Gray"
-    ],
-    "colorHexes": {
-      "Dawn Purple": "#735b80",
-      "Dusk Gray": "#4c4f54"
-    },
-    "colorImages": {
-      "Dawn Purple": "/images/phones/realme-c100i/realme-c100i-pakistan-priceoye-2reil-500x500.webp",
-      "Dusk Gray": "/images/phones/realme-c100i/realme-c100i-pakistan-priceoye-x6hd0-500x500.webp"
-    }
-  },
-  {
-    "id": "oppo-a6",
-    "name": "Oppo A6",
-    "brand": "Oppo",
-    "model": "A6 (CPH2817) (8GB/128GB, 8GB/256GB)",
-    "pricePKR": 67999,
-    "marketPriceRangePKR": {
-      "min": 67999,
-      "max": 77999
-    },
-    "variants": [
-      {
-        "id": "oppo-a6-8-128",
-        "name": "8GB RAM / 128GB Storage",
-        "ram": "8GB",
-        "storage": "128GB",
-        "pricePKR": 67999,
-        "marketPriceRangePKR": {
-          "min": 67999,
-          "max": 67999
-        }
-      },
-      {
-        "id": "oppo-a6-8-256",
-        "name": "8GB RAM / 256GB Storage",
-        "ram": "8GB",
-        "storage": "256GB",
-        "pricePKR": 77999,
-        "marketPriceRangePKR": {
-          "min": 77999,
-          "max": 77999
-        }
-      }
-    ],
-    "ptaTax": {
-      "status": "Official PTA Approved",
-      "isLocallyAssembled": true
-    },
-    "isLocallyAssembled": true,
-    "releaseDate": "2025-11-25",
-    "rating": 0,
-    "reviewCount": 0,
-    "reviewsCount": 0,
-    "popularInCities": [],
-    "image": "/images/phones/oppo-a6/oppo-a6-pakistan-priceoye-elznh-500x500.webp",
-    "tags": [
-      "trending",
-      "battery"
-    ],
-    "specs": {
-      "display": "6.75-inch LCD, 120Hz Ultra Smooth Display",
-      "refreshRate": "120Hz",
-      "processor": "Qualcomm Snapdragon 685 (6nm)",
-      "ram": "8GB LPDDR4X",
-      "storage": "128GB / 256GB",
-      "mainCamera": "50 MP Main Camera + 2 MP Portrait Camera",
-      "selfieCamera": "8 MP Front Camera",
-      "battery": "7000 mAh High-Capacity Battery",
-      "charging": "45W SUPERVOOC Flash Charge",
-      "os": "ColorOS 15 (Android 15)",
-      "network": "4G LTE / 3G / 2G",
-      "resolution": "1570 x 720 pixels (HD+)",
-      "dimensions": "Thickness 8.66mm, Weight 215g",
-      "simSlot": "Dual SIM (Nano-SIM, dual stand-by)"
-    },
-    "colors": [
-      "Sapphire Blue",
-      "Aurora Gold"
-    ],
-    "colorHexes": {
-      "Sapphire Blue": "#25508a",
-      "Aurora Gold": "#caa86b"
-    },
-    "colorImages": {
-      "Sapphire Blue": "/images/phones/oppo-a6/oppo-a6-pakistan-priceoye-elznh-500x500.webp",
-      "Aurora Gold": "/images/phones/oppo-a6/oppo-a6-pakistan-priceoye-spdvo-500x500.webp"
-    }
-  },
-  {
-    "id": "tecno-spark-50",
-    "name": "Tecno Spark 50",
-    "brand": "Tecno",
-    "model": "Spark 50 (6GB/128GB)",
-    "pricePKR": 54499,
-    "marketPriceRangePKR": {
-      "min": 54499,
-      "max": 54499
-    },
-    "variants": [
-      {
-        "id": "tecno-spark-50-6-128",
-        "name": "6GB RAM / 128GB Storage",
-        "ram": "6GB",
-        "storage": "128GB",
-        "pricePKR": 54499,
-        "marketPriceRangePKR": {
-          "min": 54499,
-          "max": 54499
-        }
-      }
-    ],
-    "ptaTax": {
-      "status": "Official PTA Approved",
-      "isLocallyAssembled": true
-    },
-    "isLocallyAssembled": true,
-    "releaseDate": "2026-04-27",
-    "rating": 0,
-    "reviewCount": 0,
-    "reviewsCount": 0,
-    "popularInCities": [],
-    "image": "/images/phones/tecno-spark-50/tecno-spark-50-pakistan-priceoye-t2xtg-500x500.webp",
-    "tags": [
-      "budget",
-      "battery"
-    ],
-    "specs": {
-      "display": "6.78-inch IPS LCD, 120Hz Hole Screen",
-      "refreshRate": "120Hz",
-      "processor": "MediaTek Helio G81",
-      "ram": "6GB (+12GB Extendable up to 18GB)",
-      "storage": "128GB",
-      "mainCamera": "50 MP Main Camera + AI Lens with LED Flash",
-      "selfieCamera": "8 MP Front Camera with Soft Light Ring",
-      "battery": "7000 mAh Long-Life Battery",
-      "charging": "18W Fast Charging",
-      "os": "Android 16",
-      "network": "4G LTE / 3G / 2G",
-      "resolution": "720 x 1600 pixels (HD+)",
-      "dimensions": "167.8 x 79.22 x 8.27 mm, 210g",
-      "simSlot": "Dual SIM (Nano-SIM, dual stand-by)"
-    },
-    "colors": [
-      "Ink Black",
-      "Neo Titanium",
-      "Aurora Purple",
-      "Halo Blue",
-      "Dynamic Orange"
-    ],
-    "colorHexes": {
-      "Ink Black": "#1c1c1e",
-      "Neo Titanium": "#84878a",
-      "Aurora Purple": "#63487a",
-      "Halo Blue": "#4b779a",
-      "Dynamic Orange": "#e26a2c"
-    },
-    "colorImages": {
-      "Ink Black": "/images/phones/tecno-spark-50/tecno-spark-50-pakistan-priceoye-t2xtg-500x500.webp",
-      "Neo Titanium": "/images/phones/tecno-spark-50/tecno-spark-50-pakistan-priceoye-z71n1-500x500.webp",
-      "Aurora Purple": "/images/phones/tecno-spark-50/tecno-spark-50-pakistan-priceoye-n66m6-500x500.webp",
-      "Halo Blue": "/images/phones/tecno-spark-50/tecno-spark-50-pakistan-priceoye-xa4ho-500x500.webp",
-      "Dynamic Orange": "/images/phones/tecno-spark-50/tecno-spark-50-pakistan-priceoye-jnwdo-500x500.webp"
     }
   }
 ];

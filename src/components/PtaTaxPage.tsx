@@ -254,12 +254,7 @@ export const PtaTaxPage: React.FC<PtaTaxPageProps> = ({
                           </span>
                         </div>
                         <div className="text-2xl font-bold font-sans tracking-tight text-emerald-600 dark:text-emerald-400">
-                          {(() => {
-                            const pTax = selectedDevice.ptaPassportTax ?? selectedDevice.ptaTax?.passportTaxPKR;
-                            return pTax !== undefined && pTax !== null && pTax > 0
-                              ? "Rs " + pTax.toLocaleString('en-PK')
-                              : "Included in Retail";
-                          })()}
+                          {"Rs " + ((selectedDevice.ptaPassportTax ?? selectedDevice.ptaTax.passportTaxPKR) || 0).toLocaleString('en-PK')}
                         </div>
                         <p className="text-[11px] text-gray-500 dark:text-zinc-400 leading-normal">
                           Within 60 days of arrival in Pakistan.
@@ -275,12 +270,7 @@ export const PtaTaxPage: React.FC<PtaTaxPageProps> = ({
                           </span>
                         </div>
                         <div className="text-2xl font-bold font-sans tracking-tight text-slate-900 dark:text-white">
-                          {(() => {
-                            const cTax = selectedDevice.ptaCnicTax ?? selectedDevice.ptaTax?.cnicTaxPKR;
-                            return cTax !== undefined && cTax !== null && cTax > 0
-                              ? "Rs " + cTax.toLocaleString('en-PK')
-                              : "Included in Retail";
-                          })()}
+                          {"Rs " + ((selectedDevice.ptaCnicTax ?? selectedDevice.ptaTax.cnicTaxPKR) || 0).toLocaleString('en-PK')}
                         </div>
                         <p className="text-[11px] text-gray-500 dark:text-zinc-400 leading-normal">
                           Standard rate for non-travelers (Nadra CNIC).
@@ -304,18 +294,12 @@ export const PtaTaxPage: React.FC<PtaTaxPageProps> = ({
                       </div>
                       <div className="flex justify-between items-center text-emerald-700 dark:text-emerald-400 font-semibold">
                         <span>Passport PTA Duty:</span>
-                        <span className="font-mono font-bold">
-                          {selectedDevice.ptaTax?.passportTaxPKR && selectedDevice.ptaTax.passportTaxPKR > 0
-                            ? `+${formatPKR(selectedDevice.ptaTax.passportTaxPKR)}`
-                            : 'Included / Pre-cleared'}
-                        </span>
+                        <span className="font-mono font-bold">+{formatPKR(selectedDevice.ptaTax.passportTaxPKR)}</span>
                       </div>
                       <div className="pt-2 border-t border-emerald-100 dark:border-emerald-800/40 flex justify-between items-center text-sm font-bold text-gray-900 dark:text-white">
                         <span>Total Landed Smartphone Cost:</span>
                         <span className="font-mono text-emerald-700 dark:text-emerald-400 font-extrabold text-base">
-                          {selectedDevice.ptaTax?.passportTaxPKR && selectedDevice.ptaTax.passportTaxPKR > 0
-                            ? formatPKR(selectedDevice.pricePKR + selectedDevice.ptaTax.passportTaxPKR)
-                            : `${formatPKR(selectedDevice.pricePKR)} (Retail)`}
+                          {formatPKR(selectedDevice.pricePKR + selectedDevice.ptaTax.passportTaxPKR)}
                         </span>
                       </div>
                     </div>

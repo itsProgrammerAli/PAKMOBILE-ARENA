@@ -33,8 +33,8 @@ export interface PhoneSpec {
   };
   variants?: PhoneVariant[];
   ptaTax: {
-    passportTaxPKR?: number;
-    cnicTaxPKR?: number;
+    passportTaxPKR: number;
+    cnicTaxPKR: number;
     status: 'Official PTA Approved' | 'Non-PTA' | 'Factory Unlocked';
     isLocallyAssembled?: boolean;
   };
