@@ -24,6 +24,7 @@ interface PhoneDetailRouteProps {
   onNavigateToPta: (phone?: PhoneSpec) => void;
   onNavigateToCompare: () => void;
   onSelectPhone: (phone: PhoneSpec) => void;
+  onAskAi?: (prompt: string) => void;
 }
 
 const PhoneDetailRoute: React.FC<PhoneDetailRouteProps> = ({
@@ -34,6 +35,7 @@ const PhoneDetailRoute: React.FC<PhoneDetailRouteProps> = ({
   onNavigateToPta,
   onNavigateToCompare,
   onSelectPhone,
+  onAskAi,
 }) => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
@@ -75,6 +77,7 @@ const PhoneDetailRoute: React.FC<PhoneDetailRouteProps> = ({
       onNavigateToPta={onNavigateToPta}
       onNavigateToCompare={onNavigateToCompare}
       onSelectPhone={onSelectPhone}
+      onAskAi={onAskAi}
     />
   );
 };

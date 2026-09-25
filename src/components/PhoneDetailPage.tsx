@@ -42,6 +42,7 @@ interface PhoneDetailPageProps {
   onNavigateToPta: (phone?: PhoneSpec) => void;
   onNavigateToCompare: () => void;
   onSelectPhone?: (phone: PhoneSpec) => void;
+  onAskAi?: (prompt: string) => void;
 }
 
 /**
@@ -418,6 +419,7 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
   onNavigateToPta,
   onNavigateToCompare,
   onSelectPhone,
+  onAskAi,
 }) => {
   const [selectedColor, setSelectedColor] = useState<string>(phone.colors[0] || 'Default');
   const [imageError, setImageError] = useState(false);
@@ -1089,6 +1091,44 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                     <span className="text-xs font-bold text-slate-800 dark:text-zinc-200 truncate block">{phone.specs.refreshRate}</span>
                   </div>
                 </div>
+              </div>
+
+              {/* Action Buttons Bar: Compare, PTA Tax, and Gemini AI Advisor */}
+              <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-200/80 dark:border-slate-700/80">
+                <button
+                  id="detail-compare-btn"
+                  onClick={() => onToggleCompare(phone)}
+                  className={`flex-1 min-w-[130px] py-2.5 px-3 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2 border cursor-pointer ${
+                    isCompared
+                      ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border-emerald-400 dark:border-emerald-700'
+                      : 'bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700/60 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-zinc-200'
+                  }`}
+                >
+                  <Scale className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <span>{isCompared ? 'In Compare' : 'Add to Compare'}</span>
+                </button>
+
+                <button
+                  id="detail-pta-calc-btn"
+                  onClick={() => onNavigateToPta(phone)}
+                  className="flex-1 min-w-[130px] py-2.5 px-3 rounded-xl font-bold text-xs bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700/60 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-zinc-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <Calculator className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <span>PTA Tax Details</span>
+                </button>
+
+                <button
+                  id="detail-ask-gemini-ai-btn"
+                  onClick={() => {
+                    if (onAskAi) {
+                      onAskAi(`Give me a detailed overview of the ${phone.name} in Pakistan. Is it worth buying at ${formatPKR(activePricePKR)}? How does its processor (${phone.specs.processor}) and camera perform compared to rivals? What is the official PTA tax status?`);
+                    }
+                  }}
+                  className="w-full sm:w-auto flex-1 min-w-[180px] py-2.5 px-3.5 rounded-xl font-bold text-xs bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+                >
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Ask Gemini AI</span>
+                </button>
               </div>
 
             </div>
