@@ -1,6 +1,4 @@
-import { NewsArticle } from '../types';
-
-export const NEWS_DATA: NewsArticle[] = [
+[
   {
     "id": "pta-tax-slab-update-iphone-17",
     "slug": "pta-tax-slab-update-iphone-17",
@@ -2582,43 +2580,4 @@ export const NEWS_DATA: NewsArticle[] = [
       }
     ]
   }
-];
-
-/**
- * Returns the entire news collection strictly sorted in descending chronological order
- * (Newest news first, oldest last) by ISO date string.
- */
-export function getSortedNews(articles: NewsArticle[] = NEWS_DATA): NewsArticle[] {
-  return [...articles].sort((a, b) => new Date(b.isoDate || b.date).getTime() - new Date(a.isoDate || a.date).getTime());
-}
-
-/**
- * Find an article by its unique SEO slug
- */
-export function getNewsArticleBySlug(slug: string): NewsArticle | undefined {
-  return NEWS_DATA.find((article) => article.slug === slug || article.id === slug);
-}
-
-/**
- * Get distinct categories for filter pills
- */
-export function getNewsCategories(): string[] {
-  const categories = Array.from(new Set(NEWS_DATA.map((article) => article.category)));
-  return ['All', ...categories];
-}
-
-/**
- * Get related articles excluding the current article slug
- */
-export function getRelatedNews(currentSlug: string, count: number = 2): NewsArticle[] {
-  const current = getNewsArticleBySlug(currentSlug);
-  const remaining = NEWS_DATA.filter((article) => article.slug !== currentSlug);
-  
-  if (!current) return remaining.slice(0, count);
-
-  // Prioritize articles with the same category
-  const sameCategory = remaining.filter((a) => a.category === current.category);
-  const others = remaining.filter((a) => a.category !== current.category);
-
-  return [...sameCategory, ...others].slice(0, count);
-}
+]
