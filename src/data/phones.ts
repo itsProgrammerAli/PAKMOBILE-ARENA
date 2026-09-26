@@ -6595,6 +6595,2061 @@ export const PHONES_DATA: PhoneSpec[] = [
       "battery",
       "trending"
     ]
+  },
+  {
+    "id": "samsung-galaxy-s25-ultra",
+    "name": "Samsung Galaxy S25 Ultra",
+    "brand": "Samsung",
+    "model": "Galaxy S25 Ultra",
+    "pricePKR": 354999,
+    "price": 354999,
+    "officialPricePKR": 414999,
+    "marketPriceRangePKR": {
+      "min": 354999,
+      "max": 414999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 115000,
+      "cnicTaxPKR": 137000,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": false
+    },
+    "ptaPassportTax": 115000,
+    "ptaCnicTax": 137000,
+    "isLocallyAssembled": false,
+    "variants": [
+      {
+        "id": "samsung-galaxy-s25-ultra-12-256",
+        "name": "12GB / 256GB",
+        "ram": "12GB LPDDR5X",
+        "storage": "256GB UFS 4.0",
+        "pricePKR": 354999,
+        "officialPricePKR": 414999,
+        "marketPriceRangePKR": {
+          "min": 354999,
+          "max": 414999
+        }
+      },
+      {
+        "id": "samsung-galaxy-s25-ultra-12-512",
+        "name": "12GB / 512GB",
+        "ram": "12GB LPDDR5X",
+        "storage": "512GB UFS 4.0",
+        "pricePKR": 414999,
+        "officialPricePKR": 439999,
+        "marketPriceRangePKR": {
+          "min": 414999,
+          "max": 439999
+        }
+      }
+    ],
+    "colors": [
+      "Titanium Silverblue",
+      "Titanium Gray",
+      "Titanium Black"
+    ],
+    "colorHexes": {
+      "Titanium Silverblue": "#9FAEC0",
+      "Titanium Gray": "#76777B",
+      "Titanium Black": "#2C2C2D"
+    },
+    "image": "/images/phones/samsung-galaxy-s25-ultra-pakistan-priceoye-bbrjh-500x500.webp",
+    "images": [
+      "/images/phones/samsung-galaxy-s25-ultra-pakistan-priceoye-bbrjh-500x500.webp",
+      "/images/phones/samsung-galaxy-s25-ultra-pakistan-priceoye-8rng7-500x500.webp"
+    ],
+    "specs": {
+      "display": "6.9-inch Dynamic LTPO AMOLED 2X, 120Hz, HDR10+, 2600 nits peak brightness, Corning Gorilla Armor 2",
+      "refreshRate": "120Hz",
+      "processor": "Qualcomm Snapdragon 8 Elite for Galaxy (3nm Octa-core up to 4.47GHz)",
+      "ram": "12GB LPDDR5X",
+      "storage": "256GB / 512GB UFS 4.0 High-Speed Flash",
+      "mainCamera": "200 MP (f/1.7, OIS, PDAF) + 50 MP (periscope telephoto, 5x optical zoom, OIS) + 10 MP (telephoto, 3x optical, OIS) + 50 MP (ultrawide, 120°)",
+      "selfieCamera": "12 MP (f/2.2, Dual Pixel PDAF, 4K@60fps HDR)",
+      "battery": "5000 mAh Li-Ion Battery with Smart AI Power Management",
+      "charging": "45W Wired Fast Charging (65% in 30 min) + 15W Fast Qi2 Wireless + 4.5W Reverse Wireless",
+      "os": "Android 15 with One UI 7 (7 Major Android OS Upgrades & 7 Years Security Updates)",
+      "network": "5G SA/NSA Dual SIM + eSIM, Wi-Fi 7, Bluetooth 5.4, Ultra Wideband (UWB)",
+      "resolution": "1440 x 3120 pixels (QHD+), 498 ppi density",
+      "peakBrightness": "2600 nits peak brightness",
+      "waterResistance": "IP68 Dust and Water Resistant (up to 1.5m for 30 mins)",
+      "buildMaterials": "Grade 5 Titanium Frame with Corning Gorilla Armor 2 front and frosted glass back",
+      "stabilization": "Dual Optical Image Stabilization (OIS) + Super Steady Video Stabilization",
+      "videoRecording": "8K @ 30fps, 4K @ 120fps, 4K @ 60fps HDR10+ with stereo audio recording"
+    },
+    "releaseDate": "2025-01-22",
+    "tags": [
+      "flagship",
+      "5g",
+      "camera",
+      "trending",
+      "gaming"
+    ],
+    "metaTitle": "Samsung Galaxy S25 Ultra Price in Pakistan & Specs | Pak Mobile Arena",
+    "metaDescription": "Samsung Galaxy S25 Ultra price in Pakistan starts at Rs. 354,999. Features Snapdragon 8 Elite, 200MP Quad Camera, 6.9-inch Dynamic AMOLED 2X, and S-Pen."
+  },
+  {
+    "id": "realme-c65",
+    "name": "Realme C65",
+    "brand": "Realme",
+    "model": "C65",
+    "pricePKR": 36799,
+    "price": 36799,
+    "officialPricePKR": 39999,
+    "marketPriceRangePKR": {
+      "min": 36799,
+      "max": 39999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 5500,
+      "cnicTaxPKR": 7500,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 5500,
+    "ptaCnicTax": 7500,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "realme-c65-8-256",
+        "name": "8GB / 256GB",
+        "ram": "8GB RAM (+8GB Dynamic RAM)",
+        "storage": "256GB Built-in",
+        "pricePKR": 36799,
+        "officialPricePKR": 39999,
+        "marketPriceRangePKR": {
+          "min": 36799,
+          "max": 39999
+        }
+      }
+    ],
+    "colors": [
+      "Starlight Purple",
+      "Starlight Black"
+    ],
+    "colorHexes": {
+      "Starlight Purple": "#7A639E",
+      "Starlight Black": "#23262A"
+    },
+    "image": "/images/phones/realme-c65-pakistan-priceoye-2l7tg-500x500.webp",
+    "images": [
+      "/images/phones/realme-c65-pakistan-priceoye-2l7tg-500x500.webp",
+      "/images/phones/realme-c65-pakistan-priceoye-c4f59-500x500.webp"
+    ],
+    "specs": {
+      "display": "6.67-inch 90Hz Eye Comfort HD+ IPS Display, 625 nits peak, TÜV Rheinland Low Blue Light Certification",
+      "refreshRate": "90Hz",
+      "processor": "MediaTek Helio G85 (12nm) Octa-Core (2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55)",
+      "ram": "8GB LPDDR4X (+8GB Dynamic Extended Virtual RAM)",
+      "storage": "256GB Internal Storage, dedicated microSDXC expansion slot up to 2TB",
+      "mainCamera": "50 MP AI Primary Camera (f/1.8, PDAF) + 2 MP Depth Sensor with Quad LED Flash",
+      "selfieCamera": "8 MP AI Front Camera (f/2.05, 1080p@30fps)",
+      "battery": "5000 mAh Massive Battery with 48-Month Fluency Guarantee",
+      "charging": "45W Fast Charging (50% charge in 30 mins) via USB Type-C",
+      "os": "Android 14 with Realme UI 5.0",
+      "network": "4G LTE Dual SIM Dual Standby, VoLTE, VoWiFi",
+      "resolution": "720 x 1604 pixels, 264 ppi",
+      "waterResistance": "IP54 Dust & Splash Resistance with Rainwater Smart Touch",
+      "dimensions": "164.6 x 76.1 x 7.64 mm, 185g"
+    },
+    "releaseDate": "2024-04-04",
+    "tags": [
+      "budget",
+      "battery",
+      "trending"
+    ],
+    "metaTitle": "Realme C65 Price in Pakistan & Specs | Pak Mobile Arena",
+    "metaDescription": "Realme C65 official price in Pakistan starts at Rs. 36,799. Features 45W Fast Charging, 5000mAh battery, 50MP AI camera, and 6.67-inch 90Hz display."
+  },
+  {
+    "id": "xiaomi-redmi-a3",
+    "name": "Xiaomi Redmi A3",
+    "brand": "Xiaomi",
+    "model": "Redmi A3",
+    "pricePKR": 21999,
+    "price": 21999,
+    "officialPricePKR": 25999,
+    "marketPriceRangePKR": {
+      "min": 21999,
+      "max": 25999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 3200,
+      "cnicTaxPKR": 4500,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 3200,
+    "ptaCnicTax": 4500,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "xiaomi-redmi-a3-4-128",
+        "name": "4GB / 128GB",
+        "ram": "4GB (+4GB Extended RAM)",
+        "storage": "128GB eMMC 5.1",
+        "pricePKR": 21999,
+        "officialPricePKR": 25999,
+        "marketPriceRangePKR": {
+          "min": 21999,
+          "max": 25999
+        }
+      }
+    ],
+    "colors": [
+      "Midnight Black",
+      "Forest Green",
+      "Star Blue"
+    ],
+    "colorHexes": {
+      "Midnight Black": "#1A1A1A",
+      "Forest Green": "#2D4836",
+      "Star Blue": "#4E7399"
+    },
+    "image": "/images/phones/xiaomi-redmi-a3-pakistan-priceoye-0sexf-500x500.webp",
+    "images": [
+      "/images/phones/xiaomi-redmi-a3-pakistan-priceoye-0sexf-500x500.webp",
+      "/images/phones/xiaomi-redmi-a3-pakistan-priceoye-yvadt-500x500.webp"
+    ],
+    "specs": {
+      "display": "6.71-inch 90Hz Dot Drop HD+ Display, Corning Gorilla Glass 3, DC Dimming Eye Protection",
+      "refreshRate": "90Hz",
+      "processor": "MediaTek Helio G36 (12nm) Octa-Core Processor up to 2.2GHz",
+      "ram": "4GB LPDDR4X (+4GB Virtual RAM)",
+      "storage": "128GB Storage, expandable up to 1TB via dedicated microSD slot",
+      "mainCamera": "8 MP AI Dual Camera (f/2.0) with Auxiliary Lens and Film Camera Filters",
+      "selfieCamera": "5 MP Front Camera (f/2.2) with Soft-light Ring for Night Selfies",
+      "battery": "5000 mAh Long-Lasting Battery (up to 29 hours of calling)",
+      "charging": "10W Charging via USB Type-C Port",
+      "os": "Android 14 (Go Edition) with 2 Major OS Updates & 3 Years Security Patches",
+      "network": "4G LTE Dual SIM, Side-mounted Fingerprint Sensor, 3.5mm Headphone Jack",
+      "resolution": "1650 x 720 pixels, 268 ppi",
+      "dimensions": "168.3 x 76.3 x 8.32 mm, 199g"
+    },
+    "releaseDate": "2024-02-14",
+    "tags": [
+      "budget",
+      "trending",
+      "battery"
+    ],
+    "metaTitle": "Xiaomi Redmi A3 Price in Pakistan & Specs | Pak Mobile Arena",
+    "metaDescription": "Xiaomi Redmi A3 official price in Pakistan starts at Rs. 21,999. Features premium circular glass design, 90Hz display, 5000mAh battery, and Type-C."
+  },
+  {
+    "id": "honor-x7b",
+    "name": "Honor X7b",
+    "brand": "Honor",
+    "model": "X7b",
+    "pricePKR": 46500,
+    "price": 46500,
+    "officialPricePKR": 54999,
+    "marketPriceRangePKR": {
+      "min": 46500,
+      "max": 54999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 7200,
+      "cnicTaxPKR": 9500,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 7200,
+    "ptaCnicTax": 9500,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "honor-x7b-8-256",
+        "name": "8GB / 256GB",
+        "ram": "8GB (+8GB HONOR RAM Turbo)",
+        "storage": "256GB Built-in",
+        "pricePKR": 46500,
+        "officialPricePKR": 54999,
+        "marketPriceRangePKR": {
+          "min": 46500,
+          "max": 54999
+        }
+      }
+    ],
+    "colors": [
+      "Flowing Silver",
+      "Emerald Green",
+      "Midnight Black"
+    ],
+    "colorHexes": {
+      "Flowing Silver": "#D1D5DB",
+      "Emerald Green": "#1B4D3E",
+      "Midnight Black": "#1F2937"
+    },
+    "image": "/images/phones/honor-x7b-pakistan-priceoye-e84gh-500x500.webp",
+    "images": [
+      "/images/phones/honor-x7b-pakistan-priceoye-e84gh-500x500.webp",
+      "/images/phones/honor-x7b-pakistan-priceoye-inzkg-500x500.webp"
+    ],
+    "specs": {
+      "display": "6.8-inch 90Hz FHD+ TFT LCD Ultra-Large Sunlight Display, 850 nits peak, TÜV Rheinland Flicker Free",
+      "refreshRate": "90Hz",
+      "processor": "Qualcomm Snapdragon 680 (6nm) Octa-Core (4x2.4 GHz Kryo 265 Gold & 4x1.9 GHz Kryo 265 Silver)",
+      "ram": "8GB RAM (+8GB HONOR RAM Turbo Expansion)",
+      "storage": "256GB High-Capacity Internal Storage",
+      "mainCamera": "108 MP Ultra-Clear Primary (f/1.75, 1/1.67\" sensor) + 5 MP Ultra-Wide (f/2.2) + 2 MP Depth (f/2.4)",
+      "selfieCamera": "8 MP Front Camera (f/2.0, 1080p@30fps)",
+      "battery": "6000 mAh DXOMARK Gold Rated Battery (up to 3 days continuous usage)",
+      "charging": "35W HONOR SuperCharge via Type-C",
+      "os": "MagicOS 7.2 based on Android 13 (upgradable)",
+      "network": "4G LTE Dual SIM, Dual Stereo Speakers with 200% High Volume Mode",
+      "resolution": "2412 x 1080 pixels (FHD+), 389 ppi",
+      "dimensions": "166.7 x 76.5 x 8.24 mm, 199g"
+    },
+    "releaseDate": "2023-12-01",
+    "tags": [
+      "battery",
+      "camera",
+      "trending",
+      "budget"
+    ],
+    "metaTitle": "Honor X7b Price in Pakistan & Specs | Pak Mobile Arena",
+    "metaDescription": "Honor X7b official price in Pakistan starts at Rs. 46,500. Features 6000mAh battery, 108MP matrix camera, 6.8-inch FHD+ 90Hz screen, and 35W SuperCharge."
+  },
+  {
+    "id": "vivo-y03",
+    "name": "Vivo Y03",
+    "brand": "Vivo",
+    "model": "Y03",
+    "pricePKR": 25999,
+    "price": 25999,
+    "officialPricePKR": 27999,
+    "marketPriceRangePKR": {
+      "min": 25999,
+      "max": 27999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 3800,
+      "cnicTaxPKR": 5200,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 3800,
+    "ptaCnicTax": 5200,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "vivo-y03-4-64",
+        "name": "4GB / 64GB",
+        "ram": "4GB (+4GB Extended RAM)",
+        "storage": "64GB eMMC 5.1",
+        "pricePKR": 25999,
+        "officialPricePKR": 27999,
+        "marketPriceRangePKR": {
+          "min": 25999,
+          "max": 27999
+        }
+      }
+    ],
+    "colors": [
+      "Space Black",
+      "Gem Green"
+    ],
+    "colorHexes": {
+      "Space Black": "#1E1E1E",
+      "Gem Green": "#355E3B"
+    },
+    "image": "/images/phones/vivo-y03-pakistan-priceoye-k5v2s-500x500.webp",
+    "images": [
+      "/images/phones/vivo-y03-pakistan-priceoye-k5v2s-500x500.webp",
+      "/images/phones/vivo-y03-pakistan-priceoye-98169-500x500.webp"
+    ],
+    "specs": {
+      "display": "6.56-inch 90Hz Sunlight IPS LCD Display, TÜV Rheinland Low Blue Light Certification",
+      "refreshRate": "90Hz",
+      "processor": "MediaTek Helio G85 (12nm) Octa-Core Processor",
+      "ram": "4GB LPDDR4X (+4GB Extended Virtual RAM)",
+      "storage": "64GB eMMC 5.1, dedicated microSDXC expandable up to 1TB",
+      "mainCamera": "13 MP Primary Camera (f/2.2) + 0.08 MP Auxiliary Lens with LED Flash",
+      "selfieCamera": "5 MP Front Camera (f/2.2)",
+      "battery": "5000 mAh Battery with 4-Year Battery Health Durability Protection",
+      "charging": "15W FlashCharge via USB Type-C",
+      "os": "Funtouch OS 14 based on Android 14",
+      "network": "4G LTE Dual SIM, IP54 Dust and Water Resistance",
+      "resolution": "1612 x 720 pixels (HD+), 269 ppi",
+      "dimensions": "163.78 x 75.73 x 8.39 mm, 185g"
+    },
+    "releaseDate": "2024-03-13",
+    "tags": [
+      "budget",
+      "battery",
+      "trending"
+    ],
+    "metaTitle": "Vivo Y03 Price in Pakistan & Specs | Pak Mobile Arena",
+    "metaDescription": "Vivo Y03 official price in Pakistan starts at Rs. 25,999. Features Helio G85 processor, 90Hz sunlight display, 5000mAh battery, and IP54 resistance."
+  },
+  {
+    "id": "infinix-hot-50i",
+    "name": "Infinix Hot 50i",
+    "brand": "Infinix",
+    "model": "Hot 50i",
+    "pricePKR": 29299,
+    "price": 29299,
+    "officialPricePKR": 32999,
+    "marketPriceRangePKR": {
+      "min": 29299,
+      "max": 32999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 3800,
+      "cnicTaxPKR": 5200,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 3800,
+    "ptaCnicTax": 5200,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "infinix-hot-50i-6-128",
+        "name": "6GB / 128GB",
+        "ram": "6GB LPDDR4X (+6GB Extended RAM)",
+        "storage": "128GB Built-in Storage",
+        "pricePKR": 29299,
+        "officialPricePKR": 32999,
+        "marketPriceRangePKR": {
+          "min": 29299,
+          "max": 32999
+        }
+      }
+    ],
+    "colors": [
+      "Titanium Grey",
+      "Sage Green",
+      "Sleek Black",
+      "Dreamy Purple"
+    ],
+    "colorHexes": {
+      "Titanium Grey": "#7A7772",
+      "Sage Green": "#788057",
+      "Sleek Black": "#1E1E1E",
+      "Dreamy Purple": "#C160BD"
+    },
+    "colorImages": {
+      "Titanium Grey": "/images/phones/infinix-hot-50i-titanium-grey.webp",
+      "Sage Green": "/images/phones/infinix-hot-50i-sage-green.webp",
+      "Sleek Black": "/images/phones/infinix-hot-50i-sleek-black.webp",
+      "Dreamy Purple": "/images/phones/infinix-hot-50i-dreamy-purple.webp"
+    },
+    "image": "/images/phones/infinix-hot-50i-titanium-grey.webp",
+    "images": [
+      "/images/phones/infinix-hot-50i-titanium-grey.webp",
+      "/images/phones/infinix-hot-50i-sage-green.webp",
+      "/images/phones/infinix-hot-50i-sleek-black.webp",
+      "/images/phones/infinix-hot-50i-dreamy-purple.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Faisalabad",
+      "Rawalpindi",
+      "Multan"
+    ],
+    "specs": {
+      "display": "6.7\" 120Hz Punch-Hole IPS Display with Dynamic Bar, 500 nits Peak Brightness, 240Hz Touch Sampling Rate",
+      "refreshRate": "120Hz Punch-Hole IPS",
+      "processor": "MediaTek Helio G81 (12nm) Octa-Core (2x2.0 GHz Cortex-A75 & 6x1.7 GHz Cortex-A55) with ARM Mali-G52 MC2 GPU",
+      "ram": "6GB LPDDR4X (+6GB Virtual Extended RAM = 12GB Effective Memory)",
+      "storage": "128GB eMMC 5.1 Internal Storage, dedicated microSD slot expandable up to 2TB",
+      "mainCamera": "48MP AI Ultra-Clear Main Sensor (f/1.79, 1/2.0\" sensor, PDAF, 5P lens) + Auxiliary Depth Lens with Quad-LED Flash",
+      "selfieCamera": "8MP Front Camera (f/2.0) with Dual-LED Flash and Portrait Beautification",
+      "battery": "5000 mAh High-Density Battery with 4-Year Battery Health Durability Guarantee (1600 cycles)",
+      "charging": "18W Fast Charging via USB Type-C, Reverse Wired Charging Support",
+      "os": "Android 14 (Go Edition) with XOS 14.5 (48-Month TÜV SÜD Fluency Certified)",
+      "network": "4G LTE Dual SIM, IP54 Splash & Dust Resistance, Dual Stereo Speakers with 300% Ultra Volume Mode, Side Fingerprint",
+      "resolution": "HD+ (1600 x 720 pixels), 20:9 aspect ratio (~262 ppi)",
+      "peakBrightness": "500 nits peak outdoor brightness, Sunlight Readable Mode",
+      "hdrSupport": "120Hz dynamic refresh rate (60/90/120Hz auto-switch), Dynamic Bar notification pill",
+      "dimensions": "165.7 x 77.1 x 8.1 mm, 184g",
+      "buildMaterials": "Glass front, textured lightweight polycarbonate unibody, feather-light ergonomic grip",
+      "simSlot": "Triple Slot: Dual SIM (Nano-SIM, dual stand-by) + dedicated microSDXC slot",
+      "waterResistance": "IP54 dust and splash resistant with Wet & Greasy Touch Control",
+      "stabilization": "Electronic Image Stabilization (EIS) on rear camera",
+      "videoRecording": "1080p @ 30fps, 720p @ 30fps video recording",
+      "opticsFeatures": "48MP f/1.79 main sensor, Super Night Mode, Portrait Mode with Bokeh, Time-lapse, Document Mode, Quad-LED flash",
+      "frontVideoRecording": "1080p @ 30fps with Dual-LED flash illumination",
+      "wirelessCharging": "Not supported (18W Fast Wired Charging via Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (dual-band 2.4GHz & 5GHz), Bluetooth 5.3, GPS/GLONASS/Galileo",
+      "specialHardware": "Dynamic Bar interactive island for charging and call notifications, 300% Ultra Volume audio amplifier",
+      "biometricsAudio": "Side-mounted capacitive fingerprint scanner, Face Unlock, dual stereo speakers with DTS sound processing, 3.5mm headphone jack"
+    },
+    "releaseDate": "2024-09-10",
+    "tags": [
+      "budget",
+      "battery",
+      "trending"
+    ],
+    "metaTitle": "Infinix Hot 50i Price in Pakistan & Specs | Pak Mobile Arena",
+    "metaDescription": "Infinix Hot 50i price in Pakistan starts at Rs. 29,299. Features 120Hz punch-hole display, Helio G81 processor, 48MP AI camera, and 5000mAh battery."
+  },
+  {
+    "id": "oppo-a58",
+    "name": "Oppo A58",
+    "brand": "Oppo",
+    "model": "A58",
+    "pricePKR": 43999,
+    "price": 43999,
+    "officialPricePKR": 49999,
+    "marketPriceRangePKR": {
+      "min": 43999,
+      "max": 49999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 7200,
+      "cnicTaxPKR": 9500,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 7200,
+    "ptaCnicTax": 9500,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "oppo-a58-6-128",
+        "name": "6GB / 128GB",
+        "ram": "6GB LPDDR4X (+6GB RAM Expansion)",
+        "storage": "128GB eMMC 5.1",
+        "pricePKR": 43999,
+        "officialPricePKR": 49999,
+        "marketPriceRangePKR": {
+          "min": 43999,
+          "max": 49999
+        }
+      }
+    ],
+    "colors": [
+      "Glowing Black",
+      "Dazzling Green"
+    ],
+    "colorHexes": {
+      "Glowing Black": "#1F2024",
+      "Dazzling Green": "#2AB12A"
+    },
+    "colorImages": {
+      "Glowing Black": "/images/phones/oppo-a58-glowing-black.webp",
+      "Dazzling Green": "/images/phones/oppo-a58-dazzling-green.webp"
+    },
+    "image": "/images/phones/oppo-a58-glowing-black.webp",
+    "images": [
+      "/images/phones/oppo-a58-glowing-black.webp",
+      "/images/phones/oppo-a58-dazzling-green.webp"
+    ],
+    "popularInCities": [
+      "Lahore",
+      "Karachi",
+      "Islamabad",
+      "Peshawar",
+      "Gujranwala"
+    ],
+    "specs": {
+      "display": "6.72\" FHD+ Sunlight Punch-Hole LTPS Display, 680 nits Peak Brightness, 100% DCI-P3 Color Gamut",
+      "refreshRate": "60Hz Sunlight Display (180Hz Touch Sampling Rate)",
+      "processor": "MediaTek Helio G85 (12nm) Octa-Core (2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55) with ARM Mali-G52 MC2 GPU",
+      "ram": "6GB LPDDR4X @ 1800MHz (+6GB Virtual RAM Expansion = up to 12GB RAM)",
+      "storage": "128GB eMMC 5.1 Storage, dedicated microSD slot expandable up to 1TB",
+      "mainCamera": "50MP AI Ultra-Clear Main (f/1.8, 75.5° FOV, 5P lens, AF open-loop motor) + 2MP Portrait Lens (f/2.4, 89.1° FOV, 3P lens)",
+      "selfieCamera": "8MP Punch-Hole Front Camera (f/2.0, 80° FOV, 4P lens) with AI Portrait Retouching",
+      "battery": "5000 mAh (typical) Long-Lasting Battery with 36-Month Fluency Protection",
+      "charging": "33W SUPERVOOC Fast Charge (52% in 30 minutes, 100% in 75 minutes) via USB Type-C",
+      "os": "ColorOS 13.1 based on Android 13 (Upgradable to Android 14 with ColorOS 14)",
+      "network": "4G LTE Dual SIM, IPX4 Water Resistance, Dual Stereo Speakers with Ultra Volume Mode 300%, NFC, Side Fingerprint",
+      "resolution": "FHD+ (2400 x 1080 pixels), 20:9 ratio (~391 ppi, 91.4% screen-to-body ratio)",
+      "peakBrightness": "680 nits peak outdoor brightness, 550 nits typical, 4096-level intelligent dimming",
+      "hdrSupport": "100% DCI-P3 cinematic wide color gamut, 100% sRGB, 16.7M colors (8-bit)",
+      "dimensions": "165.65 x 75.98 x 7.99 mm, 192g",
+      "buildMaterials": "2.8D curved back with silk-satin texture, matte polymer composite frame, fingerprint-resistant finish",
+      "simSlot": "Dual SIM (Nano-SIM, dual stand-by) + dedicated microSDXC expansion slot",
+      "waterResistance": "IPX4 water resistance rating (tested against water sprays from all directions)",
+      "stabilization": "Electronic Image Stabilization (EIS) on video capture",
+      "videoRecording": "1080p @ 30fps, 720p @ 30fps with video EIS zoom support",
+      "opticsFeatures": "50MP AI primary camera, Night Mode, Portrait Bokeh Flare, Extra HD 50MP composite, Panorama, Google Lens",
+      "frontVideoRecording": "1080p @ 30fps, 720p @ 30fps with portrait enhancement",
+      "wirelessCharging": "Not supported (33W SUPERVOOC wired)",
+      "wifiBluetooth": "Wi-Fi 5 (802.11 a/b/g/n/ac dual-band 2.4/5GHz), Bluetooth 5.3 (SBC, AAC, aptX HD), NFC supported",
+      "specialHardware": "Dual stereo acoustic chamber with Dirac sound tuning, 300% Ultra Volume Mode for noisy outdoor calls",
+      "biometricsAudio": "Side-mounted capacitive fingerprint sensor, Face Unlock, dual stereo speakers, 3.5mm stereo earphone jack"
+    },
+    "releaseDate": "2023-07-28",
+    "tags": [
+      "budget",
+      "battery",
+      "trending"
+    ],
+    "metaTitle": "Oppo A58 Price in Pakistan & Specs | Pak Mobile Arena",
+    "metaDescription": "Oppo A58 price in Pakistan starts at Rs. 43,999. Features 33W SUPERVOOC, 5000mAh battery, 6.72-inch FHD+ sunlight display, and 50MP AI camera."
+  },
+  {
+    "id": "samsung-galaxy-a05",
+    "name": "Samsung Galaxy A05",
+    "brand": "Samsung",
+    "model": "Galaxy A05",
+    "pricePKR": 21299,
+    "price": 21299,
+    "officialPricePKR": 24999,
+    "marketPriceRangePKR": {
+      "min": 21299,
+      "max": 24999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 3200,
+      "cnicTaxPKR": 4500,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 3200,
+    "ptaCnicTax": 4500,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "samsung-galaxy-a05-4-64",
+        "name": "4GB / 64GB",
+        "ram": "4GB RAM (+4GB RAM Plus)",
+        "storage": "64GB eMMC 5.1",
+        "pricePKR": 21299,
+        "officialPricePKR": 24999,
+        "marketPriceRangePKR": {
+          "min": 21299,
+          "max": 24999
+        }
+      }
+    ],
+    "colors": [
+      "Black",
+      "Light Green",
+      "Silver"
+    ],
+    "colorHexes": {
+      "Black": "#2F2F2F",
+      "Light Green": "#9AA07C",
+      "Silver": "#C0C0C0"
+    },
+    "colorImages": {
+      "Black": "/images/phones/samsung-galaxy-a05-black.webp",
+      "Light Green": "/images/phones/samsung-galaxy-a05-light-green.webp",
+      "Silver": "/images/phones/samsung-galaxy-a05-silver.webp"
+    },
+    "image": "/images/phones/samsung-galaxy-a05-black.webp",
+    "images": [
+      "/images/phones/samsung-galaxy-a05-black.webp",
+      "/images/phones/samsung-galaxy-a05-light-green.webp",
+      "/images/phones/samsung-galaxy-a05-silver.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Rawalpindi",
+      "Islamabad",
+      "Sialkot"
+    ],
+    "specs": {
+      "display": "6.7\" PLS LCD Infinity-U HD+ Display, 16 Million Colors, 450 nits Typical Brightness",
+      "refreshRate": "60Hz Infinity-U Display",
+      "processor": "MediaTek Helio G85 (12nm) Octa-Core (2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55) with ARM Mali-G52 MC2 GPU",
+      "ram": "4GB RAM (+4GB RAM Plus Virtual Memory = 8GB Total)",
+      "storage": "64GB Internal Storage, dedicated microSD card slot expandable up to 1TB",
+      "mainCamera": "50MP Wide Main Camera (f/1.8 aperture, Auto Focus) + 2MP Depth Camera (f/2.4 aperture) with Single LED Flash",
+      "selfieCamera": "8MP Front Selfie Camera (f/2.0 aperture)",
+      "battery": "5000 mAh (typical) Long-Lasting Battery with Smart AI Power Management",
+      "charging": "25W Super Fast Charging via USB Type-C 2.0 (Power Delivery 3.0 PPS)",
+      "os": "Android 13 with One UI Core 5.1 (Guaranteed 2 Major Android OS Upgrades & 4 Years Security Maintenance)",
+      "network": "4G LTE Dual SIM, Dolby Atmos Sound Support, 3.5mm Headphone Jack, Bluetooth 5.3",
+      "resolution": "HD+ (1600 x 720 pixels), 20:9 ratio (~262 ppi)",
+      "peakBrightness": "450 nits typical brightness, adaptive screen tone adjustment",
+      "hdrSupport": "16M colors depth, vivid color profile tuning",
+      "dimensions": "168.8 x 78.2 x 8.8 mm, 195g",
+      "buildMaterials": "Glass front, durable polycarbonate rear panel with fine linear patterned texture, rounded ergonomic edges",
+      "simSlot": "Triple Slot: SIM 1 + SIM 2 + dedicated MicroSD expansion slot",
+      "waterResistance": "Standard daily splash resistance",
+      "stabilization": "Digital Video Stabilization",
+      "videoRecording": "FHD (1920 x 1080) @ 60fps / @ 30fps, Slow Motion 120fps @ HD",
+      "opticsFeatures": "50MP f/1.8 autofocus lens, 10x digital zoom, Portrait Mode with Depth sensing, Pro Mode, Food Mode, Night Mode",
+      "frontVideoRecording": "FHD (1920 x 1080) @ 30fps",
+      "wirelessCharging": "Not supported (25W Super Fast Wired Charging via Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (2.4G+5GHz VHT80), Bluetooth 5.3, GPS/Glonass/Beidou/Galileo",
+      "specialHardware": "Samsung Knox security platform, linear patterned back panel with anti-smudge coating",
+      "biometricsAudio": "Face Unlock, loudspeaker, Dolby Atmos audio enhancement for wired earphones, 3.5mm stereo earjack"
+    },
+    "releaseDate": "2023-10-15",
+    "tags": [
+      "budget",
+      "battery",
+      "trending"
+    ],
+    "metaTitle": "Samsung Galaxy A05 Price in Pakistan & Specs | Pak Mobile Arena",
+    "metaDescription": "Samsung Galaxy A05 price in Pakistan starts at Rs. 21,299. Features 50MP main camera, 5000mAh battery with 25W charging, 6.7-inch screen, and Helio G85."
+  },
+  {
+    "id": "realme-c61",
+    "name": "Realme C61",
+    "brand": "Realme",
+    "model": "C61",
+    "pricePKR": 29499,
+    "price": 29499,
+    "officialPricePKR": 32999,
+    "marketPriceRangePKR": {
+      "min": 29499,
+      "max": 32999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 4800,
+      "cnicTaxPKR": 6800,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 4800,
+    "ptaCnicTax": 6800,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "realme-c61-6-128",
+        "name": "6GB / 128GB",
+        "ram": "6GB LPDDR4X (+6GB Dynamic RAM)",
+        "storage": "128GB High-Speed Storage",
+        "pricePKR": 29499,
+        "officialPricePKR": 32999,
+        "marketPriceRangePKR": {
+          "min": 29499,
+          "max": 32999
+        }
+      }
+    ],
+    "colors": [
+      "Safari Green",
+      "Sparkle Gold"
+    ],
+    "colorHexes": {
+      "Safari Green": "#264740",
+      "Sparkle Gold": "#EFE1BE"
+    },
+    "colorImages": {
+      "Safari Green": "/images/phones/realme-c61-dark-green.webp",
+      "Sparkle Gold": "/images/phones/realme-c61-sparkle-gold.webp"
+    },
+    "image": "/images/phones/realme-c61-dark-green.webp",
+    "images": [
+      "/images/phones/realme-c61-dark-green.webp",
+      "/images/phones/realme-c61-sparkle-gold.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Faisalabad",
+      "Rawalpindi",
+      "Gujranwala"
+    ],
+    "specs": {
+      "display": "6.74\" 90Hz Eye Comfort Sunlight Display, 560 nits Peak Brightness, 180Hz Touch Sampling Rate, DC Dimming",
+      "refreshRate": "90Hz Eye Comfort Display",
+      "processor": "Unisoc T612 (12nm) High-Efficiency Octa-Core (2x1.8 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55) with ARM Mali-G57 GPU",
+      "ram": "6GB LPDDR4X (+6GB Dynamic Virtual RAM = 12GB Effective Memory)",
+      "storage": "128GB High-Speed Storage, dedicated microSD expansion up to 2TB",
+      "mainCamera": "50MP AI Primary Camera (f/1.8 aperture, 5P lens, PDAF) + Auxiliary Depth Sensor with LED Flash",
+      "selfieCamera": "5MP AI Front Camera (f/2.22, 3P lens, 78° FOV) with AI Portrait Retouching",
+      "battery": "5000 mAh Massive Battery with 4-Year Battery Health Durability Guarantee (≥80% capacity after 1000 cycles)",
+      "charging": "15W Quick Charge via USB Type-C with multi-level voltage protection",
+      "os": "realme UI based on Android 14 (48-Month TÜV Fluency Certified, Mini Capsule 2.0 & Dynamic Button)",
+      "network": "4G LTE Dual SIM, IP54 Water & Dust Resistance, ArmorShell Drop Protection, Side Fingerprint Scanner",
+      "resolution": "HD+ (1600 x 720 pixels), 20:9 ratio (~260 ppi, 90.3% screen-to-body ratio)",
+      "peakBrightness": "560 nits peak brightness, 450 nits typical",
+      "hdrSupport": "90Hz refresh rate, 16.7M colors, TÜV Rheinland High Reliability Certified",
+      "dimensions": "167.26 x 76.67 x 7.84 mm, 188g (Ultra-Slim 7.84mm Metallic Frame)",
+      "buildMaterials": "Integrated metallic high-gloss frame, ArmorShell drop-resistant structural matrix, anti-scratch back",
+      "simSlot": "Triple Slot: Dual SIM (Nano-SIM, dual stand-by) + dedicated microSDXC slot",
+      "waterResistance": "IP54 dust & water resistance with Rainwater Smart Touch protection",
+      "stabilization": "Electronic Image Stabilization (EIS) on video",
+      "videoRecording": "1080p @ 30fps, 720p @ 30fps, 480p @ 30fps",
+      "opticsFeatures": "50MP AI camera, Night Mode, Portrait Bokeh, Street Filter, HDR, Panoramic View, Pro Mode, Time-lapse",
+      "frontVideoRecording": "720p @ 30fps, 480p @ 30fps",
+      "wirelessCharging": "Not supported (15W Quick Charge wired via Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (2.4GHz / 5GHz dual band), Bluetooth 5.0, GPS/AGPS/GLONASS/BDS/Galileo",
+      "specialHardware": "ArmorShell drop-resistant structural matrix, Mini Capsule 2.0 interactive notifications, Dynamic Button",
+      "biometricsAudio": "Side-mounted capacitive fingerprint sensor, Face Unlock, UltraBoom speaker with 150% volume boost, 3.5mm audio jack"
+    },
+    "releaseDate": "2024-06-28",
+    "tags": [
+      "budget",
+      "battery",
+      "trending"
+    ],
+    "metaTitle": "Realme C61 Price in Pakistan & Specs | Pak Mobile Arena",
+    "metaDescription": "Realme C61 price in Pakistan starts at Rs. 29,499. Features ultra-slim 7.84mm metallic frame, 50MP AI camera, 5000mAh battery, and IP54 ArmorShell design."
+  },
+  {
+    "id": "vivo-y17s",
+    "name": "Vivo Y17s",
+    "brand": "Vivo",
+    "model": "Y17s",
+    "pricePKR": 32499,
+    "price": 32499,
+    "officialPricePKR": 36999,
+    "marketPriceRangePKR": {
+      "min": 32499,
+      "max": 36999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 5200,
+      "cnicTaxPKR": 7200,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 5200,
+    "ptaCnicTax": 7200,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "vivo-y17s-6-128",
+        "name": "6GB / 128GB",
+        "ram": "6GB LPDDR4X (+6GB Extended RAM)",
+        "storage": "128GB eMMC 5.1",
+        "pricePKR": 32499,
+        "officialPricePKR": 36999,
+        "marketPriceRangePKR": {
+          "min": 32499,
+          "max": 36999
+        }
+      }
+    ],
+    "colors": [
+      "Glitter Purple",
+      "Forest Green",
+      "Diamond Orange"
+    ],
+    "colorHexes": {
+      "Glitter Purple": "#800080",
+      "Forest Green": "#009460",
+      "Diamond Orange": "#E67E22"
+    },
+    "colorImages": {
+      "Glitter Purple": "/images/phones/vivo-y17s-glitter-purple.webp",
+      "Forest Green": "/images/phones/vivo-y17s-forest-green.webp",
+      "Diamond Orange": "/images/phones/vivo-y17s-diamond-orange.webp"
+    },
+    "image": "/images/phones/vivo-y17s-glitter-purple.webp",
+    "images": [
+      "/images/phones/vivo-y17s-glitter-purple.webp",
+      "/images/phones/vivo-y17s-forest-green.webp",
+      "/images/phones/vivo-y17s-diamond-orange.webp"
+    ],
+    "popularInCities": [
+      "Lahore",
+      "Karachi",
+      "Multan",
+      "Islamabad",
+      "Faisalabad"
+    ],
+    "specs": {
+      "display": "6.56\" 90Hz Sunlight IPS Display, 840 nits Peak Brightness, 83% NTSC Color Gamut, TÜV Low Blue Light",
+      "refreshRate": "90Hz Sunlight IPS Display",
+      "processor": "MediaTek Helio G85 (12nm) Octa-Core (2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55) with ARM Mali-G52 MC2 GPU",
+      "ram": "6GB LPDDR4X (+6GB Extended Virtual RAM 3.0 = 12GB Total Memory)",
+      "storage": "128GB eMMC 5.1 Storage, dedicated microSD slot expandable up to 1TB",
+      "mainCamera": "50MP Ultra-Clear Main (f/1.8, PDAF) + 2MP Bokeh Camera (f/2.4) with LED Flash",
+      "selfieCamera": "8MP Front Camera (f/2.0) with Aura Screen Light for Low-Light Selfies",
+      "battery": "5000 mAh High-Capacity Battery with Smart Overnight Charging Protection",
+      "charging": "15W FlashCharge via USB Type-C",
+      "os": "Funtouch OS 13 based on Android 13 (Upgradable to Android 14 with Funtouch OS 14)",
+      "network": "4G LTE Dual SIM, IP54 Dust & Splash Resistance, Side-mounted Capacitive Fingerprint Scanner, 3.5mm Earphone Jack",
+      "resolution": "HD+ (1612 x 720 pixels), 20.1:9 ratio (~269 ppi)",
+      "peakBrightness": "840 nits peak outdoor brightness under direct sunlight, 500 nits typical",
+      "hdrSupport": "83% NTSC wide color saturation, TÜV Rheinland Low Blue Light certified",
+      "dimensions": "163.74 x 75.43 x 8.09 mm, 186g",
+      "buildMaterials": "2.5D composite frosted matte back cover, metallic finish camera deco ring, anti-fingerprint coating",
+      "simSlot": "Triple Slot: Dual Nano-SIM (Dual Standby) + dedicated MicroSD card slot",
+      "waterResistance": "IP54 dust and splash resistance rating",
+      "stabilization": "Electronic Image Stabilization (EIS)",
+      "videoRecording": "1080p @ 30fps, 720p @ 30fps",
+      "opticsFeatures": "50MP f/1.8 main camera, Super Night Mode, Portrait Bokeh Flare, Live Photo, Slow Motion, Time-Lapse, Document Scanning",
+      "frontVideoRecording": "1080p @ 30fps with Aura Screen Light fill",
+      "wirelessCharging": "Not supported (15W FlashCharge wired via Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (dual-band 2.4GHz / 5GHz), Bluetooth 5.0, GPS/BeiDou/GLONASS/Galileo/QZSS",
+      "specialHardware": "Audio Booster mode up to 150%, 2.5D curved frosted back texture",
+      "biometricsAudio": "Side-mounted capacitive fingerprint scanner (0.24s unlock), Face Unlock, 150% volume booster loudspeaker, 3.5mm earphone jack"
+    },
+    "releaseDate": "2023-09-18",
+    "tags": [
+      "budget",
+      "battery",
+      "trending"
+    ],
+    "metaTitle": "Vivo Y17s Price in Pakistan & Specs | Pak Mobile Arena",
+    "metaDescription": "Vivo Y17s price in Pakistan starts at Rs. 32,499. Features 50MP portrait camera, 6.56-inch sunlight display, 5000mAh battery, and IP54 rating."
+  },
+  {
+    "id": "honor-x6a",
+    "name": "Honor X6a",
+    "brand": "Honor",
+    "model": "X6a",
+    "pricePKR": 27999,
+    "price": 27999,
+    "officialPricePKR": 29999,
+    "marketPriceRangePKR": {
+      "min": 27499,
+      "max": 29999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 3200,
+      "cnicTaxPKR": 4500,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 3200,
+    "ptaCnicTax": 4500,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "honor-x6a-4-128",
+        "name": "4GB / 128GB",
+        "ram": "4GB RAM (+4GB HONOR RAM Turbo)",
+        "storage": "128GB Built-in Storage",
+        "pricePKR": 27999,
+        "officialPricePKR": 29999,
+        "marketPriceRangePKR": {
+          "min": 27499,
+          "max": 29999
+        }
+      }
+    ],
+    "colors": [
+      "Cyan Lake",
+      "Midnight Black",
+      "Sky Silver"
+    ],
+    "colorHexes": {
+      "Cyan Lake": "#1E6B7B",
+      "Midnight Black": "#1A1A1A",
+      "Sky Silver": "#D3D8DE"
+    },
+    "colorImages": {
+      "Cyan Lake": "/images/phones/honor-x6a-cyan-lake.webp",
+      "Midnight Black": "/images/phones/honor-x6a-midnight-black.webp",
+      "Sky Silver": "/images/phones/honor-x6a-sky-silver.webp"
+    },
+    "image": "/images/phones/honor-x6a-cyan-lake.webp",
+    "images": [
+      "/images/phones/honor-x6a-cyan-lake.webp",
+      "/images/phones/honor-x6a-midnight-black.webp",
+      "/images/phones/honor-x6a-sky-silver.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Rawalpindi",
+      "Islamabad",
+      "Faisalabad",
+      "Multan",
+      "Peshawar"
+    ],
+    "specs": {
+      "display": "6.56\" TFT LCD, 90Hz Refresh Rate, 16.7 Million Colors, Dynamic Dimming Eye Comfort Display",
+      "refreshRate": "90Hz Smooth Display with Dynamic Dimming",
+      "processor": "MediaTek Helio G36 (12nm) Octa-Core (4x2.2 GHz Cortex-A53 & 4x1.7 GHz Cortex-A53) with PowerVR GE8320 GPU",
+      "ram": "4GB RAM (+4GB HONOR RAM Turbo = 8GB Equivalent Memory)",
+      "storage": "128GB Internal Storage, MicroSD expansion slot up to 1TB",
+      "mainCamera": "50MP Triple AI Camera: 50MP Wide Main (f/1.8, PDAF) + 2MP Macro (f/2.4) + 2MP Depth (f/2.4) with LED Flash",
+      "selfieCamera": "5MP Front Camera (f/2.2 aperture) with Portrait mode and 2D Face Recognition",
+      "battery": "5200 mAh (typical) High-Capacity Lithium-Polymer Battery",
+      "charging": "22.5W HONOR SuperCharge via USB Type-C (31% charge in approximately 20 minutes)",
+      "os": "MagicOS 7.1 based on Android 13 with Google Mobile Services (GMS)",
+      "network": "4G LTE Dual SIM (Nano-SIM, dual stand-by), 3.5mm Earphone Jack, Bluetooth 5.1",
+      "resolution": "HD+ (1612 x 720 pixels), 20.15:9 aspect ratio (~269 ppi density)",
+      "peakBrightness": "520 nits peak brightness with Dynamic Dimming and Circadian Night Display",
+      "hdrSupport": "16.7M colors, TÜV Rheinland Low Blue Light hardware certification",
+      "dimensions": "163.32 x 75.07 x 8.35 mm, 188g weight",
+      "buildMaterials": "Glass front, polycarbonate frame and metallic-sheen rear panel with anti-fingerprint coating",
+      "simSlot": "Dual SIM (Nano-SIM, dual stand-by) + dedicated MicroSD expansion slot",
+      "waterResistance": "Standard daily splash and dust resistance",
+      "stabilization": "Electronic Image Stabilization (EIS) for 1080p video recording",
+      "videoRecording": "1080p (1920 x 1080) video recording @ 30fps with continuous autofocus",
+      "opticsFeatures": "50MP Ultra-Clear Mode, Portrait Mode with Bokeh, Time-Lapse, Super Macro, HDR, Smile Capture",
+      "frontVideoRecording": "1080p @ 30fps with AI beautification filters",
+      "wirelessCharging": "Not supported (22.5W wired HONOR SuperCharge via Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (2.4GHz and 5GHz dual-band), Bluetooth 5.1 BLE, GPS/AGPS/GLONASS/BeiDou/Galileo",
+      "specialHardware": "Side-mounted fingerprint scanner, Dynamic Dimming eye comfort technology, 3.5mm audio jack",
+      "biometricsAudio": "Side-Mounted Fingerprint Sensor, 2D Face Recognition, Bottom-firing speaker, High-res audio output via 3.5mm jack"
+    },
+    "releaseDate": "August 2023",
+    "tags": [
+      "budget",
+      "honor",
+      "50mp-camera",
+      "5200mah-battery",
+      "trending",
+      "under-30k"
+    ],
+    "metaTitle": "Honor X6a Price in Pakistan & Verified Specifications | Pak Mobile Arena",
+    "metaDescription": "Check official Honor X6a price in Pakistan, 5200mAh battery, 50MP triple camera, 90Hz display, PTA tax rates and authentic user specs."
+  },
+  {
+    "id": "infinix-hot-40i",
+    "name": "Infinix Hot 40i",
+    "brand": "Infinix",
+    "model": "Hot 40i",
+    "pricePKR": 28499,
+    "price": 28499,
+    "officialPricePKR": 30999,
+    "marketPriceRangePKR": {
+      "min": 28499,
+      "max": 30999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 3500,
+      "cnicTaxPKR": 4800,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 3500,
+    "ptaCnicTax": 4800,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "infinix-hot-40i-8-128",
+        "name": "8GB / 128GB",
+        "ram": "8GB LPDDR4X (+8GB Extended RAM = 16GB)",
+        "storage": "128GB UFS 2.2 Storage",
+        "pricePKR": 28499,
+        "officialPricePKR": 30999,
+        "marketPriceRangePKR": {
+          "min": 28499,
+          "max": 30999
+        }
+      },
+      {
+        "id": "infinix-hot-40i-8-256",
+        "name": "8GB / 256GB",
+        "ram": "8GB LPDDR4X (+8GB Extended RAM = 16GB)",
+        "storage": "256GB UFS 2.2 Storage",
+        "pricePKR": 31999,
+        "officialPricePKR": 34999,
+        "marketPriceRangePKR": {
+          "min": 31999,
+          "max": 34999
+        }
+      }
+    ],
+    "colors": [
+      "Starlit Black",
+      "Palm Blue",
+      "Horizon Gold",
+      "Starfall Green"
+    ],
+    "colorHexes": {
+      "Starlit Black": "#1C1D21",
+      "Palm Blue": "#4B729F",
+      "Horizon Gold": "#E5C388",
+      "Starfall Green": "#6C9371"
+    },
+    "colorImages": {
+      "Starlit Black": "/images/phones/infinix-hot-40i-starlit-black.webp",
+      "Palm Blue": "/images/phones/infinix-hot-40i-palm-blue.webp",
+      "Horizon Gold": "/images/phones/infinix-hot-40i-horizon-gold.webp",
+      "Starfall Green": "/images/phones/infinix-hot-40i-starfall-green.webp"
+    },
+    "image": "/images/phones/infinix-hot-40i-starlit-black.webp",
+    "images": [
+      "/images/phones/infinix-hot-40i-starlit-black.webp",
+      "/images/phones/infinix-hot-40i-palm-blue.webp",
+      "/images/phones/infinix-hot-40i-horizon-gold.webp",
+      "/images/phones/infinix-hot-40i-starfall-green.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Rawalpindi",
+      "Islamabad",
+      "Faisalabad",
+      "Gujranwala",
+      "Multan"
+    ],
+    "specs": {
+      "display": "6.56\" IPS LCD Punch-Hole Display, 90Hz Refresh Rate, Magic Ring Dynamic Notification Bar",
+      "refreshRate": "90Hz Smooth Punch-Hole Screen with Magic Ring Interaction",
+      "processor": "Unisoc T606 (12nm) Octa-Core (2x1.6 GHz Cortex-A75 & 6x1.6 GHz Cortex-A55) with ARM Mali-G57 MP1 GPU",
+      "ram": "8GB LPDDR4X RAM (+8GB Extended RAM = 16GB Total Memory)",
+      "storage": "128GB / 256GB UFS 2.2 Fast Flash Storage, dedicated microSD slot expandable up to 1TB",
+      "mainCamera": "50MP AI Dual Camera: 50MP Wide (f/1.6, AF, 5P lens) + 0.08MP auxiliary lens with Quad-LED Flash",
+      "selfieCamera": "32MP Crystal-Clear Selfie Camera (f/2.2 aperture) with Dual-LED Front Flash and 90° Wide-Angle lens",
+      "battery": "5000 mAh (typical) High-Density Battery with Power Marathon technology",
+      "charging": "18W FastCharge via USB Type-C 2.0 (charges 20% to 75% in approximately 35 minutes)",
+      "os": "Android 13 with XOS 13.0 user interface",
+      "network": "4G LTE Dual Nano-SIM, 3.5mm Headphone Jack, USB Type-C 2.0 with OTG",
+      "resolution": "HD+ (1612 x 720 pixels), 20:9 ratio (~269 ppi density)",
+      "peakBrightness": "480 nits peak brightness, sunlight readable display algorithm",
+      "hdrSupport": "Vivid color enhancement mode, Eye Care low blue light mode",
+      "dimensions": "163.6 x 75.6 x 8.3 mm, 190g weight",
+      "buildMaterials": "Glass front, composite textured back panel with optical microscopic crystal texture, flat frame",
+      "simSlot": "Triple Slot: Dual Nano-SIM + dedicated MicroSD expansion slot",
+      "waterResistance": "Everyday splash and humidity protection",
+      "stabilization": "Software electronic video stabilization for 1080p recording",
+      "videoRecording": "1080p @ 30fps, 720p @ 30fps with HDR mode",
+      "opticsFeatures": "50MP Ultra Night Mode, Super Night Filter, AI Portrait, HDR, Panorama, Slow Motion, AR Space",
+      "frontVideoRecording": "1080p @ 30fps with Front Dual Flash night video recording",
+      "wirelessCharging": "Not supported (18W wired FastCharge via Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (2.4GHz & 5GHz dual-band), Bluetooth 5.0, GPS, OTG support",
+      "specialHardware": "Magic Ring interactive notifications (charging, calls, face unlock status), Side Fingerprint, Quad-LED rear flash",
+      "biometricsAudio": "Side-Mounted Fingerprint Sensor, Face Unlock, 200% Super Volume Speaker with DTS Audio Processing, 3.5mm audio jack"
+    },
+    "releaseDate": "December 2023",
+    "tags": [
+      "budget",
+      "infinix",
+      "32mp-selfie",
+      "50mp-camera",
+      "magic-ring",
+      "trending",
+      "under-35k"
+    ],
+    "metaTitle": "Infinix Hot 40i Price in Pakistan & Full Specs | Pak Mobile Arena",
+    "metaDescription": "Infinix Hot 40i price in Pakistan starts at Rs. 28,499. Features 32MP selfie camera, 50MP dual camera, 90Hz Magic Ring display, 18W fast charging and official PTA approval."
+  },
+  {
+    "id": "infinix-smart-8",
+    "name": "Infinix Smart 8",
+    "brand": "Infinix",
+    "model": "Smart 8",
+    "pricePKR": 21999,
+    "price": 21999,
+    "officialPricePKR": 23999,
+    "marketPriceRangePKR": {
+      "min": 21499,
+      "max": 23999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 2800,
+      "cnicTaxPKR": 3900,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 2800,
+    "ptaCnicTax": 3900,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "infinix-smart-8-4-64",
+        "name": "4GB / 64GB",
+        "ram": "4GB RAM (+4GB Extended RAM = 8GB)",
+        "storage": "64GB Built-in Storage",
+        "pricePKR": 21999,
+        "officialPricePKR": 23999,
+        "marketPriceRangePKR": {
+          "min": 21499,
+          "max": 23999
+        }
+      },
+      {
+        "id": "infinix-smart-8-4-128",
+        "name": "4GB / 128GB",
+        "ram": "4GB RAM (+4GB Extended RAM = 8GB)",
+        "storage": "128GB Built-in Storage",
+        "pricePKR": 23499,
+        "officialPricePKR": 25999,
+        "marketPriceRangePKR": {
+          "min": 23499,
+          "max": 25999
+        }
+      }
+    ],
+    "colors": [
+      "Timber Black",
+      "Shiny Gold",
+      "Crystal Green",
+      "Galaxy White"
+    ],
+    "colorHexes": {
+      "Timber Black": "#1D1E22",
+      "Shiny Gold": "#D9B464",
+      "Crystal Green": "#488B80",
+      "Galaxy White": "#E9ECF1"
+    },
+    "colorImages": {
+      "Timber Black": "/images/phones/infinix-smart-8-timber-black.webp",
+      "Shiny Gold": "/images/phones/infinix-smart-8-shiny-gold.webp",
+      "Crystal Green": "/images/phones/infinix-smart-8-crystal-green.webp",
+      "Galaxy White": "/images/phones/infinix-smart-8-galaxy-white.webp"
+    },
+    "image": "/images/phones/infinix-smart-8-timber-black.webp",
+    "images": [
+      "/images/phones/infinix-smart-8-timber-black.webp",
+      "/images/phones/infinix-smart-8-shiny-gold.webp",
+      "/images/phones/infinix-smart-8-crystal-green.webp",
+      "/images/phones/infinix-smart-8-galaxy-white.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Rawalpindi",
+      "Islamabad",
+      "Peshawar",
+      "Faisalabad",
+      "Sialkot"
+    ],
+    "specs": {
+      "display": "6.6\" IPS LCD Punch-Hole Display, 90Hz Refresh Rate, Magic Ring Dynamic Status Bar, 500 nits Peak",
+      "refreshRate": "90Hz Fluid Punch-Hole Display with Magic Ring",
+      "processor": "Unisoc T606 (12nm) Octa-Core (2x1.6 GHz Cortex-A75 & 6x1.6 GHz Cortex-A55) with ARM Mali-G57 MP1",
+      "ram": "4GB RAM (+4GB Extended RAM = 8GB Total Usable Memory)",
+      "storage": "64GB / 128GB Built-in Storage, dedicated microSD card slot expandable up to 2TB",
+      "mainCamera": "13MP Dual AI Camera: 13MP Wide (f/1.8, AF) + 0.08MP auxiliary lens with Ring-LED Flash",
+      "selfieCamera": "8MP Front Camera (f/2.0 aperture) with Front LED Flash",
+      "battery": "5000 mAh (typical) Long-Life Battery with Power Marathon 3.0",
+      "charging": "10W Charging via USB Type-C port",
+      "os": "Android 13 (Go edition) with XOS 13 interface",
+      "network": "4G LTE Dual SIM, 3.5mm Audio Jack, USB Type-C with OTG support",
+      "resolution": "HD+ (1612 x 720 pixels), 20:9 ratio (~267 ppi density)",
+      "peakBrightness": "500 nits peak brightness, Dark Region Enhancement technology",
+      "hdrSupport": "Standard dynamic range, Eye Protection warm tone filter",
+      "dimensions": "163.6 x 75.6 x 8.5 mm, 184g weight",
+      "buildMaterials": "Glass front, textured composite rear panel with timber-inspired micro-groove texture, flat edges",
+      "simSlot": "Triple Slot: Dual Nano-SIM + dedicated MicroSD expansion slot",
+      "waterResistance": "Everyday splash resistance",
+      "stabilization": "Standard software video stabilization",
+      "videoRecording": "1080p @ 30fps, 720p @ 30fps",
+      "opticsFeatures": "13MP AI Cam, Ring-LED Flash, Portrait Mode, Beauty Mode, HDR, Panorama",
+      "frontVideoRecording": "1080p @ 30fps with front LED flash lighting",
+      "wirelessCharging": "Not supported (10W wired Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (dual-band 2.4/5GHz), Bluetooth 5.0, GPS, USB OTG",
+      "specialHardware": "Magic Ring interactive notifications, Ring Flash design, Side-mounted Fingerprint scanner, Type-C port",
+      "biometricsAudio": "Side-Mounted Fingerprint Sensor, Face Unlock, 200% Super Volume Speaker with DTS Audio Enhancement, 3.5mm jack"
+    },
+    "releaseDate": "November 2023",
+    "tags": [
+      "budget",
+      "infinix",
+      "entry-level",
+      "90hz-display",
+      "5000mah-battery",
+      "trending",
+      "under-25k"
+    ],
+    "metaTitle": "Infinix Smart 8 Price in Pakistan & Specs | Pak Mobile Arena",
+    "metaDescription": "Infinix Smart 8 price in Pakistan is Rs. 21,999. Featuring 90Hz Magic Ring punch-hole display, 5000mAh battery, Type-C charging, side fingerprint sensor, and verified PTA approval."
+  },
+  {
+    "id": "oppo-a38",
+    "name": "OPPO A38",
+    "brand": "OPPO",
+    "model": "A38",
+    "pricePKR": 34999,
+    "price": 34999,
+    "officialPricePKR": 36999,
+    "marketPriceRangePKR": {
+      "min": 34499,
+      "max": 36999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 4200,
+      "cnicTaxPKR": 5800,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 4200,
+    "ptaCnicTax": 5800,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "oppo-a38-4-128",
+        "name": "4GB / 128GB",
+        "ram": "4GB LPDDR4X (+4GB RAM Expansion = 8GB)",
+        "storage": "128GB eMMC 5.1 Storage",
+        "pricePKR": 34999,
+        "officialPricePKR": 36999,
+        "marketPriceRangePKR": {
+          "min": 34499,
+          "max": 36999
+        }
+      }
+    ],
+    "colors": [
+      "Glowing Black",
+      "Glowing Gold"
+    ],
+    "colorHexes": {
+      "Glowing Black": "#1E1E20",
+      "Glowing Gold": "#DFC89A"
+    },
+    "colorImages": {
+      "Glowing Black": "/images/phones/oppo-a38-glowing-black.webp",
+      "Glowing Gold": "/images/phones/oppo-a38-glowing-gold.webp"
+    },
+    "image": "/images/phones/oppo-a38-glowing-black.webp",
+    "images": [
+      "/images/phones/oppo-a38-glowing-black.webp",
+      "/images/phones/oppo-a38-glowing-gold.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Rawalpindi",
+      "Islamabad",
+      "Multan",
+      "Faisalabad",
+      "Gujranwala"
+    ],
+    "specs": {
+      "display": "6.56\" Sunlight 90Hz Display, 720 nits Peak Brightness, 100% DCI-P3 & 96% NTSC Color Gamut",
+      "refreshRate": "90Hz Sunlight-Readable Display",
+      "processor": "MediaTek Helio G85 (12nm) Octa-Core (2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55) with ARM Mali-G52 MC2 GPU",
+      "ram": "4GB LPDDR4X RAM (+4GB OPPO RAM Expansion = 8GB)",
+      "storage": "128GB eMMC 5.1 Internal Storage, dedicated microSD slot expandable up to 1TB",
+      "mainCamera": "50MP AI Dual Camera: 50MP Primary (f/1.8, 75.5° FOV, 5P lens, AF) + 2MP Bokeh Lens (f/2.4) with LED Flash",
+      "selfieCamera": "5MP Front Camera (f/2.2 aperture, 76.8° FOV, 3P lens)",
+      "battery": "5000 mAh (typical) Long-Life Battery with Smart Charging Protection",
+      "charging": "33W SUPERVOOC Fast Charge via USB Type-C (charges over 50% in approximately 30 minutes)",
+      "os": "ColorOS 13.1 based on Android 13 with 36-Month Fluency Protection",
+      "network": "4G LTE Dual SIM, 3.5mm Earphone Jack, USB Type-C 2.0 with OTG",
+      "resolution": "HD+ (1612 x 720 pixels), 20.1:9 ratio (~269 ppi density)",
+      "peakBrightness": "720 nits peak brightness under direct sunlight",
+      "hdrSupport": "96% NTSC gamut coverage, All-Day AI Eye Comfort certified",
+      "dimensions": "163.74 x 75.03 x 8.16 mm, 190g weight",
+      "buildMaterials": "Glass front, OPPO Glow shimmering matte-textured back panel, IP54 dust and splash resistant frame",
+      "simSlot": "Triple Slot: Dual Nano-SIM + dedicated MicroSD expansion slot",
+      "waterResistance": "IP54 dust and water splash resistance rating",
+      "stabilization": "EIS digital video stabilization for 1080p recording",
+      "videoRecording": "1080p @ 30fps, 720p @ 30fps",
+      "opticsFeatures": "50MP High-Res Mode, AI Portrait Retouching, Portrait Bokeh, Night Mode, Panorama, Time-Lapse",
+      "frontVideoRecording": "1080p @ 30fps, 720p @ 30fps",
+      "wirelessCharging": "Not supported (33W wired SUPERVOOC via Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (2.4G & 5GHz dual-band), Bluetooth 5.3, BLE, SBC, AAC, aptX HD, LDAC",
+      "specialHardware": "33W SUPERVOOC charging circuit, 300% Ultra-Volume Mode, IP54 water resistance, OPPO Glow design",
+      "biometricsAudio": "Side-Mounted Fingerprint Sensor, Facial Recognition, 300% Ultra-Volume Loudspeaker, 3.5mm headphone jack"
+    },
+    "releaseDate": "September 2023",
+    "tags": [
+      "budget",
+      "oppo",
+      "33w-supervooc",
+      "50mp-camera",
+      "ip54",
+      "trending",
+      "under-40k"
+    ],
+    "metaTitle": "OPPO A38 Price in Pakistan & Full Specifications | Pak Mobile Arena",
+    "metaDescription": "OPPO A38 price in Pakistan is Rs. 34,999. Highlights 33W SUPERVOOC fast charge, 50MP AI camera, 90Hz Sunlight display, IP54 rating, and official PTA tax status."
+  },
+  {
+    "id": "realme-c51",
+    "name": "realme C51",
+    "brand": "realme",
+    "model": "C51",
+    "pricePKR": 25499,
+    "price": 25499,
+    "officialPricePKR": 27999,
+    "marketPriceRangePKR": {
+      "min": 25499,
+      "max": 27999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 3400,
+      "cnicTaxPKR": 4700,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 3400,
+    "ptaCnicTax": 4700,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "realme-c51-4-64",
+        "name": "4GB / 64GB",
+        "ram": "4GB LPDDR4X (+4GB Dynamic RAM = 8GB)",
+        "storage": "64GB Built-in Storage",
+        "pricePKR": 25499,
+        "officialPricePKR": 27999,
+        "marketPriceRangePKR": {
+          "min": 25499,
+          "max": 27999
+        }
+      },
+      {
+        "id": "realme-c51-4-128",
+        "name": "4GB / 128GB",
+        "ram": "4GB LPDDR4X (+4GB Dynamic RAM = 8GB)",
+        "storage": "128GB Built-in Storage",
+        "pricePKR": 27499,
+        "officialPricePKR": 29999,
+        "marketPriceRangePKR": {
+          "min": 27499,
+          "max": 29999
+        }
+      }
+    ],
+    "colors": [
+      "Mint Green",
+      "Carbon Black"
+    ],
+    "colorHexes": {
+      "Mint Green": "#A2C5AC",
+      "Carbon Black": "#252629"
+    },
+    "colorImages": {
+      "Mint Green": "/images/phones/realme-c51-mint-green.webp",
+      "Carbon Black": "/images/phones/realme-c51-carbon-black.webp"
+    },
+    "image": "/images/phones/realme-c51-mint-green.webp",
+    "images": [
+      "/images/phones/realme-c51-mint-green.webp",
+      "/images/phones/realme-c51-carbon-black.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Rawalpindi",
+      "Islamabad",
+      "Faisalabad",
+      "Multan",
+      "Peshawar"
+    ],
+    "specs": {
+      "display": "6.74\" 90Hz Display, 16.7 Million Colors, Mini Capsule Notification Bar, 560 nits Peak",
+      "refreshRate": "90Hz Smooth Display with Mini Capsule",
+      "processor": "Unisoc Tiger T612 (12nm) Octa-Core (2x1.8 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55) with ARM Mali-G57 GPU",
+      "ram": "4GB LPDDR4X RAM (+4GB Dynamic RAM Expansion = 8GB)",
+      "storage": "64GB / 128GB Built-in Storage, dedicated microSD card slot expandable up to 2TB",
+      "mainCamera": "50MP AI Primary Camera: 50MP Wide (f/1.8, 77° FOV, 5P lens, AF) + 0.08MP auxiliary lens with LED Flash",
+      "selfieCamera": "5MP Front Selfie Camera (f/2.22 aperture, 76.8° FOV, 3P lens)",
+      "battery": "5000 mAh (typical) Massive Battery with Smart Battery Protection",
+      "charging": "33W SUPERVOOC Charge via USB Type-C (0 to 50% charge in just 28 minutes)",
+      "os": "realme UI T Edition based on Android 13",
+      "network": "4G LTE Dual SIM, 3.5mm Headphone Jack, USB Type-C 2.0 with OTG",
+      "resolution": "HD+ (1600 x 720 pixels), 20:9 ratio (~260 ppi density)",
+      "peakBrightness": "560 nits peak brightness, 83% NTSC color gamut",
+      "hdrSupport": "16.7M colors, Sunlight Display technology",
+      "dimensions": "167.2 x 76.7 x 7.99 mm, 186g weight (ultra-slim profile)",
+      "buildMaterials": "Glass front, stylish dual-texture sparkling finish with matte lower section and glossy camera island",
+      "simSlot": "Triple Slot: Dual Nano-SIM + dedicated MicroSD expansion slot up to 2TB",
+      "waterResistance": "Standard everyday splash protection",
+      "stabilization": "EIS digital stabilization for 1080p recording",
+      "videoRecording": "1080p @ 30fps, 720p @ 30fps, 480p @ 30fps",
+      "opticsFeatures": "50MP Mode, Night Mode, Panoramic View, Expert, Timelapse, Portrait Mode, HDR, AI Scene Recognition",
+      "frontVideoRecording": "720p @ 30fps, 480p @ 30fps",
+      "wirelessCharging": "Not supported (33W wired SUPERVOOC via Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (2.4GHz & 5GHz dual-band), Bluetooth 5.0, GPS/AGPS/GLONASS/Galileo",
+      "specialHardware": "33W SUPERVOOC fast charge, Mini Capsule status bar, 7.99mm ultra-slim body, 150% UltraBoom Speaker",
+      "biometricsAudio": "Fast Side-Mounted Fingerprint Sensor, Face Unlock, 150% UltraBoom Loudspeaker, 3.5mm audio jack"
+    },
+    "releaseDate": "July 2023",
+    "tags": [
+      "budget",
+      "realme",
+      "33w-supervooc",
+      "50mp-camera",
+      "mini-capsule",
+      "trending",
+      "under-30k"
+    ],
+    "metaTitle": "realme C51 Price in Pakistan & Detailed Specs | Pak Mobile Arena",
+    "metaDescription": "realme C51 price in Pakistan starts at Rs. 25,499. Includes 33W SUPERVOOC charging, 50MP AI camera, 90Hz Mini Capsule screen, 7.99mm slim design and PTA approval."
+  },
+  {
+    "id": "realme-c53",
+    "name": "realme C53",
+    "brand": "realme",
+    "model": "C53",
+    "pricePKR": 31499,
+    "price": 31499,
+    "officialPricePKR": 33999,
+    "marketPriceRangePKR": {
+      "min": 31499,
+      "max": 33999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 3800,
+      "cnicTaxPKR": 5200,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 3800,
+    "ptaCnicTax": 5200,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "realme-c53-6-128",
+        "name": "6GB / 128GB",
+        "ram": "6GB LPDDR4X (+6GB Dynamic RAM = 12GB)",
+        "storage": "128GB Built-in Storage",
+        "pricePKR": 31499,
+        "officialPricePKR": 33999,
+        "marketPriceRangePKR": {
+          "min": 31499,
+          "max": 33999
+        }
+      }
+    ],
+    "colors": [
+      "Champion Gold",
+      "Mighty Black"
+    ],
+    "colorHexes": {
+      "Champion Gold": "#E3CF97",
+      "Mighty Black": "#1C1D21"
+    },
+    "colorImages": {
+      "Champion Gold": "/images/phones/realme-c53-champion-gold.webp",
+      "Mighty Black": "/images/phones/realme-c53-mighty-black.webp"
+    },
+    "image": "/images/phones/realme-c53-champion-gold.webp",
+    "images": [
+      "/images/phones/realme-c53-champion-gold.webp",
+      "/images/phones/realme-c53-mighty-black.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Rawalpindi",
+      "Islamabad",
+      "Faisalabad",
+      "Peshawar",
+      "Sargodha"
+    ],
+    "specs": {
+      "display": "6.74\" 90Hz Display, 16.7 Million Colors, Mini Capsule Notification Bar, 560 nits Peak",
+      "refreshRate": "90Hz Smooth Display with Mini Capsule",
+      "processor": "Unisoc Tiger T612 (12nm) Octa-Core (2x1.8 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55) with ARM Mali-G57 GPU",
+      "ram": "6GB LPDDR4X RAM (+6GB Dynamic RAM Expansion = 12GB)",
+      "storage": "128GB Built-in Storage, dedicated microSD card slot expandable up to 2TB",
+      "mainCamera": "50MP AI Primary Camera: 50MP Wide (f/1.8, 77° FOV, 5P lens, AF) + 0.08MP auxiliary lens with LED Flash",
+      "selfieCamera": "8MP Front Selfie Camera (f/2.0 aperture, 78° FOV, 4P lens) with HDR support",
+      "battery": "5000 mAh (typical) Massive Battery with Smart Battery Protection",
+      "charging": "33W SUPERVOOC Charge via USB Type-C (charges 50% in approximately 31 minutes)",
+      "os": "realme UI T Edition based on Android 13",
+      "network": "4G LTE Dual SIM, 3.5mm Headphone Jack, USB Type-C 2.0 with OTG",
+      "resolution": "HD+ (1600 x 720 pixels), 20:9 ratio (~260 ppi density)",
+      "peakBrightness": "560 nits peak brightness, 83% NTSC color gamut",
+      "hdrSupport": "16.7M colors, Eye Comfort certification",
+      "dimensions": "167.3 x 76.7 x 7.49 mm, 182g weight (Champion 7.49mm ultra-slim profile)",
+      "buildMaterials": "Glass front, Shiny Champion golden texture with shimmering golden silk gradient coating, flat edges",
+      "simSlot": "Triple Slot: Dual Nano-SIM + dedicated MicroSD expansion slot up to 2TB",
+      "waterResistance": "Standard everyday splash protection",
+      "stabilization": "EIS digital stabilization for 1080p recording",
+      "videoRecording": "1080p @ 30fps, 720p @ 30fps, 480p @ 30fps",
+      "opticsFeatures": "50MP Mode, Night Mode, Panoramic View, Expert, Timelapse, Portrait Mode, HDR, AI Scene Recognition",
+      "frontVideoRecording": "720p @ 30fps with AI portrait retouching",
+      "wirelessCharging": "Not supported (33W wired SUPERVOOC via Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (2.4GHz & 5GHz dual-band), Bluetooth 5.0, GPS/AGPS/GLONASS/Galileo",
+      "specialHardware": "Champion 7.49mm ultra-slim body, 33W SUPERVOOC fast charge, Mini Capsule interactive bar, 150% UltraBoom Speaker",
+      "biometricsAudio": "Side-Mounted Fast Fingerprint Sensor, Face Unlock, 150% UltraBoom Loudspeaker, 3.5mm headphone jack"
+    },
+    "releaseDate": "May 2023",
+    "tags": [
+      "budget",
+      "realme",
+      "33w-supervooc",
+      "50mp-camera",
+      "7.49mm-slim",
+      "trending",
+      "under-35k"
+    ],
+    "metaTitle": "realme C53 Price in Pakistan & Official Specs | Pak Mobile Arena",
+    "metaDescription": "realme C53 price in Pakistan is Rs. 31,499. Boasting 7.49mm ultra-slim body, 33W SUPERVOOC, 50MP AI camera, 90Hz Mini Capsule screen, and PTA approval."
+  },
+  {
+    "id": "tecno-spark-20",
+    "name": "Tecno Spark 20",
+    "brand": "Tecno",
+    "model": "Spark 20",
+    "pricePKR": 32999,
+    "price": 32999,
+    "officialPricePKR": 34999,
+    "marketPriceRangePKR": {
+      "min": 32499,
+      "max": 34999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 3900,
+      "cnicTaxPKR": 5300,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 3900,
+    "ptaCnicTax": 5300,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "tecno-spark-20-8-256",
+        "name": "8GB / 256GB",
+        "ram": "8GB LPDDR4X (+8GB Extended RAM = 16GB)",
+        "storage": "256GB Built-in Storage",
+        "pricePKR": 32999,
+        "officialPricePKR": 34999,
+        "marketPriceRangePKR": {
+          "min": 32499,
+          "max": 34999
+        }
+      }
+    ],
+    "colors": [
+      "Gravity Black",
+      "Cyber White",
+      "Neon Gold",
+      "Magic Skin Blue"
+    ],
+    "colorHexes": {
+      "Gravity Black": "#1F1F21",
+      "Cyber White": "#E6E8ED",
+      "Neon Gold": "#E4C479",
+      "Magic Skin Blue": "#49789F"
+    },
+    "colorImages": {
+      "Gravity Black": "/images/phones/tecno-spark-20-gravity-black.webp",
+      "Cyber White": "/images/phones/tecno-spark-20-cyber-white.webp",
+      "Neon Gold": "/images/phones/tecno-spark-20-neon-gold.webp",
+      "Magic Skin Blue": "/images/phones/tecno-spark-20-magic-skin-blue.webp"
+    },
+    "image": "/images/phones/tecno-spark-20-gravity-black.webp",
+    "images": [
+      "/images/phones/tecno-spark-20-gravity-black.webp",
+      "/images/phones/tecno-spark-20-cyber-white.webp",
+      "/images/phones/tecno-spark-20-neon-gold.webp",
+      "/images/phones/tecno-spark-20-magic-skin-blue.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Rawalpindi",
+      "Islamabad",
+      "Faisalabad",
+      "Multan",
+      "Hyderabad"
+    ],
+    "specs": {
+      "display": "6.56\" IPS LCD Punch-Hole Display, 90Hz Refresh Rate, Dynamic Port Notification Pill",
+      "refreshRate": "90Hz Smooth Punch-Hole Screen with Dynamic Port",
+      "processor": "MediaTek Helio G85 (12nm) Octa-Core (2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55) with ARM Mali-G52 MC2 GPU",
+      "ram": "8GB LPDDR4X RAM (+8GB Memory Fusion = 16GB Total RAM)",
+      "storage": "256GB Built-in Storage, dedicated microSD card slot expandable up to 1TB",
+      "mainCamera": "50MP Ultra-Clear Dual Camera: 50MP Primary (f/1.6, PDAF) + 0.08MP auxiliary lens with Dual-LED Flash",
+      "selfieCamera": "32MP Glowing Selfie Camera (f/2.2 aperture) with Dual Micro-slit Flash (3 color temperatures)",
+      "battery": "5000 mAh (typical) High-Capacity Battery",
+      "charging": "18W Fast Charging via USB Type-C 2.0",
+      "os": "Android 13 with HiOS 13.5 user interface",
+      "network": "4G LTE Dual SIM, 3.5mm Headphone Jack, Dual Stereo Speakers with DTS Sound",
+      "resolution": "HD+ (1612 x 720 pixels), 20:9 ratio (~269 ppi density)",
+      "peakBrightness": "500 nits peak brightness, readable under sunlight",
+      "hdrSupport": "Standard dynamic range, Eye Protection filter mode",
+      "dimensions": "163.69 x 75.6 x 8.45 mm, 192g weight",
+      "buildMaterials": "Glass front, composite back panel with Magic Skin eco-leather option, flat square frame, IP53 rating",
+      "simSlot": "Triple Slot: Dual Nano-SIM + dedicated MicroSD expansion slot",
+      "waterResistance": "IP53 dust and splash protection certified",
+      "stabilization": "EIS digital video stabilization",
+      "videoRecording": "1440p (2K) @ 30fps, 1080p @ 30fps, 720p @ 30fps",
+      "opticsFeatures": "50MP Ultra-Clear Mode, Super Night Mode, Portrait Mode with Bokeh, HDR, Pro Mode, Dual Flash",
+      "frontVideoRecording": "1080p @ 30fps with front Dual Flash color temperature adjustment",
+      "wirelessCharging": "Not supported (18W wired Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (2.4G & 5GHz dual-band), Bluetooth 5.2, GPS, FM Radio, USB OTG",
+      "specialHardware": "Stereo Dual Speakers with DTS Sound (400% volume boost), IP53 rating, Dynamic Port, 32MP Glowing Selfie with 3-temp flash",
+      "biometricsAudio": "Side-Mounted Fingerprint Sensor, Fast Face Unlock, Dual Stereo Speakers with DTS Audio, 3.5mm headphone jack"
+    },
+    "releaseDate": "December 2023",
+    "tags": [
+      "budget",
+      "tecno",
+      "32mp-selfie",
+      "dual-stereo-speakers",
+      "256gb-storage",
+      "ip53",
+      "trending",
+      "under-35k"
+    ],
+    "metaTitle": "Tecno Spark 20 Price in Pakistan & Detailed Specs | Pak Mobile Arena",
+    "metaDescription": "Tecno Spark 20 price in Pakistan is Rs. 32,999 for 256GB. Offers 32MP Glowing Selfie, 50MP camera, dual stereo speakers, 90Hz Dynamic Port display, and verified PTA tax info."
+  },
+  {
+    "id": "vivo-y27s",
+    "name": "vivo Y27s",
+    "brand": "Vivo",
+    "model": "Y27s",
+    "pricePKR": 43999,
+    "price": 43999,
+    "officialPricePKR": 46999,
+    "marketPriceRangePKR": {
+      "min": 43499,
+      "max": 46999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 4800,
+      "cnicTaxPKR": 6600,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 4800,
+    "ptaCnicTax": 6600,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "vivo-y27s-8-128",
+        "name": "8GB / 128GB",
+        "ram": "8GB LPDDR4X (+8GB Extended RAM 3.0 = 16GB)",
+        "storage": "128GB UFS 2.2 Storage",
+        "pricePKR": 43999,
+        "officialPricePKR": 46999,
+        "marketPriceRangePKR": {
+          "min": 43499,
+          "max": 46999
+        }
+      },
+      {
+        "id": "vivo-y27s-8-256",
+        "name": "8GB / 256GB",
+        "ram": "8GB LPDDR4X (+8GB Extended RAM 3.0 = 16GB)",
+        "storage": "256GB UFS 2.2 Storage",
+        "pricePKR": 48999,
+        "officialPricePKR": 51999,
+        "marketPriceRangePKR": {
+          "min": 48499,
+          "max": 51999
+        }
+      }
+    ],
+    "colors": [
+      "Burgundy Black",
+      "Garden Green"
+    ],
+    "colorHexes": {
+      "Burgundy Black": "#261A1D",
+      "Garden Green": "#476C55"
+    },
+    "colorImages": {
+      "Burgundy Black": "/images/phones/vivo-y27s-burgundy-black.webp",
+      "Garden Green": "/images/phones/vivo-y27s-garden-green.webp"
+    },
+    "image": "/images/phones/vivo-y27s-burgundy-black.webp",
+    "images": [
+      "/images/phones/vivo-y27s-burgundy-black.webp",
+      "/images/phones/vivo-y27s-garden-green.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Rawalpindi",
+      "Islamabad",
+      "Faisalabad",
+      "Multan",
+      "Peshawar"
+    ],
+    "specs": {
+      "display": "6.64\" FHD+ Sunlight Display, 90Hz Refresh Rate, 650 nits Peak, 100% P3 Color Gamut",
+      "refreshRate": "90Hz FHD+ Sunlight Display",
+      "processor": "Qualcomm Snapdragon 680 4G (6nm) Octa-Core (4x2.4 GHz Kryo 265 Gold & 4x1.9 GHz Kryo 265 Silver) with Adreno 610 GPU",
+      "ram": "8GB LPDDR4X RAM (+8GB Extended RAM 3.0 = 16GB)",
+      "storage": "128GB / 256GB UFS 2.2 Storage, dedicated microSD slot expandable up to 1TB",
+      "mainCamera": "50MP Dual Camera: 50MP Wide (f/1.8, AF) + 2MP Bokeh Camera (f/2.4) with LED Flash",
+      "selfieCamera": "8MP Front Camera (f/2.0 aperture) with Aura Screen Light and Portrait Beauty",
+      "battery": "5000 mAh (typical) High-Capacity Battery with 24-Dimension Security Protection",
+      "charging": "44W FlashCharge via USB Type-C (charges 0 to 30% in approximately 15 minutes)",
+      "os": "Funtouch OS 13 based on Android 13",
+      "network": "4G LTE Dual SIM, 3.5mm Audio Jack, USB Type-C 2.0 with OTG",
+      "resolution": "FHD+ (2388 x 1080 pixels), 19.9:9 ratio (~394 ppi density)",
+      "peakBrightness": "650 nits peak brightness Sunlight Display",
+      "hdrSupport": "100% DCI-P3 color gamut, Eye Protection mode",
+      "dimensions": "164.06 x 76.17 x 8.17 mm, 192g weight",
+      "buildMaterials": "Glass front, composite plastic matte finish with anti-scratch and anti-fingerprint surface, IP54 rating",
+      "simSlot": "Triple Slot: Dual Nano-SIM + dedicated MicroSD expansion slot up to 1TB",
+      "waterResistance": "IP54 dust and splash water resistance",
+      "stabilization": "EIS electronic image stabilization for smooth 1080p recording",
+      "videoRecording": "1080p @ 30fps, 720p @ 30fps",
+      "opticsFeatures": "50MP Ultra HD, Super Night Mode, Bokeh Flare Portrait, Double Exposure, Slow Motion, Time-Lapse",
+      "frontVideoRecording": "1080p @ 30fps with Aura Screen Light",
+      "wirelessCharging": "Not supported (44W wired FlashCharge via Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (2.4G & 5GHz dual-band), Bluetooth 5.0, GPS/BEIDOU/GLONASS/GALILEO/QZSS, OTG",
+      "specialHardware": "44W FlashCharge, Snapdragon 680 6nm processor, IP54 rating, Audio Booster up to 200%",
+      "biometricsAudio": "Side-Mounted Fingerprint Sensor, Face Access, Audio Booster speaker, 3.5mm headphone jack"
+    },
+    "releaseDate": "November 2023",
+    "tags": [
+      "mid-range",
+      "vivo",
+      "44w-flashcharge",
+      "snapdragon-680",
+      "fhd-display",
+      "ip54",
+      "trending",
+      "under-50k"
+    ],
+    "metaTitle": "vivo Y27s Price in Pakistan & Full Specs | Pak Mobile Arena",
+    "metaDescription": "vivo Y27s price in Pakistan is Rs. 43,999. Features 44W FlashCharge, Snapdragon 680, 50MP camera, 90Hz FHD+ display, IP54 rating, and verified PTA tax status."
+  },
+  {
+    "id": "vivo-y36",
+    "name": "vivo Y36",
+    "brand": "Vivo",
+    "model": "Y36",
+    "pricePKR": 48999,
+    "price": 48999,
+    "officialPricePKR": 52999,
+    "marketPriceRangePKR": {
+      "min": 48499,
+      "max": 52999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 5200,
+      "cnicTaxPKR": 7200,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 5200,
+    "ptaCnicTax": 7200,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "vivo-y36-8-128",
+        "name": "8GB / 128GB",
+        "ram": "8GB LPDDR4X (+8GB Extended RAM 3.0 = 16GB)",
+        "storage": "128GB UFS 2.2 Storage",
+        "pricePKR": 48999,
+        "officialPricePKR": 52999,
+        "marketPriceRangePKR": {
+          "min": 48499,
+          "max": 52999
+        }
+      },
+      {
+        "id": "vivo-y36-8-256",
+        "name": "8GB / 256GB",
+        "ram": "8GB LPDDR4X (+8GB Extended RAM 3.0 = 16GB)",
+        "storage": "256GB UFS 2.2 Storage",
+        "pricePKR": 54999,
+        "officialPricePKR": 58999,
+        "marketPriceRangePKR": {
+          "min": 54499,
+          "max": 58999
+        }
+      }
+    ],
+    "colors": [
+      "Glitter Aqua",
+      "Meteor Black",
+      "Vibrant Gold"
+    ],
+    "colorHexes": {
+      "Glitter Aqua": "#49A7A6",
+      "Meteor Black": "#1E1E22",
+      "Vibrant Gold": "#D8B868"
+    },
+    "colorImages": {
+      "Glitter Aqua": "/images/phones/vivo-y36-glitter-aqua.webp",
+      "Meteor Black": "/images/phones/vivo-y36-meteor-black.webp",
+      "Vibrant Gold": "/images/phones/vivo-y36-vibrant-gold.webp"
+    },
+    "image": "/images/phones/vivo-y36-glitter-aqua.webp",
+    "images": [
+      "/images/phones/vivo-y36-glitter-aqua.webp",
+      "/images/phones/vivo-y36-meteor-black.webp",
+      "/images/phones/vivo-y36-vibrant-gold.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Rawalpindi",
+      "Islamabad",
+      "Faisalabad",
+      "Multan",
+      "Sialkot"
+    ],
+    "specs": {
+      "display": "6.64\" FHD+ Dotch Display, 90Hz Refresh Rate, 650 nits Sunlight Readable, 2388 x 1080 Resolution",
+      "refreshRate": "90Hz Smooth FHD+ Sunlight Display",
+      "processor": "Qualcomm Snapdragon 680 4G (6nm) Octa-Core (4x2.4 GHz Kryo 265 Gold & 4x1.9 GHz Kryo 265 Silver) with Adreno 610 GPU",
+      "ram": "8GB LPDDR4X RAM (+8GB Extended RAM 3.0 = 16GB)",
+      "storage": "128GB / 256GB UFS 2.2 Storage, dedicated microSD slot expandable up to 1TB",
+      "mainCamera": "50MP AI Dual Camera: 50MP Wide (f/1.8, AF) + 2MP Bokeh Camera (f/2.4) with LED Flash",
+      "selfieCamera": "16MP Front Portrait Camera (f/2.45 aperture) with Aura Screen Light and AI Portrait algorithm",
+      "battery": "5000 mAh (typical) High-Capacity Battery with Smart Charging Engine",
+      "charging": "44W FlashCharge via USB Type-C (charges 30% in approximately 15 minutes)",
+      "os": "Funtouch OS 13 based on Android 13",
+      "network": "4G LTE Dual SIM, 3.5mm Headphone Jack, USB Type-C 2.0 with OTG",
+      "resolution": "FHD+ (2388 x 1080 pixels), 19.9:9 ratio (~395 ppi density)",
+      "peakBrightness": "650 nits peak brightness Sunlight Display",
+      "hdrSupport": "P3 color gamut, Eye Protection certified",
+      "dimensions": "164.06 x 76.17 x 8.07 mm, 202g weight",
+      "buildMaterials": "Glass front, 2.5D Curved Fluorite AG Glass back panel with dream ripple texture, IP54 rating",
+      "simSlot": "Triple Slot: Dual Nano-SIM + dedicated MicroSD expansion slot up to 1TB",
+      "waterResistance": "IP54 dust and splash water resistance certified",
+      "stabilization": "EIS electronic image stabilization for stable video",
+      "videoRecording": "1080p @ 30fps, 720p @ 30fps",
+      "opticsFeatures": "50MP Ultra HD, Super Night Mode with multi-frame noise reduction, Bokeh Flare Portrait, Double Exposure, Live Photo",
+      "frontVideoRecording": "1080p @ 30fps with Aura Screen Light illumination",
+      "wirelessCharging": "Not supported (44W wired FlashCharge via Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (2.4G & 5GHz dual-band), Bluetooth 5.1, GPS/BEIDOU/GLONASS/GALILEO/QZSS, OTG",
+      "specialHardware": "2.5D Fluorite AG Glass back panel, 44W FlashCharge, 16MP Selfie with Aura Light, 200% Audio Booster, IP54 rating",
+      "biometricsAudio": "Side-Mounted Capacitive Fingerprint Sensor, Face Access, 200% Audio Booster Loudspeaker, 3.5mm headphone jack"
+    },
+    "releaseDate": "May 2023",
+    "tags": [
+      "mid-range",
+      "vivo",
+      "44w-flashcharge",
+      "fluorite-ag-glass",
+      "16mp-selfie",
+      "fhd-display",
+      "ip54",
+      "trending",
+      "under-55k"
+    ],
+    "metaTitle": "vivo Y36 Price in Pakistan & Authentic Specs | Pak Mobile Arena",
+    "metaDescription": "vivo Y36 price in Pakistan is Rs. 48,999. Offers Fluorite AG Glass design, 44W FlashCharge, 50MP camera, 16MP selfie, 90Hz FHD+ screen, IP54 and verified PTA status."
+  },
+  {
+    "id": "xiaomi-redmi-12",
+    "name": "Xiaomi Redmi 12",
+    "brand": "Xiaomi",
+    "model": "Redmi 12",
+    "pricePKR": 34999,
+    "price": 34999,
+    "officialPricePKR": 37999,
+    "marketPriceRangePKR": {
+      "min": 34499,
+      "max": 37999
+    },
+    "rating": 0,
+    "reviewCount": 0,
+    "ptaTax": {
+      "passportTaxPKR": 4200,
+      "cnicTaxPKR": 5800,
+      "status": "Official PTA Approved",
+      "isLocallyAssembled": true
+    },
+    "ptaPassportTax": 4200,
+    "ptaCnicTax": 5800,
+    "isLocallyAssembled": true,
+    "variants": [
+      {
+        "id": "xiaomi-redmi-12-8-128",
+        "name": "8GB / 128GB",
+        "ram": "8GB LPDDR4X (+8GB Memory Extension = 16GB)",
+        "storage": "128GB eMMC 5.1 Storage",
+        "pricePKR": 34999,
+        "officialPricePKR": 37999,
+        "marketPriceRangePKR": {
+          "min": 34499,
+          "max": 37999
+        }
+      },
+      {
+        "id": "xiaomi-redmi-12-8-256",
+        "name": "8GB / 256GB",
+        "ram": "8GB LPDDR4X (+8GB Memory Extension = 16GB)",
+        "storage": "256GB eMMC 5.1 Storage",
+        "pricePKR": 38999,
+        "officialPricePKR": 41999,
+        "marketPriceRangePKR": {
+          "min": 38499,
+          "max": 41999
+        }
+      }
+    ],
+    "colors": [
+      "Midnight Black",
+      "Sky Blue",
+      "Polar Silver"
+    ],
+    "colorHexes": {
+      "Midnight Black": "#1E1F22",
+      "Sky Blue": "#8CB2D4",
+      "Polar Silver": "#C8CED7"
+    },
+    "colorImages": {
+      "Midnight Black": "/images/phones/xiaomi-redmi-12-midnight-black.webp",
+      "Sky Blue": "/images/phones/xiaomi-redmi-12-sky-blue.webp",
+      "Polar Silver": "/images/phones/xiaomi-redmi-12-polar-silver.webp"
+    },
+    "image": "/images/phones/xiaomi-redmi-12-midnight-black.webp",
+    "images": [
+      "/images/phones/xiaomi-redmi-12-midnight-black.webp",
+      "/images/phones/xiaomi-redmi-12-sky-blue.webp",
+      "/images/phones/xiaomi-redmi-12-polar-silver.webp"
+    ],
+    "popularInCities": [
+      "Karachi",
+      "Lahore",
+      "Rawalpindi",
+      "Islamabad",
+      "Faisalabad",
+      "Multan",
+      "Peshawar"
+    ],
+    "specs": {
+      "display": "6.79\" FHD+ DotDisplay, 90Hz AdaptiveSync Refresh Rate, 2460 x 1080 Resolution, SGS Low Blue Light Certified",
+      "refreshRate": "90Hz AdaptiveSync FHD+ Display (36/48/60/90Hz)",
+      "processor": "MediaTek Helio G88 (12nm) Octa-Core (2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55) with ARM Mali-G52 MC2 GPU",
+      "ram": "8GB LPDDR4X RAM (+8GB Memory Extension = 16GB)",
+      "storage": "128GB / 256GB eMMC 5.1 Storage, dedicated microSD card slot expandable up to 1TB",
+      "mainCamera": "50MP Triple AI Camera: 50MP Main (f/1.8, AF) + 8MP Ultra-Wide (f/2.2, 120° FOV) + 2MP Macro (f/2.4) with LED Flash",
+      "selfieCamera": "8MP Front Selfie Camera (f/2.1 aperture)",
+      "battery": "5000 mAh (typical) High-Capacity Battery",
+      "charging": "18W Fast Charging via USB Type-C port",
+      "os": "MIUI 14 based on Android 13 (upgradable to Xiaomi HyperOS)",
+      "network": "4G LTE Dual SIM (Nano-SIM, dual stand-by), 3.5mm Headphone Jack, IR Blaster",
+      "resolution": "FHD+ (2460 x 1080 pixels), 20.5:9 ratio (~396 ppi density)",
+      "peakBrightness": "550 nits peak brightness (HBM), 1500:1 contrast ratio",
+      "hdrSupport": "70% NTSC color gamut, Reading Mode 3.0, SGS Low Blue Light certified",
+      "dimensions": "168.6 x 76.28 x 8.17 mm, 198.5g weight",
+      "buildMaterials": "Corning Gorilla Glass front, premium glass back panel, polycarbonate flat frame, IP53 rating",
+      "simSlot": "Hybrid Dual SIM (Nano-SIM, dual stand-by or MicroSD slot up to 1TB)",
+      "waterResistance": "IP53 splash and dust resistant certified",
+      "stabilization": "EIS electronic image stabilization",
+      "videoRecording": "1080p @ 30fps, 720p @ 30fps",
+      "opticsFeatures": "50MP Ultra HD, 120° Ultra-Wide Angle, filmCamera filters, Night Mode, Portrait Mode, Macro Mode, HDR",
+      "frontVideoRecording": "1080p @ 30fps, 720p @ 30fps with filmCamera filters",
+      "wirelessCharging": "Not supported (18W wired Type-C)",
+      "wifiBluetooth": "Wi-Fi 802.11 a/b/g/n/ac (2.4GHz & 5GHz dual-band), Bluetooth 5.3, GPS/GLONASS/Galileo/BDS, IR Blaster, FM Radio",
+      "specialHardware": "Premium glass back panel, 8.17mm slim, 90Hz FHD+ DotDisplay, IR Blaster, IP53 rating, 1217 super linear speaker",
+      "biometricsAudio": "Side-Mounted Fingerprint Sensor, AI Face Unlock, 1217 Super Linear Speaker, 3.5mm headphone jack"
+    },
+    "releaseDate": "June 2023",
+    "tags": [
+      "budget",
+      "xiaomi",
+      "redmi",
+      "glass-back",
+      "ultra-wide-camera",
+      "90hz-fhd",
+      "ip53",
+      "trending",
+      "under-40k"
+    ],
+    "metaTitle": "Xiaomi Redmi 12 Price in Pakistan & Detailed Specs | Pak Mobile Arena",
+    "metaDescription": "Xiaomi Redmi 12 price in Pakistan is Rs. 34,999. Featuring premium glass back, 50MP triple camera with 120° ultra-wide, 90Hz FHD+ screen, IP53 rating and PTA tax rates."
   }
 ];
 

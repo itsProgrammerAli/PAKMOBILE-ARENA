@@ -6,8 +6,7 @@ import {
   Smartphone, 
   ArrowRight, 
   FileText, 
-  Search,
-  Sparkles
+  Search
 } from 'lucide-react';
 import { PhoneSpec } from '../types';
 import { PHONES_DATA } from '../data/phones';
@@ -106,23 +105,11 @@ export const PtaTaxPage: React.FC<PtaTaxPageProps> = ({
             </p>
           </div>
 
-          {/* Col 3 (Right): Exchange Rate Badge & AI Help */}
+          {/* Col 3 (Right): Exchange Rate Badge */}
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-2 w-full md:w-auto">
             <span className="text-[11px] font-mono font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 sm:py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800/60 shadow-2xs whitespace-nowrap">
               USD / PKR: {liveRate.toFixed(2)}
             </span>
-            <button
-              id="pta-ask-gemini-ai-btn"
-              onClick={() => {
-                if (onAskAi) {
-                  onAskAi(`Explain the current 2026 PTA mobile registration and DIRBS tax rules in Pakistan for ${selectedDevice ? selectedDevice.name : 'smartphones'}. How is customs duty calculated for Passport vs CNIC, and what is the step-by-step procedure to pay via PSID?`);
-                }
-              }}
-              className="px-3 py-1 sm:py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] shadow-xs flex items-center gap-1.5 transition-all cursor-pointer hover:scale-105 active:scale-95"
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Ask AI About PTA</span>
-            </button>
           </div>
         </div>
       </div>

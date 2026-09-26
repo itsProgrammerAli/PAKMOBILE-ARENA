@@ -1093,7 +1093,7 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 </div>
               </div>
 
-              {/* Action Buttons Bar: Compare, PTA Tax, and Gemini AI Advisor */}
+              {/* Action Buttons Bar: Compare and PTA Tax */}
               <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-200/80 dark:border-slate-700/80">
                 <button
                   id="detail-compare-btn"
@@ -1115,19 +1115,6 @@ export const PhoneDetailPage: React.FC<PhoneDetailPageProps> = ({
                 >
                   <Calculator className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                   <span>PTA Tax Details</span>
-                </button>
-
-                <button
-                  id="detail-ask-gemini-ai-btn"
-                  onClick={() => {
-                    if (onAskAi) {
-                      onAskAi(`Give me a detailed overview of the ${phone.name} in Pakistan. Is it worth buying at ${formatPKR(activePricePKR)}? How does its processor (${phone.specs.processor}) and camera perform compared to rivals? What is the official PTA tax status?`);
-                    }
-                  }}
-                  className="w-full sm:w-auto flex-1 min-w-[180px] py-2.5 px-3.5 rounded-xl font-bold text-xs bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
-                >
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>Ask Gemini AI</span>
                 </button>
               </div>
 

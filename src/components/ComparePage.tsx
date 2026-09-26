@@ -11,8 +11,7 @@ import {
   Zap, 
   Eye, 
   TrendingUp,
-  Search,
-  Sparkles
+  Search
 } from 'lucide-react';
 import { PhoneSpec } from '../types';
 import { PHONES_DATA } from '../data/phones';
@@ -498,37 +497,6 @@ export const ComparePage: React.FC<ComparePageProps> = ({
               )}
 
             </div>
-
-            {/* AI Comparison Analysis Banner */}
-            {phone1 && phone2 && (
-              <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-emerald-900/10 via-emerald-800/10 to-teal-900/10 dark:from-emerald-950/40 dark:via-emerald-900/20 dark:to-teal-950/40 border border-emerald-500/30 dark:border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xs">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/30">
-                    <Sparkles className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-xs sm:text-sm font-bold text-gray-900 dark:text-white">
-                      Ask Gemini AI for a 1v1 Verdict
-                    </h4>
-                    <p className="text-[11px] text-gray-600 dark:text-zinc-400">
-                      Get real-time analysis comparing speed, cameras, battery endurance, and value in PKR.
-                    </p>
-                  </div>
-                </div>
-                <button
-                  id="compare-ai-verdict-btn"
-                  onClick={() => {
-                    if (onAskAi) {
-                      onAskAi(`Perform an in-depth comparison between ${phone1.name} (PKR ${phone1.pricePKR.toLocaleString('en-PK')}) and ${phone2.name} (PKR ${phone2.pricePKR.toLocaleString('en-PK')}) in Pakistan. Compare their processors (${phone1.specs.processor} vs ${phone2.specs.processor}), cameras (${phone1.specs.mainCamera} vs ${phone2.specs.mainCamera}), batteries, and PTA tax statuses. Conclude with a clear recommendation on which phone Pakistani buyers should pick.`);
-                    }
-                  }}
-                  className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-all shadow-md flex items-center gap-2 shrink-0 cursor-pointer hover:scale-105 active:scale-95"
-                >
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>AI Comparison Verdict</span>
-                </button>
-              </div>
-            )}
 
             {/* ========================================================================= */}
             {/* FULL DETAILED 1V1 SIDE-BY-SIDE SPECIFICATION MATRIX                       */}
