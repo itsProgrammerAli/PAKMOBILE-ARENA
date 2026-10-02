@@ -264,7 +264,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     "releaseDate": "September 2023",
     "rating": 0,
     "reviewCount": 0,
-    "image": "https://images.priceoye.pk/apple-iphone-15-pro-max-pakistan-priceoye-1inne-500x500.webp",
+    "image": "/images/phones/apple-iphone-15-pro-max-pakistan-priceoye-1inne-500x500.webp",
     "tags": [
       "trending",
       "flagship",
@@ -306,10 +306,10 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Black Titanium"
     ],
     "colorImages": {
-      "Natural Titanium": "https://images.priceoye.pk/apple-iphone-15-pro-max-pakistan-priceoye-1inne-500x500.webp",
-      "White Titanium": "https://images.priceoye.pk/apple-iphone-15-pro-max-pakistan-priceoye-4a9o4-500x500.webp",
-      "Blue Titanium": "https://images.priceoye.pk/apple-iphone-15-pro-max-pakistan-priceoye-v3uz5-500x500.webp",
-      "Black Titanium": "https://images.priceoye.pk/apple-iphone-15-pro-max-pakistan-priceoye-w67mx-500x500.webp"
+      "Natural Titanium": "/images/phones/apple-iphone-15-pro-max-pakistan-priceoye-1inne-500x500.webp",
+      "White Titanium": "/images/phones/apple-iphone-15-pro-max-pakistan-priceoye-4a9o4-500x500.webp",
+      "Blue Titanium": "/images/phones/apple-iphone-15-pro-max-pakistan-priceoye-v3uz5-500x500.webp",
+      "Black Titanium": "/images/phones/apple-iphone-15-pro-max-pakistan-priceoye-w67mx-500x500.webp"
     },
     "colorHexes": {
       "Natural Titanium": "#9a9893",
@@ -328,10 +328,10 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Quetta"
     ],
     "images": [
-      "https://images.priceoye.pk/apple-iphone-15-pro-max-pakistan-priceoye-1inne-500x500.webp",
-      "https://images.priceoye.pk/apple-iphone-15-pro-max-pakistan-priceoye-4a9o4-500x500.webp",
-      "https://images.priceoye.pk/apple-iphone-15-pro-max-pakistan-priceoye-v3uz5-500x500.webp",
-      "https://images.priceoye.pk/apple-iphone-15-pro-max-pakistan-priceoye-w67mx-500x500.webp"
+      "/images/phones/apple-iphone-15-pro-max-pakistan-priceoye-1inne-500x500.webp",
+      "/images/phones/apple-iphone-15-pro-max-pakistan-priceoye-4a9o4-500x500.webp",
+      "/images/phones/apple-iphone-15-pro-max-pakistan-priceoye-v3uz5-500x500.webp",
+      "/images/phones/apple-iphone-15-pro-max-pakistan-priceoye-w67mx-500x500.webp"
     ],
     "price": 392000,
     "metaTitle": "Apple iPhone 15 Pro Max Price in Pakistan & Specs",
@@ -532,7 +532,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     "releaseDate": "January 2024",
     "rating": 0,
     "reviewCount": 0,
-    "image": "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-d4s6b-500x500.webp",
+    "image": "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-d4s6b-500x500.webp",
     "tags": [
       "trending",
       "flagship",
@@ -576,12 +576,12 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Titanium Green"
     ],
     "colorImages": {
-      "Titanium Gray": "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-d4s6b-500x500.webp",
-      "Titanium Black": "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-0kp8e-500x500.webp",
-      "Titanium Violet": "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-k3tm5-500x500.webp",
-      "Titanium Yellow": "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-8hwmu-500x500.webp",
-      "Titanium Blue": "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-clkkr-500x500.webp",
-      "Titanium Green": "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-tiebw-500x500.webp"
+      "Titanium Gray": "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-d4s6b-500x500.webp",
+      "Titanium Black": "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-0kp8e-500x500.webp",
+      "Titanium Violet": "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-k3tm5-500x500.webp",
+      "Titanium Yellow": "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-8hwmu-500x500.webp",
+      "Titanium Blue": "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-clkkr-500x500.webp",
+      "Titanium Green": "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-tiebw-500x500.webp"
     },
     "colorHexes": {
       "Titanium Gray": "#8a867e",
@@ -602,12 +602,12 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Quetta"
     ],
     "images": [
-      "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-d4s6b-500x500.webp",
-      "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-0kp8e-500x500.webp",
-      "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-k3tm5-500x500.webp",
-      "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-8hwmu-500x500.webp",
-      "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-clkkr-500x500.webp",
-      "https://images.priceoye.pk/samsung-galaxy-s24-ultra-pakistan-priceoye-tiebw-500x500.webp"
+      "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-d4s6b-500x500.webp",
+      "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-0kp8e-500x500.webp",
+      "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-k3tm5-500x500.webp",
+      "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-8hwmu-500x500.webp",
+      "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-clkkr-500x500.webp",
+      "/images/phones/samsung-galaxy-s24-ultra-pakistan-priceoye-tiebw-500x500.webp"
     ],
     "price": 316999,
     "metaTitle": "Samsung Galaxy S24 Ultra Price in Pakistan & Specs",
@@ -650,7 +650,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     "releaseDate": "March 2024",
     "rating": 0,
     "reviewCount": 0,
-    "image": "https://images.priceoye.pk/samsung-galaxy-a55-5g-pakistan-priceoye-otyr1-500x500.webp",
+    "image": "/images/phones/samsung-galaxy-a55-5g-pakistan-priceoye-otyr1-500x500.webp",
     "tags": [
       "trending",
       "camera",
@@ -691,10 +691,10 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Awesome Lemon"
     ],
     "colorImages": {
-      "Awesome Navy": "https://images.priceoye.pk/samsung-galaxy-a55-5g-pakistan-priceoye-otyr1-500x500.webp",
-      "Awesome Iceblue": "https://images.priceoye.pk/samsung-galaxy-a55-5g-pakistan-priceoye-y8qkp-500x500.webp",
-      "Awesome Lilac": "https://images.priceoye.pk/samsung-galaxy-a55-5g-pakistan-priceoye-5ybpv-500x500.webp",
-      "Awesome Lemon": "https://images.priceoye.pk/samsung-galaxy-a55-5g-pakistan-priceoye-22hvw-500x500.webp"
+      "Awesome Navy": "/images/phones/samsung-galaxy-a55-5g-pakistan-priceoye-otyr1-500x500.webp",
+      "Awesome Iceblue": "/images/phones/samsung-galaxy-a55-5g-pakistan-priceoye-y8qkp-500x500.webp",
+      "Awesome Lilac": "/images/phones/samsung-galaxy-a55-5g-pakistan-priceoye-5ybpv-500x500.webp",
+      "Awesome Lemon": "/images/phones/samsung-galaxy-a55-5g-pakistan-priceoye-22hvw-500x500.webp"
     },
     "colorHexes": {
       "Awesome Navy": "#2b303c",
@@ -712,10 +712,10 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Peshawar"
     ],
     "images": [
-      "https://images.priceoye.pk/samsung-galaxy-a55-5g-pakistan-priceoye-otyr1-500x500.webp",
-      "https://images.priceoye.pk/samsung-galaxy-a55-5g-pakistan-priceoye-y8qkp-500x500.webp",
-      "https://images.priceoye.pk/samsung-galaxy-a55-5g-pakistan-priceoye-5ybpv-500x500.webp",
-      "https://images.priceoye.pk/samsung-galaxy-a55-5g-pakistan-priceoye-22hvw-500x500.webp"
+      "/images/phones/samsung-galaxy-a55-5g-pakistan-priceoye-otyr1-500x500.webp",
+      "/images/phones/samsung-galaxy-a55-5g-pakistan-priceoye-y8qkp-500x500.webp",
+      "/images/phones/samsung-galaxy-a55-5g-pakistan-priceoye-5ybpv-500x500.webp",
+      "/images/phones/samsung-galaxy-a55-5g-pakistan-priceoye-22hvw-500x500.webp"
     ],
     "price": 99999,
     "metaTitle": "Samsung Galaxy A55 5G Price in Pakistan & Specs",
@@ -879,7 +879,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     "releaseDate": "March 2023",
     "rating": 0,
     "reviewCount": 0,
-    "image": "https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-41gvz-500x500.webp",
+    "image": "/images/phones/samsung-galaxy-a54-5g-pakistan-priceoye-41gvz-500x500.webp",
     "tags": [
       "camera",
       "gaming"
@@ -919,10 +919,10 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Awesome Lime"
     ],
     "colorImages": {
-      "Awesome Violet": "https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-41gvz-500x500.webp",
-      "Awesome Graphite": "https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-sem0b-500x500.webp",
-      "Awesome White": "https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-nwjoh-500x500.webp",
-      "Awesome Lime": "https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-wmmpy-500x500.webp"
+      "Awesome Violet": "/images/phones/samsung-galaxy-a54-5g-pakistan-priceoye-41gvz-500x500.webp",
+      "Awesome Graphite": "/images/phones/samsung-galaxy-a54-5g-pakistan-priceoye-sem0b-500x500.webp",
+      "Awesome White": "/images/phones/samsung-galaxy-a54-5g-pakistan-priceoye-nwjoh-500x500.webp",
+      "Awesome Lime": "/images/phones/samsung-galaxy-a54-5g-pakistan-priceoye-wmmpy-500x500.webp"
     },
     "colorHexes": {
       "Awesome Violet": "#a794db",
@@ -939,10 +939,10 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Peshawar"
     ],
     "images": [
-      "https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-41gvz-500x500.webp",
-      "https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-sem0b-500x500.webp",
-      "https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-nwjoh-500x500.webp",
-      "https://images.priceoye.pk/samsung-galaxy-a54-5g-pakistan-priceoye-wmmpy-500x500.webp"
+      "/images/phones/samsung-galaxy-a54-5g-pakistan-priceoye-41gvz-500x500.webp",
+      "/images/phones/samsung-galaxy-a54-5g-pakistan-priceoye-sem0b-500x500.webp",
+      "/images/phones/samsung-galaxy-a54-5g-pakistan-priceoye-nwjoh-500x500.webp",
+      "/images/phones/samsung-galaxy-a54-5g-pakistan-priceoye-wmmpy-500x500.webp"
     ],
     "price": 80499,
     "metaTitle": "Samsung Galaxy A54 5G Price in Pakistan & Specs",
@@ -1090,7 +1090,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     "releaseDate": "January 2025",
     "rating": 0,
     "reviewCount": 0,
-    "image": "https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-dbjm9-500x500.webp",
+    "image": "/images/phones/tecno-spark-40-pro-plus-pakistan-priceoye-dbjm9-500x500.webp",
     "tags": [
       "trending",
       "budget",
@@ -1131,10 +1131,10 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Tundra Green"
     ],
     "colorImages": {
-      "Nebula Black": "https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-dbjm9-500x500.webp",
-      "Aurora White": "https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-pb3tm-500x500.webp",
-      "Moon Titanium": "https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-oa58m-500x500.webp",
-      "Tundra Green": "https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-ahqfm-500x500.webp"
+      "Nebula Black": "/images/phones/tecno-spark-40-pro-plus-pakistan-priceoye-dbjm9-500x500.webp",
+      "Aurora White": "/images/phones/tecno-spark-40-pro-plus-pakistan-priceoye-pb3tm-500x500.webp",
+      "Moon Titanium": "/images/phones/tecno-spark-40-pro-plus-pakistan-priceoye-oa58m-500x500.webp",
+      "Tundra Green": "/images/phones/tecno-spark-40-pro-plus-pakistan-priceoye-ahqfm-500x500.webp"
     },
     "colorHexes": {
       "Nebula Black": "#1f242d",
@@ -1151,10 +1151,10 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Peshawar"
     ],
     "images": [
-      "https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-dbjm9-500x500.webp",
-      "https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-pb3tm-500x500.webp",
-      "https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-oa58m-500x500.webp",
-      "https://images.priceoye.pk/tecno-spark-40-pro-plus-pakistan-priceoye-ahqfm-500x500.webp"
+      "/images/phones/tecno-spark-40-pro-plus-pakistan-priceoye-dbjm9-500x500.webp",
+      "/images/phones/tecno-spark-40-pro-plus-pakistan-priceoye-pb3tm-500x500.webp",
+      "/images/phones/tecno-spark-40-pro-plus-pakistan-priceoye-oa58m-500x500.webp",
+      "/images/phones/tecno-spark-40-pro-plus-pakistan-priceoye-ahqfm-500x500.webp"
     ],
     "price": 72999,
     "metaTitle": "Tecno Spark 40 Pro Plus Price in Pakistan & Specs",
@@ -1197,7 +1197,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     "releaseDate": "April 2024",
     "rating": 0,
     "reviewCount": 0,
-    "image": "https://images.priceoye.pk/infinix-note-40-pro-pakistan-priceoye-r52ud-500x500.webp",
+    "image": "/images/phones/infinix-note-40-pro-pakistan-priceoye-r52ud-500x500.webp",
     "tags": [
       "trending",
       "budget",
@@ -1238,10 +1238,10 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Racing Edition"
     ],
     "colorImages": {
-      "Vintage Green": "https://images.priceoye.pk/infinix-note-40-pro-pakistan-priceoye-r52ud-500x500.webp",
-      "Titan Gold": "https://images.priceoye.pk/infinix-note-40-pro-pakistan-priceoye-n4uwu-500x500.webp",
-      "Obsidian Black": "https://images.priceoye.pk/infinix-note-40-pro-pakistan-priceoye-sirm5-500x500.webp",
-      "Racing Edition": "https://images.priceoye.pk/infinix-note-40-pro-pakistan-priceoye-xhn8m-500x500.webp"
+      "Vintage Green": "/images/phones/infinix-note-40-pro-pakistan-priceoye-r52ud-500x500.webp",
+      "Titan Gold": "/images/phones/infinix-note-40-pro-pakistan-priceoye-n4uwu-500x500.webp",
+      "Obsidian Black": "/images/phones/infinix-note-40-pro-pakistan-priceoye-sirm5-500x500.webp",
+      "Racing Edition": "/images/phones/infinix-note-40-pro-pakistan-priceoye-xhn8m-500x500.webp"
     },
     "colorHexes": {
       "Vintage Green": "#495a48",
@@ -1258,10 +1258,10 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Peshawar"
     ],
     "images": [
-      "https://images.priceoye.pk/infinix-note-40-pro-pakistan-priceoye-r52ud-500x500.webp",
-      "https://images.priceoye.pk/infinix-note-40-pro-pakistan-priceoye-n4uwu-500x500.webp",
-      "https://images.priceoye.pk/infinix-note-40-pro-pakistan-priceoye-sirm5-500x500.webp",
-      "https://images.priceoye.pk/infinix-note-40-pro-pakistan-priceoye-xhn8m-500x500.webp"
+      "/images/phones/infinix-note-40-pro-pakistan-priceoye-r52ud-500x500.webp",
+      "/images/phones/infinix-note-40-pro-pakistan-priceoye-n4uwu-500x500.webp",
+      "/images/phones/infinix-note-40-pro-pakistan-priceoye-sirm5-500x500.webp",
+      "/images/phones/infinix-note-40-pro-pakistan-priceoye-xhn8m-500x500.webp"
     ],
     "price": 63899,
     "metaTitle": "Infinix Note 40 Pro Price in Pakistan & Specs",
@@ -1509,7 +1509,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     "releaseDate": "March 2024",
     "rating": 0,
     "reviewCount": 0,
-    "image": "https://images.priceoye.pk/vivo-v30-5g-pakistan-priceoye-2ahpt-500x500.webp",
+    "image": "/images/phones/vivo-v30-5g-pakistan-priceoye-2ahpt-500x500.webp",
     "tags": [
       "trending",
       "camera",
@@ -1548,8 +1548,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Waving Aqua"
     ],
     "colorImages": {
-      "Peacock Green": "https://images.priceoye.pk/vivo-v30-5g-pakistan-priceoye-2ahpt-500x500.webp",
-      "Waving Aqua": "https://images.priceoye.pk/vivo-v30-5g-pakistan-priceoye-0ij9a-500x500.webp"
+      "Peacock Green": "/images/phones/vivo-v30-5g-pakistan-priceoye-2ahpt-500x500.webp",
+      "Waving Aqua": "/images/phones/vivo-v30-5g-pakistan-priceoye-0ij9a-500x500.webp"
     },
     "colorHexes": {
       "Peacock Green": "#3a6b66",
@@ -1564,8 +1564,8 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Sialkot"
     ],
     "images": [
-      "https://images.priceoye.pk/vivo-v30-5g-pakistan-priceoye-2ahpt-500x500.webp",
-      "https://images.priceoye.pk/vivo-v30-5g-pakistan-priceoye-0ij9a-500x500.webp"
+      "/images/phones/vivo-v30-5g-pakistan-priceoye-2ahpt-500x500.webp",
+      "/images/phones/vivo-v30-5g-pakistan-priceoye-0ij9a-500x500.webp"
     ],
     "price": 110500,
     "metaTitle": "Vivo V30 5G Price in Pakistan & Specs",
@@ -1620,7 +1620,7 @@ export const PHONES_DATA: PhoneSpec[] = [
     "releaseDate": "January 2024",
     "rating": 0,
     "reviewCount": 0,
-    "image": "https://images.priceoye.pk/xiaomi-redmi-note-13-pro-pakistan-priceoye-8zikv-500x500.webp",
+    "image": "/images/phones/xiaomi-redmi-note-13-pro-pakistan-priceoye-8zikv-500x500.webp",
     "tags": [
       "trending",
       "budget",
@@ -1660,9 +1660,9 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Forest Green"
     ],
     "colorImages": {
-      "Midnight Black": "https://images.priceoye.pk/xiaomi-redmi-note-13-pro-pakistan-priceoye-8zikv-500x500.webp",
-      "Lavender Purple": "https://images.priceoye.pk/xiaomi-redmi-note-13-pro-pakistan-priceoye-da8y9-500x500.webp",
-      "Forest Green": "https://images.priceoye.pk/xiaomi-redmi-note-13-pro-pakistan-priceoye-yunsm-500x500.webp"
+      "Midnight Black": "/images/phones/xiaomi-redmi-note-13-pro-pakistan-priceoye-8zikv-500x500.webp",
+      "Lavender Purple": "/images/phones/xiaomi-redmi-note-13-pro-pakistan-priceoye-da8y9-500x500.webp",
+      "Forest Green": "/images/phones/xiaomi-redmi-note-13-pro-pakistan-priceoye-yunsm-500x500.webp"
     },
     "colorHexes": {
       "Midnight Black": "#222328",
@@ -1678,9 +1678,9 @@ export const PHONES_DATA: PhoneSpec[] = [
       "Faisalabad"
     ],
     "images": [
-      "https://images.priceoye.pk/xiaomi-redmi-note-13-pro-pakistan-priceoye-8zikv-500x500.webp",
-      "https://images.priceoye.pk/xiaomi-redmi-note-13-pro-pakistan-priceoye-da8y9-500x500.webp",
-      "https://images.priceoye.pk/xiaomi-redmi-note-13-pro-pakistan-priceoye-yunsm-500x500.webp"
+      "/images/phones/xiaomi-redmi-note-13-pro-pakistan-priceoye-8zikv-500x500.webp",
+      "/images/phones/xiaomi-redmi-note-13-pro-pakistan-priceoye-da8y9-500x500.webp",
+      "/images/phones/xiaomi-redmi-note-13-pro-pakistan-priceoye-yunsm-500x500.webp"
     ],
     "price": 61500,
     "metaTitle": "Xiaomi Redmi Note 13 Pro Price in Pakistan & Specs",
